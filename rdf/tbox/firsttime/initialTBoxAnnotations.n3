@@ -1,5 +1,6 @@
 @prefix ld4l:    <http://bib.ld4l.org/ontology#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/>
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
@@ -90,43 +91,55 @@
 ##### CLASSGROUP ASSIGNMENTS #####
 
 ##
-## Works ##
+## WORKS ##
 ##
 
-ld4l:Collection
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-
-ld4l:Integrating
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-    
-ld4l:Manuscript
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-    
-ld4l:Monograph
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-    
-ld4l:MultipartMonograph
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-        
-ld4l:Serial
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-    
 ld4l:Audio
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
+
 ld4l:Cartography
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+ld4l:Collection
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+    
+ld4l:ContinuingResource
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
     
 ld4l:Dataset
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
-ld4l:MixedMaterial
+
+ld4l:Dissertation
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
     
+ld4l:FiniteResource
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+ld4l:Index
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+    
+ld4l:IntegratingResource
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+fabio:Journal
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+fabio:Magazine
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+ 
+ld4l:Monograph
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+             
 ld4l:MovingImage
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
+
 ld4l:Multimedia
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+ld4l:MultipartMonograph
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+    
+fabio:Newspaper
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
     
 ld4l:NotatedMovement
@@ -134,94 +147,101 @@ ld4l:NotatedMovement
     
 ld4l:NotatedMusic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
+
+ld4l:Periodical
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+ld4l:PeriodicalPart
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+        
+ld4l:Serial
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+ld4l:Series
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+           
 ld4l:StillImage
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
-ld4l:Text
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .   
 
-ld4l:Thesis
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .  
-    
+ld4l:Text
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
 ld4l:ThreeDimensionalObject
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
     
-ld4l:Work
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-  
-##    
-## Instances ##
+##
+## INSTANCES ##
 ##
 
 ld4l:Electronic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
     
 ld4l:Instance
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .  
- 
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
+    
 ld4l:Print
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
-
+    
 ld4l:Tactile
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupInstances> .
+
     
-#
-## Holdings ##   
-#
+##
+## HOLDINGS ##
+##
 
 ld4l:Item
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupHoldings> . 
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupHoldings> .
+   
     
-ld4l:Manuscript
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupHoldings> . 
-
-#
-## People ##
-#
+##
+## PEOPLE ##
+##
 
 foaf:Person
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupPeople> .
- 
-#   
-## Agents ##
-#
+    
+    
+##
+## ORGANIZATIONS ##
+##
+
+schema:GovernmentOrganization
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> .
+    
+foaf:Organization
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> .
+
+
+##
+## AGENTS ##
+##
 
 foaf:Agent
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupAgents> .
     
 ld4l:Family
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupAgents> .
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupAgents> .    
 
-# 
-## Organizations ##
-#
-   
-schema:GovernmentOrganization
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> .
 
-schema:Organization
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> . 
-  
-   
-## Topics ##
-      
+##
+## TOPICS ##
+##
+
 ld4l:Topic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupTopics> .
-
+  
     
     
-### PROPERTY CONFIGURATION ###
+##### PROPERTY CONFIGURATION #####
 
 
 # TODO Define property class groups in 
 # /rdf/applicationMetadata/firsttime/propertygroups.rdf and group the properties 
 # here. 
 
-ld4l:label
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
-ld4l:authorizedAccessPoint
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+#      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+#              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+#      vitro:inPropertyGroupAnnot
+#              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
