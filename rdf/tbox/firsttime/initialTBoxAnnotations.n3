@@ -1,8 +1,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio:   <http://purl.org/spar/fabio/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix ld4l:    <http://bib.ld4l.org/ontology/> .
 @prefix legacy:  <http://bib.ld4l.org/ontology/legacy/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema:  <http://schema.org/>
+@prefix schema:  <http://schema.org/> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
@@ -30,14 +32,14 @@
     vitro:ontologyPrefixAnnot "foaf"^^xsd:string .
 
 <http://bib.ld4l.org/ontology/> 
-    rdfs:label "LD4L Bibliographic Ontology"@en-US ;  
+    rdfs:label "LD4L-O (LD4L Proposed Bibliographic Ontology)"@en-US ;  
     vitro:ontologyPrefixAnnot "ld4l"^^xsd:string .
        
 <http://www.lingvoj.org/ontology#> 
     rdfs:label "Lingvoj"@en-US ;
     vitro:ontologyPrefixAnnot "lingvo"^^xsd:string .
 
-<http:// www.loc.gov/mads/rdf/v1#>
+<http://www.loc.gov/mads/rdf/v1#>
     rdfs:label "MADS/RDF"@en-US ;
     vitro:ontologyPrefixAnnot "madsrdf"^^xsd:string .
            
@@ -96,6 +98,15 @@
 ## WORKS ##
 ##
 
+fabio:Journal
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+
+fabio:Magazine
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+   
+fabio:Newspaper
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+        
 ld4l:Audio
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
 
@@ -123,12 +134,6 @@ ld4l:Index
 ld4l:IntegratingResource
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
 
-fabio:Journal
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-
-fabio:Magazine
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
- 
 ld4l:Monograph
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
              
@@ -140,10 +145,7 @@ ld4l:Multimedia
 
 ld4l:MultipartMonograph
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
-fabio:Newspaper
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
+   
 ld4l:NotatedMovement
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
     
@@ -208,10 +210,10 @@ foaf:Person
 ## ORGANIZATIONS ##
 ##
 
-schema:GovernmentOrganization
+foaf:Organization
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> .
     
-foaf:Organization
+schema:GovernmentOrganization
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupOrganizations> .
 
 
@@ -231,7 +233,7 @@ ld4l:Family
 ##
 
 ld4l:Topic
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupTopics> .
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupTopicGenreForm> .
   
     
     
@@ -248,6 +250,19 @@ ld4l:Topic
 #      vitro:inPropertyGroupAnnot
 #              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
 
+ 
+dcterms:hasFormat
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedInstances> .
+
+# dcterms:language
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupLanguages> .
+
+dcterms:subject
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTopicGenreForm> .
+               
 ld4l:absorbedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -269,14 +284,6 @@ ld4l:acquisitionNote
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
 
-legacy:aspectRatio
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-
-legacy:awardNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-               
 ld4l:birthDate
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupPersonalData> .
@@ -320,15 +327,7 @@ ld4l:cartographicWesternmostLongitude
 ld4l:cartographicZone
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
-                
-legacy:colorContent
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
-        
-legacy:contentsNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-                        
+
 ld4l:continuesUnderNewTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -337,10 +336,6 @@ ld4l:contributedTo
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupWorks> .
 
-legacy:creditsNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-        
 ld4l:deathDate
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupPersonalData> .
@@ -358,10 +353,6 @@ ld4l:dissertationNote
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
 
-legacy:duration
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
-                                      
 ld4l:equivalent
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedInstances> .
@@ -370,10 +361,6 @@ ld4l:extent
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
 
-legacy:findingAidNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-                        
 ld4l:follows
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -382,30 +369,10 @@ ld4l:followsInNarrative
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
 
-legacy:format
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
-
-legacy:formatOfMusic
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
-
-legacy:formDesignation
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupGenreForm> .
-                                
 ld4l:formedBySplitting
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
 
-legacy:geographicCoverageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupTopics> .
-
-legacy:graphicScaleNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
-                
 ld4l:hasAbsorbed
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -424,7 +391,7 @@ ld4l:hasContribution
         
 ld4l:hasCoverArt
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupArtAndIllustrations> .
+        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
 
 ld4l:hasDataSource
     vitro:inPropertyGroupAnnot
@@ -437,14 +404,10 @@ ld4l:hasExpression
 ld4l:hasFirst
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
- 
-dcterms:hasFormat
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupRelatedInstances> .
 
 ld4l:hasGenre
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupGenreForm> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTopicGenreForm> .
                  
 ld4l:hasHolding
     vitro:inPropertyGroupAnnot
@@ -458,13 +421,13 @@ ld4l:hasLast
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
  
-ld4l:hasMusicKey
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
+# ld4l:hasMusicKey
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
         
-ld4l:hasMusiMedium
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
+# ld4l:hasMusiMedium
+#     vitro:inPropertyGroupAnnot
+ #        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
                                                                            
 ld4l:hasOriginalVersion
     vitro:inPropertyGroupAnnot
@@ -498,9 +461,9 @@ ld4l:identifiedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupIdentifiers> .
 
-ld4l:illustrationNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupArtAndIllustrations> .
+# ld4l:illustrationNote
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupArtAndIllustrations> .
                                               
 ld4l:isExpressionOf
     vitro:inPropertyGroupAnnot
@@ -522,54 +485,22 @@ ld4l:isUnionOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
 
-dcterms:language
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupLanguages> .
-
-legacy:languageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupLanguages> .
-
-legacy:legalDate
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-                        
 ld4l:mergedToForm
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
+                               
+# ld4l:musicNumber
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
 
-legacy:modeOfIssuance
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-
-legacy:musicKey
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
-
-legacy:musicMediumNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
-                        
-ld4l:musicNumber
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
- 
-legacy:notationSystem
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-               
 ld4l:note
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
                                
 ld4l:performedAt
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPerformances> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
 
-legacy:performerNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPerformances> .
-        
 ld4l:precedesInNarrative
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -579,13 +510,9 @@ ld4l:producedAt
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
 
-legacy:providerStatement
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupProvisioning> .
-                
 ld4l:recordedAt
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupRelatedPerformances> .
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTimeAndPlace> .
         
 ld4l:reproduces
     vitro:inPropertyGroupAnnot
@@ -609,7 +536,7 @@ ld4l:splitInto
 
 ld4l:subject
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTopics> .
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTopicGenreForm> .
         
 ld4l:supersededBy
     vitro:inPropertyGroupAnnot
@@ -619,18 +546,10 @@ ld4l:supersedes
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
 
-legacy:supplementaryContentNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
-          
 ld4l:supplements
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
-        
-legacy:temporalCoverageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTopics> .
-                                    
+
 ld4l:translates
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -638,6 +557,94 @@ ld4l:translates
 ld4l:translatedAs
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
+                                                                                      
+legacy:aspectRatio
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+
+legacy:awardNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+                              
+legacy:colorContent
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
+        
+legacy:contentsNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+                        
+legacy:creditsNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+        
+legacy:duration
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
+                                      
+legacy:findingAidNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+                        
+legacy:format
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
+
+# legacy:formatOfMusic
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
+
+legacy:formDesignation
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupTopicGenreForm> .
+                                
+legacy:geographicCoverageNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupTopicGenreForm> .
+
+legacy:graphicScaleNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics> .
+
+legacy:languageNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+
+legacy:legalDate
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+                        
+legacy:modeOfIssuance
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+
+# legacy:musicKey
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
+
+# legacy:musicMediumNote
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupMusicalProperties> .
+ 
+legacy:notationSystem
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+               
+# legacy:performerNote
+#     vitro:inPropertyGroupAnnot
+#         <http://ld4l.org/ontology#vitroPropertyGroupPerformances> .
+        
+legacy:providerStatement
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupProvisioning> .
+                
+legacy:supplementaryContentNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupNotesAndAnnotations> .
+                 
+legacy:temporalCoverageNote
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedTopicGenreForm> .
 
 legacy:treatySignator
     vitro:inPropertyGroupAnnot
