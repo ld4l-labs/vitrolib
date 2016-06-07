@@ -17,6 +17,7 @@
         <j.0:logotypeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.0:logotypeWidth>
         <j.0:bannerHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.0:bannerHeight>
         <j.0:copyrightAnchor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linked Data for Libraries (LD4L)</j.0:copyrightAnchor>
+        <j.0:copyrightURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ld4l.org</j.0:copyrightURL>
         <j.0:aboutText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VitroLib is an ontology-based cataloging editor enabling manual cataloging in RDF based on a generalized bibliographic ontology with extensions for specialized cataloging. Built on Vitro, a generalized semantic web ontology and instance editor with customizable browsing, VitroLib is a joint product of the Mellon-funded Linked Data for Libraries Labs and Linked Data for Production projects.&lt;/p&gt;
             
             
