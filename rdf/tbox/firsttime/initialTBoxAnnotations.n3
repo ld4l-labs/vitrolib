@@ -290,44 +290,48 @@ ld4l:birthDate
 
 ld4l:cartographicEasternmostLongitude
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
 
 ld4l:cartographicEquinox
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicExclusionGRingCoordinates
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicNorthernmostLatitude
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicOuterGRingCoordinates
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicProjection
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicScale
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicSouthernmostLatitude
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicWesternmostLongitude
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
         
 ld4l:cartographicZone
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupCartography> .
+        <http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace> .
 
+ld4l:continuedUnderNewTitleBy
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
+        
 ld4l:continuesUnderNewTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .

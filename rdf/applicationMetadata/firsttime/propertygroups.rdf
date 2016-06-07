@@ -51,6 +51,7 @@
     </rdf:Description>
     
     <!-- Properties of cartographic Works -->
+    <!--
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupCartography">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties related to a work's cartographic data</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</vitro:displayRank>
@@ -59,6 +60,7 @@
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
+    -->
     
     <!-- Item circulation data -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupCirculation">
@@ -173,7 +175,7 @@
     <!-- Person data (name, birthdate, etc.) -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupNotes">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notes</vitro:publicDescriptionAnnot>
-        <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</vitro:displayRank>
+        <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">130</vitro:displayRank>
         <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
         <rdfs:label xml:lang="en-US">notes</rdfs:label>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
