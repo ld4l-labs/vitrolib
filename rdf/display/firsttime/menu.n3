@@ -1,0 +1,145 @@
+# $This file is distributed under the terms of the license in /doc/license.txt$ 
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix ld4l: <http://ld4l.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### This file defines the default menu for vivo. ###
+### It overrides the menu.n3 from vitro.
+
+#### Default Menu ####
+
+display:DefaultMenu 
+    a  display:MainMenu ;
+    rdfs:label "Default Menu" ;
+    display:hasElement display:HomeMenuItem ;
+    display:hasElement display:WorksMenuItem ;
+    display:hasElement display:InstancesMenuItem ;
+    display:hasElement display:ItemsMenuItem ;
+    display:hasElement display:PeopleMenuItem ;
+    display:hasElement display:OrganizationsMenuItem .
+
+
+#### Menu Items for Default Menu ####
+
+display:HomeMenuItem 
+    a display:NavigationElement ;
+    display:menuPosition 1;
+    display:linkText "Home";
+    display:toPage display:Home .
+
+display:WorksMenuItem 
+    a display:NavigationElement ;
+    display:menuPosition 2;
+    display:linkText "Works";
+    display:toPage display:Works .
+
+display:InstancesMenuItem 
+    a display:NavigationElement ;
+    display:menuPosition 3;
+    display:linkText "Instances";
+    display:toPage display:Instances .
+
+display:ItemsMenuItem     
+    a display:NavigationElement ;
+    display:menuPosition 4;
+    display:linkText "Holdings ";
+    display:toPage display:Items .
+
+display:PeopleMenuItem 
+    a display:NavigationElement ;
+    display:menuPosition 5;
+    display:linkText "People";
+    display:toPage display:People .  
+    
+display:OrganizationsMenuItem 
+    a display:NavigationElement ;
+    display:menuPosition 6;
+    display:linkText "Organizations";
+    display:toPage display:Organizations . 
+       
+        
+ 
+#### Menu Item Pages ####
+   
+display:Home 
+    a display:HomePage ;    
+    a display:Page ;
+    display:title "Home" ;    
+    display:urlMapping "/" ;
+    display:hasDataGetter display:homeDataGetter;
+    display:cannotDeletePage "true" .
+
+display:Works
+    a display:Page ;    
+    a display:ClassGroupPage;
+    display:forClassGroup ld4l:vitroClassGroupWorks ;
+    display:title "Works" ;
+    display:urlMapping "/works" ; 
+    display:hasDataGetter display:worksDataGetter .
+
+display:Instances
+    a display:Page ;
+    a display:ClassGroupPage;
+    display:forClassGroup ld4l:vitroClassGroupInstances ;
+    display:title "Instances" ;
+    display:urlMapping "/instances";
+    display:hasDataGetter display:instancesDataGetter .
+
+display:Items 
+    a display:Page ;    
+    a display:ClassGroupPage;
+    display:forClassGroup ld4l:vitroClassGroupItems ;
+    display:title "Holdings" ;
+    display:urlMapping "/holdings" ;
+   	display:hasDataGetter display:itemsDataGetter .
+
+display:People 
+    a display:Page ;        
+    a display:ClassGroupPage;
+    display:forClassGroup ld4l:vitroClassGroupPeople ;
+    display:title "People" ;
+    display:urlMapping "/people" ;
+    display:hasDataGetter display:peopleDataGetter .
+
+display:Organizations
+    a display:Page ;        
+    a display:ClassGroupPage;
+    display:forClassGroup ld4l:vitroClassGroupOrganizations ;
+    display:title "Organizations" ;
+    display:urlMapping "/organizations" ;
+    display:hasDataGetter display:organizationsDataGetter .
+    
+    
+    
+#### Page Data Getters ####
+
+display:homeDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.BrowseDataGetter> .
+      
+display:worksDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
+      display:forClassGroup
+              ld4l:vitroClassGroupWorks .
+
+display:instancesDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
+      display:forClassGroup
+              ld4l:vitroClassGroupInstances .
+
+display:itemsDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
+      display:forClassGroup
+              ld4l:vitroClassGroupItems .
+                            
+display:peopleDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
+      display:forClassGroup
+              ld4l:vitroClassGroupPeople .
+              
+display:organizationsDataGetter
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
+      display:forClassGroup
+              ld4l:vitroClassGroupOrganizations .
