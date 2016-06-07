@@ -15,7 +15,7 @@
 	    vitro.home
 	    tomcat.home
 	     ====================================================================== -->
-<project name="ld4l-vitro" default="describe">
+<project name="vitrolib" default="describe">
 
 	<!-- 
 		The build directory goes in the product directory. 
