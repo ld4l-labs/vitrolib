@@ -34,9 +34,9 @@
   </rdf:Description>
 
   <!-- May not use; may not create Items in LD4P instances -->
-  <rdf:Description rdf:about="http://ld4l.org/ontology#vitroClassGroupHoldings">
+  <rdf:Description rdf:about="http://ld4l.org/ontology#vitroClassGroupItems">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:label xml:lang="en-US">holdings</rdfs:label>
+    <rdfs:label xml:lang="en-US">items</rdfs:label>
     <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T12:00:00-4:00</vitro:modTime>
     <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ClassGroup"/>
     <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</vitro:displayRank>
