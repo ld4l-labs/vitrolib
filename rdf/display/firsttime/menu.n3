@@ -45,7 +45,7 @@ display:InstancesMenuItem
 display:ItemsMenuItem     
     a display:NavigationElement ;
     display:menuPosition 4;
-    display:linkText "Holdings ";
+    display:linkText "Items";
     display:toPage display:Items .
 
 display:PeopleMenuItem 
@@ -92,8 +92,8 @@ display:Items
     a display:Page ;    
     a display:ClassGroupPage;
     display:forClassGroup ld4l:vitroClassGroupItems ;
-    display:title "Holdings" ;
-    display:urlMapping "/holdings" ;
+    display:title "Items" ;
+    display:urlMapping "/items" ;
    	display:hasDataGetter display:itemsDataGetter .
 
 display:People 

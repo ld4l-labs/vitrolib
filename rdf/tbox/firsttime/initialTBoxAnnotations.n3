@@ -172,7 +172,10 @@ ld4l:Text
 
 ld4l:ThreeDimensionalObject
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
-    
+
+ld4l:Work
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+        
 ##
 ## INSTANCES ##
 ##
@@ -191,11 +194,11 @@ ld4l:Tactile
 
     
 ##
-## HOLDINGS ##
+## ITEMS ##
 ##
 
 ld4l:Item
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupHoldings> .
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupItems> .
    
     
 ##
@@ -357,7 +360,7 @@ ld4l:dissertationNote
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupNotes> .
 
-ld4l:equivalent
+ld4l:equivalentTo
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedInstances> .
 
@@ -469,9 +472,13 @@ ld4l:identifiedBy
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupArtAndIllustrations> .
 
-ld4l:instanceOf
+ld4l:isHoldingFor
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupInstanceWorks> .
+        <http://ld4l.org/ontology#vitroPropertyGroupItemInstance> .
+        
+ld4l:isInstanceOf
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupInstanceWork> .
                                                      
 ld4l:isExpressionOf
     vitro:inPropertyGroupAnnot
