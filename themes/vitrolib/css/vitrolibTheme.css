@@ -431,14 +431,14 @@ h1.vitro-logo {
     position: absolute;
     width: 184px;
     height: 90px;
-    top: 12px;
+    top: 8px;
     left: 0;
     background: url(../images/VitroLib-logo.png) 0 0 no-repeat;
 }
 h1.vitro-logo a {
     display: block;
-    width: 3184px;
-    height: 90px;
+    width: 386px;
+    height: 59px;
 }
 /* HEADER NAV------>  */
 ul#header-nav {

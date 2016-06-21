@@ -12,5 +12,5 @@ VitroLib theme: screen styles
 @charset "UTF-8";
 
 @import url("reset.css");
-@import url("vitrolib.css");
+@import url("vitrolibTheme.css");
 
