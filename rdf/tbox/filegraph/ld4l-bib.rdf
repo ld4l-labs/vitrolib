@@ -181,6 +181,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <owl:inverseOf rdf:resource="hasAbsorbed"/>
     </owl:ObjectProperty>
     
 
@@ -202,6 +203,7 @@
         <rdfs:label xml:lang="en-us">accompanies</rdfs:label>
         <skos:example xml:lang="en-us">An index in a separate volume accompanies an encyclopedia.</skos:example>
         <rdfs:comment xml:lang="en-us">This resource adds to or is issued with another resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
     </owl:ObjectProperty>
     
 
@@ -239,6 +241,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/follows"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/continuedUnderNewTitleBy"/>
     </owl:ObjectProperty>
     
 
@@ -327,6 +330,7 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/follows"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/precedesInNarrative"/>
     </owl:ObjectProperty>
     
 
@@ -364,6 +368,7 @@
         <rdfs:comment xml:lang="en-us">This Item is governed by the specified PolicySet.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/governs"/>
     </owl:ObjectProperty>
     
 
@@ -412,6 +417,7 @@
         <rdfs:label xml:lang="en-us">has annotation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Annotation of this resource.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
+        <owl:inverseOf rdf:resource="&oa;hasTarget"/>
     </owl:ObjectProperty>
     
 
@@ -436,6 +442,7 @@
         <rdfs:comment xml:lang="en">This work was contributed to through this contribution.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Contribution"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/contributedTo"/>
     </owl:ObjectProperty>
     
 
@@ -484,6 +491,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/derivedFrom" />
     </owl:ObjectProperty>
     
 
@@ -545,6 +553,7 @@
         <rdfs:comment xml:lang="en-us">Holding reported for this Instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Item"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isHoldingFor"/>
     </owl:ObjectProperty>
     
 
@@ -556,6 +565,7 @@
         <rdfs:comment xml:lang="en-us">This Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isInstanceOf"/>
     </owl:ObjectProperty>
     
 
@@ -569,6 +579,7 @@
         <rdfs:comment xml:lang="en-us">Last part (issue, volume, etc.) of this Serial.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isLastOf"/>
     </owl:ObjectProperty>
     
 
@@ -624,8 +635,8 @@
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOriginalVersion">
         <rdfs:label xml:lang="en-us">has original version</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
     </owl:ObjectProperty>
     
@@ -682,6 +693,7 @@
         <rdfs:comment xml:lang="en">This instance is made available through this provision.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/madeAvailable"/>
     </owl:ObjectProperty>
     
 
@@ -695,6 +707,7 @@
         <skos:scopeNote>This property links an Award node to a context node that is then linked to the award recipient. The use of the context node allows the receipt to have properties such as date, place, etc.</skos:scopeNote>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Award"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isReceiptOf"/>
     </owl:ObjectProperty>
     
 
@@ -706,6 +719,7 @@
         <rdfs:comment xml:lang="en-us">This Instance has a reproduction that embodies the same Work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/reproduces"/>
     </owl:ObjectProperty>
     
 
@@ -785,6 +799,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/isTitleOf"/>
     </owl:ObjectProperty>
     
 
@@ -817,6 +832,7 @@
         <rdfs:label xml:lang="en-us">identifies</rdfs:label>
         <rdfs:comment xml:lang="en-us">Resource identifed by this Identifier.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/identifiedBy"/>
     </owl:ObjectProperty>
     
 
@@ -839,6 +855,7 @@
         <rdfs:label xml:lang="en">is body of</rdfs:label>
         <rdfs:comment xml:lang="en">This resource is the body of an annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
+        <owl:inverseOf rdf:resource="&oa;hasBody"/>
     </owl:ObjectProperty>
     
 
@@ -848,6 +865,7 @@
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isCirculationStatusFor">
         <rdfs:label xml:lang="en">is circulation status for</rdfs:label>
         <rdfs:comment xml:lang="en">An item has this circulation status.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasCirculationStatus"/>
     </owl:ObjectProperty>
     
 
@@ -858,6 +876,7 @@
         <rdfs:label xml:lang="en">is classification for</rdfs:label>
         <rdfs:comment xml:lang="en">This Classification pertains to the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/classifiedAs" />
     </owl:ObjectProperty>
     
 
@@ -870,6 +889,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/follows"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasExpression"/>
     </owl:ObjectProperty>
     
 
@@ -896,6 +916,7 @@
         <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial is the first part.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasFirst"/>
     </owl:ObjectProperty>
     
 
@@ -956,6 +977,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasPreferredTitle"/>
     </owl:ObjectProperty>
     
 
@@ -981,6 +1003,7 @@
         <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
         <rdfs:comment>This source status (either supplied or transcribed) pertains to the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSourceStatus"/>
     </owl:ObjectProperty>
     
 
@@ -1001,6 +1024,7 @@
         <rdfs:label xml:lang="en-us">is table of contents for</rdfs:label>
         <rdfs:comment xml:lang="en-us">The Instance for which this resource is the table of contents.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasTableOfContents"/>
     </owl:ObjectProperty>
     
 
@@ -1100,6 +1124,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isUnionOf"/>
     </owl:ObjectProperty>
     
 
@@ -1113,6 +1138,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <owl:propertyDisjointWith rdf:resource="http://bib.ld4l.org/ontology/recordedIn"/>
         <rdfs:domain rdf:resource="http://schema.org/Event"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/performedAt"/>
     </owl:ObjectProperty>
     
 
@@ -1134,6 +1160,7 @@
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/precedes">
         <rdfs:label xml:lang="en-us">precedes</rdfs:label>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/follows" />
         <skos:scopeNote>Generally one of the subproperties should be used to specify the exact relationship. This will be used only when the precise relationship is unknown.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or before in a narrative).</rdfs:comment>
     </owl:ObjectProperty>
@@ -1149,6 +1176,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/followsInNarrative"/>
     </owl:ObjectProperty>
     
 
@@ -1178,6 +1206,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/receivedBy"/>
     </owl:ObjectProperty>
     
 
@@ -1209,6 +1238,7 @@
         <rdfs:comment xml:lang="en">This Work was recorded at the specified Event.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="http://schema.org/Event"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/recordedIn"/>
     </owl:ObjectProperty>
     
 
@@ -1260,6 +1290,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/separatedFrom"/>       
     </owl:ObjectProperty>
     
 
@@ -1285,6 +1316,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/formedBySplitting"/>
     </owl:ObjectProperty>
     
 
@@ -1297,6 +1329,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/supersedes"/>
     </owl:ObjectProperty>
     
 
@@ -1335,6 +1368,7 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasDerivative"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/translates"/>
     </owl:ObjectProperty>
     
 
@@ -1375,6 +1409,7 @@
 
     <owl:ObjectProperty rdf:about="&dcterms;isPartOf">
         <rdfs:label xml:lang="en-us">is part of</rdfs:label>
+        <owl:inverseOf rdf:resource="&dcterms;hasPart"/>
         <rdfs:comment xml:lang="en-us">A related resource in which the described resource is physically or logically included.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -1404,6 +1439,7 @@
     <owl:ObjectProperty rdf:about="&dcterms;subject">
         <rdfs:label xml:lang="en-us">subject</rdfs:label>
         <rdfs:comment xml:lang="en-us">The topic of the described resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSubjectOf"/>
     </owl:ObjectProperty>
     
 
@@ -1425,6 +1461,7 @@
         <rdfs:comment rdf:datatype="&xsd;string">Associates a madsrdf:Authority with the Real World Object that is the subject of the authority&apos;s label.</rdfs:comment>
         <rdfs:domain rdf:resource="&madsrdf;Authority"/>
         <rdfs:range rdf:resource="&madsrdf;RWO"/>
+        <owl:inverseOf rdf:resource="&madsrdf;isIdentifiedByAuthority"></owl:inverseOf>
     </owl:ObjectProperty>
     
 
@@ -1460,6 +1497,7 @@
             
             It is RECOMMENDED to use these and other FOAF terms to describe agents: foaf:Person, prov:SoftwareAgent, foaf:Organization, foaf:name, foaf:mbox, foaf:openid, foaf:homepage</rdfs:comment>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isAnnotatorOf" />
     </owl:ObjectProperty>
     
 
@@ -1495,6 +1533,7 @@
             There is no OA class provided for &quot;Target&quot; as a target might be a body in a different annotation. However, there SHOULD be 1 or more content-based classes associated with the target resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasAnnotation"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasAnnotation"/>
     </owl:ObjectProperty>
     
 
@@ -1528,6 +1567,7 @@
         <rdfs:comment xml:lang="en-us">Can include electronic locator.</rdfs:comment>
         <rdfs:comment xml:lang="en-us">The location of any resource.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
+        <owl:inverseOf rdf:resource="&prov;locationOf" />
     </owl:ObjectProperty>
     
 
