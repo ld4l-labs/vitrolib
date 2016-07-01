@@ -499,10 +499,6 @@ ld4l:isLastOf
 ld4l:isUnionOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
-
-ld4l:madeAvailable
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupProvisions> .
         
 ld4l:mergedToForm
     vitro:inPropertyGroupAnnot

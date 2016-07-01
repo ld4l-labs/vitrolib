@@ -214,7 +214,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
     
+
     <!-- An Agent's Provisions -->
+    <!--
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupProvisions">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties related to an agent's provisions</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</vitro:displayRank>
@@ -223,6 +225,7 @@
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
+    -->
 
     <!-- Instance/Item physical properties --> 
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupPhysicalCharacteristics">
