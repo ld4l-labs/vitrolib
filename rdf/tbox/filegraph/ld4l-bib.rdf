@@ -517,6 +517,7 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isFindingAidFor"/>
     </owl:ObjectProperty>
     
 
@@ -768,6 +769,7 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/supplements"/>
     </owl:ObjectProperty>
     
 
@@ -799,7 +801,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/isTitleOf"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isTitleOf"/>
     </owl:ObjectProperty>
     
 
