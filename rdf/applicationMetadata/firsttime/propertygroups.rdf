@@ -42,7 +42,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
     
-    <!-- Work's or Agent's Awards -->
+    <!-- Awards (of Agent or Work) -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAwards">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to an agent's or work's awards</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</vitro:displayRank>
@@ -125,7 +125,7 @@
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to an instance's work</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRank>
         <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
-        <rdfs:label xml:lang="en-US">works</rdfs:label>
+        <rdfs:label xml:lang="en-US">work</rdfs:label>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
@@ -198,7 +198,7 @@
     </rdf:Description>
     -->
 
-    <!-- Person data (name, birthdate, etc.) -->
+    <!-- Personal data (name, birthdate, etc.) -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupPersonalData">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">personal data</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRank>
