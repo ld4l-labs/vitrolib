@@ -627,9 +627,9 @@
         <rdfs:comment xml:lang="en-us">Place from which the creation of this Work originated.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="&prov;Location"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isOriginPlaceOf"/>
     </owl:ObjectProperty>
     
-
 
     <!-- http://bib.ld4l.org/ontology/hasOriginalVersion -->
 
@@ -962,7 +962,17 @@
     </owl:ObjectProperty>
     
 
-
+    <!-- http://bib.ld4l.org/ontology/isOriginPlaceOf -->
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isOriginPlaceOf">
+        <rdfs:label xml:lang="en-us">is origin place of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Work that originated in this place.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="&prov;Location"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasOriginPlace"/>
+    </owl:ObjectProperty>
+    
+    
     <!-- http://bib.ld4l.org/ontology/isPreferredTitleOf -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isPreferredTitleOf">
