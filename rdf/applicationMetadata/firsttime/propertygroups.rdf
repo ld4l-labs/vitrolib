@@ -21,6 +21,7 @@
   -->
 
     <!-- Works of Agents -->
+    <!-- 
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAgentWorks">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to an agent's works</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</vitro:displayRank>
@@ -29,7 +30,8 @@
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
-    
+    -->
+
     <!-- Annotations -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAgentAnnotations">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to resources annotations</vitro:publicDescriptionAnnot>
@@ -172,7 +174,8 @@
     </rdf:Description>
     -->
 
-    <!-- Person data (name, birthdate, etc.) -->
+    <!-- Notes -->
+    <!--
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupNotes">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notes</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">130</vitro:displayRank>
@@ -181,6 +184,7 @@
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
+    -->
     
     <!-- Performance data for music, dance, theater, etc. performances -->
     <!--
@@ -204,6 +208,18 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
 
+
+    <!-- Policies -->
+    <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupPolicies">
+        <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">policies relating to items</vitro:publicDescriptionAnnot>
+        <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</vitro:displayRank>
+        <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
+        <rdfs:label xml:lang="en-US">access policies</rdfs:label>
+        <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+    
     <!-- Instance publication, manufacture, distribution, etc. -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupProvisioning">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instance publication data and other provisioning</vitro:publicDescriptionAnnot>
@@ -256,7 +272,7 @@
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
-    
+
     <!-- Time and place -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupTimeAndPlace">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporal and event data</vitro:publicDescriptionAnnot>
@@ -267,6 +283,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description> 
     
+    <!-- Resource title -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupTitles">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title data for a resource</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</vitro:displayRank>
@@ -276,12 +293,12 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description> 
 
-    <!-- Work subjects -->
+    <!-- Work subject, genre, and form -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupTopicGenreForm">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties related to a work's topics, genre, and form</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</vitro:displayRank>
         <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
-        <rdfs:label xml:lang="en-US">topic/genre/form</rdfs:label>
+        <rdfs:label xml:lang="en-US">topic, genre, and form</rdfs:label>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
