@@ -265,7 +265,15 @@ dcterms:hasFormat
 dcterms:subject
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupTopicGenreForm> .
-               
+
+foaf:name
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupIdentity> .
+           
+ld4l:absorbedBy
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
+                    
 ld4l:absorbedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
@@ -286,10 +294,6 @@ ld4l:acquisitionNote
 # ld4l:annotatedBy
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupNotes> .
-
-ld4l:birthDate
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPersonalData> .
 
 ld4l:cartographicEasternmostLongitude
     vitro:inPropertyGroupAnnot
@@ -338,10 +342,6 @@ ld4l:continuedUnderNewTitleBy
 ld4l:continuesUnderNewTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupRelatedWorks> .
-
-ld4l:deathDate
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupPersonalData> .
         
 # Also applies to titles
 # ld4l:derivedFrom
@@ -463,6 +463,10 @@ ld4l:hasReproduction
 ld4l:hasTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupTitles> .
+        
+ld4l:heldBy
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupCirculation> .        
          
 ld4l:identifiedBy
     vitro:inPropertyGroupAnnot
@@ -475,7 +479,11 @@ ld4l:identifiedBy
 ld4l:isHoldingFor
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupItemInstance> .
-        
+ 
+ld4l:isAgentOf
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupAgentWorks> .
+               
 ld4l:isInstanceOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupInstanceWork> .
@@ -668,4 +676,12 @@ legacy:temporalCoverageNote
 legacy:treatySignator
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupContributors> .
+        
+schema:birthDate
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupIdentity> .
+        
+schema:deathDate
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGroupIdentity> .
         
