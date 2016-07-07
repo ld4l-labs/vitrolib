@@ -479,10 +479,10 @@ ld4l:identifiedBy
 ld4l:isHoldingFor
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupItemInstance> .
- 
+
 ld4l:isAgentOf
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupAgentWorks> .
+        <http://ld4l.org/ontology#vitroPropertyGroupAgency> .
                
 ld4l:isInstanceOf
     vitro:inPropertyGroupAnnot

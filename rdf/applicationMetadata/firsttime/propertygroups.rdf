@@ -20,16 +20,19 @@
       resolvable URIs.
   -->
 
-    <!-- Works of Agents -->
-    <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAgentWorks">
-        <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to an agent's contributions to works</vitro:publicDescriptionAnnot>
+    <!-- Contributions and Provisions of Agents -->
+    <!-- Most likely what we want here is two faux properties, one for Agent to Provision, one for Agent to Contribution. The first would go in a property group AgentProvisions, the
+        second in a property group AgentWorks, labelled "works". -->
+    <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAgency">
+        <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to an agent's contributions to works and provisions of instances</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</vitro:displayRank>
         <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
-        <rdfs:label xml:lang="en-US">works</rdfs:label>
+        <rdfs:label xml:lang="en-US">agencies</rdfs:label>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
 
+    
     <!-- Annotations -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupAnnotations">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to resources annotations</vitro:publicDescriptionAnnot>
