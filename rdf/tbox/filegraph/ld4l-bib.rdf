@@ -1568,8 +1568,17 @@
     <owl:ObjectProperty rdf:about="&prov;agent">
         <rdfs:label xml:lang="en">has agent</rdfs:label>
         <rdfs:comment xml:lang="en">Agent associated with a resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isAgentOf"/>
     </owl:ObjectProperty>
     
+    
+    <!-- http://bib.ld4l.org/ontology/isAgentOf -->
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isAgentOf">
+        <rdfs:label xml:lang="en">is agent of</rdfs:label>
+        <rdfs:comment xml:lang="en">Resource associated with an agent.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&prov;agent"/>
+    </owl:ObjectProperty>
 
 
     <!-- http://www.w3.org/ns/prov#atLocation -->
@@ -2235,13 +2244,17 @@
 
     <!-- http://schema.org/birthDate -->
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/birthDate"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/birthDate">
+        <rdfs:label>date of birth</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://schema.org/deathDate -->
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/deathDate"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/deathDate">
+        <rdfs:label>date of death</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
