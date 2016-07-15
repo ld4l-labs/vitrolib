@@ -4,6 +4,7 @@
 @prefix ld4l:    <http://bib.ld4l.org/ontology/> .
 @prefix legacy:  <http://bib.ld4l.org/ontology/legacy/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix schema:  <http://schema.org/> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -172,6 +173,9 @@ ld4l:Text
 
 ld4l:ThreeDimensionalObject
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
+    
+ld4l:Topic
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupTopics> .
 
 ld4l:Work
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupWorks> .
@@ -238,6 +242,21 @@ ld4l:Family
 ld4l:Topic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupTopicGenreForm> .
   
+    
+##
+## LOCATIONS ##
+##
+
+prov:Location
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupLocations> .
+    
+##
+## EVENTS ##
+##
+
+schema:Event
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupEvents> .
+    
     
     
 ##### PROPERTY CONFIGURATION #####
@@ -480,10 +499,6 @@ ld4l:isHoldingFor
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupItemInstance> .
 
-ld4l:isAgentOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupAgency> .
-               
 ld4l:isInstanceOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupInstanceWork> .

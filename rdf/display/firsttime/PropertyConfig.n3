@@ -1,0 +1,54 @@
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ld4l: <http://bib.ld4l.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+@base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
+
+
+# warning: don't use blank nodes; the display model doesn't currently support them.
+
+local:agentOfContribution a :ConfigContext ;
+    :hasConfiguration local:agentOfContributionConfig ;
+    :configContextFor ld4l:isAgentOf ;
+    :qualifiedBy ld4l:Contribution .
+    
+local:agentOfContributionConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "agentOfContribution"@en-US ;
+    :displayName "made contribution"^^xsd:string ;
+    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupAgentContributions> ;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
+    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public .
+
+
+
+local:agentOfProvision a :ConfigContext ;
+    :hasConfiguration local:agentOfProvisionConfig ;
+    :configContextFor ld4l:isAgentOf ;
+    :qualifiedBy ld4l:Provision .
+                
+local:agentOfProvisionConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "agentOfProvision"@en-US ;
+    :displayName "made provision"^^xsd:string ;
+    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupAgentProvisions> ;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
+    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public . 
+
+                               
+
+                
+                                
