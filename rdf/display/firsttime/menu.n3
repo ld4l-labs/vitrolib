@@ -75,7 +75,7 @@ display:Home
 display:Works
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupWorks ;
+    display:forClassGroup ld4l:vitroClassGroupworks ;
     display:title "Works" ;
     display:urlMapping "/works" ; 
     display:hasDataGetter display:worksDataGetter .
@@ -83,7 +83,7 @@ display:Works
 display:Instances
     a display:Page ;
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupInstances ;
+    display:forClassGroup ld4l:vitroClassGroupinstances ;
     display:title "Instances" ;
     display:urlMapping "/instances";
     display:hasDataGetter display:instancesDataGetter .
@@ -91,7 +91,7 @@ display:Instances
 display:Items 
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupItems ;
+    display:forClassGroup ld4l:vitroClassGroupitems ;
     display:title "Items" ;
     display:urlMapping "/items" ;
    	display:hasDataGetter display:itemsDataGetter .
@@ -99,7 +99,7 @@ display:Items
 display:People 
     a display:Page ;        
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupPeople ;
+    display:forClassGroup ld4l:vitroClassGrouppeople ;
     display:title "People" ;
     display:urlMapping "/people" ;
     display:hasDataGetter display:peopleDataGetter .
@@ -107,7 +107,7 @@ display:People
 display:Organizations
     a display:Page ;        
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupOrganizations ;
+    display:forClassGroup ld4l:vitroClassGrouporganizations ;
     display:title "Organizations" ;
     display:urlMapping "/organizations" ;
     display:hasDataGetter display:organizationsDataGetter .
@@ -122,24 +122,24 @@ display:homeDataGetter
 display:worksDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupWorks .
+              ld4l:vitroClassGroupworks .
 
 display:instancesDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupInstances .
+              ld4l:vitroClassGroupinstances .
 
 display:itemsDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupItems .
+              ld4l:vitroClassGroupitems .
                             
 display:peopleDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupPeople .
+              ld4l:vitroClassGrouppeople .
               
 display:organizationsDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupOrganizations .
+              ld4l:vitroClassGrouporganizations .
