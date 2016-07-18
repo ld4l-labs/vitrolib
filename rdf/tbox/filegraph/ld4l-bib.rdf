@@ -1452,6 +1452,8 @@
         <rdfs:label xml:lang="en-us">subject</rdfs:label>
         <rdfs:comment xml:lang="en-us">The topic of the described resource.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSubjectOf"/>
+        <!-- Temporary fix to get dcterms:subject into Work profile page for easy editing -->
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
     </owl:ObjectProperty>
     
 
