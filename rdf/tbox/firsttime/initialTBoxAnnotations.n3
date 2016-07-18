@@ -284,8 +284,9 @@ dcterms:subject
 
 foaf:name
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupidentity> .
-           
+        <http://ld4l.org/ontology#vitroPropertyGroupidentity> ;
+    vitro:displayRankAnnot "10"^^xsd:int .
+                       
 ld4l:absorbedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
@@ -699,9 +700,11 @@ legacy:treatySignator
         
 schema:birthDate
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupidentity> .
+        <http://ld4l.org/ontology#vitroPropertyGroupidentity> ;
+    vitro:displayRankAnnot "20"^^xsd:int .
         
 schema:deathDate
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupidentity> .
+        <http://ld4l.org/ontology#vitroPropertyGroupidentity> ;
+    vitro:displayRankAnnot "30"^^xsd:int .
         
