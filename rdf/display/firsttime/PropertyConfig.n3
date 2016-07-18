@@ -9,14 +9,20 @@
 @prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ld4l: <http://bib.ld4l.org/ontology/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <http://schema.org/> .
 
 @base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
 
 
 # warning: don't use blank nodes; the display model doesn't currently support them.
+
+
+################################################################################
+
 
 local:agentOfContribution a :ConfigContext ;
     :hasConfiguration local:agentOfContributionConfig ;
@@ -26,12 +32,14 @@ local:agentOfContribution a :ConfigContext ;
 local:agentOfContributionConfig a :ObjectPropertyDisplayConfig ;
     rdfs:label "agentOfContribution"@en-US ;
     :displayName "made contribution"^^xsd:string ;
-    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupAgentContributions> ;
+    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentContributions> ;
     vitro:displayRankAnnot "0"^^xsd:int ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
     vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public .
 
+
+################################################################################
 
 
 local:agentOfProvision a :ConfigContext ;
@@ -42,13 +50,31 @@ local:agentOfProvision a :ConfigContext ;
 local:agentOfProvisionConfig a :ObjectPropertyDisplayConfig ;
     rdfs:label "agentOfProvision"@en-US ;
     :displayName "made provision"^^xsd:string ;
-    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupAgentProvisions> ;
+    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentProvisions> ;
     vitro:displayRankAnnot "0"^^xsd:int ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
     vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public . 
 
-                               
 
+################################################################################
+    
+    
+local:eventLocation a :ConfigContext ;
+    :hasConfiguration local:eventLocationConfig ;
+    :configContextFor prov:atLocation ;
+    :qualifiedByDomain schema:Event ;
+    :qualifiedBy prov:Location .
                 
-                                
+local:eventLocationConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "eventLocation"@en-US ;
+    :displayName "location"^^xsd:string ;
+    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupeventDetails> ;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
+    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public .              
+     
+     
+################################################################################
+   

@@ -250,7 +250,7 @@
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to date, time, and place of an event</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRank>
         <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T017:00:00</vitro:modTime>
-        <rdfs:label xml:lang="en-US">date and location</rdfs:label>
+        <rdfs:label xml:lang="en-US">event details</rdfs:label>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
