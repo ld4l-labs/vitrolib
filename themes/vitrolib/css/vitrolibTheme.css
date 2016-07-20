@@ -1472,10 +1472,3 @@ form.customForm #requiredLegend {
     font-style: italic;
     margin-top: .5em;
 }
-
-/* Hack to remove ontology error notice - no time now to figure out what causes
-   it.
-*/
-body.siteAdmin div#adminDashboard div.notice {
-    display: none;
-}
