@@ -13,7 +13,7 @@
 <#if statement.work?? && statement.workTitle??>
     <a href="${profileUrl(statement.uri("work"))}" title="${statement.workTitle}">${statement.workTitle}</a>
     <#if statement.subclassLabel??>
-        (${statement.subclassLabel})
+        (${statement.subclassLabel?replace(" contribution", "")})
     </#if>
 </#if>
 
