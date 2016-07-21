@@ -6,16 +6,16 @@
 <list-view-config>
     
     <query-select>
-        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX ld4l: &lt;http://bib.ld4l.org/ontology/&gt;
-        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
         PREFIX madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;
-        
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+    
         SELECT DISTINCT 
             ?contribution
             ?subclassLabel
             ?work ?workTitle
-
+    
         WHERE {
             ?subject ?property ?contribution .
             ?contribution a ld4l:Contribution ;
