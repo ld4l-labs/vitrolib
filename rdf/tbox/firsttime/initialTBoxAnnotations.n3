@@ -493,6 +493,11 @@ ld4l:identifiedBy
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupartAndIllustrations> .
 
+# Displayed as faux properties, so hide the display of the base property.
+ld4l:isAgentOf
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+    
 ld4l:isHoldingFor
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupitemInstance> .
