@@ -24,31 +24,34 @@
 ################################################################################
 
 
-local:agentOfContribution a :ConfigContext ;
-    :hasConfiguration local:agentOfContributionConfig ;
+local:agentHasContribution a :ConfigContext ;
+    :hasConfiguration local:agentHasContributionConfig ;
     :configContextFor ld4l:isAgentOf ;
     :qualifiedBy ld4l:Contribution .
     
-local:agentOfContributionConfig a :ObjectPropertyDisplayConfig ;
-    rdfs:label "agentOfContribution"@en-US ;
+local:agentHasContributionConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "agentHasContribution"@en-US ;
     :displayName "made contribution"^^xsd:string ;
     :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentContributions> ;
-    vitro:displayRankAnnot "0"^^xsd:int ;
+    :listViewConfigFile "listViewConfig-agentHasContribution.xml"^^xsd:string ;
+    # vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AgentHasContribution"^^xsd:string ;
+    vitro:displayRankAnnot "0"^^xsd:int ; 
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
     vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public .
 
+    
 
 ################################################################################
 
 
-local:agentOfProvision a :ConfigContext ;
-    :hasConfiguration local:agentOfProvisionConfig ;
+local:agentHasProvision a :ConfigContext ;
+    :hasConfiguration local:agentHasProvisionConfig ;
     :configContextFor ld4l:isAgentOf ;
     :qualifiedBy ld4l:Provision .
                 
-local:agentOfProvisionConfig a :ObjectPropertyDisplayConfig ;
-    rdfs:label "agentOfProvision"@en-US ;
+local:agentHasProvisionConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "agentHasProvision"@en-US ;
     :displayName "made provision"^^xsd:string ;
     :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentProvisions> ;
     vitro:displayRankAnnot "0"^^xsd:int ;

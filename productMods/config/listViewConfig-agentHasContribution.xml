@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX ld4l: &lt;http://bib.ld4l.org/ontology/&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;
+        
+        SELECT DISTINCT 
+            ?contribution
+            ?subclassLabel
+            ?work ?workTitle
+
+        WHERE {
+            ?subject ?property ?contribution .
+            ?contribution a ld4l:Contribution ;
+                ld4l:contributedTo ?work .
+            ?work a ld4l:Work ;
+                ld4l:hasTitle ?title .
+            ?title a madsrdf:Title ;
+                rdfs:label ?workTitle .
+            OPTIONAL {
+                ?contribution vitro:mostSpecificType ?subclass .
+                ?subclass rdfs:subClassOf ld4l:Contribution; 
+                    rdfs:label ?subclassLabel .
+            }
+        }
+    </query-select>
+    
+    <template>propStatement-agentHasContribution.ftl</template>
+</list-view-config>
