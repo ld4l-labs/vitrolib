@@ -31,7 +31,7 @@ local:agentHasContribution a :ConfigContext ;
     
 local:agentHasContributionConfig a :ObjectPropertyDisplayConfig ;
     rdfs:label "agentHasContribution"@en-US ;
-    :displayName "made contribution"^^xsd:string ;
+    :displayName "contributed to"^^xsd:string ;
     :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentContributions> ;
     :listViewConfigFile "listViewConfig-agentHasContribution.xml"^^xsd:string ;
     # vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AgentHasContribution"^^xsd:string ;
@@ -52,7 +52,7 @@ local:agentHasProvision a :ConfigContext ;
                 
 local:agentHasProvisionConfig a :ObjectPropertyDisplayConfig ;
     rdfs:label "agentHasProvision"@en-US ;
-    :displayName "made provision"^^xsd:string ;
+    :displayName "provisioned"^^xsd:string ;
     :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentProvisions> ;
     vitro:displayRankAnnot "0"^^xsd:int ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
