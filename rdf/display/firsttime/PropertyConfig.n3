@@ -82,14 +82,14 @@ local:eventLocationConfig a :ObjectPropertyDisplayConfig ;
 ################################################################################
 
     
-local:sameInstance a :ConfigContext ;
-    :hasConfiguration local:sameInstanceConfig ;
+local:sameAsInstance a :ConfigContext ;
+    :hasConfiguration local:sameAsInstanceConfig ;
     :configContextFor owl:sameAs ;
     :qualifiedByDomain ld4l:Instance ;
     :qualifiedBy ld4l:Instance .
                 
-local:sameInstanceConfig a :ObjectPropertyDisplayConfig ;
-    rdfs:label "sameInstance"@en-US ;
+local:sameAsInstanceConfig a :ObjectPropertyDisplayConfig ;
+    rdfs:label "sameAsInstance"@en-US ;
     :displayName "same as instance"^^xsd:string ;
     :propertyGroup <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> ;
     :listViewConfigFile "listViewConfig-sameAsInstance.xml"^^xsd:string ;

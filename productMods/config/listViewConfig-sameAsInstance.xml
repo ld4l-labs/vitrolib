@@ -25,5 +25,5 @@
         }
     </query-select>
     
-    <template>propStatement-default.ftl</template>
+    <template>propStatement-sameAsInstance.ftl</template>
 </list-view-config>
