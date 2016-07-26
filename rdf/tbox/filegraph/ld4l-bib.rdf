@@ -279,6 +279,12 @@
         </rdfs:range>
     </owl:ObjectProperty>
     
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+    <!-- Add here to make display work correctly -->
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en-us">same as</rdfs:label>        
+    </owl:ObjectProperty>
 
 
     <!-- http://bib.ld4l.org/ontology/equivalentTo -->
