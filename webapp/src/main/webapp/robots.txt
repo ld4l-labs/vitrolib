@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /admin/             # Vitro
+Disallow: /help/              # Vitro
+Disallow: /images/            # Vitro
+Disallow: /js/                # Vitro
+Disallow: /quickedits/        # Vitro
+Disallow: /site_icons/        # Vitro
+Disallow: /src/               # Vitro
+Disallow: /templates/         # Vitro
+Disallow: /themes/            # Vitro
+Disallow: /xsl/               # Vitro
+Disallow: /search/            # Vitro
+Disallow: /coauthors/         # Vitro
+Disallow: /pubsbyorg/         # Vitro
+Disallow: /fedsearch/         # Vitro
+Disallow: /comments.jsp       # Vitro
+Disallow: /dataservice/       # Vitro
+Disallow: /listrdf/           # Vitro
+Disallow: /visualizationfm/   # VIVO addition
+Disallow: /visualization/     # VIVO addition
+Disallow: /vis/               # VIVO addition
+Disallow: /visualizationAjax/ # VIVO addition
+Disallow: /visualizationData/ # VIVO addition
+Disallow: /qrcode             # VIVO addition
+Disallow: /individual         # VIVO addition

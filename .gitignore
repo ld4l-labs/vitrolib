@@ -1,3 +1,4 @@
-build.properties
-bin
-catalog-v001.xml
+# Ignore eclipse artifacts
+**/.settings
+**/.project
+**/.classpath

@@ -1,0 +1,21 @@
+PREFIX core: <http://vivoweb.org/ontology/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+     ?grant ?property ?object .
+     ?investigatorRole core:relatedBy ?grant .
+} WHERE {
+     {
+       { PERSON_URI core:relatedBy ?investigatorRole .
+         ?investigatorRole a core:PrincipalInvestigatorRole
+       }
+         union
+       { PERSON_URI core:relatedBy ?investigatorRole .
+         ?investigatorRole a core:CoPrincipalInvestigatorRole
+       }   
+     }
+     
+     ?investigatorRole core:relatedBy ?grant .
+     ?grant a core:Grant .
+     ?grant ?property ?object 
+}
