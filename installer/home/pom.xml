@@ -5,29 +5,27 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-installer-home</artifactId>
-    <version>1.9.1</version>
+    <artifactId>vitrolib-installer-home</artifactId>
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>org.vivoweb</groupId>
-        <artifactId>vivo-installer</artifactId>
-        <version>1.9.1</version>
+        <groupId>org.ld4l</groupId>
+        <artifactId>vitrolib-installer</artifactId>
+        <version>0.1</version>
         <relativePath>..</relativePath>
     </parent>
 
-    <name>VIVO Install Home</name>
+    <name>vitrolib Install Home</name>
 
     <properties>
-        <default-theme>wilma</default-theme>
+        <default-theme>vitrolib</default-theme>
     </properties>
 
     <profiles>
         <profile>
             <id>install</id>
             <activation>
-                <property><name>vivo-dir</name></property>
+                <property><name>vitrolib-home-dir</name></property>
             </activation>
             <build>
                 <plugins>
@@ -59,7 +57,7 @@
                                 </goals>
                                 <configuration>
                                     <tasks>
-                                        <delete dir="${vivo-dir}/rdf" />
+                                        <delete dir="${vitrolib-home-dir}/rdf" />
                                     </tasks>
                                 </configuration>
                             </execution>
@@ -75,7 +73,7 @@
                                     <goal>copy-resources</goal>
                                 </goals>
                                 <configuration>
-                                    <outputDirectory>${vivo-dir}</outputDirectory>
+                                    <outputDirectory>${vitrolib-home-dir}</outputDirectory>
                                     <resources>
                                         <resource>
                                             <directory>${project.build.directory}/${project.build.finalName}</directory>
@@ -103,8 +101,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.vivoweb</groupId>
-            <artifactId>vivo-home</artifactId>
+            <groupId>org.ld4l</groupId>
+            <artifactId>vitrolib-home</artifactId>
+            <version>${project.version}</version>
             <type>tar.gz</type>
         </dependency>
     </dependencies>

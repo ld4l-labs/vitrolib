@@ -5,19 +5,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-installer-vivo</artifactId>
-    <version>1.9.1</version>
+    <artifactId>vitrolib-installer-vitrolib</artifactId>
     <packaging>war</packaging>
 
     <parent>
-        <groupId>org.vivoweb</groupId>
-        <artifactId>vivo-installer</artifactId>
-        <version>1.9.1</version>
+        <groupId>org.ld4l</groupId>
+        <artifactId>vitrolib-installer</artifactId>
+        <version>0.1</version>
         <relativePath>..</relativePath>
     </parent>
 
-    <name>VIVO Install Web App</name>
+    <name>vitrolib Install Web App</name>
 
     <profiles>
         <profile>
@@ -40,8 +38,8 @@
                             <archiveClasses>false</archiveClasses>
                             <overlays>
                                 <overlay>
-                                    <groupId>org.vivoweb</groupId>
-                                    <artifactId>vivo-webapp</artifactId>
+                                    <groupId>org.ld4l</groupId>
+                                    <artifactId>vitrolib-webapp</artifactId>
                                     <type>war</type>
                                 </overlay>
                             </overlays>
@@ -133,12 +131,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.vivoweb</groupId>
-            <artifactId>vivo-api</artifactId>
+            <groupId>org.ld4l</groupId>
+            <artifactId>vitrolib-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.vivoweb</groupId>
-            <artifactId>vivo-webapp</artifactId>
+            <groupId>org.ld4l</groupId>
+            <artifactId>vitrolib-webapp</artifactId>
+            <version>${project.version}</version>
             <type>war</type>
         </dependency>
 

@@ -5,29 +5,35 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-project</artifactId>
-    <version>1.9.1</version>
+    <groupId>org.ld4l</groupId>
+    <artifactId>vitrolib-project</artifactId>
+    <version>0.1</version>
     <packaging>pom</packaging>
 
-    <name>VIVO</name>
-    <description>VIVO project</description>
-    <url>http://vivoweb.org/</url>
+    <name>vitrolib</name>
+    <description>LD4L vitrolib project</description>
+    <url>http://ld4l.org/</url>
 
     <licenses>
         <license>
             <name>BSD 3-Clause License</name>
-            <url>https://raw.github.com/vivo-project/VIVO/develop/LICENSE</url>
+            <url>https://raw.github.com/ld4l-labs/vitrolib/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <name>Graham Triggs</name>
-            <email>gtriggs@duraspace.org</email>
-            <organization>DuraSpace</organization>
-            <organizationUrl>http://vivoweb.org/</organizationUrl>
+            <name>Rebecca Younes</name>
+            <email>rjy7@cornell.edu</email>
+            <organization>Cornell University Library</organization>
+            <organizationUrl>https://github.com/rjyounes</organizationUrl>
+        </developer>
+        <developer>
+            <name>Huda Khan</name>
+            <email>hjk54cornell.edu</email>
+            <organization>Cornell University</organization>
+            <organizationUrl>https://github.com/hudajkhan</organizationUrl>
         </developer>
         <developer>
             <name>Jim Blake</name>
@@ -35,29 +41,18 @@
             <organization>Cornell University Library</organization>
             <organizationUrl>https://github.com/j2blake</organizationUrl>
         </developer>
-        <developer>
-            <name>John Fereira</name>
-            <email>jaf30@cornell.edu</email>
-            <organization>Cornell University</organization>
-            <organizationUrl>https://github.com/fereira</organizationUrl>
-        </developer>
     </developers>
 
-    <!--
-       The SCM repository location is used by Continuum to update against
-       when changes have occurred.  This spawns a new build cycle and releases
-       snapshots into the snapshot repository below.
-    -->
     <scm>
-        <connection>scm:git:git@github.com:vivo-project/VIVO.git</connection>
-        <developerConnection>scm:git:git@github.com:vivo-project/VIVO.git</developerConnection>
-        <url>git@github.com:vivo-project/VIVO.git</url>
+        <connection>scm:git:git@github.com:ld4l-labs/vitrolib.git</connection>
+        <developerConnection>scm:git:git@github.com:ld4l-labs/vitrolib.git</developerConnection>
+        <url>git@github.com:ld4l-labs/vitrolib.git</url>
         <tag>HEAD</tag>
     </scm>
 
     <properties>
-        <vitro-version>${project.version}</vitro-version>
-        <vivo-dir>${basedir}</vivo-dir>
+        <vitro-version>1.9.1</vitro-version>
+        <vitrolib-home-dir>${basedir}</vitrolib-home-dir>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
     </properties>
@@ -84,7 +79,7 @@
             <id>installer</id>
             <activation>
                 <property>
-                    <name>!vivo-installer-dir</name>
+                    <name>!vitrolib-installer-dir</name>
                 </property>
             </activation>
             <modules>
@@ -95,11 +90,11 @@
             <id>external-installer</id>
             <activation>
                 <property>
-                    <name>vivo-installer-dir</name>
+                    <name>vitrolib-installer-dir</name>
                 </property>
             </activation>
             <modules>
-                <module>${vivo-installer-dir}</module>
+                <module>${vitrolib-installer-dir}</module>
             </modules>
         </profile>
         <profile>
@@ -230,8 +225,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -293,23 +288,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <!--
-        Add a custom repository, which is actually just a simple GitHub project
-        in order to distribute some dependencies that aren't part of Maven central
-    -->
-    <repositories>
-        <repository>
-            <id>vivo-dependencies</id>
-            <name>VIVO Dependencies</name>
-            <url>https://raw.github.com/vivo-project/dependencies/master/</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>

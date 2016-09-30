@@ -5,19 +5,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-home</artifactId>
-    <version>1.9.1</version>
+    <artifactId>vitrolib-home</artifactId>
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>org.vivoweb</groupId>
-        <artifactId>vivo-project</artifactId>
-        <version>1.9.1</version>
+        <groupId>org.ld4l</groupId>
+        <artifactId>vitrolib-project</artifactId>
+        <version>0.1</version>
         <relativePath>..</relativePath>
     </parent>
 
-    <name>VIVO Home</name>
+    <name>vitrolib Home</name>
 
     <build>
         <plugins>

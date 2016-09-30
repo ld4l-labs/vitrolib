@@ -5,16 +5,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-installer</artifactId>
-    <version>1.9.1</version>
+    <groupId>org.ld4l</groupId>
+    <artifactId>vitrolib-installer</artifactId>
+    <version>0.1</version>
     <packaging>pom</packaging>
 
-    <name>VIVO Installer</name>
-
-    <properties>
-        <vitro-version>${project.version}</vitro-version>
-    </properties>
+    <name>vitrolib Installer</name>
 
     <build>
         <plugins>
@@ -110,26 +106,26 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.vivoweb</groupId>
-                <artifactId>vitro-solr</artifactId>
-                <version>${vitro-version}</version>
+                <groupId>org.ld4l</groupId>
+                <artifactId>vitrolib-solr</artifactId>
+                <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.vivoweb</groupId>
-                <artifactId>vivo-home</artifactId>
-                <version>${vitro-version}</version>
+                <groupId>org.ld4l</groupId>
+                <artifactId>vitrolib-home</artifactId>
+                <version>${project.version}</version>
                 <type>tar.gz</type>
             </dependency>
             <dependency>
-                <groupId>org.vivoweb</groupId>
-                <artifactId>vivo-api</artifactId>
-                <version>${vitro-version}</version>
+                <groupId>org.ld4l</groupId>
+                <artifactId>vitrolib-api</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.vivoweb</groupId>
-                <artifactId>vivo-webapp</artifactId>
-                <version>${vitro-version}</version>
+                <groupId>org.ld4l</groupId>
+                <artifactId>vitrolib-webapp</artifactId>
+                <version>${project.version}</version>
                 <type>war</type>
             </dependency>
         </dependencies>
@@ -139,7 +135,7 @@
         <profile>
             <id>skip-install</id>
             <activation>
-                <property><name>!vivo-dir</name></property>
+                <property><name>!vitrolib-home-dir</name></property>
             </activation>
             <build>
                 <plugins>
@@ -170,7 +166,6 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-resources-plugin</artifactId>
-                        <version>2.6</version>
                         <executions>
                             <execution>
                                 <id>default-resources</id>
@@ -206,7 +201,7 @@
         <profile>
             <id>install</id>
             <activation>
-                <property><name>vivo-dir</name></property>
+                <property><name>vitrolib-home-dir</name></property>
             </activation>
             <build>
                 <plugins>

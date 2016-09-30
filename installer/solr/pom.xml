@@ -5,19 +5,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.vivoweb</groupId>
-    <artifactId>vivo-installer-solr</artifactId>
-    <version>1.9.1</version>
+    <artifactId>vitrolib-installer-solr</artifactId>
     <packaging>war</packaging>
 
     <parent>
-        <groupId>org.vivoweb</groupId>
-        <artifactId>vivo-installer</artifactId>
-        <version>1.9.1</version>
+        <groupId>org.ld4l</groupId>
+        <artifactId>vitrolib-installer</artifactId>
+        <version>0.1</version>
         <relativePath>..</relativePath>
     </parent>
 
-    <name>VIVO Install Solr App</name>
+    <name>vitrolib Install Solr App</name>
 
     <profiles>
         <profile>
@@ -134,6 +132,7 @@
         <dependency>
             <groupId>org.vivoweb</groupId>
             <artifactId>vitro-solr</artifactId>
+            <version>1.9.1</version>
             <type>war</type>
         </dependency>
     </dependencies>
