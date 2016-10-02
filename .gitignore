@@ -1,4 +1,10 @@
-# Ignore eclipse artifacts
+# Configuration files
+build.properties
+
+# Build directories
+**/target
+
+# Eclipse artifacts
 **/.settings
-**/.project
 **/.classpath
+**/.project
