@@ -7,7 +7,7 @@
             <properties>
                 <app-name>vitrolib</app-name>
 
-                <vitrolib-home-dir>/usr/local/vivo/home</vitrolib-home-dir>
+                <vitrolib-home-dir>/usr/local/vitrolib/home</vitrolib-home-dir>
                 <tomcat-dir>/usr/local/tomcat</tomcat-dir>
 
                 <default-theme>vitrolib</default-theme>
