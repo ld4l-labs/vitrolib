@@ -16,14 +16,13 @@
         SELECT DISTINCT 
             ?contribution
             ?subclassLabel
-            ?agent ?agentLabel ?agentName 
+            ?agent ?agentLabel 
         
         WHERE {
             ?subject ?property ?contribution .
             ?contribution a ld4l:Contribution ;
                 prov:agent ?agent .
-            ?agent rdfs:label ?agentLabel ;
-                foaf:name ?agentName .
+            ?agent rdfs:label ?agentLabel .
             OPTIONAL {
                 ?contribution vitro:mostSpecificType ?subclass .
                 ?subclass rdfs:subClassOf ld4l:Contribution ;

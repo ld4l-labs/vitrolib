@@ -260,20 +260,21 @@ schema:Event
 ##### PROPERTY CONFIGURATION #####
 
 
-# TODO Define property class groups in 
-# /rdf/applicationMetadata/firsttime/propertygroups.rdf and group the properties 
-# here. 
-
-
-#      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-#              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-#      vitro:inPropertyGroupAnnot
-#              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
-
- 
 dcterms:hasFormat
+    vitro:displayRankAnnot
+        "20"^^xsd:int ;
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
+        
+# Displayed as faux properties, so hide the display of the base property.
+dcterms:hasPart
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+        
+# Displayed as faux properties, so hide the display of the base property.
+dcterms:isPartOf
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+       <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 # dcterms:language
 #     vitro:inPropertyGroupAnnot
@@ -375,6 +376,8 @@ ld4l:dissertationNote
         <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
 
 ld4l:equivalentTo
+    vitro:displayRankAnnot
+        "20"^^xsd:int ;
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
 
@@ -382,9 +385,10 @@ ld4l:extent
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
 
+# Displayed as faux properties, so hide the display of the base property.
 ld4l:follows
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 ld4l:followsInNarrative
     vitro:inPropertyGroupAnnot
@@ -411,6 +415,10 @@ ld4l:hasCirculationStatus
         <http://ld4l.org/ontology#vitroPropertyGroupcirculation> .
 
 ld4l:hasContribution
+    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
+    vitro:selectFromExistingAnnot "false"^^xsd:boolean ;             
+    vitro:customEntryFormAnnot 
+        "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.WorkHasContributorGenerator"^^xsd:string ;
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .
         
@@ -439,8 +447,9 @@ ld4l:hasHolding
         <http://ld4l.org/ontology#vitroPropertyGroupinstanceItems> .
         
 ld4l:hasInstance
+    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
     vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupworkInstances> .
+        <http://ld4l.org/ontology#vitroPropertyGroupworkInstances> .             
  
 ld4l:hasLast
     vitro:inPropertyGroupAnnot
@@ -455,6 +464,8 @@ ld4l:hasLast
  #        <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
                                                                            
 ld4l:hasOriginalVersion
+    vitro:displayRankAnnot
+        "20"^^xsd:int ;
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
 
@@ -474,9 +485,11 @@ ld4l:hasProvision
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupprovisioning> .
 
+# Displayed as faux properties, so hide the display of the base property.
+# Should apply only to Instances, but sample data uses between Works.
 ld4l:hasReproduction
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 ld4l:hasTitle
     vitro:inPropertyGroupAnnot
@@ -504,9 +517,10 @@ ld4l:isHoldingFor
         <http://ld4l.org/ontology#vitroPropertyGroupitemInstance> .
 
 ld4l:isInstanceOf
+    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupinstanceWork> .
-                                                     
+                                                           
 ld4l:isExpressionOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
@@ -522,6 +536,14 @@ ld4l:isFindingAidFor
 ld4l:isLastOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+ 
+ld4l:isPreferredTitleOf
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGrouptitleOfResource> .
+               
+ld4l:isTitleOf
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGrouptitleOfResource> .
                 
 ld4l:isUnionOf
     vitro:inPropertyGroupAnnot
@@ -546,6 +568,12 @@ ld4l:performanceOf
 ld4l:performedAt
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
+        
+# Displayed as faux properties, so hide the display of the base property.
+ld4l:precedes
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
 
 ld4l:precedesInNarrative
     vitro:inPropertyGroupAnnot
@@ -567,14 +595,12 @@ ld4l:recordedAt
 ld4l:recordedIn
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupworksAboutEvent> .
-        
-ld4l:reproduces
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
 
-ld4l:responsibilityNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .
+# Displayed as faux properties, so hide the display of the base property.
+# Should apply only to Instances, but sample data uses between Works.
+ld4l:reproduces
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
                                
 ld4l:separatedFrom
     vitro:inPropertyGroupAnnot

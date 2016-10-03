@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 
-
 <!DOCTYPE rdf:RDF [
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -44,6 +43,8 @@
      xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#" >
 
+    <!-- NB This is a modified version of LD4L-O with some temporary 
+        modifications for display in the VitroLib demo version. -->
     <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibliographic Ontology</rdfs:label>
         <dcterms:modified>2016-05-25</dcterms:modified>
@@ -280,11 +281,12 @@
     </owl:ObjectProperty>
     
     <!-- http://www.w3.org/2002/07/owl#sameAs -->
-    <!-- Add here to make display work correctly -->
+    <!-- Add here to make display work correctly 
+         Now moving out of main ontology to ontologyHacks.n3
     <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">same as</rdfs:label>        
-    </owl:ObjectProperty>
+    </owl:ObjectProperty>-->
 
 
     <!-- http://bib.ld4l.org/ontology/equivalentTo -->
@@ -706,9 +708,15 @@
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasReproduction">
         <rdfs:label xml:lang="en-us">has reproduction</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This Instance has a reproduction that embodies the same Work.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">This resource has a reproduction that embodies the same Work.</rdfs:comment>
+        
+        <!-- There are cases in the data where hasReproduction relates two
+             Works. Probably incorrect, but for now adapt the ontology. -->
+        <!--
+        <rdfs:comment xml:lang="en-us">This Instance has a reproduction that embodies the same Work.</rdfs:comment>        
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        -->
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/reproduces"/>
     </owl:ObjectProperty>
     
@@ -1260,9 +1268,14 @@
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/reproduces">
         <rdfs:label xml:lang="en-us">reproduces</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This Instance reproduces another Instance embodying the same Wsork.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:comment xml:lang="en-us">This resource reproduces another resource embodying the same Work.</rdfs:comment>
+        <!-- There are cases in the data where hasReproduction relates two
+             Works. Probably incorrect, but for now adapt the ontology. -->
+        <!--
+        <rdfs:comment xml:lang="en-us">This Instance has a reproduction that embodies the same Work.</rdfs:comment>        
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        -->
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasReproduction"/>
     </owl:ObjectProperty>
     
@@ -1441,8 +1454,6 @@
         <rdfs:label xml:lang="en-us">subject</rdfs:label>
         <rdfs:comment xml:lang="en-us">The topic of the described resource.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSubjectOf"/>
-        <!-- Temporary fix to get dcterms:subject into Work profile page for easy editing -->
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
     </owl:ObjectProperty>
     
 
@@ -1911,7 +1922,7 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/responsibilityNote">
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>

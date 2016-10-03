@@ -16,7 +16,6 @@
     xmlns:vitro="&vitro;"
     xmlns:xsd="&xsd;" >
 
-
     <rdf:Description rdf:about="http://bib.ld4l.org/ontology/hasContribution">
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-workHasContributor.xml</display:listViewConfigFile>
     </rdf:Description>
