@@ -2,9 +2,10 @@
 build.properties
 
 # Build directories
-**/target
+**/target/
 
 # Eclipse artifacts
+**/bin/
 **/.settings
 **/.classpath
 **/.project
