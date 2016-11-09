@@ -1,0 +1,73 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>vitrolib-webapp</artifactId>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>org.ld4l</groupId>
+        <artifactId>vitrolib-project</artifactId>
+        <version>0.1</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <name>vitrolib Web App</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+                    <archiveClasses>false</archiveClasses>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                    <overlays>
+                        <overlay>
+                            <groupId>org.vivoweb</groupId>
+							<artifactId>vitro-webapp</artifactId>
+                            <type>war</type>
+                        </overlay>
+                    </overlays>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webResources</directory>
+                            <filtering>true</filtering>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>overlays</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.vivoweb</groupId>
+            <artifactId>vitro-webapp</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>org.ld4l</groupId>
+            <artifactId>vitrolib-api</artifactId>
+            <version>0.1</version>
+        </dependency>
+    </dependencies>
+</project>

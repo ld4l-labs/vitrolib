@@ -1,3 +1,11 @@
+# Configuration files
 build.properties
-bin
-catalog-v001.xml
+
+# Build directories
+**/target/
+
+# Eclipse artifacts
+**/bin/
+**/.settings
+**/.classpath
+**/.project

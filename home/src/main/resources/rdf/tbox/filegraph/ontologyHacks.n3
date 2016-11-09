@@ -1,0 +1,37 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio:   <http://purl.org/spar/fabio/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix ld4l:    <http://bib.ld4l.org/ontology/> .
+@prefix legacy:  <http://bib.ld4l.org/ontology/legacy/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# Temporary hacks to the ontology for Vitro display. Not intended as permanent
+# additions to the ontology.
+
+
+# Show this property to editors on Work page even when not populated.
+dcterms:subject
+    rdfs:domain ld4l:Work .
+    
+# Show this property to editors on Agent page even when not populated.
+foaf:name
+    rdfs:domain foaf:Agent .
+ 
+# Create faux property for domain/range Instance. If not defined explicitly, 
+# doesn't display in object property list so can't edit and add a faux property.   
+owl:sameAs
+    a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "same as"@en-us .
+    
+# Show this property to editors on Person page even when not populated.
+schema:birthDate
+    rdfs:domain foaf:Person .
+ 
+# Show this property to editors on Person page even when not populated.   
+schema:deathDate
+    rdfs:domain foaf:Person .
