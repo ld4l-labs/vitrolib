@@ -6,7 +6,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
     <rdf:Description>
         <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Portal"/>
-        <rdfs:label xml:lang="en-US">VIVO</rdfs:label>
+        <rdfs:label xml:lang="en-US">VITROLIB</rdfs:label>
         <j.0:shortHand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connect * share * discover</j.0:shortHand>
         <j.0:flag1Filtering rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</j.0:flag1Filtering>
         <j.0:imageThumbWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</j.0:imageThumbWidth>
