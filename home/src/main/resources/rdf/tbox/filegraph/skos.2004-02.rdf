@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xml:base="http://www.w3.org/2004/02/skos/core">
+  
+  <rdf:Description rdf:about="#Concept">
+    <rdfs:label xml:lang="en">Concept</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <skos:definition xml:lang="en">An idea or notion; a unit of thought.</skos:definition>
+    <!-- S1 -->
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="#broader">
+    <rdfs:label xml:lang="en">has broader</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+    <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+    <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    <!-- S18 -->
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <!-- S22 -->
+    <rdfs:subPropertyOf rdf:resource="#broaderTransitive"/>
+    <!-- S25 -->
+    <owl:inverseOf rdf:resource="#narrower"/>
+    <!-- For non-OWL aware applications -->
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#narrower">
+    <rdfs:label xml:lang="en">has narrower</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+    <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+    <!-- S18 -->
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <!-- S22 -->
+    <rdfs:subPropertyOf rdf:resource="#narrowerTransitive"/>
+    <!-- S25 -->
+    <owl:inverseOf rdf:resource="#broader"/>
+    <!-- For non-OWL aware applications -->
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+
+</rdf:RDF>

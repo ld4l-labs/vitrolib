@@ -9,20 +9,11 @@
 @prefix ld4l: <http://bib.ld4l.org/ontology/> .
 @prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
 
 # See vitroSearchProhibited.n3 for more information about files in this directory.
 
 vitroDisplay:SearchIndex 
     rdf:type owl:Thing ; 
-    vitroDisplay:excludeClass ld4l:AwardReceipt ;
-    vitroDisplay:excludeClass ld4l:CirculationStatus ;
-    vitroDisplay:excludeClass ld4l:Contribution ;
-    vitroDisplay:excludeClass ld4l:Identifier ;
-    vitroDisplay:excludeClass ld4l:Provision ;
-    vitroDisplay:excludeClass ld4l:SourceStatus ;
-    vitroDisplay:excludeClass madsrdf:Authority ;
-    vitroDisplay:excludeClass madsrdf:Title ;
-    vitroDisplay:excludeClass madsrdf:TitleElement ;
-    vitroDisplay:excludeClass oa:Annotation ;
-    vitroDisplay:excludeClass oa:Motivation .
+   vitroDisplay:excludeClass bibframe:Identifier .
 	

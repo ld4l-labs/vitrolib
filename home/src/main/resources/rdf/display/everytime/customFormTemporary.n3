@@ -17,55 +17,8 @@
 @prefix schema: <http://schema.org/> .
 
 @base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
-################################################################################
 
-local:agentHasContribution a :ConfigContext ;
-    :hasConfiguration local:agentHasContributionConfig ;
-    :configContextFor ld4l:isAgentOf ;
-    :qualifiedByDomain foaf:Agent ;
-    :qualifiedBy ld4l:Contribution .
-    
-local:agentHasContributionConfig a :ObjectPropertyDisplayConfig ;
-    rdfs:label "agentHasContribution"@en-US ;
-    :displayName "contributed to"^^xsd:string ;
-    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGroupagentContributions> ;
-    :listViewConfigFile "listViewConfig-agentHasContribution.xml"^^xsd:string ;
-    vitro:selectFromExistingAnnot "false"^^xsd:boolean ; 
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AgentHasContributionGenerator"^^xsd:string ;
-    vitro:displayRankAnnot "0"^^xsd:int ; 
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
-    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public .
 
-################################################################################
-
-local:sameAsInstance a :ConfigContext ;
-    :hasConfiguration local:sameAsInstanceConfig ;
-    :configContextFor owl:sameAs ;
-    :qualifiedByDomain ld4l:Instance ;
-    :qualifiedBy ld4l:Instance .
-                
-local:sameAsInstanceConfig a :ObjectPropertyDisplayConfig ;
-    rdfs:label "sameAsInstance"@en-US ;
-    :displayName "same as"^^xsd:string ;
-    :propertyGroup <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> ;
-    :listViewConfigFile "listViewConfig-sameAsInstance.xml"^^xsd:string ;
-    vitro:displayRankAnnot "0"^^xsd:int ;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;               
-    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public . 
+# Nothing in here right now but could consider configuring same as etc.
     
     
-################################################################################
-
-local:workHasContributor a :ConfigContext ;
-    :hasConfiguration local:workHasContributorConfig ;
-    :configContextFor ld4l:hasContribution .
-    
-local:workHasContributorConfig a :ObjectPropertyDisplayConfig ; 
-    :listViewConfigFile "listViewConfig-workHasContributor.xml"^^xsd:string ;
-
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.WorkHasContributorGenerator"^^xsd:string  .
-
-################################################################################    
