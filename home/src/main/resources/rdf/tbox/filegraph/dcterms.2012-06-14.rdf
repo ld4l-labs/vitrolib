@@ -102,7 +102,7 @@
     </rdf:Description>
     -->
     
-    <!-- Not sure
+    <!-- Needs group review - may use rdau predicate or bf:relatedTo. Include temporarily till decision is made. -->
     <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
         <rdfs:label xml:lang="en">Relation</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
@@ -115,9 +115,8 @@
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
     </rdf:Description>
-    -->
     
-    <!-- Needs group review
+    <!-- Needs group review - may use bf:subject. Include temporarily till decision is made. -->
     <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
         <rdfs:label xml:lang="en">Subject</rdfs:label>
         <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
@@ -130,6 +129,5 @@
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
     </rdf:Description>
-    -->
 
 </rdf:RDF>

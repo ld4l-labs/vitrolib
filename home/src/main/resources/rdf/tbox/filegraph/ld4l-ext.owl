@@ -16,6 +16,9 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     >
     
+    
+    <!-- ONTOLOGY DECLARATION -->
+       
     <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
         <owl:ontologyIRI rdf:resource="http://bib.ld4l.org/ontology"/>
         <!-- TODO Need redirect from the version IRI to the ontology IRI -->
@@ -26,362 +29,324 @@
         <!-- TODO Fill in date of publication -->
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-        <!-- TODO Fill in ontology definition (rdfs:comment / skos:definition?). Extension of bf2 core, some additions, some mods. -->
+        <rdfs:label xml:lang="en">LD4L BIBFRAME 2 Extension</rdfs:label>
+        <rdfs:comment xml:lang="en">This ontology fragment includes extensions and modifications to BIBFRAME 2 and is intended to be used as a supplement to the core BIBFRAME 2 ontology. It is a joint product of the Mellon Foundation-funded Linked Data for Libraries - Labs and the Linked Data for Production projects. See http://ld4l.org for more information on these projects.</rdfs:comment>
         <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
-    
+ 
+ 
     <!-- CLASSES -->
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ConciseTitle">
-        <rdfs:label>Concise title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <skos:example>&apos;Modern Writing&apos; could serve as the concise title for &apos;The Berkley Book of Modern Writing&apos;.</skos:example>
-        <skos:definition xml:lang="en-us">The concise version of a title.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/KeyTitle">
-        <rdfs:label>Key title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <skos:definition xml:lang="en-us">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ParallelTitle">
-        <rdfs:label>Parallel title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <skos:definition xml:lang="en-us">A title in another language.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistinctiveTitle">
-        <rdfs:label>Distinctive title</rdfs:label>
-        <skos:definition>Special title that appears in addition to the regular title on individual issues of an item and by which the issue may be known.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AbbreviatedTitle">
-        <rdfs:label>Abbreviated title</rdfs:label>
-        <skos:definition>Title as abbreviated for citation, indexing, and/or identification.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Credits">
-        <rdfs:label>Credits</rdfs:label>
-        <skos:definition>Credits for agents who have participated in the creation and/or production of a resource.</skos:definition>
-        <skos:scopeNote>Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CustodialHistory">
-        <rdfs:label>Custodial history</rdfs:label>
-        <skos:definition>Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</skos:definition>
-        <skos:scopeNote>Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/HistoryOfWork">
-        <rdfs:label>History of work</rdfs:label>
-        <skos:definition>Information about the history of a work.</skos:definition>
-        <skos:scopeNote>Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SystemRequirements">
-        <rdfs:label>System requirements</rdfs:label>
-        <skos:definition>Description of the equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.</skos:definition>
-        <skos:scopeNote>Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NatureOfContent">
-        <rdfs:label>Nature of content</rdfs:label>
-        <skos:definition>Description of the primary type of content of a resource.</skos:definition>
-        <skos:example>Field recording of birdsong; combined time series analysis and graph plotting system.</skos:example>
-        <skos:scopeNote>Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TitleElement">
-        <rdfs:label>Title element</rdfs:label>    
-        <skos:definition>A part of a title, such as a subtitle, part number, or part name.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>    
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MainTitleElement">
-        <rdfs:label>Main title element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
-        <skos:definition>The main part of a title.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>    
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NonSortElement">
-        <rdfs:label>Non-sort element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
-        <skos:definition>The initial segment of a title that is removed for sorting.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>       
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PartNameElement">
-        <rdfs:label>Part name element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
-        <skos:definition>The part of a title that specifies the name of a part of the resource.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>       
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PartNumberElement">
-        <rdfs:label>Part number element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
-        <skos:definition>The part of a title that specifies the number of a part of the resource.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>      
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SubtitleElement">
-        <rdfs:label>Subtitle element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
-        <skos:definition>The subtitle of a title.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>       
 
-    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/TitleOrigin">
-        <rdfs:label>Title origin</rdfs:label>    
-        <skos:definition>The place from which a title originates, such as spine, cover, container, etc.</skos:definition>
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AbbreviatedTitle">
+        <rdfs:label xml:lang="en">Abbreviated title</rdfs:label>
+        <skos:definition xml:lang="en">Title as abbreviated for citation, indexing, and/or identification.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Software">
-        <rdfs:label>Software</rdfs:label>    
-        <skos:definition>A compiled executable binary file.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AcquisitionActivity">
+        <rdfs:label xml:lang="en">Acquisition</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of acquiring a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Activity">
-        <rdfs:label>Activity</rdfs:label>    
-        <skos:definition>An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>    
+        <skos:definition xml:lang="en">An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/AuthorActivity">
-        <rdfs:label>Author</rdfs:label>    
-        <skos:definition>The activity of authoring a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Author</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of authoring a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-    </owl:Class>
+    </owl:Class> 
     
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AcquisitionActivity">
-        <rdfs:label>Acquisition</rdfs:label>    
-        <skos:definition>The activity of acquiring a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/IllustratorActivity">
-        <rdfs:label>Illustrator</rdfs:label>    
-        <skos:definition>The activity of illustrating a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/EditorActivity">
-        <rdfs:label>Editor</rdfs:label>    
-        <skos:definition>The activity of editing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CreatorActivity">
-        <rdfs:label>Creator</rdfs:label>    
-        <skos:definition>The activity of creating a resource.</skos:definition>
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CaptureActivity">
+        <rdfs:label xml:lang="en">Capture</rdfs:label>    
+        <skos:definition xml:lang="en">The recording, filming, etc. of a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ComposerActivity">
-        <rdfs:label>Composer</rdfs:label>    
-        <skos:definition>The activity of composing a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Composer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of composing a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TranslatorActivity">
-        <rdfs:label>Translator</rdfs:label>    
-        <skos:definition>The activity of translatin a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ConciseTitle">
+        <rdfs:label xml:lang="en">Concise title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <skos:example xml:lang="en">&apos;Modern Writing&apos; could serve as the concise title for &apos;The Berkley Book of Modern Writing&apos;.</skos:example>
+        <skos:definition xml:lang="en">The concise version of a title.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
+
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ConductorActivity">
-        <rdfs:label>Conductor</rdfs:label>    
-        <skos:definition>The activity of conducting a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Conductor</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of conducting a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CreatorActivity">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of creating a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Credits">
+        <rdfs:label xml:lang="en">Credits</rdfs:label>
+        <skos:definition xml:lang="en">Credits for agents who have participated in the creation and/or production of a resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CustodialHistory">
+        <rdfs:label xml:lang="en">Custodial history</rdfs:label>
+        <skos:definition xml:lang="en">Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistinctiveTitle">
+        <rdfs:label xml:lang="en">Distinctive title</rdfs:label>
+        <skos:definition xml:lang="en">Special title that appears in addition to the regular title on individual issues of an item and by which the issue may be known.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>   
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistributorActivity">
+        <rdfs:label xml:lang="en">Distributor</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of distributing a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/EditorActivity">
+        <rdfs:label xml:lang="en">Editor</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of editing a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/HistoryOfWork">
+        <rdfs:label xml:lang="en">History of work</rdfs:label>
+        <skos:definition xml:lang="en">Information about the history of a work.</skos:definition>
+        <skos:scopeNote xml:lang="en">Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/IllustratorActivity">
+        <rdfs:label xml:lang="en">Illustrator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of illustrating a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/KeyTitle">
+        <rdfs:label xml:lang="en">Key title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <skos:definition xml:lang="en">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MainTitleElement">
+        <rdfs:label xml:lang="en">Main title element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The main part of a title.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>    
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ManufacturerActivity">
+        <rdfs:label xml:lang="en">Manufacturer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of manufacturing a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/NarratorActivity">
-        <rdfs:label>Narrator</rdfs:label>    
-        <skos:definition>The activity of narrating a  resource.</skos:definition>
+        <rdfs:label xml:lang="en">Narrator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of narrating a  resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NatureOfContent">
+        <rdfs:label xml:lang="en">Nature of content</rdfs:label>
+        <skos:definition xml:lang="en">Description of the primary type of content of a resource.</skos:definition>
+        <skos:example xml:lang="en">Field recording of birdsong; combined time series analysis and graph plotting system.</skos:example>
+        <skos:scopeNote xml:lang="en">Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+ 
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NonSortElement">
+        <rdfs:label xml:lang="en">Non-sort element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The initial segment of a title that is removed for sorting.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>       
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ParallelTitle">
+        <rdfs:label xml:lang="en">Parallel title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <skos:definition xml:lang="en">A title in another language.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PartNameElement">
+        <rdfs:label xml:lang="en">Part name element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The part of a title that specifies the name of a part of the resource.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>       
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PartNumberElement">
+        <rdfs:label xml:lang="en">Part number element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The part of a title that specifies the number of a part of the resource.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/PerformerActivity">
-        <rdfs:label>Performer</rdfs:label>    
-        <skos:definition>The activity of performing in a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Performer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of performing in a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistributorActivity">
-        <rdfs:label>Distributor</rdfs:label>    
-        <skos:definition>The activity of distributing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ManufacturerActivity">
-        <rdfs:label>Manufacturer</rdfs:label>    
-        <skos:definition>The activity of manufacturing a resource.</skos:definition>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ProducerActivity">
+        <rdfs:label xml:lang="en">Producer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of producing a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/PublisherActivity">
-        <rdfs:label>Publishing</rdfs:label>    
-        <skos:definition>The activity of publishing a resource.</skos:definition>
+        <rdfs:label xml:lang="en">Publishing</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of publishing a resource.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ProducerActivity">
-        <rdfs:label>Producer</rdfs:label>    
-        <skos:definition>The activity of producing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CaptureActivity">
-        <rdfs:label>Capture</rdfs:label>    
-        <skos:definition>The recording, filming, etc. of a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Braille">
-        <rdfs:label>Braille</rdfs:label>    
-        <skos:definition>A tactile notation used by the blind and visually impaired, based on a system of rectangular cells and raised dots.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/TactileNotation"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Tactile">
-        <rdfs:label>Tactile</rdfs:label>    
-        <skos:definition>A work intended to be at least partially perceived with the sense of touch.</skos:definition>
-        <skos:example>The children's book Pat the Bunny.</skos:example>
-        <skos:scopeNote>Contrasts with http://id.loc.gov/ontologies/bibframe/TactileNotation, a notation used for transcribing a resource, such as braille.</skos:scopeNote>
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Software">
+        <rdfs:label xml:lang="en">Software</rdfs:label>    
+        <skos:definition xml:lang="en">A compiled executable binary file.</skos:definition>
         <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SubtitleElement">
+        <rdfs:label xml:lang="en">Subtitle element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The subtitle of a title.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>   
 
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SystemRequirements">
+        <rdfs:label xml:lang="en">System requirements</rdfs:label>
+        <skos:definition xml:lang="en">Description of the equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.</skos:definition>
+        <skos:scopeNote xml:lang="en">Used to type Annotation bodies. Recommended use with motivation http://bib.ld4l.org/ontology/cataloging.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+ 
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Tactile">
+        <rdfs:label xml:lang="en">Tactile</rdfs:label>    
+        <skos:definition xml:lang="en">A work intended to be at least partially perceived with the sense of touch.</skos:definition>
+        <skos:example xml:lang="en">The children's book Pat the Bunny.</skos:example>
+        <skos:scopeNote xml:lang="en">Contrasts with http://id.loc.gov/ontologies/bibframe/TactileNotation, a notation used for transcribing a resource, such as braille.</skos:scopeNote>
+        <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
     
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TitleElement">
+        <rdfs:label xml:lang="en">Title element</rdfs:label>    
+        <skos:definition xml:lang="en">A part of a title, such as a subtitle, part number, or part name.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>    
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/TitleOrigin">
+        <rdfs:label xml:lang="en">Title origin</rdfs:label>    
+        <skos:definition xml:lang="en">The place from which a title originates, such as spine, cover, container, etc.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TranslatorActivity">
+        <rdfs:label xml:lang="en">Translator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of translatin a resource.</skos:definition>
+        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>    
+
+
+
     <!-- OBJECT PROPERTIES --> 
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOrigin">
-        <rdfs:label>has origin</rdfs:label>    
-        <skos:definition>Specifies the physical location from which this title originates, such as spine, cover, container, etc.</skos:definition>
-        <skos:scopeNote>Distinct from http://bib.ld4l.org/ontology/hasSource, which specifies an external organization or scheme from which the title was obtained.</skos:scopeNote>
-        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
+
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/atLocation">
+        <rdfs:label xml:lang="en">at location</rdfs:label>
+        <skos:definition xml:lang="en">The resource being described is at the specified location.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/> 
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/locationOf"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasActivity">
-        <rdfs:label>has activity</rdfs:label>
-        <skos:definition>Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
+        <rdfs:label xml:lang="en">has activity</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isActivityOf"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/geographicCoverage">
-        <rdfs:label>geographic coverage</rdfs:label>
-        <skos:definition>Specifies the geographic coverage of the content of the resource.</skos:definition>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/> 
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/temporalCoverage">
-        <rdfs:label>geographic coverage</rdfs:label>
-        <skos:definition>Specifies the time period covered in the content of the resource.</skos:definition>
-        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Temporal"/> 
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isActivityOf">
-        <rdfs:label>has activity</rdfs:label>
-        <skos:definition>Relates an activity to the affected resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasActivity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAnnotation">
-        <rdfs:label>has annotation</rdfs:label>
-        <skos:definition>Relates a resource to its annotation.</skos:definition>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/oa#Annotation"/> 
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
+
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAgent">
-        <rdfs:label>has agent</rdfs:label>
-        <skos:definition>Relates an activity to its agent.</skos:definition>
+        <rdfs:label xml:lang="en">has agent</rdfs:label>
+        <skos:definition xml:lang="en">Relates an activity to its agent.</skos:definition>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isAgentOf"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -389,188 +354,272 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAnnotation">
+        <rdfs:label xml:lang="en">has annotation</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to its annotation.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/oa#Annotation"/> 
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasGeographicCoverage">
+        <rdfs:label xml:lang="en">has geographic coverage</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the geographic coverage of the content of the resource.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/> 
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOrigin">
+        <rdfs:label xml:lang="en">has origin</rdfs:label>    
+        <skos:definition xml:lang="en">Specifies the physical location from which this title originates, such as spine, cover, container, etc.</skos:definition>
+        <skos:scopeNote xml:lang="en">Distinct from http://bib.ld4l.org/ontology/hasSource, which specifies an external organization or scheme from which the title was obtained.</skos:scopeNote>
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasPreferredTitle">
+        <rdfs:label xml:lang="en">has preferred title</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the preferred title of this resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isPreferredTitleOf"/>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasSource">
+        <rdfs:label xml:lang="en">has source</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to the source from which it was derived.</skos:definition>
+        <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSourceOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasTemporalCoverage">
+        <rdfs:label xml:lang="en">has temporal coverage</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the time period covered in the content of the resource.</skos:definition>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Temporal"/> 
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/heldBy">
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <skos:definition>Specifies the agent holding this item or from which it is available.</skos:definition>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/holds"/>
+        <rdfs:label>held by</rdfs:label>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/holds">
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <skos:definition>Specifies an item held by this agent.</skos:definition>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/heldBy"/>
+        <rdfs:label>holds</rdfs:label>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isActivityOf">
+        <rdfs:label xml:lang="en">has activity</rdfs:label>
+        <skos:definition xml:lang="en">Relates an activity to the affected resource.</skos:definition>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasActivity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isAgentOf">
-        <rdfs:label>is agent of</rdfs:label>
-        <skos:definition>Relates an agent to the activity it participated in.</skos:definition>
+        <rdfs:label xml:lang="en">is agent of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an agent to the activity it participated in.</skos:definition>
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasAgent"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasSource">
-        <rdfs:label>has source</rdfs:label>
-        <skos:definition>Relates this resource to the source from which it was derived.</skos:definition>
-        <skos:scopeNote>Has general applicability to many types of sources and resources.</skos:scopeNote>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSourceOf"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isSourceOf">
-        <rdfs:label>is source of</rdfs:label>
-        <skos:definition>Relates this resource to a resource of which it is the source.</skos:definition>
-        <skos:scopeNote>Has general applicability to many types of sources and resources.</skos:scopeNote>        
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSource"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasPreferredTitle">
-        <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
-        <skos:definition>Specifies the preferred title of this resource.</skos:definition>
-        <skos:scopeNote>A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
-        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isPreferredTitleOf"/>
-        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isPreferredTitleOf">
-        <rdfs:label xml:lang="en-us">is preferred title of</rdfs:label>
-        <skos:definition>Specifies the resource for which this is the preferred title.</skos:definition>
-        <skos:scopeNote>A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
-        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/titleOf"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasPreferredTitle"/>
-        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-    </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/atLocation">
-        <rdfs:label>at location</rdfs:label>
-        <skos:definition>The resource being described is at the specified location.</skos:definition>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/> 
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/locationOf"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/locationOf">
-        <rdfs:label>location of</rdfs:label>
-        <skos:definition>The specified resource is at the location being described.</skos:definition>
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isLocationOf">
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+        <skos:definition xml:lang="en">The specified resource is at the location being described.</skos:definition>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/atLocation"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isPreferredTitleOf">
+        <rdfs:label xml:lang="en">is preferred title of</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the resource for which this is the preferred title.</skos:definition>
+        <skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/titleOf"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasPreferredTitle"/>
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+    </owl:ObjectProperty>
     
-    <!-- DATATYPE PROPERTIES -->
-    
-    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isSourceOf">
+        <rdfs:label xml:lang="en">is source of</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to a resource of which it is the source.</skos:definition>
+        <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>        
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSource"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
+
     
     <!-- NAMED INDIVIDUALS -->
 
     <!-- Type http://www.w3.org/ns/oa#Motivation -->
     
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/reviewing">
-        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
-        <rdfs:label xml:lang="en-us">reviewing</rdfs:label>
-        <skos:definition xml:lang="en-us">The motivation that represents reviewing the target resource.</skos:definition>
-        <skos:scopeNote>Optional use with annotation body type http://id.loc.gov/ontologies/bibframe/Review.</skos:scopeNote>
-        <skos:broader rdfs:resource="http://www.w3.org/ns/oa#assessing"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/cataloging">
         <rdf:type rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
-        <rdfs:label xml:lang="en-us">cataloging</rdfs:label>
-        <skos:definition xml:lang="en-us">The motivation that represents cataloging or recording metadata.</skos:definition>
-        <skos:scopeNote>May be used with annotation body types http://bib.ld4l.org/ontology/Credits, http://bib.ld4l.org/ontology/CustodialHistory, http://bib.ld4l.org/ontology/HistoryOfWork, http://bib.ld4l.org/ontology/NatureOfContent, http://bib.ld4l.org/ontology/SystemRequirements.</skos:scopeNote>
+        <rdfs:label xml:lang="en">cataloging</rdfs:label>
+        <skos:definition xml:lang="en">The motivation that represents cataloging or recording metadata.</skos:definition>
+        <skos:scopeNote xml:lang="en">May be used with annotation body types http://bib.ld4l.org/ontology/Credits, http://bib.ld4l.org/ontology/CustodialHistory, http://bib.ld4l.org/ontology/HistoryOfWork, http://bib.ld4l.org/ontology/NatureOfContent, http://bib.ld4l.org/ontology/SystemRequirements.</skos:scopeNote>
         <skos:broader rdfs:resource="http://www.w3.org/ns/oa#describing"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/reviewing">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
+        <rdfs:label xml:lang="en">reviewing</rdfs:label>
+        <skos:definition xml:lang="en">The motivation that represents reviewing the target resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">Optional use with annotation body type http://id.loc.gov/ontologies/bibframe/Review.</skos:scopeNote>
+        <skos:broader rdfs:resource="http://www.w3.org/ns/oa#assessing"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual> 
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/summarizing">
         <rdf:type rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
-        <rdfs:label xml:lang="en-us">summarizing</rdfs:label>
-        <skos:definition xml:lang="en-us">The motivation that represents a summarizing of the target resource.</skos:definition>
-        <skos:scopeNote>May be used with annotation body types http://id.loc.gov/ontologies/bibframe/Summary, http://id.loc.gov/ontologies/bibframe/TableOfContents.</skos:scopeNote>
+        <rdfs:label xml:lang="en">summarizing</rdfs:label>
+        <skos:definition xml:lang="en">The motivation that represents summarizing the target resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">May be used with annotation body types http://id.loc.gov/ontologies/bibframe/Summary, http://id.loc.gov/ontologies/bibframe/TableOfContents.</skos:scopeNote>
         <skos:broader rdfs:resource="http://www.w3.org/ns/oa#describing"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
-    
+ 
+ 
     
     <!-- Type http://id.loc.gov/ontologies/bibframe/Status -->
+
+    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/cancelled">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/current">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">current</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/deprecated">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual>
+ 
+    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/invalid">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">invalid</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual>
     
     
     <!-- Type http://bib.ld4l.org/ontology/TitleOrigin -->
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/addedTitlePage">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">added title page</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a title appearing on a title page that has not been chosen as the chief source.</skos:definition>
+        <rdfs:label xml:lang="en">added title page</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title appearing on a title page that has not been chosen as the chief source.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/binder">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">binder</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a title derived from a binding that is not that of the publisher.</skos:definition>
+        <rdfs:label xml:lang="en">binder</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title derived from a binding that is not that of the publisher.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/caption">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">caption</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a title given at the beginning of the first page of the text.</skos:definition>
+        <rdfs:label xml:lang="en">caption</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title given at the beginning of the first page of the text.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/container">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">container</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a title on the resource's container.</skos:definition>
-        <skos:inScheme rdf:resource="http://www.w3.org/ns/oa#motivationScheme"/>
+        <rdfs:label xml:lang="en">container</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title on the resource's container.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/cover">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">cover</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a title printed on the cover of a resource as issued.</skos:definition>
+        <rdfs:label xml:lang="en">cover</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title printed on the cover of a resource as issued.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/margin">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">margin</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a running title printed on the top or bottom margin of each page of a publication.</skos:definition>
+        <rdfs:label xml:lang="en">margin</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a running title printed on the top or bottom margin of each page of a publication.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/spine">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">spine</rdfs:label>
-        <skos:definition xml:lang="en-us">Applies to a publisher's title found on the spine of a publication.</skos:definition>
+        <rdfs:label xml:lang="en">spine</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a publisher's title found on the spine of a publication.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/supplied">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">supplied</rdfs:label>
-        <skos:definition xml:lang="en-us"></skos:definition>
+        <rdfs:label xml:lang="en">supplied</rdfs:label>
+        <skos:definition xml:lang="en"></skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/transcribed">
         <rdf:type rdf:resource="http://bib.ld4l.org/ontology/TitleOrigin"/>
-        <rdfs:label xml:lang="en-us">transcribed</rdfs:label>
-        <skos:definition xml:lang="en-us"></skos:definition>
+        <rdfs:label xml:lang="en">transcribed</rdfs:label>
+        <skos:definition xml:lang="en"></skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
     
 </rdf:RDF>
-
 
