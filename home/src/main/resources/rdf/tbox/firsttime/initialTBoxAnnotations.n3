@@ -9,7 +9,7 @@
 @prefix schema:  <http://schema.org/> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
 
 ##### ONTOLOGY METADATA #####
 
@@ -33,9 +33,6 @@
     rdfs:label "FOAF (Friend of a Friend)"@en-US ;
     vitro:ontologyPrefixAnnot "foaf"^^xsd:string .
 
-<http://bib.ld4l.org/ontology/> 
-    rdfs:label "LD4L-O (LD4L Proposed Bibliographic Ontology)"@en-US ;  
-    vitro:ontologyPrefixAnnot "ld4l"^^xsd:string .
        
 <http://www.lingvoj.org/ontology#> 
     rdfs:label "Lingvoj"@en-US ;
@@ -100,98 +97,84 @@
 ## WORKS ##
 ##
 
-fabio:Journal
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+##Doesn't appear fabio is being used anymore?
 
-fabio:Magazine
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
-   
-fabio:Newspaper
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
         
-ld4l:Audio
+bibframe:Audio
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Cartography
+bibframe:Cartography
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Collection
+bibframe:Collection
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
     
-ld4l:ContinuingResource
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removed continuing resource
     
-ld4l:Dataset
+bibframe:Dataset
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Dissertation
+bibframe:Dissertation
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
     
-ld4l:FiniteResource
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removed finite resource
 
-ld4l:Index
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
-    
-ld4l:IntegratingResource
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Reoved Index
 
-ld4l:Monograph
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removed integrating resource
+
+#Removed monograph    
              
-ld4l:MovingImage
+bibframe:MovingImage
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Multimedia
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removed multimedia
 
-ld4l:MultipartMonograph
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removed multipartmonograph
+
    
-ld4l:NotatedMovement
+bibframe:NotatedMovement
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
     
-ld4l:NotatedMusic
+bibframe:NotatedMusic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Periodical
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removing periodical
 
-ld4l:PeriodicalPart
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removing periodicalPart
+
+#Removing Serial
+
+#Removing Series
         
-ld4l:Serial
+                   
+bibframe:StillImage
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Series
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
-           
-ld4l:StillImage
+bibframe:Text
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Text
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+#Removing three dimensional object
 
-ld4l:ThreeDimensionalObject
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
 
-ld4l:Work
+bibframe:Work
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
         
 ##
 ## INSTANCES ##
 ##
 
-ld4l:Electronic
+bibframe:Electronic
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
     
-ld4l:Instance
+bibframe:Instance
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
     
-ld4l:Print
+bibframe:Print
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
     
-ld4l:Tactile
+bibframe:Tactile
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
 
     
@@ -199,7 +182,7 @@ ld4l:Tactile
 ## ITEMS ##
 ##
 
-ld4l:Item
+bibframe:Item
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupitems> .
    
     
@@ -229,7 +212,7 @@ schema:GovernmentOrganization
 foaf:Agent
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupagents> .
     
-ld4l:Family
+bibframe:Family
     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupagents> .    
 
 
@@ -237,9 +220,8 @@ ld4l:Family
 ## TOPICS ##
 ##
 
-ld4l:Topic
-    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouptopics> .
-  
+#removed topic
+
     
 ##
 ## LOCATIONS ##
@@ -260,11 +242,8 @@ schema:Event
 ##### PROPERTY CONFIGURATION #####
 
 
-dcterms:hasFormat
-    vitro:displayRankAnnot
-        "20"^^xsd:int ;
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
+#removed hasFormat
+
         
 # Displayed as faux properties, so hide the display of the base property.
 dcterms:hasPart
@@ -289,19 +268,20 @@ foaf:name
         <http://ld4l.org/ontology#vitroPropertyGroupidentity> ;
     vitro:displayRankAnnot "10"^^xsd:int .
                        
-ld4l:absorbedBy
+bibframe:absorbed
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
                     
-ld4l:absorbedBy
+bibframe:absorbedBy
+    vitro:inPropertyGroupAnnot
+        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+
+#marked as todo in bibframe.2016 file but including here        
+bibframe:accompaniedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
         
-ld4l:accompaniedBy
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-        
-ld4l:accompanies
+bibframe:accompanies
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
@@ -314,45 +294,9 @@ ld4l:acquisitionNote
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
 
-ld4l:cartographicEasternmostLongitude
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
+#removed cartographicesternmostlongitude, equinox, exclusiongringcoordinates, northernmostlatitude,outergringcoordinates,projection
+#scale, southernmostlatitude, westernmostlongitude, zone etc.
 
-ld4l:cartographicEquinox
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicExclusionGRingCoordinates
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicNorthernmostLatitude
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicOuterGRingCoordinates
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicProjection
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicScale
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicSouthernmostLatitude
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicWesternmostLongitude
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:cartographicZone
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
 
 ld4l:continuedUnderNewTitleBy
     vitro:inPropertyGroupAnnot
@@ -367,93 +311,64 @@ ld4l:continuesUnderNewTitle
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
   
-ld4l:dimensions
+bibframe:dimensions
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
 
-ld4l:dissertationNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+#removed dissertation note
 
-ld4l:equivalentTo
-    vitro:displayRankAnnot
-        "20"^^xsd:int ;
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
 
-ld4l:extent
+#removed equivalent to
+
+bibframe:extent
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
-
-# Displayed as faux properties, so hide the display of the base property.
-ld4l:follows
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
-
-ld4l:followsInNarrative
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-
-ld4l:formedBySplitting
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-
-ld4l:governedBy
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouppolicies> .
         
-ld4l:hasAbsorbed
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+        
+#removed follows
+# Displayed as faux properties, so hide the display of the base property.
+#removed followsinnarrative
+
+#removed formedBySplitting
+
+#removed governedBy
+
+#removed hasAbsorbed
 
 ld4l:hasAnnotation
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupannotations> .
+        
+#removed has circulation status        
 
-ld4l:hasCirculationStatus
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupcirculation> .
-
-ld4l:hasContribution
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
-    vitro:selectFromExistingAnnot "false"^^xsd:boolean ;             
-    vitro:customEntryFormAnnot 
-        "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.WorkHasContributorGenerator"^^xsd:string ;
+#removed hasContribution
+#although we should have a property group for has activity now
+#is this a faux property? no
+ld4l:hasActivity
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .
-        
-ld4l:hasCoverArt
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
 
-ld4l:hasDataSource
+#removed hasCoverArt        
+
+#removed data source
+
+bibframe:hasExpression
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
-ld4l:hasExpression
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-        
-ld4l:hasFirst
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+#removed hasFirst        
 
-ld4l:hasGenre
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupgenreForm> .
-                 
-ld4l:hasHolding
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupinstanceItems> .
+#removed hasGenre
+
+#removed hasHolding               
+               
         
-ld4l:hasInstance
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
+bibframe:hasInstance
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupworkInstances> .             
- 
-ld4l:hasLast
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+
+#removed hasLast 
+
  
 # ld4l:hasMusicKey
 #     vitro:inPropertyGroupAnnot
@@ -462,44 +377,43 @@ ld4l:hasLast
 # ld4l:hasMusiMedium
 #     vitro:inPropertyGroupAnnot
  #        <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
-                                                                           
-ld4l:hasOriginalVersion
-    vitro:displayRankAnnot
-        "20"^^xsd:int ;
+
+#replaced hasoriginalversion with bibframe:originalVersion                                                                           
+bibframe:originalVersion
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedInstances> .
+#removed hasOriginPlace
 
-ld4l:hasOriginPlace
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-
-ld4l:hasOtherEdition
+#replace with bibframe otherEdition
+bibframe:otherEdition
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+
 
 ld4l:hasPreferredTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouptitles> .
-               
-ld4l:hasProvision
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupprovisioning> .
+#removed hasProvision               
+
 
 # Displayed as faux properties, so hide the display of the base property.
 # Should apply only to Instances, but sample data uses between Works.
-ld4l:hasReproduction
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
-ld4l:hasTitle
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptitles> .
+#Commenting this out for now since need to see whether or not this should be a faux property
+#bibframe:hasReproduction
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+#        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+#Commenting out hasTitle 
+#ld4l:hasTitle
+#    vitro:inPropertyGroupAnnot
+#        <http://ld4l.org/ontology#vitroPropertyGrouptitles> .
         
 ld4l:heldBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupcirculation> .        
          
-ld4l:identifiedBy
+bibframe:identifiedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupidentifiers> .
 
@@ -511,45 +425,30 @@ ld4l:identifiedBy
 ld4l:isAgentOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
         <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
-    
-ld4l:isHoldingFor
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupitemInstance> .
 
-ld4l:isInstanceOf
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupinstanceWork> .
-                                                           
-ld4l:isExpressionOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+#remove isHoldingFor    
 
-ld4l:isFirstOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-        
-ld4l:isFindingAidFor
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+#remove isInstanceOf
 
-ld4l:isLastOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+#remove isExpressionOf                                                           
+
+#remove isFirstOf
+
+#remove isFindingAidFor        
+
+#remove isLastOf
+
  
 ld4l:isPreferredTitleOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouptitleOfResource> .
-               
-ld4l:isTitleOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptitleOfResource> .
-                
-ld4l:isUnionOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+
+#remove isTitleOf               
+
+#remove isUnionOf                
+
         
-ld4l:mergedToForm
+bibframe:mergedToForm
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
                                
@@ -557,118 +456,85 @@ ld4l:mergedToForm
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
 
-ld4l:note
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+#Remove note
 
-ld4l:performanceOf
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupworksPerformed> .
+#Remove performanceOf
+
+#remove performed at
                                        
-ld4l:performedAt
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
+
         
 # Displayed as faux properties, so hide the display of the base property.
-ld4l:precedes
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+#remove precedes
 
+#remove precedesInNarrative
 
-ld4l:precedesInNarrative
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
 # ??
-ld4l:producedAt
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
+#remove producedAt
 
-ld4l:received
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupawards> .
-        
-ld4l:recordedAt
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
-        
-ld4l:recordedIn
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupworksAboutEvent> .
+#remove received
+
+#remove recordedAt        
+
+#remove recordedIn        
+
 
 # Displayed as faux properties, so hide the display of the base property.
 # Should apply only to Instances, but sample data uses between Works.
-ld4l:reproduces
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+#removing reproduces
+
                                
-ld4l:separatedFrom
+bibframe:separatedFrom
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
-ld4l:separatedInto
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+#remove separatedInto
+
  
-ld4l:splitInto
+bibframe:splitInto
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
-ld4l:subject
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouptopics> .
-        
-ld4l:supersededBy
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-                       
-ld4l:supersedes
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+# remove subject
 
-ld4l:supplements
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
+# remove superseded        
 
-ld4l:translates
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
-               
-ld4l:translatedAs
+#remove supersedes                       
+
+#remove supplements
+
+#remove translates
+
+# rda has a property that has name "translatedAs" so using that in stead of ld4l:translatedAs               
+<http://rdaregistry.info/Elements/u/P60280>
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
                                                                                       
-legacy:aspectRatio
+bibframe:aspectRatio
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+#removing awardnote
 
-legacy:awardNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
                               
-legacy:colorContent
+bibframe:colorContent
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
+
+#removing contentsNote        
+
+#removing creditsNote                        
+
         
-legacy:contentsNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
-                        
-legacy:creditsNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
-        
-legacy:duration
+bibframe:duration
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
-                                      
-legacy:findingAidNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
-                        
-legacy:format
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
+
+#remove findingAidNote                                      
+
+#remove format                        
+
 
 # legacy:formatOfMusic
 #     vitro:inPropertyGroupAnnot
@@ -677,26 +543,17 @@ legacy:format
 #legacy:formDesignation
 #    vitro:inPropertyGroupAnnot
 #        <http://ld4l.org/ontology#vitroPropertyGroupgenreForm> .
-                                
-legacy:geographicCoverageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupgenreForm> .
 
-legacy:graphicScaleNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupphysicalCharacteristics> .
+#removing geographicCoverageNote                                
 
-legacy:languageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+#removing graphicScaleNote
 
-legacy:legalDate
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
-                        
-legacy:modeOfIssuance
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+#removing languageNote
+
+#removing legalDate
+
+#removing modeOfIssuance                        
+
 
 # legacy:musicKey
 #     vitro:inPropertyGroupAnnot
@@ -705,35 +562,29 @@ legacy:modeOfIssuance
 # legacy:musicMediumNote
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
- 
-legacy:notationSystem
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
+
+#removing notation system 
+
                
 # legacy:performerNote
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupperformances> .
-        
-legacy:providerStatement
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupprovisioning> .
-                
-legacy:supplementaryContentNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
-                 
-legacy:temporalCoverageNote
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupgenreForm> .
+      
+#removing providerStatement
 
-legacy:treatySignator
-    vitro:inPropertyGroupAnnot
-        <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .
+#removing supplementary content note
+                
+
+#removing temporal coverage note                 
+
+#removing treatySignator
+
 
 # Displayed as faux properties, so hide the display of the base property.
-owl:sameAs
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+#Commenting this out
+#owl:sameAs
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+#        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
         
                
 schema:birthDate
