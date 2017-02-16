@@ -428,7 +428,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isActivityOf">
-        <rdfs:label xml:lang="en">has activity</rdfs:label>
+        <rdfs:label xml:lang="en">is activity of</rdfs:label>
         <skos:definition xml:lang="en">Relates an activity to the affected resource.</skos:definition>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Activity"/> 
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasActivity"/>
