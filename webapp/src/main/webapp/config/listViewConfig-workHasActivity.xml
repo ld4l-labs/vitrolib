@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+        PREFIX ld4l: &lt;http://bib.ld4l.org/ontology/&gt;
+        PREFIX prov: &lt;http://www.w3.org/ns/prov#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+    	PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    	PREFIX bibframe: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
+        
+        SELECT DISTINCT 
+            ?activity
+            ?subclassLabel
+            ?agent ?agentLabel 
+        
+        WHERE {
+            ?subject ?property ?activity .
+            ?activity a ld4l:Activity ;
+                ld4l:hasAgent ?agent .
+            ?agent rdfs:label ?agentLabel .
+            ?agent rdf:type foaf:Agent .
+            OPTIONAL {
+                ?activity vitro:mostSpecificType ?subclass .
+                ?subclass rdfs:subClassOf ld4l:Activity ;
+                    rdfs:label ?subclassLabel .
+            }
+        }
+    </query-select>
+    
+    <template>propStatement-workHasActivity.ftl</template>
+</list-view-config>

@@ -1,0 +1,68 @@
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ld4l: <http://bib.ld4l.org/ontology/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <http://schema.org/> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+
+#Do we need property configs to designate simple create new property information
+#Commenting out for now
+#local:hasInstanceContext a :ConfigContext ;
+#    :hasConfiguration local:hasInstanceConfig ;
+#    :configContextFor <http://id.loc.gov/ontologies/bibframe/hasInstance> .
+
+#local:hasInstanceConfig a :ObjectPropertyDisplayConfig ;
+#    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+
+#local:instanceOfContext a :ConfigContext ;
+#    :hasConfiguration local:instanceOfConfig ;
+#    :configContextFor <http://id.loc.gov/ontologies/bibframe/instanceOf> .
+
+#local:instanceOfConfig a :ObjectPropertyDisplayConfig ;
+#    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+
+##Similar to agent has contribution, agent has activity   
+##Work has activity 
+#local:workHasActivityContext a :ConfigContext ;
+#    :hasConfiguration local:workHasActivityConfig ;
+#    :configContextFor <http://bib.ld4l.org/ontology/hasActivity>;
+#    :qualifiedByDomain bibframe:Work ;
+#    :qualifiedBy ld4l:Activity  .
+
+#local:activityOfConfig a :ObjectPropertyDisplayConfig ;
+#    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean;
+#    :listViewConfigFile "listViewConfig-workHasActivity.xml"^^xsd:string  .
+
+
+#local:activityOfContext a :ConfigContext ;
+#    :hasConfiguration local:activityOfConfig ;
+#    :configContextFor <http://bib.ld4l.org/ontology/isActivityOf>;
+#    :qualifiedByDomain bibframe:Work ;
+#    :qualifiedBy ld4l:Activity  .
+
+#local:activityOfConfig a :ObjectPropertyDisplayConfig ;
+ #   vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean;
+ #   :listViewConfigFile "listViewConfig-workHasActivity.xml"^^xsd:string  .
+
+#Agent has activity    
+#local:agentHasActivityContext a :ConfigContext ;
+#    :hasConfiguration local:agentHasActivityConfig ;
+#    :configContextFor <http://bib.ld4l.org/ontology/isAgentOf> ; 
+#    :qualifiedByDomain foaf:Agent ;
+#    :qualifiedBy ld4l:Activity .
+    
+#local:agentHasActivityConfig a :ObjectPropertyDisplayConfig ;
+#	:listViewConfigFile "listViewConfig-agentHasActivity.xml"^^xsd:string  .
+    

@@ -1,0 +1,10 @@
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ld4l: <http://bib.ld4l.org/ontology/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://id.loc.gov/ontologies/bibframe/hasInstance> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+<http://id.loc.gov/ontologies/bibframe/instanceOf> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+<http://bib.ld4l.org/ontology/isActivityOf> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+<http://bib.ld4l.org/ontology/hasActivity> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .

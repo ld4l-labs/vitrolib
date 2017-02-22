@@ -49,7 +49,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/AcquisitionActivity">
         <rdfs:label xml:lang="en">Acquisition</rdfs:label>    
         <skos:definition xml:lang="en">The activity of acquiring a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -57,7 +57,6 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
         <skos:definition xml:lang="en">An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -65,7 +64,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/AuthorActivity">
         <rdfs:label xml:lang="en">Author</rdfs:label>    
         <skos:definition xml:lang="en">The activity of authoring a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class> 
@@ -73,7 +72,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/CaptureActivity">
         <rdfs:label xml:lang="en">Capture</rdfs:label>    
         <skos:definition xml:lang="en">The recording, filming, etc. of a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -81,7 +80,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ComposerActivity">
         <rdfs:label xml:lang="en">Composer</rdfs:label>    
         <skos:definition xml:lang="en">The activity of composing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -98,7 +97,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ConductorActivity">
         <rdfs:label xml:lang="en">Conductor</rdfs:label>    
         <skos:definition xml:lang="en">The activity of conducting a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -106,7 +105,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/CreatorActivity">
         <rdfs:label xml:lang="en">Creator</rdfs:label>    
         <skos:definition xml:lang="en">The activity of creating a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -138,7 +137,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistributorActivity">
         <rdfs:label xml:lang="en">Distributor</rdfs:label>    
         <skos:definition xml:lang="en">The activity of distributing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -146,7 +145,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/EditorActivity">
         <rdfs:label xml:lang="en">Editor</rdfs:label>    
         <skos:definition xml:lang="en">The activity of editing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -162,7 +161,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/IllustratorActivity">
         <rdfs:label xml:lang="en">Illustrator</rdfs:label>    
         <skos:definition xml:lang="en">The activity of illustrating a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -187,7 +186,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ManufacturerActivity">
         <rdfs:label xml:lang="en">Manufacturer</rdfs:label>    
         <skos:definition xml:lang="en">The activity of manufacturing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -195,7 +194,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/NarratorActivity">
         <rdfs:label xml:lang="en">Narrator</rdfs:label>    
         <skos:definition xml:lang="en">The activity of narrating a  resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -244,7 +243,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/PerformerActivity">
         <rdfs:label xml:lang="en">Performer</rdfs:label>    
         <skos:definition xml:lang="en">The activity of performing in a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -252,7 +251,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/ProducerActivity">
         <rdfs:label xml:lang="en">Producer</rdfs:label>    
         <skos:definition xml:lang="en">The activity of producing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -260,7 +259,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/PublisherActivity">
         <rdfs:label xml:lang="en">Publishing</rdfs:label>    
         <skos:definition xml:lang="en">The activity of publishing a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -268,7 +267,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Software">
         <rdfs:label xml:lang="en">Software</rdfs:label>    
         <skos:definition xml:lang="en">A compiled executable binary file.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -294,7 +293,7 @@
         <skos:definition xml:lang="en">A work intended to be at least partially perceived with the sense of touch.</skos:definition>
         <skos:example xml:lang="en">The children's book Pat the Bunny.</skos:example>
         <skos:scopeNote xml:lang="en">Contrasts with http://id.loc.gov/ontologies/bibframe/TactileNotation, a notation used for transcribing a resource, such as braille.</skos:scopeNote>
-        <rdfs:subClassOf rdfs:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -316,7 +315,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/TranslatorActivity">
         <rdfs:label xml:lang="en">Translator</rdfs:label>    
         <skos:definition xml:lang="en">The activity of translatin a resource.</skos:definition>
-        <rdfs:subClassOf rdfs:resource="http://bib.ld4l.org/ontology/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>    
@@ -485,7 +484,7 @@
         <rdfs:label xml:lang="en">cataloging</rdfs:label>
         <skos:definition xml:lang="en">The motivation that represents cataloging or recording metadata.</skos:definition>
         <skos:scopeNote xml:lang="en">May be used with annotation body types http://bib.ld4l.org/ontology/Credits, http://bib.ld4l.org/ontology/CustodialHistory, http://bib.ld4l.org/ontology/HistoryOfWork, http://bib.ld4l.org/ontology/NatureOfContent, http://bib.ld4l.org/ontology/SystemRequirements.</skos:scopeNote>
-        <skos:broader rdfs:resource="http://www.w3.org/ns/oa#describing"/>
+        <skos:broader rdf:resource="http://www.w3.org/ns/oa#describing"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
@@ -495,7 +494,7 @@
         <rdfs:label xml:lang="en">reviewing</rdfs:label>
         <skos:definition xml:lang="en">The motivation that represents reviewing the target resource.</skos:definition>
         <skos:scopeNote xml:lang="en">Optional use with annotation body type http://id.loc.gov/ontologies/bibframe/Review.</skos:scopeNote>
-        <skos:broader rdfs:resource="http://www.w3.org/ns/oa#assessing"/>
+        <skos:broader rdf:resource="http://www.w3.org/ns/oa#assessing"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual> 
@@ -505,7 +504,7 @@
         <rdfs:label xml:lang="en">summarizing</rdfs:label>
         <skos:definition xml:lang="en">The motivation that represents summarizing the target resource.</skos:definition>
         <skos:scopeNote xml:lang="en">May be used with annotation body types http://id.loc.gov/ontologies/bibframe/Summary, http://id.loc.gov/ontologies/bibframe/TableOfContents.</skos:scopeNote>
-        <skos:broader rdfs:resource="http://www.w3.org/ns/oa#describing"/>
+        <skos:broader rdf:resource="http://www.w3.org/ns/oa#describing"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:NamedIndividual>
