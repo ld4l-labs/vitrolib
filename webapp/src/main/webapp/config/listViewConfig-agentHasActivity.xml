@@ -15,18 +15,22 @@
     	PREFIX bibframe: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
     
         SELECT DISTINCT 
-            ?activity
+            ?activity ?activityLabel
             ?subclassLabel
             ?work ?workTitle
     
         WHERE {
             ?subject ?property ?activity .
-            ?activity a ld4l:Activity ;
-                ld4l:isActivityOf ?work .
+            ?activity a ld4l:Activity .
+            ?activity rdfs:label ?activityLabel .
+            
+            OPTIONAL {
+             ?activity ld4l:isActivityOf ?work .
             ?work a bibframe:Work ;
                 bibframe:title ?title .
             ?title a bibframe:Title ;
                 rdfs:label ?workTitle .
+                }
             OPTIONAL {
                 ?activity vitro:mostSpecificType ?subclass .
                 ?subclass rdfs:subClassOf ld4l:Activity; 

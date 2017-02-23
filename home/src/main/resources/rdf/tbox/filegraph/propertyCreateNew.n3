@@ -8,3 +8,4 @@
 <http://id.loc.gov/ontologies/bibframe/instanceOf> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
 <http://bib.ld4l.org/ontology/isActivityOf> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
 <http://bib.ld4l.org/ontology/hasActivity> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .
+<http://bib.ld4l.org/ontology/isAgentOf> vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean .

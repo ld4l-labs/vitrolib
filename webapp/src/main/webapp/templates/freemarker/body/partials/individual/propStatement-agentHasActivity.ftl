@@ -16,6 +16,12 @@
     <#if statement.subclassLabel??>
         (${statement.subclassLabel?replace(" activity", "")})
     </#if>
+<#-- If there is no work, still show activity -->
+<#else>    
+	<#if statement.activity?? && statement.activityLabel??>
+		    <a href="${profileUrl(statement.uri("activity"))}" title="${statement.activityLabel}">${statement.activityLabel}[Activity]</a>
+
+	</#if>
 </#if>
 
 </#macro>
