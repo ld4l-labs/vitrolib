@@ -422,9 +422,10 @@ bibframe:identifiedBy
 #         <http://ld4l.org/ontology#vitroPropertyGroupartAndIllustrations> .
 
 # Displayed as faux properties, so hide the display of the base property.
-ld4l:isAgentOf
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot
-        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+#Comment out for now until faux property in place
+#ld4l:isAgentOf
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+#        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 #remove isHoldingFor    
 
