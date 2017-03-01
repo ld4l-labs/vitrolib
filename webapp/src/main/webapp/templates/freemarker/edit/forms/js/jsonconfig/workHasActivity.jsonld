@@ -1,0 +1,173 @@
+var configjson = {
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "ld4l": "http://bib.ld4l.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/"
+  },
+  "@graph": [
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#pattern": [
+        "\n        ?activity ld4l:hasAgent ?agent .\n        ?agent ld4l:isAgentOf ?activity .\n    ",
+        "\n        ?activity a ld4l:Activity .\n        ?activity a ?activityType .\n        ?activity rdfs:label ?activityLabel . \n    ",
+        "\n        ?work ld4l:hasActivity ?activity . \n        ?activity ld4l:isActivityOf ?work .\n    "
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#prefixes": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/> .\n        PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/> .\n      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . \n    "
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgent",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#mayUseNewResource": true,
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n            SELECT ?existingAgent \n        WHERE {\n          ?activity ld4l:hasAgent ?existingAgent .\n        }\n    ",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#validator": {
+        "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_nonemptyValidator"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "agent"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_optionalN3",
+      "@type": [
+        "forms:FormComponent",
+        "forms:OptionalN3Pattern"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#pattern": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/> .\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . \n        PREFIX foaf:<http://xmlns.com/foaf/0.1/> . \n        ?agent a ?agentType. \n        ?agent rdfs:label ?agentName. \n        ?agent foaf:name ?agentName .\n    "
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivityLabel",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#queryForExistingValue": "\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   \n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        SELECT ?existingActivityLabel \n        WHERE {\n          ?activity rdfs:label ?existingActivityLabel .\n        }\n    ",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#rangeDatatypeUri": {
+        "@id": "xsd:string"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "activityLabel"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivity",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#mayUseNewResource": true,
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "activity"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_nonemptyValidator",
+      "@type": [
+        "forms:NonEmptyFieldValidator",
+        "forms:FieldValidator"
+      ]
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgentName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        PREFIX prov: <http://www.w3.org/ns/prov#> \n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   \n        PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingAgentName \n        WHERE {\n          ?activity prov:agent ?agent .?agent rdfs:label ?existingAgentName .\n        }\n    ",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "agentName"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_agentListFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#classUri": {
+        "@id": "foaf:Agent"
+      }
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgentType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#fieldOptions": {
+        "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_agentListFieldOptions"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n      PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingAgentType \n        WHERE {\n          ?activity ld4l:hasAgent ?agent .\n          ?agent vitro:mostSpecificType ?existingAgentType .\n        }\n    ",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#validator": {
+        "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_nonemptyValidator"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "agentType"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_activityTypeListFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParentCustomLabels",
+        "forms:FieldOptions"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#classUri": {
+        "@id": "ld4l:Activity"
+      }
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#workHasActivity",
+      "@type": [
+        "forms:FormBuilder",
+        "forms:SimpleFormBuilder"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#component": [
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivity"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_requiredN3"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgent"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgentName"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivityType"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivityLabel"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_optionalN3"
+        },
+        {
+          "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgentType"
+        }
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#returnTo": "HERE",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#template": "workHasActivity.ftl",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForObject": "activity",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForPredicate": "predicate",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForSubject": "work"
+    },
+    {
+      "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivityType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#fieldOptions": {
+        "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_activityTypeListFieldOptions"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingActivityType \n        WHERE {\n          ?activity vitro:mostSpecificType ?existingActivityType .\n        }\n    ",
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#validator": {
+        "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_nonemptyValidator"
+      },
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varName": "activityType"
+    }
+  ]
+};
