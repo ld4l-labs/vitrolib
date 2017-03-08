@@ -3,20 +3,6 @@ package edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.fields;
 
 import java.text.Collator;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-
-import com.hp.hpl.jena.vocabulary.OWL;
-
-import edu.cornell.mannlib.vitro.webapp.beans.VClass;
-import edu.cornell.mannlib.vitro.webapp.controller.VitroRequest;
-import edu.cornell.mannlib.vitro.webapp.dao.VClassDao;
-import edu.cornell.mannlib.vitro.webapp.dao.WebappDaoFactory;
-import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.EditConfigurationVTwo;
 
 public class ChildVClassesWithParentCustomLabels extends ChildVClassesWithParent   {
 

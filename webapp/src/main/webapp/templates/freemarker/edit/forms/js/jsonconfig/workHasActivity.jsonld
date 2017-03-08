@@ -148,11 +148,7 @@ var configjson = {
           "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldAgentType"
         }
       ],
-      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#returnTo": "HERE",
-      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#template": "workHasActivity.ftl",
-      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForObject": "activity",
-      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForPredicate": "predicate",
-      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#varNameForSubject": "work"
+      "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#returnTo": "HERE"
     },
     {
       "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_fieldActivityType",
