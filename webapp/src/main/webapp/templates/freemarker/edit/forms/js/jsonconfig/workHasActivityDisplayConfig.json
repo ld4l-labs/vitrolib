@@ -1,9 +1,9 @@
 var displayConfig = {
-	var fieldOrder =  ["activityLabel", "agentName"];
-	var fieldDisplayProperties = {
+	"fieldOrder" :  ["activityLabel", "agentName"],
+	"fieldDisplayProperties" : {
 		"activityLabel": {"label":"Activity Label"},
 		"agentName": {"label": "Agent Name", "autocomplete":"true"},
 		"agentType":{"label": "Agent Type"},
 		"activityType": {"label": "Activity Type"}
-	};
+	}
 };
