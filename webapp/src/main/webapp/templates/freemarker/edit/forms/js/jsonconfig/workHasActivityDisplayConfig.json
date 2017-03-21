@@ -2,7 +2,7 @@ var displayConfig = {
 	"fieldOrder" :  ["activityLabel", "agentName"],
 	"fieldDisplayProperties" : {
 		"activityLabel": {"label":"Activity Label"},
-		"agentName": {"label": "Agent Name", "autocomplete":"true"},
+		"agentName": {"label": "Agent Name", "autocomplete":"true", "labelFieldFor": "agent"},
 		"agentType":{"label": "Agent Type"},
 		"activityType": {"label": "Activity Type"}
 	}
