@@ -88,7 +88,7 @@ var configjson = {
         "forms:FieldOptions"
       ],
       "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#classUri": {
-        "@id": "foaf:Agent"
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
       }
     },
     {
@@ -109,11 +109,11 @@ var configjson = {
     {
       "@id": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#whcor_activityTypeListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParentCustomLabels",
+        "forms:ChildVClassesWithParent",
         "forms:FieldOptions"
       ],
       "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#classUri": {
-        "@id": "ld4l:Activity"
+        "@id": "http://bib.ld4l.org/ontology/Activity"
       }
     },
     {
