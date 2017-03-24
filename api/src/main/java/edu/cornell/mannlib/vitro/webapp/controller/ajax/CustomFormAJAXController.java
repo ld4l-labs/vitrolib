@@ -97,7 +97,7 @@ public class CustomFormAJAXController extends VitroAjaxController {
 			try {
 			switch(JAVAClassName) {
 				case "ChildVClassesWithParent":
-					JSONObject classJSON = json.getJSONObject("http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#classUri");
+					JSONObject classJSON = json.getJSONObject("customform:classUri");
 					String classURI = classJSON.getString("@id");
 					//Could use class for name, but why bother?
 					ChildVClassesWithParent cvp = new ChildVClassesWithParent(classURI);
