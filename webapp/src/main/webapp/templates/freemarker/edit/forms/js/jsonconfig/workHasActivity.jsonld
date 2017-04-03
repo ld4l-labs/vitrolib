@@ -18,11 +18,11 @@ var configjson = {
         "forms:FormComponent"
       ],
       "customform:pattern": [
-        "?activity ld4l:hasAgent ?agent .        ?agent ld4l:isAgentOf ?activity .    ",
-        "?activity a ld4l:Activity .        ?activity a ?activityType .        ?activity rdfs:label ?activityLabel .     ",
-        "?work ld4l:hasActivity ?activity .         ?activity ld4l:isActivityOf ?work .    "
+        "?activity ld4l:hasAgent ?agent . ?agent ld4l:isAgentOf ?activity .    ",
+        "?activity a ld4l:Activity . ?activity a ?activityType .?activity rdfs:label ?activityLabel .     ",
+        "?work ld4l:hasActivity ?activity .?activity ld4l:isActivityOf ?work .    "
       ],
-      "customform:prefixes": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/> .\n        PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/> .\n      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . \n    "
+      "customform:prefixes": "PREFIX ld4l: <http://bib.ld4l.org/ontology/> .        PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/> .     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .     "
     },
     {
       "@id": "customform:whcor_fieldAgent",
@@ -31,7 +31,7 @@ var configjson = {
         "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
-      "customform:queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n            SELECT ?existingAgent \n        WHERE {\n          ?activity ld4l:hasAgent ?existingAgent .\n        }\n    ",
+      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>   SELECT ?existingAgent WHERE {  ?activity ld4l:hasAgent ?existingAgent . }   ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },
@@ -43,7 +43,7 @@ var configjson = {
         "forms:FormComponent",
         "forms:OptionalN3Pattern"
       ],
-      "customform:pattern": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/> .\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . \n        PREFIX foaf:<http://xmlns.com/foaf/0.1/> . \n        ?agent a ?agentType. \n        ?agent rdfs:label ?agentName. \n        ?agent foaf:name ?agentName .\n    "
+      "customform:pattern": "PREFIX ld4l: <http://bib.ld4l.org/ontology/> . PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . PREFIX foaf:<http://xmlns.com/foaf/0.1/> .  ?agent a ?agentType.  ?agent rdfs:label ?agentName.  ?agent foaf:name ?agentName .  "
     },
     {
       "@id": "customform:whcor_fieldActivityLabel",
@@ -51,7 +51,7 @@ var configjson = {
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   \n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        SELECT ?existingActivityLabel \n        WHERE {\n          ?activity rdfs:label ?existingActivityLabel .\n        }\n    ",
+      "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   PREFIX ld4l: <http://bib.ld4l.org/ontology/>      SELECT ?existingActivityLabel     WHERE {?activity rdfs:label ?existingActivityLabel .}  ",
       "customform:rangeDatatypeUri": {
         "@id": "xsd:string"
       },
@@ -79,7 +79,7 @@ var configjson = {
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        PREFIX prov: <http://www.w3.org/ns/prov#> \n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   \n        PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingAgentName \n        WHERE {\n          ?activity prov:agent ?agent .?agent rdfs:label ?existingAgentName .\n        }\n    ",
+      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?activity prov:agent ?agent .?agent rdfs:label ?existingAgentName . }    ",
       "customform:varName": "agentName"
     },
     {
@@ -101,7 +101,7 @@ var configjson = {
       "customform:fieldOptions": {
         "@id": "customform:whcor_agentListFieldOptions"
       },
-      "customform:queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n      PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingAgentType \n        WHERE {\n          ?activity ld4l:hasAgent ?agent .\n          ?agent vitro:mostSpecificType ?existingAgentType .\n        }\n    ",
+      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?activity ld4l:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },
@@ -160,7 +160,7 @@ var configjson = {
       "customform:fieldOptions": {
         "@id": "customform:whcor_activityTypeListFieldOptions"
       },
-      "customform:queryForExistingValue": "\n        PREFIX ld4l: <http://bib.ld4l.org/ontology/>\n        PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n        SELECT ?existingActivityType \n        WHERE {\n          ?activity vitro:mostSpecificType ?existingActivityType .\n        }\n    ",
+      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>     PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>      SELECT ?existingActivityType      WHERE {?activity vitro:mostSpecificType ?existingActivityType .   }    ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },
