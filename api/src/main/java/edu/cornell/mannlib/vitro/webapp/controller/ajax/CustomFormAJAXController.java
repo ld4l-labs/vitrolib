@@ -111,13 +111,17 @@ public class CustomFormAJAXController extends VitroAjaxController {
 	        EditN3GeneratorVTwo editN3Generator = new EditN3GeneratorVTwo();
 	        if(isURIField(configComponent)) {
 	            List<String> uriFromQuery = sparqlEvaluate.sparqlEvaluateForURIQuery(editN3Generator, uriScope, literalScope, sparqlQuery);
-	        	returnValues = uriFromQuery;
+	            if(uriFromQuery != null && uriFromQuery.size() > 0) {
+	            	returnValues = uriFromQuery;
+	            }
 
 	        }
 	        else if(isLiteralField(configComponent)) {
 	        	List<Literal> literalVars = sparqlEvaluate.sparqlEvaluateForLiteralQuery(editN3Generator, uriScope, literalScope, sparqlQuery);
-	        	for(Literal literal: literalVars) {
-	        		returnValues.add(literal.getString());
+	        	if(literalVars != null && literalVars.size() > 0) {
+		        	for(Literal literal: literalVars) {
+		        		returnValues.add(literal.getString());
+		        	}
 	        	}
 	        }
 

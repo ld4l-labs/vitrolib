@@ -71,7 +71,7 @@
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?objectVar prov:agent ?agent .?agent rdfs:label ?existingAgentName . }    ",
+      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?objectVar ld4l:hasAgent ?agent .?agent rdfs:label ?existingAgentName . }    ",
       "customform:varName": "agentName"
     },
     {
