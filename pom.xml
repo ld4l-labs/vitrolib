@@ -51,7 +51,7 @@
     </scm>
 
     <properties>
-        <vitro-version>1.9.1</vitro-version>
+        <vitro-version>1.10.0-SNAPSHOT</vitro-version>
         <vitrolib-home-dir>${basedir}</vitrolib-home-dir>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>

@@ -10,7 +10,7 @@ import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.hp.hpl.jena.vocabulary.OWL;
+//import com.hp.hpl.jena.vocabulary.OWL;
 
 import edu.cornell.mannlib.vitro.webapp.beans.VClass;
 import edu.cornell.mannlib.vitro.webapp.controller.VitroRequest;
