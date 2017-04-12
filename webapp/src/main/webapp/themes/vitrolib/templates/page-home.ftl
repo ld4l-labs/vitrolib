@@ -15,18 +15,15 @@
         <#include "menu.ftl">
         
             <section id="intro" role="region">
-                <h2>${i18n().what_is_vitro}</h2>
-                
-                <p>${i18n().vitro_description}</p>
-                <p>${i18n().with_vitro}</p>
-                
-                <ul>
-                    <li>${i18n().vitro_bullet_one}</li>
-                    <li>${i18n().vitro_bullet_two}</li>
-                    <li>${i18n().vitro_bullet_three}</li>
-                    <li>${i18n().vitro_bullet_four}</li>
-                </ul>
-                
+              <h2>${i18n().catalog_new_resource}</h2>
+              <a href="#">${i18n().overview_model}</h2>
+              <form id="addNewWork" action="${urls.base}/editRequestDispatch" method="get">
+	            <input type="hidden" name="editForm" value="edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator" role="input" />
+	            <input type="hidden" name="classURI" value="http://id.loc.gov/ontologies/bibframe/Work"/>
+	            <input type="submit" id="submit" value="${i18n().work}" role="button" />
+        	</form>
+              
+              
                 <section id="search-home" role="region">
                     <h3>${i18n().search_vitro} <span class="search-filter-selected">filteredSearch</span></h3>
                     
