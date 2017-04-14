@@ -15,15 +15,28 @@
         <#include "menu.ftl">
         
             <section id="intro" role="region">
-              <h2>${i18n().catalog_new_resource}</h2>
-              <a href="#">${i18n().overview_model}</h2>
+            
+            <section id="catalogNew" role="region">
+            <#-- Show this WHEN logged in, otherwise show VitroLib information -->
+              <h2>${i18n().catalog_new_resource} <sup><a href="#">${i18n().overview_model}</a></sup></h2>
+              <div class="row">
+              <div class="column">
               <form id="addNewWork" action="${urls.base}/editRequestDispatch" method="get">
 	            <input type="hidden" name="editForm" value="edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator" role="input" />
 	            <input type="hidden" name="classURI" value="http://id.loc.gov/ontologies/bibframe/Work"/>
 	            <input type="submit" id="submit" value="${i18n().work}" role="button" />
         	</form>
+              </div>
+              <div class="column">
+              <form id="addNewInstance" action="${urls.base}/editRequestDispatch" method="get">
+	            <input type="hidden" name="editForm" value="edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator" role="input" />
+	            <input type="hidden" name="classURI" value="http://id.loc.gov/ontologies/bibframe/Instance"/>
+	            <input type="submit" id="submit" value="${i18n().instance}" role="button" />
+        	</form>
+        	</div>
+        	</div>
               
-              
+              </section>
                 <section id="search-home" role="region">
                     <h3>${i18n().search_vitro} <span class="search-filter-selected">filteredSearch</span></h3>
                     

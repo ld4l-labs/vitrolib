@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "ld4l": "http://bib.ld4l.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject rdf:type bibframe:Work .",
+		"?subject rdfs:label ?title .",
+		"?subject bibframe:title ?titleIndividual .",
+		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual bibframe:titleOf ?subject .",
+		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
+		"?mainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?mainTitleElement rdfs:label ?title .",
+		"?mainTitleElement dcterms:isPartOf ?titleIndividual ."
+      ],
+      "customform:prefixes": "@prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
+    },
+    {
+      "@id": "customform:addWork_subject",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "subject"
+    },
+    {
+      "@id": "customform:addWork_titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "titleIndividual"
+    },
+     {
+      "@id": "customform:addWork_mainTitleElement",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "mainTitleElement"
+    },
+     {
+      "@id": "customform:addWork_title",
+      "@type": [
+        "forms:FormComponent",
+        "forms:LiteralField"
+      ],
+      "customform:varName": "title"
+    }
+   ]
+}

@@ -1472,3 +1472,15 @@ form.customForm #requiredLegend {
     font-style: italic;
     margin-top: .5em;
 }
+
+/*** Customizations for VitroLib ***/
+div.row {
+	float:none;
+	clear:both;
+	overflow:hidden;
+}
+
+div.column {
+	padding-left:16px;
+	float:left;
+}

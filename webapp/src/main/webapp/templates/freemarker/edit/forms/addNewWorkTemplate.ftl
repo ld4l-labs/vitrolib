@@ -7,7 +7,6 @@
 
 <#--Retrieve certain edit configuration information-->
 <#assign editMode = editConfiguration.pageData.editMode />
-<#assign formTitle = editConfiguration.formTitle />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
 	<#assign newUriSentinel = editConfigurationConstants["NEW_URI_SENTINEL"] />
@@ -102,15 +101,25 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <#assign yearHint     = "<span class='hint'>(${i18n().year_hint_format})</span>" />
 
 <#if editMode = "error">
- <div>${i18n().unable_to_handle_publication_editing}</div>      
+ <div>Error</div>      
 <#else>
 
-<section id="addPublicationToPerson" role="region">        
+<section id="addNewWork" role="region">        
     
 <@lvf.unsupportedBrowser urls.base/>
-<form id="addpublicationToPerson" class="customForm noIE67" action="${submitUrl}"  role="add/edit publication" >
+<form id="addNewWork" class="customForm noIE67" action="${submitUrl}"  role="add work" >
         
     <div id="formcontent">
+    <#--  New Work fields -->
+       <p>
+	            <label for="title">Title</label>
+	            <input size="60"  type="text" id="title" name="title" value="" />
+	   </p>
+	
+    
+    
+    
+    
     </div>
 
 
@@ -168,16 +177,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
 
     <script type="text/javascript">
-    var urisInScope = {};
-    var literalsInScope = {};
-    <#list editConfiguration.pageData.urisInScope?keys as uriKey>
-    	urisInScope["${uriKey}"]=[];
-    	<#assign uriValue = editConfiguration.pageData.urisInScope[uriKey] />
-    	<#list uriValue as val>
-    		urisInScope["${uriKey}"].push("${val}");
-    	</#list>
-    	
-    </#list>
+  	//No uris or literals in scope here
          
 	//TODO: Handle multiple autocompletes on the same page?
     var customFormData  = {
@@ -190,9 +190,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-        urisInScope:urisInScope,
-        literalsInScope:literalsInScope
+        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
