@@ -111,13 +111,77 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         
     <div id="formcontent">
     <#--  New Work fields -->
+    	<#--  Title -->
        <p>
 	            <label for="title">Title</label>
 	            <input size="60"  type="text" id="title" name="title" value="" />
 	   </p>
+	   
+	   <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
+	   <div>
+  		<p>
+  		<label for="workType">Type </label>
+  			   <select id="workType" name="workType" role="select">
+                
+            	</select>
+        </p>
+  		</div>
+		<#--  Autocomplete field for AUTHOR using LOC NAF field -->
+    
+    	<div> 
+	        <p templateId="inputAcSelector">
+	            <label for=""> ${requiredHint}</label>
+	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
+	        </p>
 	
-    
-    
+		
+	        <div class="acSelection" acGroupName="group" templateId="literalSelection">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  ${flagClearLabelForExisting}="true" />
+	        </div>
+  		</div>
+    	<#--  Instance fields are in their own field set -->
+    	<fieldset>
+    	<legend>Has Instance (RDA Manifestation) </legend>
+    	
+    	<div> 
+	        <p>
+	            <label for="instanceTitle">Title</label>
+	            <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
+	        </p>
+  		</div>
+    	
+    	<div> 
+	        <p>
+	            <label for="publisherAgentName"> Publisher</label>
+	            <input class="acSelector" size="60"  type="text" id="publisherAgentName" name="publisherAgentName" acGroupName="publisherGroup"  value="" />
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="publisherGroup" templateId="literalSelection">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  ${flagClearLabelForExisting}="true" />
+	        </div>
+  		</div>
+    	
+    	<div> 
+	        <p>
+	            <label for="instanceTitle">Place of Publication</label>
+	            <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
+	        </p>
+  		</div>
+    	
+    	</fieldset>
     
     
     </div>

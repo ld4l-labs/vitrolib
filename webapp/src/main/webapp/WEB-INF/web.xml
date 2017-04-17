@@ -936,6 +936,15 @@
     <servlet-name>JSON Service</servlet-name>
     <url-pattern>/dataservice</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ConceptSearchService</servlet-name>
+    <servlet-class>edu.cornell.mannlib.vitro.webapp.servlet.ConceptSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConceptSearchService</servlet-name>
+    <url-pattern>/conceptSearchService</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>DashboardPropertyListController</servlet-name>
