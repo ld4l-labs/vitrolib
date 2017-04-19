@@ -64,6 +64,27 @@
         "forms:LiteralField"
       ],
       "customform:varName": "title"
+    },
+    {
+      "@id": "customform:addWork_workType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "workType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_workTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_workTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Work"
+      }
     }
    ]
 }

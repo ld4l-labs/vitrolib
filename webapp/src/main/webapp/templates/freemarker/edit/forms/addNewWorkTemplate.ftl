@@ -130,7 +130,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     
     	<div> 
 	        <p templateId="inputAcSelector">
-	            <label for=""> ${requiredHint}</label>
+	            <label for="agentName"> Author${requiredHint}</label>
 	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
 	        </p>
 	
@@ -146,8 +146,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	        </div>
   		</div>
     	<#--  Instance fields are in their own field set -->
-    	<fieldset>
-    	<legend>Has Instance (RDA Manifestation) </legend>
+    	<fieldset class="customFormFieldset">
+    	<legend class="customFormLegend">Has Instance (RDA Manifestation) </legend>
     	
     	<div> 
 	        <p>
@@ -273,6 +273,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />')}
  ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customForm.css" />')}
  ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />')}
+ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/updatedCustomForm.css" />')}
 
 
  ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
@@ -281,4 +282,4 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/sm
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocomplete.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalconfigtemplate.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}

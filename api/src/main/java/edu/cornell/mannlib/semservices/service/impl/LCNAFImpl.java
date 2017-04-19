@@ -194,8 +194,8 @@ public class LCNAFImpl implements ExternalConceptService {
 
 	private List<String> getAltLabelsFromLinkedDataRequest(JSONObject termResult) {
 		List<String> altLabels = new ArrayList<String>();
-		if(termResult.containsKey("altLabel")) {
-			JSONArray labels = termResult.getJSONArray("altLabel");
+		if(termResult.containsKey("altlabel")) {
+			JSONArray labels = termResult.getJSONArray("altlabel");
 			int length = labels.size();
 			int l;
 			for(l = 0; l < length; l++) {
