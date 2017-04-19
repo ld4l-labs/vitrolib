@@ -244,9 +244,10 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   	//No uris or literals in scope here
          
 	//TODO: Handle multiple autocompletes on the same page?
+	//regular autocomplete url: acUrl: '${urls.base}/autocomplete?tokenize=true',
     var customFormData  = {
         sparqlQueryUrl: '${sparqlQueryUrl}',
-        acUrl: '${urls.base}/autocomplete?tokenize=true',
+        acUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
         customFormAJAXUrl:'${urls.base}/ajax/customForm',
         editMode: '${editMode}',
         baseHref: '${urls.base}/individual?uri=',
@@ -279,7 +280,7 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/sm
  ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',              
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocomplete.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}
