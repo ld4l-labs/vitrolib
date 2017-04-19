@@ -28,6 +28,7 @@ public class ConceptSearchServiceUtils {
 
     //Get the class that corresponds to the appropriate search
 	public static String getConceptSearchServiceClassName(String searchServiceName) {
+		System.out.println("VITROLIB Get Concept Search Service Class Name " + searchServiceName);
 		HashMap<String, String> map = getMapping();
 		if(map.containsKey(searchServiceName)) {
 			return map.get(searchServiceName);
@@ -59,6 +60,7 @@ public class ConceptSearchServiceUtils {
     	map.put(AgrovocVocabSource, "edu.cornell.mannlib.semservices.service.impl.AgrovocService");
     	map.put(GemetVocabSource, "edu.cornell.mannlib.semservices.service.impl.GemetService");
     	map.put(LCSHVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHService");
+    	map.put(LCNAFVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCNAFImpl");
 
     	return map;
     }
