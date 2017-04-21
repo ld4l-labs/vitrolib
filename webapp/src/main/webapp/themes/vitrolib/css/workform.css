@@ -5,6 +5,17 @@
 
 @import url("https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css");
 
+.workform__fieldset {
+  margin: 2em 0;
+  border: 2px dashed #ccc;
+  border-radius: .7em;
+  padding: 1em 2em;
+}
+
+.workform__legend {
+  display: inline;
+}
+
 .workform-button {
   margin-right: 3em;
   color: #fff;
