@@ -1,0 +1,15 @@
+/* $This file is distributed under the terms of the license in /doc/license.txt$ */
+
+@charset "UTF-8";
+/* Consolidated styles for custom forms for Work & Instance entities */
+
+@import url("https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css");
+
+.workform-button {
+  margin-right: 3em;
+  color: #fff;
+}
+
+.workform-button__icon {
+  margin-left: 1em;
+}
