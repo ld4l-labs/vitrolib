@@ -283,4 +283,6 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/sm
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>')}
+,

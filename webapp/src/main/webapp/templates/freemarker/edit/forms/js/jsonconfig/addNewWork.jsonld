@@ -26,9 +26,38 @@
 		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
 		"?mainTitleElement rdf:type ld4l:MainTitleElement .",
 		"?mainTitleElement rdfs:label ?title .",
-		"?mainTitleElement dcterms:isPartOf ?titleIndividual ."
+		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
+		"?subject rdf:type ?workType ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+       "?subject ld4l:hasActivity ?activity .",
+		"?activity a ld4l:AuthorActivity.",
+		"?activity rdfs:label 'Author'.",
+		"?activity ld4l:hasAgent ?agent .", 
+		"?activity ld4l:isActivityOf ?subject .",
+		"?agent a foaf:Person.",
+		"?agent rdfs:label ?agentName .",
+		"?agent ld4l:isAgentOf ?activity .",
+		"?subject bibframe:hasInstance ?instance .",
+		"?instance rdf:type bibframe:Instance .",
+		"?instance bibframe:instanceOf ?subject .",
+		"?instance bibframe:title ?instanceTitleIndividual .",
+		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
+		"?instanceTitleIndividual bibframe:titleOf ?instance .",
+		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
+		"?instanceMainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
+		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> ."
     },
     {
       "@id": "customform:addWork_subject",
@@ -85,6 +114,67 @@
       "customform:classUri": {
         "@id": "http://id.loc.gov/ontologies/bibframe/Work"
       }
+    },
+    {
+      "@id": "customform:whcor_workActivity",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "activity"
+    },
+    {
+      "@id": "customform:whcor_workAgent",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "agent"
+    },
+    {
+      "@id": "customform:whcor_workAgentName",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "agentName"
+    },
+     {
+      "@id": "customform:whcor_instance",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "instance"
+    },
+    {
+      "@id": "customform:whcor_instanceTitleIndividual",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "instanceTitleIndividual"
+    },
+     {
+      "@id": "customform:whcor_instanceTitle",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "instanceTitle"
+    },
+     {
+      "@id": "customform:whcor_instanceMainTitleElement",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "instanceMainTitleElement"
     }
    ]
 }
