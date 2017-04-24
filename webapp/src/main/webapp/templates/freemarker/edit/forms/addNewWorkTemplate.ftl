@@ -113,14 +113,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     <#--  New Work fields -->
       <#--  Title -->
        <p>
-              <label for="title">Title</label>
+              <label for="title">Title ${requiredHint}</label>
               <input size="60"  type="text" id="title" name="title" value="" />
      </p>
 
      <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
      <div>
       <p>
-      <label for="workType">Type </label>
+      <label for="workType">Type ${requiredHint}</label>
            <select id="workType" name="workType" role="select">
 
               </select>
@@ -142,7 +142,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
-              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  ${flagClearLabelForExisting}="true" />
+              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+              <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
 
@@ -187,7 +188,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
        <p class="submit">
             <input type="hidden" name = "editKey" value="${editKey}"/>
             <input type="hidden" name="configFile" value="${configFile}" />
-            <input type="submit" id="submit" value="${submitButtonText}"/><span class="or"> ${i18n().or} </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
+            <input type="submit" id="submit" value="${i18n().save_button}"/><span class="or"> ${i18n().or} </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
