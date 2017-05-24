@@ -1,7 +1,7 @@
 @prefix schema: <http://schema.org/> .
-@prefix ld4l:  <http://bib.ld4l.org/ontology/> .
+@prefix biblioteko:  <http://bibliotek-o.org/ontology/> .
 @prefix lvont: <http://lexvo.org/ontology#> .
-@prefix legacy: <http://bib.ld4l.org/ontology/legacy/> .
+@prefix legacy: <http://bibliotek-o.org/ontology/legacy/> .
 @prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix dcam:  <http://purl.org/dc/dcam/> .
@@ -36,7 +36,7 @@
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 #Updates occuring through the interface and saved here
 # create new option and select from existing options set to true
-ld4l:isActivityOf  
+biblioteko:isActivityOf  
         vitro:hiddenFromDisplayBelowRoleLevelAnnot
                 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
         vitro:hiddenFromPublishBelowRoleLevelAnnot

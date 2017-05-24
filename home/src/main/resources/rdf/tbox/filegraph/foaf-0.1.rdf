@@ -52,9 +52,6 @@
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
   </rdf:Property>
   
-  <!-- TODO LD4L hasn't discussed which FOAF naming properties other than 
-    foaf:name we want to use. I assume we might want to use any or all of these. -->
-  
   <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/firstName" vs:term_status="testing" rdfs:label="firstName" rdfs:comment="The first name of a person.">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>

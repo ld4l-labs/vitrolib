@@ -1,8 +1,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fabio:   <http://purl.org/spar/fabio/> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
-@prefix ld4l:    <http://bib.ld4l.org/ontology/> .
-@prefix legacy:  <http://bib.ld4l.org/ontology/legacy/> .
+@prefix biblioteko:    <http://bibliotek-o.org/ontology/> .
+@prefix legacy:  <http://bibliotek-o.org/ontology/legacy/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,21 +14,21 @@
 #http://ld4l.org/ontology#vitroClassGroupactivities
 #http://ld4l.org/ontology#vitroClassGrouplocations
 
-<http://bib.ld4l.org/ontology/Activity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/AcquisitionActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/AuthorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/CaptureActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/ComposerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/ConductorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/CreatorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/DistributorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/EditorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/Activity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/AcquisitionActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/AuthorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/CaptureActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/ComposerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/ConductorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/CreatorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/DistributorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/EditorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
 
-<http://bib.ld4l.org/ontology/IllustratorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/ManufacturerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/NarratorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/PerformerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/IllustratorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/ManufacturerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/NarratorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/PerformerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
 
-<http://bib.ld4l.org/ontology/ProducerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/PublisherActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
-<http://bib.ld4l.org/ontology/TranslatorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/ProducerActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/PublisherActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+<http://bibliotek-o.org/ontology/TranslatorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .

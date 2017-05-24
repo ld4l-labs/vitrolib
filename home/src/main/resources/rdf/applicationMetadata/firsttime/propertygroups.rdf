@@ -255,7 +255,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
     
-    <!-- Works about an Event (e.g., ld4l:recordedIn) -->
+    <!-- Works about an Event (e.g., biblioteko:recordedIn) -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupworksAboutEvent">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to works about an event</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</vitro:displayRank>
@@ -265,7 +265,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </rdf:Description>
     
-    <!-- Works performed at an Event (e.g., ld4l:performedAt) -->
+    <!-- Works performed at an Event (e.g., biblioteko:performedAt) -->
     <rdf:Description rdf:about="http://ld4l.org/ontology#vitroPropertyGroupworksPerformed">
         <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties relating to Works performed at an Event</vitro:publicDescriptionAnnot>
         <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</vitro:displayRank>

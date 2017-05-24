@@ -16,11 +16,11 @@
     xmlns:vitro="&vitro;"
     xmlns:xsd="&xsd;" >
 
-      <rdf:Description rdf:about="http://bib.ld4l.org/ontology/isAgentOf">
+      <rdf:Description rdf:about="http://bibliotek-o.org/ontology/isAgentOf">
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-agentHasActivity.xml</display:listViewConfigFile>
     </rdf:Description>
     
-          <rdf:Description rdf:about="http://bib.ld4l.org/ontology/hasActivity">
+          <rdf:Description rdf:about="http://bibliotek-o.org/ontology/hasActivity">
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-workHasActivity.xml</display:listViewConfigFile>
     </rdf:Description>
 

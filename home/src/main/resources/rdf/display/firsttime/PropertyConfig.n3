@@ -11,7 +11,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ld4l: <http://bib.ld4l.org/ontology/> .
+@prefix biblioteko: <http://bibliotek-o.org/ontology/> .
 @prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
@@ -37,9 +37,9 @@
 ##Work has activity 
 #local:workHasActivityContext a :ConfigContext ;
 #    :hasConfiguration local:workHasActivityConfig ;
-#    :configContextFor <http://bib.ld4l.org/ontology/hasActivity>;
+#    :configContextFor <http://bibliotek-o.org/ontology/hasActivity>;
 #    :qualifiedByDomain bibframe:Work ;
-#    :qualifiedBy ld4l:Activity  .
+#    :qualifiedBy biblioteko:Activity  .
 
 #local:activityOfConfig a :ObjectPropertyDisplayConfig ;
 #    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean;
@@ -48,9 +48,9 @@
 
 #local:activityOfContext a :ConfigContext ;
 #    :hasConfiguration local:activityOfConfig ;
-#    :configContextFor <http://bib.ld4l.org/ontology/isActivityOf>;
+#    :configContextFor <http://bibliotek-o.org/ontology/isActivityOf>;
 #    :qualifiedByDomain bibframe:Work ;
-#    :qualifiedBy ld4l:Activity  .
+#    :qualifiedBy biblioteko:Activity  .
 
 #local:activityOfConfig a :ObjectPropertyDisplayConfig ;
  #   vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean;
@@ -59,9 +59,9 @@
 #Agent has activity    
 #local:agentHasActivityContext a :ConfigContext ;
 #    :hasConfiguration local:agentHasActivityConfig ;
-#    :configContextFor <http://bib.ld4l.org/ontology/isAgentOf> ; 
+#    :configContextFor <http://bibliotek-o.org/ontology/isAgentOf> ; 
 #    :qualifiedByDomain foaf:Agent ;
-#    :qualifiedBy ld4l:Activity .
+#    :qualifiedBy biblioteko:Activity .
     
 #local:agentHasActivityConfig a :ObjectPropertyDisplayConfig ;
 #	:listViewConfigFile "listViewConfig-agentHasActivity.xml"^^xsd:string  .

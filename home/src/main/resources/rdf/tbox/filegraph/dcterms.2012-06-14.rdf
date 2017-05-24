@@ -87,7 +87,6 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
     </rdf:Description>
 
-    <!-- Needs group review
     <rdf:Description rdf:about="http://purl.org/dc/terms/language">
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
@@ -100,23 +99,7 @@
         <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
     </rdf:Description>
-    -->
-    
-    <!-- Needs group review - may use rdau predicate or bf:relatedTo. Include temporarily till decision is made. -->
-    <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
-        <rdfs:label xml:lang="en">Relation</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
-        <dcterms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dcterms:description>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:issued>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:modified>
-        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relationT-001"/>
-        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
-    </rdf:Description>
-    
-    <!-- Needs group review - may use bf:subject. Include temporarily till decision is made. -->
+
     <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
         <rdfs:label xml:lang="en">Subject</rdfs:label>
         <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>

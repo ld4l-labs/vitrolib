@@ -7,7 +7,7 @@
   <owl:Ontology rdf:about="http://purl.org/dc/terms/"/>
   <owl:Ontology rdf:about="http://purl.org/spar/fabio/"/>
   <owl:Ontology rdf:about="http://xmlns.com/foaf/0.1/"/>
-  <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/"/>
+  <owl:Ontology rdf:about="http://bibliotek-o.org/ontology/"/>
   <owl:Ontology rdf:about="http://www.lingvoj.org/ontology#"/>  
   <owl:Ontology rdf:about="http://www.loc.gov/mads/rdf/v1#"/>
   <owl:Ontology rdf:about="http://www.w3.org/ns/oa#"/>
