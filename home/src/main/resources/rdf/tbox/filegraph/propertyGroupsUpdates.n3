@@ -1,5 +1,5 @@
 @prefix schema: <http://schema.org/> .
-@prefix biblioteko:  <http://bibliotek-o.org/ontology/> .
+@prefix bib:  <http://bibliotek-o.org/ontology/> .
 @prefix lvont: <http://lexvo.org/ontology#> .
 @prefix legacy: <http://bibliotek-o.org/ontology/legacy/> .
 @prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
@@ -36,5 +36,5 @@
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 
-biblioteko:hasAgent vitro:inPropertyGroupAnnot <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .  
-biblioteko:atLocation vitro:inPropertyGroupAnnot  <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .
+bib:hasAgent vitro:inPropertyGroupAnnot <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .  
+bib:atLocation vitro:inPropertyGroupAnnot  <http://ld4l.org/ontology#vitroPropertyGrouptimeAndPlace> .

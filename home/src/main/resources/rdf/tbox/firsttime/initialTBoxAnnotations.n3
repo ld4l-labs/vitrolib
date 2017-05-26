@@ -1,7 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fabio:   <http://purl.org/spar/fabio/> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
-@prefix biblioteko:    <http://bibliotek-o.org/ontology/> .
+@prefix bib:    <http://bibliotek-o.org/ontology/> .
 @prefix legacy:  <http://bibliotek-o.org/ontology/legacy/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
@@ -285,12 +285,12 @@ bibframe:accompanies
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
-biblioteko:acquisitionNote
+bib:acquisitionNote
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
           
-# This property will be displayed in a custom list view with biblioteko:hasAnnotation                      
-# biblioteko:annotatedBy
+# This property will be displayed in a custom list view with bib:hasAnnotation                      
+# bib:annotatedBy
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupnotes> .
 
@@ -298,16 +298,16 @@ biblioteko:acquisitionNote
 #scale, southernmostlatitude, westernmostlongitude, zone etc.
 
 
-biblioteko:continuedUnderNewTitleBy
+bib:continuedUnderNewTitleBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
         
-biblioteko:continuesUnderNewTitle
+bib:continuesUnderNewTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
         
 # Also applies to titles
-# biblioteko:derivedFrom
+# bib:derivedFrom
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
   
@@ -335,7 +335,7 @@ bibframe:extent
 
 #removed hasAbsorbed
 
-biblioteko:hasAnnotation
+bib:hasAnnotation
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupannotations> .
         
@@ -344,7 +344,7 @@ biblioteko:hasAnnotation
 #removed hasContribution
 #although we should have a property group for has activity now
 #is this a faux property? no
-biblioteko:hasActivity
+bib:hasActivity
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupcontributors> .
 
@@ -370,11 +370,11 @@ bibframe:hasInstance
 #removed hasLast 
 
  
-# biblioteko:hasMusicKey
+# bib:hasMusicKey
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
         
-# biblioteko:hasMusiMedium
+# bib:hasMusiMedium
 #     vitro:inPropertyGroupAnnot
  #        <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
 
@@ -390,7 +390,7 @@ bibframe:otherEdition
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
 
 
-biblioteko:hasPreferredTitle
+bib:hasPreferredTitle
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouptitles> .
 #removed hasProvision               
@@ -405,11 +405,11 @@ biblioteko:hasPreferredTitle
 #        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 #Commenting out hasTitle 
-#biblioteko:hasTitle
+#bib:hasTitle
 #    vitro:inPropertyGroupAnnot
 #        <http://ld4l.org/ontology#vitroPropertyGrouptitles> .
         
-biblioteko:heldBy
+bib:heldBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupcirculation> .        
          
@@ -417,13 +417,13 @@ bibframe:identifiedBy
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGroupidentifiers> .
 
-# biblioteko:illustrationNote
+# bib:illustrationNote
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupartAndIllustrations> .
 
 # Displayed as faux properties, so hide the display of the base property.
 #Comment out for now until faux property in place
-#biblioteko:isAgentOf
+#bib:isAgentOf
 #    vitro:hiddenFromDisplayBelowRoleLevelAnnot
 #        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
@@ -440,7 +440,7 @@ bibframe:identifiedBy
 #remove isLastOf
 
  
-biblioteko:isPreferredTitleOf
+bib:isPreferredTitleOf
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouptitleOfResource> .
 
@@ -453,7 +453,7 @@ bibframe:mergedToForm
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .
                                
-# biblioteko:musicNumber
+# bib:musicNumber
 #     vitro:inPropertyGroupAnnot
 #         <http://ld4l.org/ontology#vitroPropertyGroupmusicalProperties> .
 
@@ -508,7 +508,7 @@ bibframe:splitInto
 
 #remove translates
 
-# rda has a property that has name "translatedAs" so using that in stead of biblioteko:translatedAs               
+# rda has a property that has name "translatedAs" so using that in stead of bib:translatedAs               
 <http://rdaregistry.info/Elements/u/P60280>
     vitro:inPropertyGroupAnnot
         <http://ld4l.org/ontology#vitroPropertyGrouprelatedWorks> .

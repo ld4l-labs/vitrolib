@@ -1,5 +1,5 @@
 @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix biblioteko: <http://bibliotek-o.org/ontology/> .
+@prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 

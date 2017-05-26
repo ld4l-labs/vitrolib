@@ -6,7 +6,7 @@
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix localNav: <http://vitro.mannlib.cornell.edu/ns/localnav#> .
 
-@prefix biblioteko: <http://bibliotek-o.org/ontology/> .
+@prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .

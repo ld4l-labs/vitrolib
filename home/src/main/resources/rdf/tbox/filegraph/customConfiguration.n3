@@ -11,7 +11,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix biblioteko: <http://bibliotek-o.org/ontology/> .
+@prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
@@ -19,7 +19,7 @@
 #Should this be in the display model instead?
 @base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
 #custom configuration file
-biblioteko:hasActivity <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+bib:hasActivity <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasActivity.jsonld" .
  
 #New individual of work type custom form
