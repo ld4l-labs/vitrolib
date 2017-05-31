@@ -8,3 +8,5 @@
 <http://www.w3.org/ns/oa#Selector> rdf:type <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/oa#SpecificResource> rdf:type <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/oa#TextQuoteSelector> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+
+<http://schema.org/Event> rdf:type <http://www.w3.org/2002/07/owl#Class> .

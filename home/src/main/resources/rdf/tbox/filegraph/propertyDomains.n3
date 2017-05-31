@@ -1,6 +1,5 @@
 ###BIBLIOTEK-O
 ##Applies to event or activity
-##<http://bibliotek-o.org/ontology/atLocation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasActivity> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasAnnotation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasGeographicCoverage> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .

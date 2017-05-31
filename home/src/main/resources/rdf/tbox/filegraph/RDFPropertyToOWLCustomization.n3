@@ -123,49 +123,38 @@
 
   
   # Property: is abstracted as -->
-  <http://rdaregistry.info/Elements/u/P60203>
+  <http://rdaregistry.info/Elements/u/P60203> rdf:type owl:ObjectProperty .
     
   
   # Property: is summarized as -->
-  <http://rdaregistry.info/Elements/u/P60205>
+  <http://rdaregistry.info/Elements/u/P60205> rdf:type owl:ObjectProperty .
    
  
   # Property: is adapted as libretto -->
-  <http://rdaregistry.info/Elements/u/P60210>
+  <http://rdaregistry.info/Elements/u/P60210> rdf:type owl:ObjectProperty .
    
  
   # Property: is imitated as -->
-  <http://rdaregistry.info/Elements/u/P60214>
+  <http://rdaregistry.info/Elements/u/P60214> rdf:type owl:ObjectProperty .
   
   # Property: is expanded as -->
-  <http://rdaregistry.info/Elements/u/P60216>
+  <http://rdaregistry.info/Elements/u/P60216> rdf:type owl:ObjectProperty .
   
 
   # Property: has facsimile -->
-  <http://rdaregistry.info/Elements/u/P60217>
+  <http://rdaregistry.info/Elements/u/P60217> rdf:type owl:ObjectProperty .
    
 
   # Property: is prequel -->
-  <http://rdaregistry.info/Elements/u/P60220>
+  <http://rdaregistry.info/Elements/u/P60220> rdf:type owl:ObjectProperty .
  
   # Property: is abridgement of -->
-  <http://rdaregistry.info/Elements/u/P60223>
+  <http://rdaregistry.info/Elements/u/P60223> rdf:type owl:ObjectProperty .
   
   
   # Property: is abstract of -->
-  <http://rdaregistry.info/Elements/u/P60224>
-    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
-    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-    <reg:name xml:lang="en>abstractOf</reg:name>
-    <rdfs:label xml:lang="en>is abstract of</rdfs:label>
-    <skos:definition xml:lang="en>Relates a resource to a resource that has been abstracted, i.e., abbreviated in a brief, objective manner.</skos:definition>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60305" />
-    <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60203" />
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20122" />
-    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/abstractOf.en" />
-  </rdf:Description>
-  
+  <http://rdaregistry.info/Elements/u/P60224> rdf:type owl:ObjectProperty .
+    
   # Property: is dramatization of 
   <http://rdaregistry.info/Elements/u/P60225> rdf:type owl:ObjectProperty .
   
@@ -394,4 +383,8 @@
    
   # Property: is inspiration for 
   <http://rdaregistry.info/Elements/u/P60833> rdf:type owl:ObjectProperty .
-   
+
+## Schema - these already have domains and ranges set
+
+<http://schema.org/birthDate> rdf:type owl:DatatypeProperty .
+<http://schema.org/deathDate> rdf:type owl:DatatypeProperty .
