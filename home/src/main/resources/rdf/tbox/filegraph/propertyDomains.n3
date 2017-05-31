@@ -1,4 +1,6 @@
-<http://bibliotek-o.org/ontology/atLocation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+###BIBLIOTEK-O
+##Applies to event or activity
+##<http://bibliotek-o.org/ontology/atLocation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasActivity> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasAnnotation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/hasGeographicCoverage> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
@@ -7,16 +9,19 @@
 <http://bibliotek-o.org/ontology/hasTemporalCoverage> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://bibliotek-o.org/ontology/isSourceOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+### BIBFRAME
+###Aspect ratio, cartographic data, copyright regulation, finding aid, music format, use and access, status 
+### Are NOT Applicable to every 
 <http://id.loc.gov/ontologies/bibframe/adminMetadata> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/arrangement> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/aspectRatio> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/cartographicAttributes> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/aspectRatio> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/cartographicAttributes> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/classification> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/colorContent> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/copyrightRegistration> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/copyrightRegistration> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/dissertation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/findingAid> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/findingAidOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/findingAid> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/findingAidOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/frequency> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/genreForm> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/hasSeries> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
@@ -28,12 +33,12 @@
 <http://id.loc.gov/ontologies/bibframe/indexOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/intendedAudience> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/issuance> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/musicFormat> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/musicFormat> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/notation> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/precededBy> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/seriesOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/soundContent> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/status> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/status> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/subseriesOf> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/succeededBy> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/supplement> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
@@ -41,6 +46,4 @@
 <http://id.loc.gov/ontologies/bibframe/supplementaryContent> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/title> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
 <http://id.loc.gov/ontologies/bibframe/unit> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
-<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .
+#<http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy> <http://www.w3.org/2000/01/rdf-schema#domain>  <http://www.w3.org/2002/07/owl#Thing> .

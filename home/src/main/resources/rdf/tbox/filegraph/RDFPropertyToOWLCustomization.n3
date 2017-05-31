@@ -1,0 +1,397 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+## Certain vocabularies/ontologies use RDF property and we need OWL Object or Datatype properties 
+## For these properties to show up/be usable in the application
+
+
+## CIDOC_CRM
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> rdf:type owl:ObjectProperty .
+
+## DC
+
+<http://purl.org/dc/elements/1.1/format> rdf:type owl:DatatypeProperty .
+
+## DC Terms
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty .
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty .
+<http://purl.org/dc/terms/hasPart> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/terms/isPartOf> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/terms/relation> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/terms/subject> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/terms/language> rdf:type owl:ObjectProperty .
+
+#OA only uses rdfs but we are including these here so we don't get errors in the application
+#OA already defines domains for some of these as strings, those are defined as datatype properties
+
+<http://www.w3.org/ns/oa#bodyValue> rdf:type owl:DatatypeProperty .   
+<http://www.w3.org/ns/oa#exact> rdf:type owl:DatatypeProperty .    
+<http://www.w3.org/ns/oa#hasSelector> rdf:type owl:ObjectProperty .
+#Range of hasBody not specified for property object should be resource that is Annotation
+<http://www.w3.org/ns/oa#hasBody> rdf:type owl:ObjectProperty .
+#hasTarget has no range specified but assumed to be object property
+<http://www.w3.org/ns/oa#hasTarget> rdf:type owl:ObjectProperty . 
+#Assumed to be object property but not specific range specified
+<http://www.w3.org/ns/oa#hasSource> rdf:type owl:ObjectProperty . 
+#Based on notes, appears to have range motivation but no range explicitly defined
+<http://www.w3.org/ns/oa#motivatedBy> rdf:type owl:ObjectProperty .
+
+
+## RDA
+
+# Property: has electronic reproduction
+<http://rdaregistry.info/Elements/u/P60083> rdf:type owl:ObjectProperty .
+
+# Property: is dramatized as 
+<http://rdaregistry.info/Elements/u/P60088>  rdf:type owl:ObjectProperty .
+
+# Property: is sequel
+<http://rdaregistry.info/Elements/u/P60102> rdf:type owl:ObjectProperty .
+
+# Property: is replaced by
+<http://rdaregistry.info/Elements/u/P60104> rdf:type owl:ObjectProperty .
+
+# Property: is adapted in verse as 
+<http://rdaregistry.info/Elements/u/P60106> rdf:type owl:ObjectProperty .
+
+# Property: is adapted as motion picture
+<http://rdaregistry.info/Elements/u/P60110> rdf:type owl:ObjectProperty .
+
+# Property: is dubbed version of
+<http://rdaregistry.info/Elements/u/P60111> rdf:type owl:ObjectProperty .
+
+# Property: is dubbed version
+<http://rdaregistry.info/Elements/u/P60112> rdf:type owl:ObjectProperty .
+
+# Property:  is variations based on -->
+  <http://rdaregistry.info/Elements/u/P60114> rdf:type owl:ObjectProperty .
+
+# Property: is modified by variation as -->
+  <http://rdaregistry.info/Elements/u/P60115> rdf:type owl:ObjectProperty .
+
+# Property: is remade as 
+  <http://rdaregistry.info/Elements/u/P60120> rdf:type owl:ObjectProperty .
+   
+# Property: is set to music as 
+  <http://rdaregistry.info/Elements/u/P60121> rdf:type owl:ObjectProperty .
+  
+# Property: is adapted as novel 
+  <http://rdaregistry.info/Elements/u/P60138> rdf:type owl:ObjectProperty .
+ 
+# Property: is reprint of 
+  <http://rdaregistry.info/Elements/u/P60168> rdf:type owl:ObjectProperty .
+   
+# Property: is adapted as radio program 
+  <http://rdaregistry.info/Elements/u/P60174> rdf:type owl:ObjectProperty .
+   
+
+# Property: is abstracted in 
+  <http://rdaregistry.info/Elements/u/P60177> rdf:type owl:ObjectProperty .
+  
+# Property: is indexed in 
+  <http://rdaregistry.info/Elements/u/P60178> rdf:type owl:ObjectProperty .
+    
+ 
+# Property: is adapted as choreography 
+  <http://rdaregistry.info/Elements/u/P60180> rdf:type owl:ObjectProperty .
+  
+# Property: is adapted as screenplay 
+  <http://rdaregistry.info/Elements/u/P60185> rdf:type owl:ObjectProperty .
+  
+# Property: is adapted as radio script 
+  <http://rdaregistry.info/Elements/u/P60188> rdf:type owl:ObjectProperty .
+  
+# Property: is freely translated as 
+  <http://rdaregistry.info/Elements/u/P60189> rdf:type owl:ObjectProperty .
+  
+# Property: has equivalent 
+  <http://rdaregistry.info/Elements/u/P60191> rdf:type owl:ObjectProperty .
+  
+# Property: is also issued as 
+  <http://rdaregistry.info/Elements/u/P60195> rdf:type owl:ObjectProperty .
+
+# Property: is mirror site 
+  <http://rdaregistry.info/Elements/u/P60197> rdf:type owl:ObjectProperty .
+
+# Property: is continued in part by 
+  <http://rdaregistry.info/Elements/u/P60199> rdf:type owl:ObjectProperty .
+  
+# Property: has digital transfer 
+  <http://rdaregistry.info/Elements/u/P60200> rdf:type owl:ObjectProperty .
+
+  
+  # Property: is abstracted as -->
+  <http://rdaregistry.info/Elements/u/P60203>
+    
+  
+  # Property: is summarized as -->
+  <http://rdaregistry.info/Elements/u/P60205>
+   
+ 
+  # Property: is adapted as libretto -->
+  <http://rdaregistry.info/Elements/u/P60210>
+   
+ 
+  # Property: is imitated as -->
+  <http://rdaregistry.info/Elements/u/P60214>
+  
+  # Property: is expanded as -->
+  <http://rdaregistry.info/Elements/u/P60216>
+  
+
+  # Property: has facsimile -->
+  <http://rdaregistry.info/Elements/u/P60217>
+   
+
+  # Property: is prequel -->
+  <http://rdaregistry.info/Elements/u/P60220>
+ 
+  # Property: is abridgement of -->
+  <http://rdaregistry.info/Elements/u/P60223>
+  
+  
+  # Property: is abstract of -->
+  <http://rdaregistry.info/Elements/u/P60224>
+    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+    <reg:name xml:lang="en>abstractOf</reg:name>
+    <rdfs:label xml:lang="en>is abstract of</rdfs:label>
+    <skos:definition xml:lang="en>Relates a resource to a resource that has been abstracted, i.e., abbreviated in a brief, objective manner.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60305" />
+    <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60203" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20122" />
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/abstractOf.en" />
+  </rdf:Description>
+  
+  # Property: is dramatization of 
+  <http://rdaregistry.info/Elements/u/P60225> rdf:type owl:ObjectProperty .
+  
+
+  # Property: is verse adaptation of 
+  <http://rdaregistry.info/Elements/u/P60226> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is motion picture adaptation of 
+  <http://rdaregistry.info/Elements/u/P60227> rdf:type owl:ObjectProperty .
+    
+  # Property: is novelization of 
+  <http://rdaregistry.info/Elements/u/P60228> rdf:type owl:ObjectProperty .
+  
+  # Property: is radio adaptation of 
+  <http://rdaregistry.info/Elements/u/P60229> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is television adaptation of 
+  <http://rdaregistry.info/Elements/u/P60230> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is screenplay based on 
+  <http://rdaregistry.info/Elements/u/P60231> rdf:type owl:ObjectProperty .
+  
+
+  # Property: is radio script based on 
+  <http://rdaregistry.info/Elements/u/P60235> rdf:type owl:ObjectProperty .
+  
+  
+  # Property: is video adaptation of 
+  <http://rdaregistry.info/Elements/u/P60236> rdf:type owl:ObjectProperty .
+    
+  
+  # Property: is digest of 
+  <http://rdaregistry.info/Elements/u/P60238> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is adaptation of 
+  <http://rdaregistry.info/Elements/u/P60241> rdf:type owl:ObjectProperty .
+  
+
+  # Property: is arrangement of 
+  <http://rdaregistry.info/Elements/u/P60242> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is free translation of 
+  <http://rdaregistry.info/Elements/u/P60243> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is translation of 
+  <http://rdaregistry.info/Elements/u/P60244> rdf:type owl:ObjectProperty .
+   
+  
+    # Property: is revised as 
+  <http://rdaregistry.info/Elements/u/P60245> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is parodied as 
+  <http://rdaregistry.info/Elements/u/P60246> rdf:type owl:ObjectProperty .
+   
+  # Property: is absorbed by 
+  <http://rdaregistry.info/Elements/u/P60247> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is absorbed in part by 
+  <http://rdaregistry.info/Elements/u/P60248> rdf:type owl:ObjectProperty .
+  
+  
+  # Property: is derivative 
+  <http://rdaregistry.info/Elements/u/P60250> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is adapted as 
+  <http://rdaregistry.info/Elements/u/P60260> rdf:type owl:ObjectProperty .
+   
+  
+ 
+  # Property: is musical setting of 
+  <http://rdaregistry.info/Elements/u/P60266> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is reprinted as 
+  <http://rdaregistry.info/Elements/u/P60271> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is reproduced as 
+  <http://rdaregistry.info/Elements/u/P60272> rdf:type owl:ObjectProperty .
+ 
+
+  # Property: is paraphrased as 
+  <http://rdaregistry.info/Elements/u/P60273> rdf:type owl:ObjectProperty .
+   
+  # Property: is arranged as 
+  <http://rdaregistry.info/Elements/u/P60274> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is abridged as 
+  <http://rdaregistry.info/Elements/u/P60275> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is continuation in part of 
+  <http://rdaregistry.info/Elements/u/P60276> rdf:type owl:ObjectProperty .
+ 
+  # Property: is separated from 
+  <http://rdaregistry.info/Elements/u/P60277> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is succeeded by 
+  <http://rdaregistry.info/Elements/u/P60278> rdf:type owl:ObjectProperty .
+  
+  
+  # Property: is digested as 
+  <http://rdaregistry.info/Elements/u/P60279> rdf:type owl:ObjectProperty .
+  
+  # Property: is translated as 
+  <http://rdaregistry.info/Elements/u/P60280> rdf:type owl:ObjectProperty .
+   
+  # Property: is digital transfer of 
+  <http://rdaregistry.info/Elements/u/P60287> rdf:type owl:ObjectProperty .
+  
+  
+  # Property: is summary of 
+  <http://rdaregistry.info/Elements/u/P60289> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is choreographic adaptation of 
+  <http://rdaregistry.info/Elements/u/P60293> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is remake of 
+  <http://rdaregistry.info/Elements/u/P60295> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is paraphrase of 
+  <http://rdaregistry.info/Elements/u/P60296> rdf:type owl:ObjectProperty .
+ 
+  
+  # Property: is reproduction of 
+  <http://rdaregistry.info/Elements/u/P60297> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is facsimile of 
+  <http://rdaregistry.info/Elements/u/P60301> rdf:type owl:ObjectProperty .
+   
+  
+  # Property: is revision of 
+  <http://rdaregistry.info/Elements/u/P60303> rdf:type owl:ObjectProperty .
+   
+ 
+ # Property: is libretto based on 
+  <http://rdaregistry.info/Elements/u/P60304> rdf:type owl:ObjectProperty .
+    
+  
+  # Property: is based on 
+  <http://rdaregistry.info/Elements/u/P60305> rdf:type owl:ObjectProperty .
+   
+ 
+  # Property: is continued by 
+  <http://rdaregistry.info/Elements/u/P60306> rdf:type owl:ObjectProperty .
+    
+ 
+  # Property: is abstracts for 
+  <http://rdaregistry.info/Elements/u/P60308> rdf:type owl:ObjectProperty .
+   
+
+  # Property: is indexing for 
+  <http://rdaregistry.info/Elements/u/P60309> rdf:type owl:ObjectProperty .
+   
+  # Property: is prequel to 
+  <http://rdaregistry.info/Elements/u/P60310> rdf:type owl:ObjectProperty .
+   
+  # Property: is imitation of 
+  <http://rdaregistry.info/Elements/u/P60311> rdf:type owl:ObjectProperty .
+   
+  # Property: is parody of 
+  <http://rdaregistry.info/Elements/u/P60312> rdf:type owl:ObjectProperty .
+   
+  # Property: is adapted as television program 
+  <http://rdaregistry.info/Elements/u/P60354> rdf:type owl:ObjectProperty .
+   
+ # Property: is adapted as video 
+ <http://rdaregistry.info/Elements/u/P60361> rdf:type owl:ObjectProperty .
+   
+  # Property: is electronic reproduction of 
+  <http://rdaregistry.info/Elements/u/P60469> rdf:type owl:ObjectProperty .
+   
+  # Property: is replacement of 
+  <http://rdaregistry.info/Elements/u/P60480> rdf:type owl:ObjectProperty .
+   
+  # Property: is split into 
+  <http://rdaregistry.info/Elements/u/P60503> rdf:type owl:ObjectProperty .
+   
+  # Property: is merged to form 
+  <http://rdaregistry.info/Elements/u/P60504> rdf:type owl:ObjectProperty .
+   
+  # Property: is merger of 
+  <http://rdaregistry.info/Elements/u/P60505> rdf:type owl:ObjectProperty .
+   
+  # Property: is absorption of 
+  <http://rdaregistry.info/Elements/u/P60574> rdf:type owl:ObjectProperty .
+   
+  # Property: is absorption in part of 
+  <http://rdaregistry.info/Elements/u/P60575> rdf:type owl:ObjectProperty .
+   
+  # Property: is continuation of 
+  <http://rdaregistry.info/Elements/u/P60576> rdf:type owl:ObjectProperty .
+   
+  # Property: is sequel to 
+  <http://rdaregistry.info/Elements/u/P60577> rdf:type owl:ObjectProperty .
+   
+  # Property: is graphic novelization of 
+  <http://rdaregistry.info/Elements/u/P60743> rdf:type owl:ObjectProperty .
+   
+  # Property: is video game adaptation of 
+  <http://rdaregistry.info/Elements/u/P60745> rdf:type owl:ObjectProperty .
+   
+  # Property: is oratorio adaptation of 
+  <http://rdaregistry.info/Elements/u/P60830> rdf:type owl:ObjectProperty .
+   
+  # Property: is adapted as oratorio 
+  <http://rdaregistry.info/Elements/u/P60831> rdf:type owl:ObjectProperty .
+   
+  # Property: is inspired by 
+  <http://rdaregistry.info/Elements/u/P60832> rdf:type owl:ObjectProperty .
+   
+  # Property: is inspiration for 
+  <http://rdaregistry.info/Elements/u/P60833> rdf:type owl:ObjectProperty .
+   
