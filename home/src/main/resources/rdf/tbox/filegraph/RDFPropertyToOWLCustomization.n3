@@ -384,6 +384,13 @@
   # Property: is inspiration for 
   <http://rdaregistry.info/Elements/u/P60833> rdf:type owl:ObjectProperty .
 
+# Properties defined as subproperties or inverses but not independently
+<http://rdaregistry.info/Elements/u/P60742> rdf:type owl:ObjectProperty .
+<http://rdaregistry.info/Elements/u/P60744> rdf:type owl:ObjectProperty .
+<http://rdaregistry.info/Elements/u/P60294> rdf:type owl:ObjectProperty .
+<http://rdaregistry.info/Elements/u/P60261> rdf:type owl:ObjectProperty .
+
+
 ## Schema - these already have domains and ranges set
 
 <http://schema.org/birthDate> rdf:type owl:DatatypeProperty .

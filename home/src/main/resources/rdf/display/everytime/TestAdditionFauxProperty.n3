@@ -1,0 +1,31 @@
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fptestcontext>
+        a       :ConfigContext ;
+        :configContextFor
+                <http://bibliotek-o.org/ontology/isTargetOf> ;
+        :hasConfiguration
+                <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fptestconfig> ;
+        :qualifiedBy
+                <http://www.w3.org/ns/oa#Annotation> ;
+        :qualifiedByDomain
+                <http://id.loc.gov/ontologies/bibframe/Work> .
+                
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fptestconfig>
+	a  :ObjectPropertyDisplayConfig ;
+	vitro:collateBySubclassAnnot   false ;
+	vitro:displayLimitAnnot        "0"^^xsd:int ;
+	vitro:displayRankAnnot         "0"^^xsd:int ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot
+	        role:public ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot
+	        role:public ;
+	vitro:offerCreateNewOptionAnnot
+	        true ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+	        role:public ;
+	vitro:selectFromExistingAnnot  true ;
+	:displayName "is target of (faux)" .
