@@ -35,6 +35,7 @@
 <http://www.w3.org/ns/oa#hasTarget> rdf:type owl:ObjectProperty . 
 #Assumed to be object property but not specific range specified
 <http://www.w3.org/ns/oa#hasSource> rdf:type owl:ObjectProperty . 
+<http://www.w3.org/ns/oa#hasScope> rdf:type owl:ObjectProperty . 
 #Based on notes, appears to have range motivation but no range explicitly defined
 <http://www.w3.org/ns/oa#motivatedBy> rdf:type owl:ObjectProperty .
 
