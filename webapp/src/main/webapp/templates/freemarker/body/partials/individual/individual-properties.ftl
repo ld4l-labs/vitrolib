@@ -9,9 +9,7 @@
 				<#assign fauxHash = fauxHash + {prop.uri:"true"} />
 			</#if>
 		</#list>
-		<#list fauxHash?keys as key>
-			${key}: ${fauxHash[key]}
-		</#list>
+
 
         <#list group.properties as property>
             <#assign rangeClass = "noRangeClass">
