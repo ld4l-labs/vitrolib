@@ -18,7 +18,11 @@
 
 @base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
 
+#local:fpgn38 a  :ConfigContext ; :configContextFor <http://bibliotek-o.org/ontology/hasActivity>;:hasConfiguration local:fpgenconfig38 ; :qualifiedBy bib:Activity ; :qualifiedByDomain bf:Work .	local:fpgenconfig38 a  :ObjectPropertyDisplayConfig ; vitro:collateBySubclassAnnot   false ; vitro:displayLimitAnnot "0"^^xsd:int ; vitro:displayRankAnnot  "0"^^xsd:int ; vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;	vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ; vitro:offerCreateNewOptionAnnot true ; vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ; vitro:selectFromExistingAnnot  true ; :displayName "has activity (faux)" .
 
+local:fpgenconfig38 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasActivity.jsonld" .
+ 
 # Nothing in here right now but could consider configuring same as etc.
     
     

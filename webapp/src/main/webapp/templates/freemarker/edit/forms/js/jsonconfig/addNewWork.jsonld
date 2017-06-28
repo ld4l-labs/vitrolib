@@ -2,7 +2,7 @@
   "@context": {
     "foaf": "http://xmlns.com/foaf/0.1/",
     "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
-    "ld4l": "http://bib.ld4l.org/ontology/",
+    "bib": "http://bibliotek-o.org/ontology/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vivo": "http://vivoweb.org/ontology/core#",
@@ -24,12 +24,12 @@
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual bibframe:titleOf ?subject .",
 		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
-		"?mainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?mainTitleElement rdf:type bib:MainTitleElement .",
 		"?mainTitleElement rdfs:label ?title .",
 		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
 		"?subject rdf:type ?workType ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -38,14 +38,14 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       "?subject ld4l:hasActivity ?activity .",
-		"?activity a ld4l:AuthorActivity.",
+       "?subject bib:hasActivity ?activity .",
+		"?activity a bib:AuthorActivity.",
 		"?activity rdfs:label 'Author'.",
-		"?activity ld4l:hasAgent ?agent .", 
-		"?activity ld4l:isActivityOf ?subject .",
+		"?activity bib:hasAgent ?agent .", 
+		"?activity bib:isActivityOf ?subject .",
 		"?agent a foaf:Person.",
 		"?agent rdfs:label ?agentName .",
-		"?agent ld4l:isAgentOf ?activity .",
+		"?agent bib:isAgentOf ?activity .",
 		"?subject bibframe:hasInstance ?instance .",
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
@@ -53,11 +53,11 @@
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
 		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
-		"?instanceMainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?instanceMainTitleElement rdf:type bib:MainTitleElement .",
 		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
 		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> ."
     },
     {
       "@id": "customform:addWork_subject",
