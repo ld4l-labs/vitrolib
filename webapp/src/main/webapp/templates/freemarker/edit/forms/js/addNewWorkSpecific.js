@@ -37,6 +37,11 @@ var addNewWorkSpecific = {
     			$("#instanceTitle").val(titleValue);
     		}
     	});
+    	//Copy activity label
+    	$("#activityType").change(function() {
+    		var optionText = $("#activityType option:selected").text();
+    		$("#activityLabel").val(optionText);
+    	});
     }
    
 

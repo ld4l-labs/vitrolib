@@ -5,22 +5,31 @@
 		<#--  Go through list to see if properties have a faux property version - if faux property exists, hide the base property -->
 		<#assign fauxHash = {} />
 			<#--  List of hash objects to enable faux property display as well -->
-		<#assign propertyInfoList = [ {"baseUri":"http://bibliotek-o.org/ontology/hasActivity", "rangeUri":"http://bibliotek-o.org/ontology/Activity"}] />
+		<#assign propertyInfoList = [ {"baseUri":"http://bibliotek-o.org/ontology/hasActivity", "rangeUri":"http://bibliotek-o.org/ontology/Activity"},
+		{"baseUri":"http://id.loc.gov/ontologies/bibframe/hasInstance"}] />
+		
        <#assign propertiesList = []/>
 		<#list group.properties as prop>
 			<#if prop.isFauxProperty == true && !fauxHash?keys?seq_contains(prop.uri) >
 				<#assign fauxHash = fauxHash + {prop.uri:"true"} />
-				<#list propertyInfoList as propertyInfo>
+			</#if>
+		</#list>
+			<#--Create properties list-->
+		<#list propertyInfoList as propertyInfo>
+			<#list group.properties as prop>
+				<#if prop.isFauxProperty == true && !fauxHash?keys?seq_contains(prop.uri) >
 					<#if propertyInfo.baseUri == prop.uri && propertyInfo.rangeUri == prop.rangeUri>
 						<#assign propertiesList = propertiesList + [prop] />
 					</#if>
-				</#list>
-				
-			</#if>
+				<#else>
+					<#if propertyInfo.baseUri == prop.uri>
+						<#assign propertiesList = propertiesList + [prop] />
+					</#if>
+				</#if>
+			</#list>
+		</#list>	
 			
-		</#list>
 		<#--  List of hash objects to enable faux property display as well -->
-		<#assign propertyInfoList = [ {"baseUri":"http://bibliotek-o.org/ontology/hasActivity", "rangeUri":"http://bibliotek-o.org/ontology/Activity"}] />
         <#--  --list group.properties as property-->
         <#list propertiesList as property>
 			

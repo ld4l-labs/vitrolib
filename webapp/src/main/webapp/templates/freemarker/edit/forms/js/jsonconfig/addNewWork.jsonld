@@ -21,15 +21,19 @@
         "?subject rdf:type bibframe:Work .",
 		"?subject rdfs:label ?title .",
 		"?subject bibframe:title ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
 		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual rdf:value ?title .",
 		"?titleIndividual bibframe:titleOf ?subject .",
 		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
 		"?mainTitleElement rdf:type bib:MainTitleElement .",
+		"?mainTitleElement rdf:value ?title .",
 		"?mainTitleElement rdfs:label ?title .",
 		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
-		"?subject rdf:type ?workType ."
+		"?subject rdf:type ?workType .",
+		"?subject dcterms:language lexvo:eng ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -39,8 +43,8 @@
       ],
       "customform:pattern": [
        "?subject bib:hasActivity ?activity .",
-		"?activity a bib:AuthorActivity.",
-		"?activity rdfs:label 'Author'.",
+		"?activity a ?activityType.",
+		"?activity rdfs:label ?activityLabel.",
 		"?activity bib:hasAgent ?agent .", 
 		"?activity bib:isActivityOf ?subject .",
 		"?agent a foaf:Person.",
@@ -50,14 +54,25 @@
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
 		"?instance bibframe:title ?instanceTitleIndividual .",
+		"?instance rdf:type bibframe:Title .",
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
+		"?instanceTitleIndividual rdf:value ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
 		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
 		"?instanceMainTitleElement rdf:type bib:MainTitleElement .",
 		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
-		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual ."
+		"?instanceMainTitleElement rdf:value ?instanceTitle .",
+		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual .",
+		"?publicationActivity bib:hasAgent ?publicationAgent .", 
+		"?publicationActivity bib:isActivityOf ?subject .",
+		"?publicationAgent a foaf:Agent.",
+		"?publicationAgent rdfs:label ?publicationAgentName .",
+		"?publicationAgent bib:isAgentOf ?publicationActivity .",
+		"?instance bib:hasActivity ?publicationActivity  .",
+		"?publicationActivity a bib:PublicationActivity .",
+		"?publicationActivity dcterms:date ?publicationDate ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
       "@id": "customform:addWork_subject",
@@ -175,6 +190,30 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "instanceMainTitleElement"
+    },
+    {
+      "@id": "customform:whcor_activityType",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:varName": "activityType"
+    },
+        {
+      "@id": "customform:whcor_activityLabel",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "activityLabel"
+    },
+    {
+      "@id": "customform:whcor_publicationDate",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "publicationDate"
     }
    ]
 }

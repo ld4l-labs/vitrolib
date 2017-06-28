@@ -129,8 +129,16 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     <#--  Autocomplete field for AUTHOR using LOC NAF field -->
 
       <div>
+      	
           <p templateId="inputAcSelector">
-              <label for="agentName"> Author${requiredHint}</label>
+              <label for="agentName"> Author or Other Role${requiredHint}</label>
+              <select name="activityType" id="activityType">
+	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
+	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
+	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
+	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
+              </select>
+              <input type="hidden"  name="activityLabel" id="activityLabel"/>
               <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
           </p>
 
@@ -181,6 +189,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
             <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
           </p>
         </div>
+        
+        <div>
+          <p>
+            <label for="instanceTitle">Date of Publication</label>
+            <input size="60"  type="text" id="publicationDate" name="publicationDate" value="" />
+          </p>
+        </div>
+        
       </fieldset>
     </div>
 
