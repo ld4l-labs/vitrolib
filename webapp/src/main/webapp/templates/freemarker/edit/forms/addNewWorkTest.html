@@ -1,0 +1,385 @@
+<!-- FM_BEGIN pageSetup.ftl -->
+<!-- FM_END pageSetup.ftl -->
+<!-- FM_BEGIN page.ftl -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- FM_BEGIN head.ftl -->
+
+<meta charset="utf-8" />
+<!-- Google Chrome Frame open source plug-in brings Google Chrome's open web technologies and speedy JavaScript engine to Internet Explorer-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Edit</title>
+
+<!-- FM_BEGIN stylesheets.ftl -->
+<!-- vitro base styles (application-wide) -->
+<link rel="stylesheet" href="/vitrolib/css/vitro.css" />
+
+<link rel="stylesheet" href="/vitrolib/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />
+<link rel="stylesheet" href="/vitrolib/templates/freemarker/edit/forms/css/customForm.css" />
+<link rel="stylesheet" href="/vitrolib/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />
+
+<link rel="stylesheet" href="/vitrolib/css/edit.css" /><!-- FM_END stylesheets.ftl -->
+<link rel="stylesheet" href="/vitrolib/themes/vitrolib/css/screen.css" />
+
+<!-- FM_BEGIN headScripts.ftl --><script>
+var i18nStrings = {
+    allCapitalized: 'All',
+};
+</script>
+<script type="text/javascript" src="/vitrolib/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/vitrolib/js/jquery-migrate-1.4.1.js"></script>
+<script type="text/javascript" src="/vitrolib/js/vitroUtils.js"></script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/vitrolib/js/html5.js"></script>
+<![endif]-->
+
+ 
+<!-- FM_END headScripts.ftl -->
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="/vitrolib/js/selectivizr.js"></script>
+<![endif]-->
+
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/vitrolib/favicon.ico"><!-- FM_END head.ftl -->
+    </head>
+    
+    <body class="editRequestDispatch loggedIn">
+<!-- FM_BEGIN identity.ftl -->
+
+<header id="branding" role="banner">
+    <h1 class="vitro-logo"><a title="VIVO" href="/vitrolib"><span class="displace">VIVO</span></a></h1>
+
+    <nav role="navigation">
+        <ul id="header-nav" role="list">
+<!-- FM_BEGIN languageSelector.ftl -->
+<script type="text/javascript">
+var i18nStringsLangMenu = {
+    selectLanguage: "Select a language"
+};
+</script>
+
+
+<!-- FM_END languageSelector.ftl -->
+            <li role="listitem"><a href="/vitrolib/browse" title="Index">Index</a></li>
+                    <li role="listitem"><a href="/vitrolib/siteAdmin" title="Site Admin">Site Admin</a></li>
+                    <li>
+                        <ul class="dropdown">
+                            <li id="user-menu"><a href="#" title="Current user">root</a>
+                                <ul class="sub_menu">
+                                         <li role="listitem"><a href="/vitrolib/accounts/myAccount" title="My account">My account</a></li>
+                                     <li role="listitem"><a href="/vitrolib/logout" title="Log out">Log out</a></li>
+                                </ul>
+                            </li>
+                         </ul>
+                     </li>
+                
+                
+                
+        </ul>
+        
+    </nav><!-- FM_END identity.ftl -->
+<!-- FM_BEGIN search.ftl --> 
+ 
+<section id="search" role="region">
+    <fieldset>
+        <legend>Search form</legend>
+
+        <form id="search-form" action="/vitrolib/search" name="search" role="search" accept-charset="UTF-8" method="POST"> 
+            <div id="search-field">
+                <input type="text" name="querytext" class="search-vitro" value="" autocapitalize="off" />
+                <input type="submit" value="Search" class="search">
+            </div>
+        </form>
+    </fieldset>
+</section><!-- FM_END search.ftl -->
+<!-- FM_BEGIN menu.ftl -->
+
+</header>
+
+<!-- FM_BEGIN developer.ftl -->
+
+<div id="developerPanel" > </div>
+<script>
+    developerAjaxUrl = '/vitrolib/admin/developerAjax'
+    developerCssLinks = ["/vitrolib/css/developer/developerPanel.css", "/vitrolib/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css"]
+</script>
+   
+
+<!-- FM_END developer.ftl -->
+
+<nav role="navigation">
+    <ul id="main-nav" role="list">
+            <li role="listitem"><a href="/vitrolib/"  title="Home menu item">Home</a></li>
+            <li role="listitem"><a href="/vitrolib/works"  title="Works menu item">Works</a></li>
+            <li role="listitem"><a href="/vitrolib/instances"  title="Instances menu item">Instances</a></li>
+            <li role="listitem"><a href="/vitrolib/items"  title="Items menu item">Items</a></li>
+            <li role="listitem"><a href="/vitrolib/people"  title="People menu item">People</a></li>
+            <li role="listitem"><a href="/vitrolib/organizations"  title="Organizations menu item">Organizations</a></li>
+    </ul>
+</nav>
+
+<div id="wrapper-content" role="main">        
+    
+    <!--[if lte IE 8]>
+    <noscript>
+        <p class="ie-alert">This site uses HTML elements that are not recognized by Internet Explorer 8 and below in the absence of JavaScript. As a result, the site will not be rendered appropriately. To correct this, please either enable JavaScript, upgrade to Internet Explorer 9, or use another browser. Here are the <a href="http://www.enable-javascript.com" title="javascript instructions">Here are the instructions for enabling JavaScript in your web browser</a>.</p>
+    </noscript>
+    <![endif]--><!-- FM_END menu.ftl -->
+        
+        <!-- FM_BEGIN addNewWorkTemplate.ftl -->
+
+
+
+<h2>New Work</h2>
+
+
+
+
+
+<section id="addNewWork" role="region">
+
+<div id="ie67DisableWrapper">
+    <div id="ie67DisableContent">
+	    <img src="/vitrolib/images/iconAlertBig.png" alt="Alert Icon"/>
+	    <p>This form is not supported in versions of Internet Explorer below version 8. Please upgrade your browser, or switch to another browser, such as FireFox.</p>
+    </div>
+</div>
+<form id="addNewWork" class="customForm noIE67" action="newWorkTest.html" method="get" role="add work" >
+
+    <div id="formcontent">
+       <p>
+              <label for="title">Title <span class='requiredHint'> *</span></label>
+              <input size="60"  type="text" id="title" name="title" value="" />
+     </p>
+
+	 <p>
+              <label for="title">Statement of Responsibility<span class='requiredHint'> *</span></label>
+              <input size="60"  type="text" id="responsibility" name="responsibility" value="" />
+     </p>
+	
+
+     <div>
+      <p>
+      <label for="workType">Type <span class='requiredHint'> *</span></label>
+           <select id="workType" name="workType" role="select">
+
+              </select>
+        </p>
+      </div>
+
+      <div>
+      	
+          <p templateId="inputAcSelector">
+              <label for="agentName"> Author or Other Role<span class='requiredHint'> *</span></label>
+              <select name="activityType" id="activityType">
+	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
+	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
+	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
+	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
+              </select>
+              <input type="hidden"  name="activityLabel" id="activityLabel"/>
+              <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
+          </p>
+
+
+          <div class="acSelection" acGroupName="group" templateId="literalSelection">
+              <p class="inline">
+                  <label>Selected:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="Verify this match">(Verify this match</a> or
+                  <a href="#" class="changeSelection" id="changeSelection">change selection)</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+          </div>
+      </div>
+      
+      <p>
+              <label for="subject">Subject</span></label>
+              <input size="60"  type="text" id="subject" name="subject" value="" />
+     </p>
+     
+        <p>
+              <label for="language">Language</span></label>
+             <select name="language" id="language"><option value="arabic">arabic</option><option value="english">english</option>
+             <option value="french">french</option></select>
+     </p>
+      
+
+      <fieldset class="workform__fieldset">
+        <legend class="workform__legend"><strong>Has Instance</strong> (RDA Manifestation) </legend>
+
+        <div>
+          <p>
+            <label for="instanceTitle">Title</label>
+            <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <label for="publisherAgentName"> Publisher</label>
+            <input class="acSelector" size="60"  type="text" id="publisherAgentName" name="publisherAgentName" acGroupName="publisherGroup"  value="" />
+          </p>
+
+          <div class="acSelection" acGroupName="publisherGroup" templateId="literalSelection">
+            <p class="inline">
+                <label>Selected:</label>
+                <span class="acSelectionInfo"></span>
+                <a href="" class="verifyMatch"  title="Verify this match">(Verify this match</a> or
+                <a href="#" class="changeSelection" id="changeSelection">change selection)</a>
+            </p>
+            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  flagClearLabelForExisting="true" />
+          </div>
+        </div>
+
+        <div>
+          <p>
+            <label for="instanceTitle">Place of Publication</label>
+            <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
+          </p>
+        </div>
+        
+        <div>
+          <p>
+            <label for="instanceTitle">Date of Publication</label>
+            <input size="60"  type="text" id="publicationDate" name="publicationDate" value="" />
+          </p>
+        </div>
+        
+      </fieldset>
+    </div>
+
+
+       <p class="submit">
+            <input type="hidden" name = "editKey" value="67294793"/>
+            <input type="hidden" name="configFile" value="addNewWork.jsonld" />
+            <input type="submit" id="submit" value="Save"/><span class="or"> or </span><a class="cancel" href="/vitrolib/postEditCleanupController?editKey=67294793&cancel=true" title="cancel">Cancel</a>
+       </p>
+
+       <p id="requiredLegend" class="requiredHint">* required fields</p>
+    </form>
+
+
+      <div templateId="literalTemplate" style="display:none" >
+          <p>
+              <label for=""></label>
+              <input size="60"  type="text" id="" name="" value="" />
+          </p>
+
+
+
+      </div>
+
+
+    <div templateId="autocompleteLiteralTemplate" style="display:none">
+          <p templateId="inputAcSelector">
+              <label for=""> <span class='requiredHint'> *</span></label>
+              <input class="acSelector" size="60"  type="text" id="" name="" acGroupName="group"  value="" />
+          </p>
+
+
+          <div class="acSelection" acGroupName="group" templateId="literalSelection">
+              <p class="inline">
+                  <label>Selected:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="Verify this match">(Verify this match</a> or
+                  <a href="#" class="changeSelection" id="changeSelection">change selection)</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="" name="" value=""  flagClearLabelForExisting="true" />
+          </div>
+      </div>
+
+      <div templateId="selectDropdownTemplate" style="display:none">
+      <p>
+      <label for=""> </label>
+           <select id="" name="" role="select">
+
+              </select>
+        </p>
+      </div>
+
+
+    <script type="text/javascript">
+    //No uris or literals in scope here
+
+  //TODO: Handle multiple autocompletes on the same page?
+  //regular autocomplete url: acUrl: '/vitrolib/autocomplete?tokenize=true',
+    var customFormData  = {
+        sparqlQueryUrl: '/vitrolib/ajax/sparqlQuery',
+        acUrl: '/vitrolib/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
+        customFormAJAXUrl:'/vitrolib/ajax/customForm',
+        editMode: 'add',
+        baseHref: '/vitrolib/individual?uri=',
+        blankSentinel: '>SUBMITTED VALUE WAS BLANK<',
+        flagClearLabelForExisting: 'flagClearLabelForExisting',
+        defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
+        acTypes: {},
+        configFileURL:"/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"
+    };
+    var i18nStrings = {
+        selectAnExisting: 'Select an existing',
+        orCreateNewOne: 'or create a new one.',
+        selectedString: 'Selected'
+    };
+    //Prevent custom form on load on document ready so these event listeners can be associated AFTER form is loaded
+    preventLoadFlag = true;
+    </script>
+
+
+</section>
+
+
+ 
+ 
+
+ 
+,
+<!-- FM_END addNewWorkTemplate.ftl -->
+
+        
+<!-- FM_BEGIN footer.ftl -->
+
+</div> <!-- #wrapper-content -->
+
+<footer role="contentinfo">
+    <p class="copyright">
+            <small>&copy;2017
+                VIVO Project
+             | <a class="terms" href="/vitrolib/termsOfUse" title="Terms of Use">Terms of Use</a></small> | 
+        Powered by <a class="powered-by-vitro" href="http://vitro.sourceforge.net"><strong>Vitro</strong></a>
+             | Version <a href="/vitrolib/revisionInfo" title="Version">0.1</a>
+    </p>
+    
+    <nav role="navigation">
+        <ul id="footer-nav" role="list">
+            <li role="listitem"><a href="/vitrolib/about" title="About">About</a></li>
+            <li role="listitem"><a href="http://www.vivoweb.org/support" target="blank" title="Support">Support</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- FM_BEGIN scripts.ftl -->
+<script type="text/javascript" src="/vitrolib/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/vitrolib/js/customFormUtils.js"></script>
+<script type="text/javascript" src="/vitrolib/js/browserUtils.js"></script>
+<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>
+<script type="application/ld+json" id="configjsonscript" src="/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"></script>
+<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWorkDisplayConfig.json"></script>
+<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>
+<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>
+<script type="text/javascript" src="/vitrolib/js/languageMenuUtils.js"></script>
+<script type="text/javascript" src="/vitrolib/js/userMenu/userMenuUtils.js"></script>
+<script type="text/javascript" src="/vitrolib/js/developer/developerPanel.js"></script>
+
+
+<!-- FM_BEGIN googleAnalytics.ftl --><!-- FM_END googleAnalytics.ftl -->
+
+<!-- FM_END scripts.ftl -->
+<!-- FM_END footer.ftl -->
+    </body>
+</html><!-- FM_END page.ftl -->
