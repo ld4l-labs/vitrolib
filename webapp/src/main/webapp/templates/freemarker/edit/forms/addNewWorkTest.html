@@ -14,45 +14,45 @@
 
 <!-- FM_BEGIN stylesheets.ftl -->
 <!-- vitro base styles (application-wide) -->
-<link rel="stylesheet" href="/vitrolib/css/vitro.css" />
+<link rel="stylesheet" href="/css/vitro.css" />
 
-<link rel="stylesheet" href="/vitrolib/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />
-<link rel="stylesheet" href="/vitrolib/templates/freemarker/edit/forms/css/customForm.css" />
-<link rel="stylesheet" href="/vitrolib/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />
+<link rel="stylesheet" href="/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />
+<link rel="stylesheet" href="/templates/freemarker/edit/forms/css/customForm.css" />
+<link rel="stylesheet" href="/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />
 
-<link rel="stylesheet" href="/vitrolib/css/edit.css" /><!-- FM_END stylesheets.ftl -->
-<link rel="stylesheet" href="/vitrolib/themes/vitrolib/css/screen.css" />
+<link rel="stylesheet" href="/css/edit.css" /><!-- FM_END stylesheets.ftl -->
+<link rel="stylesheet" href="/themes/vitrolib/css/screen.css" />
 
 <!-- FM_BEGIN headScripts.ftl --><script>
 var i18nStrings = {
     allCapitalized: 'All',
 };
 </script>
-<script type="text/javascript" src="/vitrolib/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/vitrolib/js/jquery-migrate-1.4.1.js"></script>
-<script type="text/javascript" src="/vitrolib/js/vitroUtils.js"></script>
+<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.4.1.js"></script>
+<script type="text/javascript" src="/js/vitroUtils.js"></script>
 
 <!--[if lt IE 9]>
-<script type="text/javascript" src="/vitrolib/js/html5.js"></script>
+<script type="text/javascript" src="/js/html5.js"></script>
 <![endif]-->
 
  
 <!-- FM_END headScripts.ftl -->
 
 <!--[if (gte IE 6)&(lte IE 8)]>
-<script type="text/javascript" src="/vitrolib/js/selectivizr.js"></script>
+<script type="text/javascript" src="/js/selectivizr.js"></script>
 <![endif]-->
 
 
 
-<link rel="shortcut icon" type="image/x-icon" href="/vitrolib/favicon.ico"><!-- FM_END head.ftl -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"><!-- FM_END head.ftl -->
     </head>
     
     <body class="editRequestDispatch loggedIn">
 <!-- FM_BEGIN identity.ftl -->
 
 <header id="branding" role="banner">
-    <h1 class="vitro-logo"><a title="VIVO" href="/vitrolib"><span class="displace">VIVO</span></a></h1>
+    <h1 class="vitro-logo"><a title="VIVO" href=""><span class="displace">VIVO</span></a></h1>
 
     <nav role="navigation">
         <ul id="header-nav" role="list">
@@ -65,14 +65,14 @@ var i18nStringsLangMenu = {
 
 
 <!-- FM_END languageSelector.ftl -->
-            <li role="listitem"><a href="/vitrolib/browse" title="Index">Index</a></li>
-                    <li role="listitem"><a href="/vitrolib/siteAdmin" title="Site Admin">Site Admin</a></li>
+            <li role="listitem"><a href="/browse" title="Index">Index</a></li>
+                    <li role="listitem"><a href="/siteAdmin" title="Site Admin">Site Admin</a></li>
                     <li>
                         <ul class="dropdown">
                             <li id="user-menu"><a href="#" title="Current user">root</a>
                                 <ul class="sub_menu">
-                                         <li role="listitem"><a href="/vitrolib/accounts/myAccount" title="My account">My account</a></li>
-                                     <li role="listitem"><a href="/vitrolib/logout" title="Log out">Log out</a></li>
+                                         <li role="listitem"><a href="/accounts/myAccount" title="My account">My account</a></li>
+                                     <li role="listitem"><a href="/logout" title="Log out">Log out</a></li>
                                 </ul>
                             </li>
                          </ul>
@@ -89,7 +89,7 @@ var i18nStringsLangMenu = {
     <fieldset>
         <legend>Search form</legend>
 
-        <form id="search-form" action="/vitrolib/search" name="search" role="search" accept-charset="UTF-8" method="POST"> 
+        <form id="search-form" action="/search" name="search" role="search" accept-charset="UTF-8" method="POST"> 
             <div id="search-field">
                 <input type="text" name="querytext" class="search-vitro" value="" autocapitalize="off" />
                 <input type="submit" value="Search" class="search">
@@ -105,8 +105,8 @@ var i18nStringsLangMenu = {
 
 <div id="developerPanel" > </div>
 <script>
-    developerAjaxUrl = '/vitrolib/admin/developerAjax'
-    developerCssLinks = ["/vitrolib/css/developer/developerPanel.css", "/vitrolib/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css"]
+    developerAjaxUrl = '/admin/developerAjax'
+    developerCssLinks = ["/css/developer/developerPanel.css", "/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css"]
 </script>
    
 
@@ -114,12 +114,12 @@ var i18nStringsLangMenu = {
 
 <nav role="navigation">
     <ul id="main-nav" role="list">
-            <li role="listitem"><a href="/vitrolib/"  title="Home menu item">Home</a></li>
-            <li role="listitem"><a href="/vitrolib/works"  title="Works menu item">Works</a></li>
-            <li role="listitem"><a href="/vitrolib/instances"  title="Instances menu item">Instances</a></li>
-            <li role="listitem"><a href="/vitrolib/items"  title="Items menu item">Items</a></li>
-            <li role="listitem"><a href="/vitrolib/people"  title="People menu item">People</a></li>
-            <li role="listitem"><a href="/vitrolib/organizations"  title="Organizations menu item">Organizations</a></li>
+            <li role="listitem"><a href="/"  title="Home menu item">Home</a></li>
+            <li role="listitem"><a href="/works"  title="Works menu item">Works</a></li>
+            <li role="listitem"><a href="/instances"  title="Instances menu item">Instances</a></li>
+            <li role="listitem"><a href="/items"  title="Items menu item">Items</a></li>
+            <li role="listitem"><a href="/people"  title="People menu item">People</a></li>
+            <li role="listitem"><a href="/organizations"  title="Organizations menu item">Organizations</a></li>
     </ul>
 </nav>
 
@@ -145,7 +145,7 @@ var i18nStringsLangMenu = {
 
 <div id="ie67DisableWrapper">
     <div id="ie67DisableContent">
-	    <img src="/vitrolib/images/iconAlertBig.png" alt="Alert Icon"/>
+	    <img src="/images/iconAlertBig.png" alt="Alert Icon"/>
 	    <p>This form is not supported in versions of Internet Explorer below version 8. Please upgrade your browser, or switch to another browser, such as FireFox.</p>
     </div>
 </div>
@@ -258,7 +258,7 @@ var i18nStringsLangMenu = {
        <p class="submit">
             <input type="hidden" name = "editKey" value="67294793"/>
             <input type="hidden" name="configFile" value="addNewWork.jsonld" />
-            <input type="submit" id="submit" value="Save"/><span class="or"> or </span><a class="cancel" href="/vitrolib/postEditCleanupController?editKey=67294793&cancel=true" title="cancel">Cancel</a>
+            <input type="submit" id="submit" value="Save"/><span class="or"> or </span><a class="cancel" href="/postEditCleanupController?editKey=67294793&cancel=true" title="cancel">Cancel</a>
        </p>
 
        <p id="requiredLegend" class="requiredHint">* required fields</p>
@@ -308,18 +308,18 @@ var i18nStringsLangMenu = {
     //No uris or literals in scope here
 
   //TODO: Handle multiple autocompletes on the same page?
-  //regular autocomplete url: acUrl: '/vitrolib/autocomplete?tokenize=true',
+  //regular autocomplete url: acUrl: '/autocomplete?tokenize=true',
     var customFormData  = {
-        sparqlQueryUrl: '/vitrolib/ajax/sparqlQuery',
-        acUrl: '/vitrolib/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
-        customFormAJAXUrl:'/vitrolib/ajax/customForm',
+        sparqlQueryUrl: '/ajax/sparqlQuery',
+        acUrl: '/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
+        customFormAJAXUrl:'/ajax/customForm',
         editMode: 'add',
-        baseHref: '/vitrolib/individual?uri=',
+        baseHref: '/individual?uri=',
         blankSentinel: '>SUBMITTED VALUE WAS BLANK<',
         flagClearLabelForExisting: 'flagClearLabelForExisting',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"
+        configFileURL:"/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"
     };
     var i18nStrings = {
         selectAnExisting: 'Select an existing',
@@ -350,31 +350,31 @@ var i18nStringsLangMenu = {
     <p class="copyright">
             <small>&copy;2017
                 VIVO Project
-             | <a class="terms" href="/vitrolib/termsOfUse" title="Terms of Use">Terms of Use</a></small> | 
+             | <a class="terms" href="/termsOfUse" title="Terms of Use">Terms of Use</a></small> | 
         Powered by <a class="powered-by-vitro" href="http://vitro.sourceforge.net"><strong>Vitro</strong></a>
-             | Version <a href="/vitrolib/revisionInfo" title="Version">0.1</a>
+             | Version <a href="/revisionInfo" title="Version">0.1</a>
     </p>
     
     <nav role="navigation">
         <ul id="footer-nav" role="list">
-            <li role="listitem"><a href="/vitrolib/about" title="About">About</a></li>
+            <li role="listitem"><a href="/about" title="About">About</a></li>
             <li role="listitem"><a href="http://www.vivoweb.org/support" target="blank" title="Support">Support</a></li>
         </ul>
     </nav>
 </footer>
 
 <!-- FM_BEGIN scripts.ftl -->
-<script type="text/javascript" src="/vitrolib/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="/vitrolib/js/customFormUtils.js"></script>
-<script type="text/javascript" src="/vitrolib/js/browserUtils.js"></script>
-<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>
-<script type="application/ld+json" id="configjsonscript" src="/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"></script>
-<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/jsonconfig/addNewWorkDisplayConfig.json"></script>
-<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>
-<script type="text/javascript" src="/vitrolib/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>
-<script type="text/javascript" src="/vitrolib/js/languageMenuUtils.js"></script>
-<script type="text/javascript" src="/vitrolib/js/userMenu/userMenuUtils.js"></script>
-<script type="text/javascript" src="/vitrolib/js/developer/developerPanel.js"></script>
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/js/customFormUtils.js"></script>
+<script type="text/javascript" src="/js/browserUtils.js"></script>
+<script type="text/javascript" src="/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>
+<script type="application/ld+json" id="configjsonscript" src="/templates/freemarker/edit/forms/js/jsonconfig/addNewWork.jsonld"></script>
+<script type="text/javascript" src="/templates/freemarker/edit/forms/js/jsonconfig/addNewWorkDisplayConfig.json"></script>
+<script type="text/javascript" src="/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>
+<script type="text/javascript" src="/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>
+<script type="text/javascript" src="/js/languageMenuUtils.js"></script>
+<script type="text/javascript" src="/js/userMenu/userMenuUtils.js"></script>
+<script type="text/javascript" src="/js/developer/developerPanel.js"></script>
 
 
 <!-- FM_BEGIN googleAnalytics.ftl --><!-- FM_END googleAnalytics.ftl -->
