@@ -184,13 +184,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
             <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  ${flagClearLabelForExisting}="true" />
           </div>
         </div>
-
-        <div>
+	<!-- Commenting out for now -->
+        <!--div
           <p>
             <label for="instanceTitle">Place of Publication</label>
             <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
           </p>
-        </div>
+        </div-->
         
         <div>
           <p>
