@@ -267,7 +267,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         customFormAJAXUrl:'${urls.base}/ajax/customForm',
         editMode: '${editMode}',
         baseHref: '${urls.base}/individual?uri=',
-        blankSentinel: '${blankSentinel}',
+        //blankSentinel: '${blankSentinel}',
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
