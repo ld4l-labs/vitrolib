@@ -43,18 +43,18 @@
       ],
       "customform:pattern": [
        "?subject bib:hasActivity ?activity .",
-		"?activity a ?activityType.",
+		"?activity rdf:type ?activityType.",
 		"?activity rdfs:label ?activityLabel.",
 		"?activity bib:hasAgent ?agent .", 
 		"?activity bib:isActivityOf ?subject .",
-		"?agent a foaf:Person.",
+		"?agent rdf:type foaf:Person.",
 		"?agent rdfs:label ?agentName .",
 		"?agent bib:isAgentOf ?activity .",
 		"?subject bibframe:hasInstance ?instance .",
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
 		"?instance bibframe:title ?instanceTitleIndividual .",
-		"?instance rdf:type bibframe:Title .",
+		"?instanceTitleIndividual rdf:type bibframe:Title .",
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
 		"?instanceTitleIndividual rdf:value ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
@@ -63,13 +63,13 @@
 		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
 		"?instanceMainTitleElement rdf:value ?instanceTitle .",
 		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual .",
-		"?publicationActivity bib:hasAgent ?publicationAgent .", 
-		"?publicationActivity bib:isActivityOf ?subject .",
-		"?publicationAgent a foaf:Agent.",
-		"?publicationAgent rdfs:label ?publicationAgentName .",
-		"?publicationAgent bib:isAgentOf ?publicationActivity .",
-		"?instance bib:hasActivity ?publicationActivity  .",
-		"?publicationActivity a bib:PublicationActivity .",
+		"?instance bib:hasActivity ?publicationActivity .",
+		"?publicationActivity bib:hasAgent ?publisherAgent .", 
+		"?publicationActivity bib:isActivityOf ?instance .",
+		"?publisherAgent rdf:type foaf:Agent.",
+		"?publisherAgent rdfs:label ?publisherAgentName .",
+		"?publisherAgent bib:isAgentOf ?publicationActivity .",
+		"?publicationActivity rdf:type bib:PublicationActivity .",
 		"?publicationActivity dcterms:date ?publicationDate ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
@@ -214,6 +214,32 @@
        "forms:LiteralField"
       ],
       "customform:varName": "publicationDate"
+    },
+     {
+      "@id": "customform:whcor_publicationActivity",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true, 
+      "customform:varName": "publicationActivity"
+    },
+    {
+      "@id": "customform:whcor_publisherAgentName",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "publisherAgentName"
+    },
+     {
+      "@id": "customform:whcor_publisherAgent",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "publisherAgent"
     }
    ]
 }
