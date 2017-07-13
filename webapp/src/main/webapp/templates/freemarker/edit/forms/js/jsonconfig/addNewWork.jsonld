@@ -47,7 +47,8 @@
 		"?activity rdfs:label ?activityLabel.",
 		"?activity bib:hasAgent ?agent .", 
 		"?activity bib:isActivityOf ?subject .",
-		"?agent rdf:type foaf:Person.",
+		"?agent rdf:type foaf:Agent.",
+		"?agent foaf:name ?agentName.",
 		"?agent rdfs:label ?agentName .",
 		"?agent bib:isAgentOf ?activity .",
 		"?subject bibframe:hasInstance ?instance .",
@@ -68,6 +69,7 @@
 		"?publicationActivity bib:isActivityOf ?instance .",
 		"?publisherAgent rdf:type foaf:Agent.",
 		"?publisherAgent rdfs:label ?publisherAgentName .",
+		"?publisherAgent foaf:name ?publisherAgentName .",
 		"?publisherAgent bib:isAgentOf ?publicationActivity .",
 		"?publicationActivity rdf:type bib:PublicationActivity .",
 		"?publicationActivity dcterms:date ?publicationDate ."

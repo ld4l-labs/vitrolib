@@ -62,7 +62,7 @@
             		<#include "individual-work-properties.ftl">
             	</#if>
             <#else>
-            <#include "individual-properties.ftl">
+            	<#include "individual-properties.ftl">
             </#if>
         </div>
         </section> <!-- end property-group -->

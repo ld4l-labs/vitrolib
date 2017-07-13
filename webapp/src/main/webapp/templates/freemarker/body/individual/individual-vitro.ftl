@@ -61,9 +61,11 @@
                     <#-- Label -->
                     <#--  Getting rid of label entirely and replacing with Title instead -->
                     <#--  --@p.label individual editable labelCount localesCount languageCount/-->
-                    <#assign titleRangeUri = "http://id.loc.gov/ontologies/bibframe/Title"/>
-                    <#assign titleProperty = propertyGroups.pullProperty("http://id.loc.gov/ontologies/bibframe/title", titleRangeUri)>
-					<@displayTitle titleProperty titleRangeUri editable />
+                    <#if individualType?? && (individualType == "work" || individualType == "instance") >
+	                    <#assign titleRangeUri = "http://id.loc.gov/ontologies/bibframe/Title"/>
+	                    <#assign titleProperty = propertyGroups.pullProperty("http://id.loc.gov/ontologies/bibframe/title", titleRangeUri)>
+						<@displayTitle titleProperty titleRangeUri editable />
+					</#if>
                     <#--  Most-specific types -->
                     <@p.mostSpecificTypes individual />
                     <@showSuperclassType individual />

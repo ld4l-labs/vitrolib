@@ -17,12 +17,13 @@
         SELECT DISTINCT 
             ?instance ?instanceTitle
             ?publicationAgentName ?publicationDate 
-            ?mostSpecificType
+            ?mostSpecificType ?mostSpecificTypeLabel
     
         WHERE {
             ?subject ?property ?instance .
           	?instance a bibframe:Instance .
           	?instance vitro:mostSpecificType ?mostSpecificType .
+          	?mostSpecificType rdfs:label ?mostSpecificTypeLabel .
             
             OPTIONAL {
            	?instance bibframe:title ?titleIndividual .

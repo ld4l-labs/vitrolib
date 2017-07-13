@@ -22,7 +22,7 @@
         WHERE {
             ?subject ?property ?activity .
             ?activity a bib:Activity .
-            ?activity rdfs:label ?activityLabel .
+            OPTIONAL {?activity rdfs:label ?activityLabel .}
             OPTIONAL {
              ?activity bib:hasAgent ?agent .
             ?agent rdfs:label ?agentLabel .

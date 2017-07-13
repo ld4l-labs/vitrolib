@@ -3,3 +3,12 @@
 <http://id.loc.gov/ontologies/bibframe/Work>
       vitro:customDisplayViewAnnot
               "individual-work.ftl"^^xsd:string .
+              
+<http://xmlns.com/foaf/0.1/Agent>
+	vitro:customDisplayViewAnnot 
+		"individual-foafAgent.ftl"^^xsd:string .
+		
+
+<http://id.loc.gov/ontologies/bibframe/Instance>
+      vitro:customDisplayViewAnnot
+              "individual-instance.ftl"^^xsd:string .

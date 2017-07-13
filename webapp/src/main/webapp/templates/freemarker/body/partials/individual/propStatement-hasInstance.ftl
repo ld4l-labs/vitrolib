@@ -11,13 +11,13 @@
      next statement -->
 <#macro showActivity statement>
 
-<#if statement.instance?? && statement.title??>
-    <a href="${profileUrl(statement.uri("instance"))}" title="${statement.title}">${statement.title} <#if statement.mostSpecificType??> (${statement.mostSpecificType}) </#if></a>
+<#if statement.instance?? && statement.instanceTitle??>
+    <a href="${profileUrl(statement.uri("instance"))}" title="${statement.instanceTitle}">${statement.instanceTitle} <#if statement.mostSpecificTypeLabel??> (${statement.mostSpecificTypeLabel}) </#if></a>
    <#if statement.publicationAgentName??>
    	Publisher: ${statement.publicationAgentName}
    </#if>
-   <#if statement.publicationDate>
-   ${publicationDate}
+   <#if statement.publicationDate??>
+   ${statement.publicationDate}
    </#if>
 </#if>
 
