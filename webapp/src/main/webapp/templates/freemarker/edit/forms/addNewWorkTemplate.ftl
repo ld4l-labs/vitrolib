@@ -198,7 +198,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
             <input size="60"  type="text" id="publicationDate" name="publicationDate" value="" />
           </p>
         </div>
-        
+       <input type="hidden" name="publicationActivityLabel" id="publicationActivityLabel" value=""/> 
       </fieldset>
     </div>
 
