@@ -60,6 +60,8 @@
             <#if individualType??>
             	<#if individualType == "work">
             		<#include "individual-work-properties.ftl">
+            	<#else>
+					<#include "individual-properties.ftl">
             	</#if>
             <#else>
             	<#include "individual-properties.ftl">

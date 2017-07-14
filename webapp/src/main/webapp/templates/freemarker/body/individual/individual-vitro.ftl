@@ -14,6 +14,8 @@
 	<#assign languageCount = 1>
 </#if>	
 
+<#--  Pulling property for main image -->
+<#assign mainImage = propertyGroups.pullProperty("${namespaces.vitroPublic}mainImage")!>
 <#--  objectPropertyList property editable statements=property.statements template=property.template -->
 
 <#macro showSuperclassType individual>
