@@ -126,6 +126,17 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
               </select>
         </p>
       </div>
+      
+      <#-- Language -->
+      
+        <div>
+      <p>
+      <label for="language">Type ${requiredHint}</label>
+           <select id="language" name="language" role="select">
+
+              </select>
+        </p>
+      </div>
     <#--  Autocomplete field for AUTHOR using LOC NAF field -->
 
       <div>
@@ -167,6 +178,23 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
             <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
           </p>
         </div>
+        
+        <div>
+          <p>
+            <label for="statementResponsibility">Statement of Responsibility</label>
+            <input size="60"  type="text" id="statementResponsibility" name="statementResponsibility" value="" />
+          </p>
+        </div>
+
+		<#-- Instance Type -->
+	<div>
+      <p>
+      <label for="instanceType">Type</label>
+           <select id="instanceType" name="instanceType" role="select">
+
+              </select>
+        </p>
+      </div>
 
         <div>
           <p>

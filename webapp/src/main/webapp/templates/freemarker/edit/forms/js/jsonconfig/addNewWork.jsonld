@@ -31,7 +31,7 @@
 		"?mainTitleElement rdfs:label ?title .",
 		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
 		"?subject rdf:type ?workType .",
-		"?subject dcterms:language lexvo:eng ."
+		"?subject dcterms:language ?language ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -74,7 +74,9 @@
 		"?publicationActivity rdf:type bib:Activity .",
 		"?publicationActivity rdf:type bib:PublicationActivity .",
 		"?publicationActivity dcterms:date ?publicationDate .",
-		"?publicationActivity rdfs:label ?publicationActivityLabel ."
+		"?publicationActivity rdfs:label ?publicationActivityLabel .",
+		"?instance rdf:type ?instanceType .",
+		"?instance bibframe:responsibilityStatement ?statementResponsibility ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -234,7 +236,6 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:mayUseNewResource": true, 
       "customform:varName": "publicationActivityLabel"
     },
     {
@@ -253,6 +254,61 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "publisherAgent"
+    },
+    
+    {
+          "@id": "customform:whcor_statementResponsibility",
+          "@type": [
+           "forms:FormComponent",
+           "forms:LiteralField"
+          ],
+          "customform:varName": "statementResponsibility"
+    },
+    
+     {
+      "@id": "customform:whcor_languageOptions",
+      "@type": [
+        "forms:IndividualsViaVClassOptions",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://schema.org/Language"
+      }
+    },
+    {
+      "@id": "customform:whcor_language",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:whcor_languageOptions"
+      },
+    
+      "customform:varName": "language"
+    },
+    
+     {
+      "@id": "customform:addWork_instanceType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "instanceType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_instanceTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_instanceTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Instance"
+      }
     }
+    
    ]
 }

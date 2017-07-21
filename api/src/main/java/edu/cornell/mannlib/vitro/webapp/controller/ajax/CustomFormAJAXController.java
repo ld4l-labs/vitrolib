@@ -33,6 +33,8 @@ import edu.cornell.mannlib.vitro.webapp.controller.ajax.SparqlUtils.AjaxControll
 import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.EditN3GeneratorVTwo;
 import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.SparqlEvaluateVTwo;
 import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.fields.ChildVClassesWithParent;
+import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.fields.IndividualsViaVClassOptions;
+import edu.cornell.mannlib.vitro.webapp.edit.n3editing.VTwo.fields.RdfTypeOptions;
 import edu.cornell.mannlib.vitro.webapp.modelaccess.ModelAccess;
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
@@ -231,6 +233,25 @@ public class CustomFormAJAXController extends VitroAjaxController {
 					optionsAsJSON = JSONSerializer.toJSON(options);
 					
 				break;
+				case "RdfTypeOptions":
+					JSONObject rdfClassJSON = json.getJSONObject("customform:classUri");
+					String rdfClassURI = rdfClassJSON.getString("@id");
+					//Could use class for name, but why bother?
+					//This should also enable multiple class URIs
+					RdfTypeOptions rto = new RdfTypeOptions(rdfClassURI);
+					//Get the options
+					Map<String, String> rdfOptions = rto.getOptions(null, fieldNameValue, vreq.getWebappDaoFactory());
+					optionsAsJSON = JSONSerializer.toJSON(rdfOptions);
+					break;
+				case "IndividualsViaVClassOptions":
+					JSONObject iClassJSON = json.getJSONObject("customform:classUri");
+					String iClassURI = iClassJSON.getString("@id");
+					//Could use class for name, but why bother?
+					IndividualsViaVClassOptions ivo = new IndividualsViaVClassOptions(iClassURI);
+					//Get the options
+					Map<String, String> ioptions = ivo.getOptions(null, fieldNameValue, vreq.getWebappDaoFactory());
+					optionsAsJSON = JSONSerializer.toJSON(ioptions);
+					break;
 				case "":
 				break;
 				default:
