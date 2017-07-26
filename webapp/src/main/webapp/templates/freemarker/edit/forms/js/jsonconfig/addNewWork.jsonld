@@ -76,7 +76,7 @@
 		"?publicationActivity dcterms:date ?publicationDate .",
 		"?publicationActivity rdfs:label ?publicationActivityLabel .",
 		"?instance rdf:type ?instanceType .",
-		"?instance bibframe:responsibilityStatement ?statementResponsibility .".
+		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
 		"?instance bibframe:identifiedBy ?issueIdentifier .",
 		"?issueIdentifer rdf:type bibframe:AudioIssueNumber .",
 		"?issueIdentifier rdf:value ?issueNumber ."
