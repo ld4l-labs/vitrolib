@@ -76,7 +76,10 @@
 		"?publicationActivity dcterms:date ?publicationDate .",
 		"?publicationActivity rdfs:label ?publicationActivityLabel .",
 		"?instance rdf:type ?instanceType .",
-		"?instance bibframe:responsibilityStatement ?statementResponsibility ."
+		"?instance bibframe:responsibilityStatement ?statementResponsibility .".
+		"?instance bibframe:identifiedBy ?issueIdentifier .",
+		"?issueIdentifer rdf:type bibframe:AudioIssueNumber .",
+		"?issueIdentifier rdf:value ?issueNumber ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -308,6 +311,23 @@
       "customform:classUri": {
         "@id": "http://id.loc.gov/ontologies/bibframe/Instance"
       }
+    },
+    {
+      "@id": "customform:whcor_issueNumber",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "issueNumber"
+    },
+    {
+      "@id": "customform:whcor_issueIdentifier",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "issueIdentifier"
     }
     
    ]
