@@ -167,6 +167,40 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
               <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
+      
+      <#--  Autocomplete field for Subject Headings using LOC SH field -->
+
+      <div>
+      		<p>
+      		  <label for="subjectHeadings">LC Subject Heading</label>
+              <select name="activityType" id="activityType" role="select">
+	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
+	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
+	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
+	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
+              </select>
+      		</p>
+          <p templateId="inputAcSelector">
+    
+              <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
+              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
+          </p>
+
+
+          <div class="acSelection" acGroupName="lcshGroup" templateId="literalSelection">
+              <p class="inline">
+                  <label>${i18n().selected} Subject:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="lcsh" name="lcsh" value=""  />
+              <#--  $ {flagClearLabelForExisting}="true"  -->
+          </div>
+      </div>
+      
+      
+      <#-- '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames' -->
 
       <#--  Instance fields are in their own field set -->
       <fieldset class="workform__fieldset">
@@ -205,6 +239,27 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </p>
         </div>
       
+         <div>
+          <p>
+            <label for="issueNumber">Matrix Number</label>
+            <input size="60"  type="text" id="matrixNumber" name="matrixNumber" value="" />
+          </p>
+        </div>
+        
+       <div>
+          <p>
+            <label for="issueNumber">UPC</label>
+            <input size="60"  type="text" id="upc" name="upc" value="" />
+          </p>
+        </div>
+
+       <div>
+          <p>
+            <label for="issueNumber">EAN</label>
+            <input size="60"  type="text" id="ean" name="ean" value="" />
+          </p>
+        </div>
+
 
         <div>
           <p>

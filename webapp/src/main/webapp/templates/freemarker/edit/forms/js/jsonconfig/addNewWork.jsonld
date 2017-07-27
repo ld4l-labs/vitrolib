@@ -79,7 +79,21 @@
 		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
 		"?instance bibframe:identifiedBy ?issueIdentifier .",
 		"?issueIdentifer rdf:type bibframe:AudioIssueNumber .",
-		"?issueIdentifier rdf:value ?issueNumber ."
+		"?issueIdentifier rdf:value ?issueNumber .",
+		"?issueIdentifier rdfs:label ?issueNumber .",
+		"?instance bibframe:identifiedBy ?matrixNumberUri .",
+		"?matrixNumberUri rdf:type bibframe:MatrixNumber .",
+		"?matrixNumberUri rdf:value ?matrixNumber .",
+		"?matrixNumberUri rdfs:label ?matrixNumber .",
+		"?instance bibframe:identifiedBy ?upcUri .",
+		"?upcUri rdf:type bibframe:UPC .",
+		"?upcUri rdf:value ?upc .",
+		"?upcUri rdfs:label ?upc .",
+		"?instance bibframe:identifiedBy ?eanUri .",
+		"?eanUri rdf:type bibframe:EAN .",
+		"?eanUri rdf:value ?ean .",
+		"?eanUri rdfs:label ?ean ."
+		
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -328,6 +342,57 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "issueIdentifier"
+    },
+    {
+      "@id": "customform:whcor_matrixNumber",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "matrixNumber"
+    },
+    {
+      "@id": "customform:whcor_matrixUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "matrixUri"
+    },
+    {
+      "@id": "customform:whcor_upc",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "upc"
+    },
+    {
+      "@id": "customform:whcor_upcUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "upcUri"
+    },
+    {
+      "@id": "customform:whcor_ean",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "ean"
+    },
+    {
+      "@id": "customform:whcor_eanUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "eanUri"
     }
     
    ]

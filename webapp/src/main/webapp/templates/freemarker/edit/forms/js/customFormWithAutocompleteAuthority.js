@@ -312,9 +312,17 @@ var customForm = {
                     response(customForm.acCache[request.term]);
                     return;
                 }
-                // console.log('not getting term from cache');
+                
+                //We want the ability to have multiple autocompletes to different sources in the same page
+                //Here, we check whether the selected object has a URL on it
+                var acUrl = customForm.acUrl;
+                if($(selectedObj).attr("acUrl")) {
+                	acUrl = $(selectedObj).attr("acUrl");
+                }
+                
+                
                 $.ajax({
-                    url: customForm.acUrl,
+                    url: acUrl,
                     dataType: 'json',
                     data: {
                         searchTerm: request.term
