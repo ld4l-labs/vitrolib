@@ -171,17 +171,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
 
       <div>
-      		<p>
-      		  <label for="subjectHeadings">LC Subject Heading</label>
-              <select name="activityType" id="activityType" role="select">
-	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
-	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
-	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
-	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
-              </select>
-      		</p>
+      	
+      		  
+             
           <p templateId="inputAcSelector">
-    
+    		<label for="lcshTerm">LC Subject Heading</label>
               <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
               <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
           </p>

@@ -89,7 +89,7 @@ public class LCNAFImpl implements ExternalConceptService {
 
 
 	private String getLocalName(String id) {
-		String prefixString = " \"http://id.loc.gov/authorities/names/";
+		String prefixString = "http://id.loc.gov/authorities/names/";
 		if(id.startsWith(prefixString)) {
 			return id.substring(prefixString.length());
 		}
