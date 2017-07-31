@@ -8,6 +8,8 @@
 		<#assign propertyInfoList = [ {"baseUri":"http://bibliotek-o.org/ontology/hasActivity", "rangeUri":"http://bibliotek-o.org/ontology/Activity"},
 		{"baseUri":"http://id.loc.gov/ontologies/bibframe/hasInstance"}] />
 		
+		<#-- 		{"baseUri":"http://purl.org/dc/terms/hasPart", "rangeUri":"http://id.loc.gov/ontologies/bibframe/Work","domainUri":"http://id.loc.gov/ontologies/bibframe/Work"},
+ -->
        <#assign propertiesList = []/>
 		<#list group.properties as prop>
 			<#if prop.isFauxProperty == true && !fauxHash?keys?seq_contains(prop.uri) >
