@@ -33,10 +33,14 @@
             OPTIONAL {
                ?instance bib:hasActivity ?publicationActivity .
                ?publicationActivity a bib:PublicationActivity .
+                OPTIONAL {
+                ?publicationActivity dcterms:date ?publicationDate .
+                }
+                OPTIONAL {
                ?publicationAgent a foaf:Agent.
 			   ?publicationAgent rdfs:label ?publicationAgentName .
 			   ?publicationAgent bib:isAgentOf ?publicationActivity .
-			   ?publicationActivity dcterms:date ?publicationDate .
+			   }
             }
         }
     </query-select>
