@@ -78,7 +78,7 @@
 		"?instance rdf:type ?instanceType .",
 		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
 		"?instance bibframe:identifiedBy ?issueIdentifier .",
-		"?issueIdentifer rdf:type bibframe:AudioIssueNumber .",
+		"?issueIdentifier rdf:type bibframe:AudioIssueNumber .",
 		"?issueIdentifier rdf:value ?issueNumber .",
 		"?issueIdentifier rdfs:label ?issueNumber .",
 		"?instance bibframe:identifiedBy ?matrixNumberUri .",
@@ -92,8 +92,9 @@
 		"?instance bibframe:identifiedBy ?eanUri .",
 		"?eanUri rdf:type bibframe:EAN .",
 		"?eanUri rdf:value ?ean .",
-		"?eanUri rdfs:label ?ean ."
-		
+		"?eanUri rdfs:label ?ean .",
+		"?subject dcterms:subject ?lcsh.",
+		"?lcsh rdfs:label ?lcshTerm ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -352,13 +353,13 @@
       "customform:varName": "matrixNumber"
     },
     {
-      "@id": "customform:whcor_matrixUri",
+      "@id": "customform:whcor_matrixNumberUri",
       "@type": [
        "forms:FormComponent",
        "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
-      "customform:varName": "matrixUri"
+      "customform:varName": "matrixNumberUri"
     },
     {
       "@id": "customform:whcor_upc",
@@ -393,8 +394,24 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "eanUri"
+    },
+       {
+      "@id": "customform:whcor_lcsh",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lcsh"
+    },
+    {
+      "@id": "customform:whcor_lcshTerm",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lcshTerm"
     }
-
-    
    ]
 }

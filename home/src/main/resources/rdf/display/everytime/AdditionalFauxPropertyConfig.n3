@@ -16,3 +16,5 @@
 local:fpgenconfig38 :listViewConfigFile "listViewConfig-workHasActivity.xml"^^xsd:string .
 #Instance Has Activity configuration
 local:fpgenconfig39 :listViewConfigFile "listViewConfig-instanceHasActivity.xml"^^xsd:string .  
+#Subject
+local:fpgenconfig34 :listViewConfigFile "listViewConfig-subject.xml"^^xsd:string .  
