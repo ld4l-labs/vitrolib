@@ -11,28 +11,19 @@
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
         
-        SELECT <collated> ?subclass </collated>
-               ?object 
-               ?label 
+        SELECT ?termuri 
+               ?termlabel
                ?localName WHERE {
                
-            ?subject ?property ?object
-                LET (?localName := afn:localname(?object)) 
-                
-            OPTIONAL { ?object rdfs:label ?label } 
+                    ?subject ?property ?termuri .
             
-            <collated> 
-            OPTIONAL { 
-                ?object a ?subclass.
-                # Require the subclasses retrieved to be in a classgroup, since others are not generally
-                # for display. See vivo-dev-all thread titled "Internal Entity and mostSpecificType,"
-                # Aug 9-10, 2011.
-                # ?subclass vitro:inClassGroup ?classgroup 
-            } 
-            FILTER ( afn:namespace(?subclass) != "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#" )   
-            </collated>       
+                LET (?localName := afn:localname(?termuri)) 
+                
+            OPTIONAL { ?termuri rdfs:label ?termlabel . } 
+            
+                  
         
-        } ORDER BY <collated> ?subclass </collated> ASC( ?label ) ASC( ?label ) ASC( ?localName )
+        } ORDER BY  ASC( ?termlabel )  ASC( ?localName )
     </query-select>
 
     <query-construct>
@@ -40,26 +31,17 @@
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
 
         CONSTRUCT {
-            ?subject ?property ?object .
-            ?object a ?subclass .
-            ?subclass vitro:inClassGroup ?classgroup .
-            ?object rdfs:label ?label .
+            ?subject ?property ?termuri .
+            ?termuri rdfs:label ?termlabel .
         } WHERE {
             { 
-                ?subject ?property ?object 
+                ?subject ?property ?termuri . 
             } UNION {            
-                ?subject ?property ?object .
-                ?object a ?subclass . 
-            } UNION {
-                ?subject ?property ?object .
-                ?object a ?subclass .
-                ?subclass vitro:inClassGroup ?classgroup 
-            } UNION {         
-                ?subject ?property ?object .
-                ?object rdfs:label ?label .
-            }             
+				?subject ?property ?termuri . 
+            	?termuri rdfs:label ?termlabel .
+            }              
         }
     </query-construct>
     
-    <template>propStatement-default.ftl</template>
+    <template>propStatement-subjectterm.ftl</template>
 </list-view-config>
