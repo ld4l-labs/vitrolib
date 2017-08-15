@@ -1,0 +1,7 @@
+var displayConfig = {
+	"fieldOrder" :  ["bodyValue", "motivation" ],
+	"fieldDisplayProperties" : {
+		"activityLabel": {"label":"Annotation Value"},
+		"motivation":{"label": "Motivation"}
+		}
+};
