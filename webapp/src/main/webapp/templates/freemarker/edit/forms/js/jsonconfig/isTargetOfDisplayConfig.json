@@ -3,7 +3,7 @@ var displayConfig = {
 	"fieldDisplayProperties" : {
 		"bodyValue": {"label":"Annotation Value"},
 		"motivation":{"label": "Motivation"},
-		"sourceUri":{"label":"Annotation Source"},
+		"sourceUri":{"label":"Annotation Source (Works)"},
 		"selectorText":{"label":"Text Selector"}
 		}
 };

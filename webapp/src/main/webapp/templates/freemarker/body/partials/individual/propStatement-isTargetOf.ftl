@@ -6,8 +6,8 @@
      is also used to generate the property statement during a deletion.  
  -->
 
-${statement.bodyValue!""} ${statement.motivationLabel!""} ${statement.selectorText!""}
+Value:${statement.bodyValue!""}, Motivation: ${statement.motivationLabel!""}, Selector Text: ${statement.selectorText!""}
+<br/>
 <#if statement.sourceUri?has_content>
-<a href="${profileUrl(statement.uri("sourceUri"))}" title="source">${statement.sourceLabel!"source"}</a> 
+Source: <a href="${profileUrl(statement.uri("sourceUri"))}" title="source">${statement.sourceLabel!"source"}</a> 
 </#if>
-<a href="${profileUrl(statement.uri("termuri"))}" title="${i18n().name}">${statement.termlabel!statement.localName!}</a> 
