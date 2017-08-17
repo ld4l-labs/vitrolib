@@ -20,4 +20,5 @@ local:fpgenconfig128 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryF
  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasPartWork.jsonld" .
 # Annotation at work level, ties to specific jsonld
 local:fpgenconfig11 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
- <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "isTargetOf.jsonld" .
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "isTargetOf.jsonld";
+ :listViewConfigFile "listViewConfig-isTargetOf.xml"^^xsd:string .

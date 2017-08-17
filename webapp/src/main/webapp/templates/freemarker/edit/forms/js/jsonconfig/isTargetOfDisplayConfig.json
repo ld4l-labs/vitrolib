@@ -1,7 +1,9 @@
 var displayConfig = {
-	"fieldOrder" :  ["bodyValue", "motivation" ],
+	"fieldOrder" :  ["bodyValue", "motivation", "sourceUri", "selectorText" ],
 	"fieldDisplayProperties" : {
-		"activityLabel": {"label":"Annotation Value"},
-		"motivation":{"label": "Motivation"}
+		"bodyValue": {"label":"Annotation Value"},
+		"motivation":{"label": "Motivation"},
+		"sourceUri":{"label":"Annotation Source"},
+		"selectorText":{"label":"Text Selector"}
 		}
 };
