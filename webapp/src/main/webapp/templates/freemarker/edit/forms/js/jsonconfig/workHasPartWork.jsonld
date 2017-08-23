@@ -19,6 +19,7 @@
       ],
       "customform:pattern": [
         "?subject ?predicate ?objectVar .",
+        "?objectVar rdfs:label ?title .",
 		"?objectVar  bibframe:title ?titleIndividual .",
 		"?titleIndividual rdf:type bibframe:Title .",
 		"?titleIndividual rdfs:label ?title .",

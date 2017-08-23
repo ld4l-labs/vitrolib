@@ -1,6 +1,6 @@
 var displayConfig = {
 	"fieldOrder" :  ["title" ],
 	"fieldDisplayProperties" : {
-		"activityLabel": {"label":"Label"}
+		"title": {"label":"Label"}
 	}
 };
