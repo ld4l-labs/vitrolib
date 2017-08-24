@@ -21,6 +21,7 @@
         "?subject ?predicate ?objectVar .",
         "?objectVar rdfs:label ?title .",
 		"?objectVar  bibframe:title ?titleIndividual .",
+		"?objectVar rdf:type bibframe:Work . ",
 		"?titleIndividual rdf:type bibframe:Title .",
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual rdf:value ?title .",
@@ -46,7 +47,7 @@
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
-      "@id": "customform:addWork_partWork",
+      "@id": "customform:addWork_object",
       "@type": [
         "forms:FormComponent",
         "forms:UriField"
@@ -73,12 +74,13 @@
       "customform:varName": "mainTitleElement"
     },
      {
-      "@id": "customform:addWork_title",
+      "@id": "customform:addWork_titleIndividual",
       "@type": [
         "forms:FormComponent",
-        "forms:LiteralField"
+        "forms:URIField"
       ],
-      "customform:varName": "title"
+	  "customform:mayUseNewResource": true,
+      "customform:varName": "titleIndividual"
     }
     
    ]

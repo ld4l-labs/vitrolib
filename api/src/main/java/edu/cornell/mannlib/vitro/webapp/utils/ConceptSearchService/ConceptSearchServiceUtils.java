@@ -67,6 +67,8 @@ public class ConceptSearchServiceUtils {
     	//map.put(LCSHVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHService");
     	map.put(LCNAFVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCNAFImpl");
     	map.put(LCSHQAVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHQAImpl");
+    	map.put(LCGFVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCGFImpl");
+
 
     	return map;
     }
