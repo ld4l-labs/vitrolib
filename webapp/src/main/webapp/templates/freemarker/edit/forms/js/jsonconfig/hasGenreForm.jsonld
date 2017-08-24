@@ -44,6 +44,7 @@
        "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingLcsh WHERE {  ?subject bibframe:genreForm ?existingLcsh. }   ",      
       "customform:varName": "lcsh"
     },
     {
@@ -53,6 +54,7 @@
        "forms:LiteralField"
       ],
       "customform:mayUseNewResource": true,
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLcshTerm WHERE {  ?subject bibframe:genreForm ?lcsh. ?lcsh rdfs:label ?existingLcshTerm .}   ",      
       "customform:varName": "lcshTerm"
     }
    ]

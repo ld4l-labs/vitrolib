@@ -55,6 +55,7 @@
        "forms:FormComponent",
        "forms:UriField"
       ],
+	  "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   SELECT ?existingTextBodyUri WHERE {  ?objectVar oa:hasBody ?existingTextBodyUri .  }   ",
       "customform:mayUseNewResource": true,
       "customform:varName": "textBodyUri"
     },
@@ -64,6 +65,7 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingBodyValue WHERE {  ?objectVar oa:hasBody ?textBodyUri .  ?textBodyUri rdf:value ?existingBodyValue. }   ",
       "customform:varName": "bodyValue"
     },
      {
@@ -73,6 +75,7 @@
        "forms:UriField"
       ],
       "customform:varName": "motivation",
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingBodyValue WHERE {  ?objectVar oa:motivatedBy ?motivation. }   ",
        "customform:fieldOptions": {
         "@id": "customform:whcor_motivationFieldOptions"
       }
@@ -94,6 +97,7 @@
        "forms:FormComponent",
        "forms:UriField"
       ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingResourceBodyUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri . }   ",
       "customform:mayUseNewResource": true,
       "customform:varName": "resourceBodyUri"
     },
@@ -103,6 +107,7 @@
        "forms:FormComponent",
        "forms:UriField"
       ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSourceUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri  oa:hasSource ?existingSourceUri.}   ",
       "customform:varName": "sourceUri",
        "customform:fieldOptions": {
         "@id": "customform:whcor_sourceOptions"
@@ -124,6 +129,7 @@
        "forms:FormComponent",
        "forms:UriField"
       ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSelectorUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri oa:hasSelector ?existingSelectorUri.}   ",
       "customform:varName": "selectorUri",
        "customform:mayUseNewResource": true
       
@@ -134,6 +140,7 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSelectorText WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri oa:hasSelector ?existingSelectorUri. ?existingSelectorUri oa:exact ?existingSelectorText .}   ",
       "customform:varName": "selectorText"      
     }
     

@@ -131,7 +131,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
-              <input class="acUriReceiver" type="hidden" id="lcsh" name="lcsh" value=""  />
+              <input class="acUriReceiver" type="hidden" id="objectVar" name="objectVar" value=""  />
               <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
