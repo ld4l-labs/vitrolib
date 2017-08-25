@@ -41,7 +41,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <#--  --assign pubTypeLiteralOptions = editConfiguration.pageData.pubType /-->
 <#-- In case of submission error, may already have publication type or title - although latter not likely, but storing values to be on safe side -->
 <#--  --assign publicationTypeValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "pubType") /-->
-<#assign titleValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "title") />
 
 
 <#--  Get the configfile name and include below -->
@@ -58,7 +57,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Work</h2>
+<h2>${titleVerb} Subject Heading</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -194,7 +193,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       </div>
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
-
+<#include "existingValuesScript.ftl" />
     <script type="text/javascript">
     //No uris or literals in scope here
 
@@ -210,7 +209,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"
+        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
+        urisInScope : urisInScope,
+	    literalsInScope : literalsInScope
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

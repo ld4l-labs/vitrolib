@@ -38,11 +38,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 
 
-<#--  --assign pubTypeLiteralOptions = editConfiguration.pageData.pubType /-->
-<#-- In case of submission error, may already have publication type or title - although latter not likely, but storing values to be on safe side -->
-<#--  --assign publicationTypeValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "pubType") /-->
-<#assign titleValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "title") />
-
 
 <#--  Get the configfile name and include below -->
 <#assign configFile = editConfiguration.pageData.configFile />
@@ -58,7 +53,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Work</h2>
+<h2>${titleVerb} Genre Form</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
