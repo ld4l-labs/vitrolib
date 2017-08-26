@@ -189,6 +189,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       </div>
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
+<#include "existingValuesScript.ftl" />
 
     <script type="text/javascript">
     //No uris or literals in scope here
