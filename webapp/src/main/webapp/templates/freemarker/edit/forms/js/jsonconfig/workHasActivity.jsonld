@@ -2,7 +2,7 @@
   "@context": {
     "foaf": "http://xmlns.com/foaf/0.1/",
     "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
-    "ld4l": "http://bib.ld4l.org/ontology/",
+    "bib": "http://bibliotek-o.org/ontology/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vivo": "http://vivoweb.org/ontology/core#",
@@ -18,11 +18,11 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-        "?objectVar ld4l:hasAgent ?agent . ?agent ld4l:isAgentOf ?objectVar .    ",
-        "?objectVar a ld4l:Activity . ?objectVar a ?activityType . ?objectVar rdfs:label ?activityLabel .     ",
-        "?subject ld4l:hasActivity ?objectVar . ?objectVar ld4l:isActivityOf ?subject .    "
+        "?objectVar bib:hasAgent ?agent . ?agent bib:isAgentOf ?objectVar .    ",
+        "?objectVar a bib:Activity . ?objectVar a ?activityType . ?objectVar rdfs:label ?activityLabel .     ",
+        "?subject bib:hasActivity ?objectVar . ?objectVar bib:isActivityOf ?subject .    "
       ],
-      "customform:prefixes": "@prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .     "
+      "customform:prefixes": "@prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .     "
     },
     {
       "@id": "customform:whcor_fieldAgent",
@@ -31,7 +31,7 @@
         "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
-      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>   SELECT ?existingAgent WHERE {  ?objectVar ld4l:hasAgent ?existingAgent . }   ",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>   SELECT ?existingAgent WHERE {  ?objectVar bib:hasAgent ?existingAgent . }   ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },
@@ -43,7 +43,7 @@
         "forms:FormComponent",
         "forms:OptionalN3Pattern"
       ],
-      "customform:prefixes": "@prefix  ld4l: <http://bib.ld4l.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  ",
+      "customform:prefixes": "@prefix  bib: <http://bibliotek-o.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  ",
       "customform:pattern": ["?agent a ?agentType.  ?agent rdfs:label ?agentName.  ?agent foaf:name ?agentName .  "]
     },
     {
@@ -52,7 +52,7 @@
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   PREFIX ld4l: <http://bib.ld4l.org/ontology/>      SELECT ?existingActivityLabel     WHERE {?objectVar rdfs:label ?existingActivityLabel .}  ",
+      "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   PREFIX bib: <http://bibliotek-o.org/ontology/>      SELECT ?existingActivityLabel     WHERE {?objectVar rdfs:label ?existingActivityLabel .}  ",
       "customform:rangeDatatypeUri": {
         "@id": "xsd:string"
       },
@@ -71,7 +71,7 @@
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?objectVar ld4l:hasAgent ?agent .?agent rdfs:label ?existingAgentName . }    ",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?objectVar bib:hasAgent ?agent .?agent rdfs:label ?existingAgentName . }    ",
       "customform:varName": "agentName"
     },
     {
@@ -93,7 +93,7 @@
       "customform:fieldOptions": {
         "@id": "customform:whcor_agentListFieldOptions"
       },
-      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar ld4l:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },
@@ -106,7 +106,7 @@
         "forms:FieldOptions"
       ],
       "customform:classUri": {
-        "@id": "http://bib.ld4l.org/ontology/Activity"
+        "@id": "http://bibliotek-o.org/ontology/Activity"
       }
     },
     {
@@ -149,7 +149,7 @@
       "customform:fieldOptions": {
         "@id": "customform:whcor_activityTypeListFieldOptions"
       },
-      "customform:queryForExistingValue": "PREFIX ld4l: <http://bib.ld4l.org/ontology/>     PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>      SELECT ?existingActivityType      WHERE {?objectVar vitro:mostSpecificType ?existingActivityType .   }    ",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>     PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>      SELECT ?existingActivityType      WHERE {?objectVar vitro:mostSpecificType ?existingActivityType .   }    ",
       "customform:validator": {
         "@id": "customform:whcor_nonemptyValidator"
       },

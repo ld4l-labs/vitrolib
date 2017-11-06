@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addAnnotation_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+      	"?subject bib:isTargetOf ?objectVar.",
+		"?objectVar rdf:type oa:Annotation .",
+		"?objectVar oa:hasTarget ?subject. "
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix oa: <http://www.w3.org/ns/oa#> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+      "?objectVar oa:hasBody ?textBodyUri .",
+	  "?textBodyUri rdf:type oa:TextualBody.",
+      "?textBodyUri rdf:value ?bodyValue.",
+       "?objectVar oa:motivatedBy ?motivation.",
+      "?objectVar dcterms:creator <https://library.princeton.edu/tsd/cams/ld4p>.",
+      "?textBodyUri rdf:type oa:TextualBody.",
+      	"?objectVar oa:hasBody ?resourceBodyUri .",
+       "?resourceBodyUri rdf:type oa:SpecificResource .",
+       "?resourceBodyUri oa:hasSource ?sourceUri.",
+       "?resourceBodyUri oa:hasSelector ?selectorUri.",
+       "?selectorUri rdf:type oa:TextQuoteSelector .",
+       "?selectorUri rdf:type oa:Selector.",
+       "?selectorUri oa:exact ?selectorText ."      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix oa: <http://www.w3.org/ns/oa#> ."
+    },
+  
+    {
+      "@id": "customform:whcor_textBodyUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+	  "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   SELECT ?existingTextBodyUri WHERE {  ?objectVar oa:hasBody ?existingTextBodyUri .  }   ",
+      "customform:mayUseNewResource": true,
+      "customform:varName": "textBodyUri"
+    },
+    {
+      "@id": "customform:whcor_bodyValue",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingBodyValue WHERE {  ?objectVar oa:hasBody ?textBodyUri .  ?textBodyUri rdf:value ?existingBodyValue. }   ",
+      "customform:varName": "bodyValue"
+    },
+     {
+      "@id": "customform:whcor_motivation",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:varName": "motivation",
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingBodyValue WHERE {  ?objectVar oa:motivatedBy ?motivation. }   ",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_motivationFieldOptions"
+      }
+    },
+     {
+      "@id": "customform:whcor_motivationFieldOptions",
+      "@type": [
+        "forms:IndividualsViaVClassOptions",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://www.w3.org/ns/oa#Motivation"
+      }
+    },
+    
+     {
+      "@id": "customform:whcor_resourceBodyUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingResourceBodyUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri . }   ",
+      "customform:mayUseNewResource": true,
+      "customform:varName": "resourceBodyUri"
+    },
+     {
+      "@id": "customform:whcor_sourceUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSourceUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri  oa:hasSource ?existingSourceUri.}   ",
+      "customform:varName": "sourceUri",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_sourceOptions"
+      }
+    },
+     {
+      "@id": "customform:whcor_sourceOptions",
+      "@type": [
+        "forms:IndividualsViaVClassOptions",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Work"
+      }
+    },
+    {
+      "@id": "customform:whcor_selectorUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSelectorUri WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri oa:hasSelector ?existingSelectorUri.}   ",
+      "customform:varName": "selectorUri",
+       "customform:mayUseNewResource": true
+      
+    },
+    {
+      "@id": "customform:whcor_selectorText",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:queryForExistingValue": "PREFIX oa: <http://www.w3.org/ns/oa#>   PREFIX RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?existingSelectorText WHERE { ?objectVar oa:hasBody ?existingResourceBodyUri .  ?existingResourceBodyUri oa:hasSelector ?existingSelectorUri. ?existingSelectorUri oa:exact ?existingSelectorText .}   ",
+      "customform:varName": "selectorText"      
+    }
+    
+   ]
+}

@@ -14,7 +14,7 @@
     <#local agentName = statement.agentName!statement.agentLabel>
     <a href="${profileUrl(statement.uri("agent"))}" title="${agentName}">${agentName}</a>
     <#if statement.subclassLabel??>
-        (${statement.subclassLabel?replace(" activity", "")})
+        (${statement.subclassLabel?replace(" contribution", "")})
     </#if>
 <#-- If there is no agent, still show activity -->
 <#else>    

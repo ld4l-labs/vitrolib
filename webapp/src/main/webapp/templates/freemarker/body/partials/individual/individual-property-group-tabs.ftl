@@ -57,7 +57,15 @@
         </#if>
         <div id="${groupNameHtmlId?replace("/","-")}Group" >
             <#-- List the properties in the group   -->
-            <#include "individual-properties.ftl">
+            <#if individualType??>
+            	<#if individualType == "work">
+            		<#include "individual-work-properties.ftl">
+            	<#else>
+					<#include "individual-properties.ftl">
+            	</#if>
+            <#else>
+            	<#include "individual-properties.ftl">
+            </#if>
         </div>
         </section> <!-- end property-group -->
         <#assign sectionCount = 2 >

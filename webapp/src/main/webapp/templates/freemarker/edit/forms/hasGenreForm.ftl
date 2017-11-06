@@ -38,11 +38,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 
 
-<#--  --assign pubTypeLiteralOptions = editConfiguration.pageData.pubType /-->
-<#-- In case of submission error, may already have publication type or title - although latter not likely, but storing values to be on safe side -->
-<#--  --assign publicationTypeValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "pubType") /-->
-<#assign titleValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "title") />
-
 
 <#--  Get the configfile name and include below -->
 <#assign configFile = editConfiguration.pageData.configFile />
@@ -58,7 +53,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Work</h2>
+<h2>${titleVerb} Genre Form</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -104,70 +99,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  <div>Error</div>
 <#else>
 
-<section id="addNewWork" role="region">
+<section id="hasLCSHSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="addNewWork" class="customForm noIE67" action="${submitUrl}"  role="add work" >
+<form id="hasLCSH" class="customForm noIE67" action="${submitUrl}"  role="add subject heading" >
 
     <div id="formcontent">
-    <#--  New Work fields -->
-      <#--  Title -->
-     <p>
-              <label for="title">Title ${requiredHint}</label>
-              <input size="60"  type="text" id="title" name="title" value="" />
-     </p>
 
-     <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
-     <div>
-      <p>
-      <label for="workType">Type ${requiredHint}</label>
-           <select id="workType" name="workType" role="select">
-
-              </select>
-        </p>
-      </div>
-      
-      <#-- Language -->
-      
-        <div>
-      <p>
-      <label for="language">Language ${requiredHint}</label>
-           <select id="language" name="language" role="select">
-
-              </select>
-        </p>
-      </div>
-    <#--  Autocomplete field for AUTHOR using LOC NAF field -->
-
-      <div>
-      		<p>
-      		  <label for="agentName"> Author or Other Role${requiredHint}</label>
-              <select name="activityType" id="activityType" role="select">
-	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
-	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
-	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
-	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
-              </select>
-      		</p>
-          <p templateId="inputAcSelector">
-    
-              <input type="hidden"  name="activityLabel" id="activityLabel"/>
-              <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
-          </p>
-
-
-          <div class="acSelection" acGroupName="group" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected}:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
-      
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
 
       <div>
@@ -175,15 +113,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		  
              
           <p templateId="inputAcSelector">
-    		<label for="lcshTerm">LC Subject Heading</label>
+    		<label for="lcshTerm">LC Genre Form</label>
               <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
-              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
+              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
           </p>
 
 
           <div class="acSelection" acGroupName="lcshGroup" templateId="literalSelection">
               <p class="inline">
-                  <label>${i18n().selected} Subject:</label>
+                  <label>${i18n().selected} Genre Form:</label>
                   <span class="acSelectionInfo"></span>
                   <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
@@ -197,97 +135,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <#-- '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames' -->
 
       <#--  Instance fields are in their own field set -->
-      <fieldset class="workform__fieldset">
-        <legend class="workform__legend"><strong>Has Instance</strong> (RDA Manifestation) </legend>
-
-        <div>
-          <p>
-            <label for="instanceTitle">Title</label>
-            <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
-          </p>
-        </div>
-        
-        <div>
-          <p>
-            <label for="statementResponsibility">Statement of Responsibility</label>
-            <input size="60"  type="text" id="statementResponsibility" name="statementResponsibility" value="" />
-          </p>
-        </div>
-
-		<#-- Instance Type -->
-	<div>
-      <p><#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
-
-
-      		<label for="instanceType">Type</label>
-           <select id="instanceType" name="instanceType" role="select">
-
-              </select>
-        </p>
-      </div>
-      
-      <div>
-          <p>
-            <label for="issueNumber">Issue Number</label>
-            <input size="60"  type="text" id="issueNumber" name="issueNumber" value="" />
-          </p>
-        </div>
-      
-         <div>
-          <p>
-            <label for="issueNumber">Matrix Number</label>
-            <input size="60"  type="text" id="matrixNumber" name="matrixNumber" value="" />
-          </p>
-        </div>
-        
-       <div>
-          <p>
-            <label for="issueNumber">UPC</label>
-            <input size="60"  type="text" id="upc" name="upc" value="" />
-          </p>
-        </div>
-
-       <div>
-          <p>
-            <label for="issueNumber">EAN</label>
-            <input size="60"  type="text" id="ean" name="ean" value="" />
-          </p>
-        </div>
-
-
-        <div>
-          <p>
-            <label for="publisherAgentName"> Publisher</label>
-            <input class="acSelector" size="60"  type="text" id="publisherAgentName" name="publisherAgentName" acGroupName="publisherGroup"  value="" />
-          </p>
-
-          <div class="acSelection" acGroupName="publisherGroup" templateId="literalSelection">
-            <p class="inline">
-                <label>${i18n().selected}:</label>
-                <span class="acSelectionInfo"></span>
-                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-            </p>
-            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  ${flagClearLabelForExisting}="true" />
-          </div>
-        </div>
-	<!-- Commenting out for now -->
-        <!--div
-          <p>
-            <label for="instanceTitle">Place of Publication</label>
-            <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
-          </p>
-        </div-->
-        
-        <div>
-          <p>
-            <label for="instanceTitle">Date of Publication</label>
-            <input size="60"  type="text" id="publicationDate" name="publicationDate" value="" />
-          </p>
-        </div>
-       <input type="hidden" name="publicationActivityLabel" id="publicationActivityLabel" value=""/> 
-      </fieldset>
-    </div>
 
 
        <p class="submit">
@@ -342,6 +189,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       </div>
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
+<#include "existingValuesScript.ftl" />
 
     <script type="text/javascript">
     //No uris or literals in scope here
@@ -350,7 +198,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   //regular autocomplete url: acUrl: '${urls.base}/autocomplete?tokenize=true',
     var customFormData  = {
         sparqlQueryUrl: '${sparqlQueryUrl}',
-        acUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
+        acUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms',
         customFormAJAXUrl:'${urls.base}/ajax/customForm',
         editMode: '${editMode}',
         baseHref: '${urls.base}/individual?uri=',
@@ -384,5 +232,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}

@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectVar .",
+        "?objectVar rdfs:label ?title .",
+		"?objectVar  bibframe:title ?titleIndividual .",
+		"?objectVar rdf:type bibframe:Work . ",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual rdf:value ?title .",
+		"?titleIndividual bibframe:titleOf ?objectVar .",
+		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
+		"?mainTitleElement rdf:type bib:MainTitleElement .",
+		"?mainTitleElement rdf:value ?title .",
+		"?mainTitleElement rdfs:label ?title .",
+		"?mainTitleElement dcterms:isPartOf ?titleIndividual ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+      
+		
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_object",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "objectVar"
+    },
+    {
+      "@id": "customform:addWork_workTitle",
+      "@type": [
+        "forms:FormComponent",
+        "forms:LiteralField"
+      ],
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   SELECT ?existingTitle WHERE {  ?objectVar  bibframe:title ?titleIndividual .  ?titleIndividual rdf:value ?existingTitle . }   ",
+      "customform:varName": "title"
+    },
+     {
+      "@id": "customform:addWork_mainTitleElement",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   PREFIX dcterms: <http://purl.org/dc/terms/> SELECT ?existingMainTitleElement WHERE {  ?objectVar  bibframe:title ?titleIndividual .  ?titleIndividual dcterms:hasPart ?existingMainTitleElement . }   ",
+      "customform:mayUseNewResource": true,
+      "customform:varName": "mainTitleElement"
+    },
+     {
+      "@id": "customform:addWork_titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:URIField"
+      ],
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   PREFIX dcterms: <http://purl.org/dc/terms/> SELECT ?existingTitleIndividual WHERE {  ?objectVar  bibframe:title ?existingTitleIndividual . }   ",
+	  "customform:mayUseNewResource": true,
+      "customform:varName": "titleIndividual"
+    }
+    
+   ]
+}

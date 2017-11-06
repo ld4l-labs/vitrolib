@@ -23,5 +23,9 @@
           <rdf:Description rdf:about="http://bibliotek-o.org/ontology/hasActivity">
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-workHasActivity.xml</display:listViewConfigFile>
     </rdf:Description>
+    
+    <rdf:Description rdf:about="http://id.loc.gov/ontologies/bibframe/hasInstance">
+        <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-hasInstance.xml</display:listViewConfigFile>
+    </rdf:Description>
 
 </rdf:RDF>

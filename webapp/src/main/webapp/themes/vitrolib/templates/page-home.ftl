@@ -17,10 +17,14 @@
     <div>
       <#-- Show this WHEN logged in, otherwise show VitroLib information -->
       <h2>${i18n().catalog_new_resource} <sup><a href="#" title="${i18n().overview_model}"><i class="fa fa-question-circle-o"></i></a></sup></h2>
-
+	
+		<#-- Commenting out for test purposes and including link to html form for now -->
       <a class="blue button workform-button" href="${urls.base}/editRequestDispatch?editForm=edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator&classURI=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork"">${i18n().work} <i class="fa fa-plus workform-button__icon"></i></a>
 
-      <a class="blue button workform-button" href="${urls.base}/editRequestDispatch?editForm=edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator&classURI=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance"">${i18n().instance} <i class="fa fa-plus workform-button__icon"></i></a>
+      <#-- a class="blue button workform-button" href="${urls.base}/editRequestDispatch?editForm=edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator&classURI=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance"">${i18n().instance} <i class="fa fa-plus workform-button__icon"></i></a-->
+       <#-- a class="blue button workform-button" href="${urls.base}/templates/freemarker/edit/forms/addNewWorkTest.html">${i18n().work}  <i class="fa fa-plus workform-button__icon"></i></a>
+
+      
     </div>
 
     <section id="intro" role="region">

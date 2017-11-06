@@ -1,4 +1,6 @@
 /* $This file is distributed under the terms of the license in /doc/license.txt$ */
+//We already have a working version of LCSH but this is tying into the central service
+//fueling QA.  For now, just using this for one of the autocomplete fields
 
 package edu.cornell.mannlib.semservices.service.impl;
 
@@ -21,19 +23,18 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
 
-public class LCNAFImpl implements ExternalConceptService {
+public class LCSHQAImpl implements ExternalConceptService {
 
 	protected final Log logger = LogFactory.getLog(getClass());
-	private final String schemeUri = "http://id.loc.gov/authorities/names";
+	private final String schemeUri = "http://id.loc.gov/authorities/subjects";
 	
 	//Followed by ?q=whatever term
 	//protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/loc/names";
-	protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locjena";
+	protected final String lcshQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locsubjects";
 	//Subauthorities include /locjena/personal_name, corporate_name, and title
 	//http://elr37-dev.library.cornell.edu/qa/show/linked_data/locjena/names/n82045653
 
-	//Followed by id
-	protected final String lcnafTerm = "https://elr37-dev.library.cornell.edu/qa/show/linked_data/loc/names/";
+
 	@Override
 	public List<Concept> getConcepts(String term) throws Exception {
 		List<Concept> conceptList = new ArrayList<Concept>();
@@ -45,12 +46,11 @@ public class LCNAFImpl implements ExternalConceptService {
 			int q;
 			for (q = 0; q < queryResultsNumber; q++) {
 				JSONObject result = queryResults.getJSONObject(q);
-				String label = getLabel(result);
-				//Get individual term information to retrieve the URI
-				JSONObject termResult = getTermResult(result);
-				if(termResult != null) {
-					conceptList.add(createConcept(termResult));
+				
+				if(result != null) {
+					conceptList.add(createConcept(result));
 				}
+				
 			}
 		}
 
@@ -62,39 +62,9 @@ public class LCNAFImpl implements ExternalConceptService {
 	
 
 
-	private JSONObject getTermResult(JSONObject result) {
-		if(result != null) {
-			//What is returned is object 
-			//Get the last part of the id
-			String uri = result.getString("uri");
-			//Get the local part
-			String localName = getLocalName(uri);
-			String linkedDataURL = lcnafTerm + localName; 
-			try {
-				String linkedDataResult = retrieveFromURL(linkedDataURL);
-				if(StringUtils.isNotEmpty(linkedDataResult)) {
-					JSONObject termResult = (JSONObject) JSONSerializer.toJSON(linkedDataResult);
-					return termResult;
-				}
-			} catch(Exception ex) {
-				
-			}
-		}
-		return null;
-	}
+	
 
 
-
-
-
-
-	private String getLocalName(String id) {
-		String prefixString = "http://id.loc.gov/authorities/names/";
-		if(id.startsWith(prefixString)) {
-			return id.substring(prefixString.length());
-		}
-		return null;
-	}
 
 
 
@@ -117,7 +87,7 @@ public class LCNAFImpl implements ExternalConceptService {
 	private JSONArray getQueryResults(String term) {
 		try {
 			String encodedTerm = URLEncoder.encode(term, "UTF-8");
-			String serviceURL = lcnafQuery + "?q=" + encodedTerm;
+			String serviceURL = lcshQuery + "?q=" + encodedTerm;
 			String results = retrieveFromURL(serviceURL);
 			if(StringUtils.isNotEmpty(results)) {
 				JSONArray queryResults = (JSONArray) JSONSerializer.toJSON(results);
@@ -178,9 +148,9 @@ public class LCNAFImpl implements ExternalConceptService {
 		//concept.setBestMatch("true"); //not sure about best matches here
 		concept.setDefinedBy(schemeUri);
 		concept.setSchemeURI(this.schemeUri);
-		concept.setType(getType(termResult));
-		concept.setLabel(getLabelFromLinkedDataRequest(termResult));
-		concept.setAltLabelList(getAltLabelsFromLinkedDataRequest(termResult));
+		concept.setType(null);
+		concept.setLabel(getLabel(termResult));
+		concept.setAltLabelList(null);
 		//Add real world object information
 		HashMap<String, String> additionalInfo = getAdditionalInfo(termResult);
 		concept.setAdditionalInformation(additionalInfo);

@@ -36,5 +36,5 @@
         }
     </query-select>
     
-    <template>propStatement-workHasActivity.ftl</template>
+    <template>propStatement-instanceHasActivity.ftl</template>
 </list-view-config>

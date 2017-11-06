@@ -21,8 +21,15 @@
 #custom configuration file
 bib:hasActivity <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasActivity.jsonld" .
+
+bib:hasActivity display:listViewConfigFile "listViewConfig-workHasActivity.xml"^^<http://www.w3.org/2001/XMLSchema#string> .
  
 #New individual of work type custom form
 <http://id.loc.gov/ontologies/bibframe/Work>  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewWorkTemplate.ftl";
 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewWork.jsonld" .
+
+#Subject area
+<http://purl.org/dc/terms/subject>  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasLCSH.ftl";
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasLCSH.jsonld" .

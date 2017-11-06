@@ -37,6 +37,28 @@ var addNewWorkSpecific = {
     			$("#instanceTitle").val(titleValue);
     		}
     	});
+    	//Copy activity label
+    	/*
+    	$("select[name=activityType]").change(function() {
+    		var optionText = $("#activityType option:selected").text();
+    		$("#activityLabel").val(optionText);
+    	});*/
+    	
+    	//On submit, copy label fields or populate as needed (for anything dynamic)
+    	$("form").submit(function(event) {
+    		addNewWorkSpecific.updateActivityLabel(event);
+    		addNewWorkSpecific.updatePublicationActivityLabel(event);
+    	})
+    	
+    },
+    updateActivityLabel:function(event) {
+    	//Update activity label
+		var optionText = $("#activityType option:selected").text();
+		$("#activityLabel").val(optionText);
+    },
+    updatePublicationActivityLabel:function(event) {
+    	//Update activity label
+		$("#publicationActivityLabel").val("Publication");
     }
    
 

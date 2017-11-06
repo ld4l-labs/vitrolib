@@ -24,6 +24,9 @@ public class ConceptSearchServiceUtils {
     private static final String AgrovocVocabSource = "http://aims.fao.org/aos/agrovoc/agrovocScheme";
     private static final String GemetVocabSource = "http://www.eionet.europa.eu/gemet/gemetThesaurus";
     private static final String LCSHVocabSource = "http://id.loc.gov/authorities/subjects";
+    private static final String LCSHQAVocabSource = "http://id.loc.gov/authorities/subjects";
+    private static final String LCGFVocabSource = "http://id.loc.gov/authorities/genreForms";
+
     private static final String LCNAFVocabSource = "http://id.loc.gov/authorities/names";
 
     //Get the class that corresponds to the appropriate search
@@ -44,8 +47,10 @@ public class ConceptSearchServiceUtils {
     	//Commenting out agrovoc for now until implementation is updated
     	map.put(AgrovocVocabSource, new VocabSourceDescription("AGROVOC", AgrovocVocabSource, "http://www.fao.org/agrovoc/", "Agricultural Vocabulary"));
     	map.put(GemetVocabSource, new VocabSourceDescription("GEMET", GemetVocabSource, "http://www.eionet.europa.eu/gemet", "GEneral Multilingual Environmental Thesaurus"));
-    	map.put(LCSHVocabSource, new VocabSourceDescription("LCSH", LCSHVocabSource, "http://id.loc.gov/authorities/subjects/", "Library of Congress Subject Headings"));
+    	//map.put(LCSHVocabSource, new VocabSourceDescription("LCSH", LCSHVocabSource, "http://id.loc.gov/authorities/subjects/", "Library of Congress Subject Headings"));
     	map.put(LCNAFVocabSource, new VocabSourceDescription("LCNAF", LCNAFVocabSource, "http://id.loc.gov/authorities/names/", "Library of Congress Names Authorities"));
+    	map.put(LCSHQAVocabSource, new VocabSourceDescription("LCSH", LCSHQAVocabSource, "http://id.loc.gov/authorities/subjects/", "Library of Congress Subject Headings"));
+    	map.put(LCGFVocabSource, new VocabSourceDescription("LCSH", LCGFVocabSource, "http://id.loc.gov/authorities/genreForms/", "Library of Congress Genre Forms"));
 
     	return map;
 	}
@@ -59,8 +64,11 @@ public class ConceptSearchServiceUtils {
     	map.put(UMLSVocabSource, "edu.cornell.mannlib.semservices.service.impl.UMLSService");
     	map.put(AgrovocVocabSource, "edu.cornell.mannlib.semservices.service.impl.AgrovocService");
     	map.put(GemetVocabSource, "edu.cornell.mannlib.semservices.service.impl.GemetService");
-    	map.put(LCSHVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHService");
+    	//map.put(LCSHVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHService");
     	map.put(LCNAFVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCNAFImpl");
+    	map.put(LCSHQAVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCSHQAImpl");
+    	map.put(LCGFVocabSource, "edu.cornell.mannlib.semservices.service.impl.LCGFImpl");
+
 
     	return map;
     }

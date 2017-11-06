@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- Default list view config file for object properties 
+    
+     See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    <query-select>    
+        PREFIX afn:  &lt;http://jena.apache.org/ARQ/function#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        
+        SELECT ?object ?bodyValue ?motivationLabel ?selectorText ?sourceUri ?sourceLabel WHERE {
+               
+            ?subject ?property ?object .
+            OPTIONAL {
+	               	?object oa:hasBody ?textBodyUri .
+	   	  			?textBodyUri rdf:type oa:TextualBody.
+	         			?textBodyUri rdf:value ?bodyValue.
+      		}
+      		
+      		OPTIONAL {
+       		?object oa:motivatedBy ?motivationIndividual.
+       		?motivationIndividual rdfs:label ?motivationLabel .
+       		}		
+                  	OPTIONAL {
+		         			?object oa:hasBody ?resourceBodyUri .
+		         			?resourceBodyUri rdf:type oa:SpecificResource .
+		         		OPTIONAL {
+		         			?resourceBodyUri oa:hasSource ?sourceUri.
+		         			?sourceUri rdfs:label ?sourceLabel .
+		         		}
+		         		OPTIONAL {
+		         			?resourceBodyUri oa:hasSelector ?selectorUri.
+		         			?selectorUri oa:exact ?selectorText .
+		         		}
+		         		}
+        
+        
+        } 
+    </query-select>
+
+    <template>propStatement-isTargetOf.ftl</template>
+</list-view-config>

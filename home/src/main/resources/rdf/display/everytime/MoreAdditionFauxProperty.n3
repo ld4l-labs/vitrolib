@@ -1,0 +1,28 @@
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix bib: <http://bibliotek-o.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+
+
+local:fpgn128 a  :ConfigContext ; :configContextFor <http://purl.org/dc/terms/hasPart>;:hasConfiguration local:fpgenconfig128; :qualifiedBy bf:Work ; :qualifiedByDomain bf:Work .	local:fpgenconfig128 a  :ObjectPropertyDisplayConfig ; vitro:collateBySubclassAnnot   false ; vitro:displayLimitAnnot "0"^^xsd:int ; vitro:displayRankAnnot  "0"^^xsd:int ; vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;	vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ; vitro:offerCreateNewOptionAnnot true ; vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ; vitro:selectFromExistingAnnot  true ; :displayName "related works/content listing" .
+#List view for related works/content listing (for 740 field)
+local:fpgenconfig128 :listViewConfigFile "listViewConfig-workHasPartWork.xml"^^xsd:string .
+local:fpgenconfig128 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasPartWork.jsonld" .
+# Annotation at work level, ties to specific jsonld
+local:fpgenconfig11 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "isTargetOf.jsonld";
+ :listViewConfigFile "listViewConfig-isTargetOf.xml"^^xsd:string .
+# Genre Form addition FOR WORK
+local:fpgenconfig70 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasGenreForm.jsonld";
+ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasGenreForm.ftl" .

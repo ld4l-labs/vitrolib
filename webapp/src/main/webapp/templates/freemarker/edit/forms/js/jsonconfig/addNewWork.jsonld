@@ -2,7 +2,7 @@
   "@context": {
     "foaf": "http://xmlns.com/foaf/0.1/",
     "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
-    "ld4l": "http://bib.ld4l.org/ontology/",
+    "bib": "http://bibliotek-o.org/ontology/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vivo": "http://vivoweb.org/ontology/core#",
@@ -21,15 +21,19 @@
         "?subject rdf:type bibframe:Work .",
 		"?subject rdfs:label ?title .",
 		"?subject bibframe:title ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
 		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual rdf:value ?title .",
 		"?titleIndividual bibframe:titleOf ?subject .",
 		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
-		"?mainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?mainTitleElement rdf:type bib:MainTitleElement .",
+		"?mainTitleElement rdf:value ?title .",
 		"?mainTitleElement rdfs:label ?title .",
 		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
-		"?subject rdf:type ?workType ."
+		"?subject rdf:type ?workType .",
+		"?subject dcterms:language ?language ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  "
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -38,26 +42,62 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       "?subject ld4l:hasActivity ?activity .",
-		"?activity a ld4l:AuthorActivity.",
-		"?activity rdfs:label 'Author'.",
-		"?activity ld4l:hasAgent ?agent .", 
-		"?activity ld4l:isActivityOf ?subject .",
-		"?agent a foaf:Person.",
+       "?subject bib:hasActivity ?activity .",
+		"?activity rdf:type ?activityType.",
+		"?activity rdfs:label ?activityLabel.",
+		"?activity bib:hasAgent ?agent .", 
+		"?activity bib:isActivityOf ?subject .",
+		"?agent rdf:type foaf:Agent.",
+		"?agent foaf:name ?agentName.",
 		"?agent rdfs:label ?agentName .",
-		"?agent ld4l:isAgentOf ?activity .",
+		"?agent bib:isAgentOf ?activity .",
 		"?subject bibframe:hasInstance ?instance .",
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
 		"?instance bibframe:title ?instanceTitleIndividual .",
+		"?instanceTitleIndividual rdf:type bibframe:Title .",
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
+		"?instanceTitleIndividual rdf:value ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
 		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
-		"?instanceMainTitleElement rdf:type ld4l:MainTitleElement .",
+		"?instanceMainTitleElement rdf:type bib:MainTitleElement .",
 		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
-		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual ."
+		"?instanceMainTitleElement rdf:value ?instanceTitle .",
+		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual .",
+		"?instance bib:hasActivity ?publicationActivity .",
+		"?publicationActivity bib:hasAgent ?publisherAgent .", 
+		"?publicationActivity bib:isActivityOf ?instance .",
+		"?publisherAgent rdf:type foaf:Agent.",
+		"?publisherAgent rdfs:label ?publisherAgentName .",
+		"?publisherAgent foaf:name ?publisherAgentName .",
+		"?publisherAgent bib:isAgentOf ?publicationActivity .",
+		"?publicationActivity rdf:type bib:Activity .",
+		"?publicationActivity rdf:type bib:PublicationActivity .",
+		"?publicationActivity dcterms:date ?publicationDate .",
+		"?publicationActivity rdfs:label ?publicationActivityLabel .",
+		"?instance rdf:type ?instanceType .",
+		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
+		"?instance bibframe:identifiedBy ?issueIdentifier .",
+		"?issueIdentifier rdf:type bibframe:AudioIssueNumber .",
+		"?issueIdentifier rdf:value ?issueNumber .",
+		"?issueIdentifier rdfs:label ?issueNumber .",
+		"?instance bibframe:identifiedBy ?matrixNumberUri .",
+		"?matrixNumberUri rdf:type bibframe:MatrixNumber .",
+		"?matrixNumberUri rdf:value ?matrixNumber .",
+		"?matrixNumberUri rdfs:label ?matrixNumber .",
+		"?instance bibframe:identifiedBy ?upcUri .",
+		"?upcUri rdf:type bibframe:UPC .",
+		"?upcUri rdf:value ?upc .",
+		"?upcUri rdfs:label ?upc .",
+		"?instance bibframe:identifiedBy ?eanUri .",
+		"?eanUri rdf:type bibframe:EAN .",
+		"?eanUri rdf:value ?ean .",
+		"?eanUri rdfs:label ?ean .",
+		"?subject dcterms:subject ?lcsh.",
+		"?lcsh rdfs:label ?lcshTerm .",
+		"?lcsh rdf:type owl:Thing ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix ld4l: <http://bib.ld4l.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
     {
       "@id": "customform:addWork_subject",
@@ -175,6 +215,204 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "instanceMainTitleElement"
+    },
+    {
+      "@id": "customform:whcor_activityType",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:varName": "activityType"
+    },
+        {
+      "@id": "customform:whcor_activityLabel",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "activityLabel"
+    },
+    {
+      "@id": "customform:whcor_publicationDate",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "publicationDate"
+    },
+     {
+      "@id": "customform:whcor_publicationActivity",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true, 
+      "customform:varName": "publicationActivity"
+    },
+         {
+      "@id": "customform:whcor_publicationActivityLabel",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "publicationActivityLabel"
+    },
+    {
+      "@id": "customform:whcor_publisherAgentName",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "publisherAgentName"
+    },
+     {
+      "@id": "customform:whcor_publisherAgent",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "publisherAgent"
+    },
+    
+    {
+          "@id": "customform:whcor_statementResponsibility",
+          "@type": [
+           "forms:FormComponent",
+           "forms:LiteralField"
+          ],
+          "customform:varName": "statementResponsibility"
+    },
+    
+     {
+      "@id": "customform:whcor_languageOptions",
+      "@type": [
+        "forms:IndividualsViaVClassOptions",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://schema.org/Language"
+      }
+    },
+    {
+      "@id": "customform:whcor_language",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:whcor_languageOptions"
+      },
+    
+      "customform:varName": "language"
+    },
+    
+     {
+      "@id": "customform:addWork_instanceType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "instanceType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_instanceTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_instanceTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Instance"
+      }
+    },
+    {
+      "@id": "customform:whcor_issueNumber",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "issueNumber"
+    },
+    {
+      "@id": "customform:whcor_issueIdentifier",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "issueIdentifier"
+    },
+    {
+      "@id": "customform:whcor_matrixNumber",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "matrixNumber"
+    },
+    {
+      "@id": "customform:whcor_matrixNumberUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "matrixNumberUri"
+    },
+    {
+      "@id": "customform:whcor_upc",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "upc"
+    },
+    {
+      "@id": "customform:whcor_upcUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "upcUri"
+    },
+    {
+      "@id": "customform:whcor_ean",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "ean"
+    },
+    {
+      "@id": "customform:whcor_eanUri",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "eanUri"
+    },
+       {
+      "@id": "customform:whcor_lcsh",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lcsh"
+    },
+    {
+      "@id": "customform:whcor_lcshTerm",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lcshTerm"
     }
    ]
 }

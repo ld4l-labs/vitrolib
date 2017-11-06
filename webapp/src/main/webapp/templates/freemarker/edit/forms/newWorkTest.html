@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<meta charset="utf-8" />
+<!-- Google Chrome Frame open source plug-in brings Google Chrome's open web technologies and speedy JavaScript engine to Internet Explorer-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>New Ontology Work Example</title>
+
+
+<!-- vitro base styles (application-wide) -->
+<link rel="stylesheet" href="/css/vitro.css" />
+
+<link rel="stylesheet" href="/css/individual/individual-property-groups.css" />
+<link rel="stylesheet" href="/css/individual/individual.css" />
+<link rel="stylesheet" type="text/css" href="/css/jquery_plugins/qtip/jquery.qtip.min.css" />
+
+<link rel="stylesheet" href="/css/edit.css" /><link rel="stylesheet" href="/themes/vitrolib/css/screen.css" />
+
+<script>
+var i18nStrings = {
+    allCapitalized: 'All',
+};
+</script>
+<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.4.1.js"></script>
+<script type="text/javascript" src="/js/vitroUtils.js"></script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/js/amplify/amplify.store.min.js"></script>
+<script type="text/javascript" src="/js/jquery_plugins/qtip/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script> 
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="/js/selectivizr.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rdf+xml" href="/individual/n6642/n6642.rdf" /> 
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">    </head>
+    
+    <body class="display loggedIn">
+
+<header id="branding" role="banner">
+    <h1 class="vitro-logo"><a title="VIVO" href=""><span class="displace">VIVO</span></a></h1>
+
+    <nav role="navigation">
+        <ul id="header-nav" role="list">
+
+<script type="text/javascript">
+var i18nStringsLangMenu = {
+    selectLanguage: "Select a language"
+};
+</script>
+
+
+<script type="text/javascript">
+$.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                      .exec(window.location.href);
+
+    return results[1] || 0;
+}
+
+function decodeForForm(paramName) {
+	var value = $.urlParam(paramName);
+	var newValue = value.replace(/\+/g, '%20'); 
+	return decodeURIComponent(newValue);
+}
+var activityType = decodeForForm("activityType");
+var activityLabel = decodeForForm("activityLabel");
+var agentName = decodeForForm("agentName");
+var publicationDate = decodeForForm("publicationDate");
+var publicationLocation = decodeForForm("publicationLocation");
+var publisherAgentName = decodeForForm("publisherAgentName");
+var instanceTitle = decodeForForm("instanceTitle");
+var workTitle = decodeForForm("title");
+//Add these fields as well
+var language  = decodeForForm("language");
+var subjectArea = decodeForForm("subject");
+var responsibility = decodeForForm("responsibility");
+</script>
+
+
+            <li role="listitem"><a href="/browse" title="Index">Index</a></li>
+                    <li role="listitem"><a href="/siteAdmin" title="Site Admin">Site Admin</a></li>
+                    <li>
+                        <ul class="dropdown">
+                            <li id="user-menu"><a href="#" title="Current user">root</a>
+                                <ul class="sub_menu">
+                                         <li role="listitem"><a href="/accounts/myAccount" title="My account">My account</a></li>
+                                     <li role="listitem"><a href="/logout" title="Log out">Log out</a></li>
+                                </ul>
+                            </li>
+                         </ul>
+                     </li>
+                
+                
+                
+        </ul>
+        
+    </nav> 
+<section id="search" role="region">
+    <fieldset>
+        <legend>Search form</legend>
+
+        <form id="search-form" action="/search" name="search" role="search" accept-charset="UTF-8" method="POST"> 
+            <div id="search-field">
+                <input type="text" name="querytext" class="search-vitro" value="" autocapitalize="off" />
+                <input type="submit" value="Search" class="search">
+            </div>
+        </form>
+    </fieldset>
+</section>
+</header>
+
+
+<div id="developerPanel" > </div>
+<script>
+    developerAjaxUrl = '/admin/developerAjax'
+    developerCssLinks = ["/css/developer/developerPanel.css", "/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css"]
+</script>
+   
+
+
+<nav role="navigation">
+    <ul id="main-nav" role="list">
+            <li role="listitem"><a href="/"  title="Home menu item">Home</a></li>
+            <li role="listitem"><a href="/works"  title="Works menu item">Works</a></li>
+            <li role="listitem"><a href="/instances"  title="Instances menu item">Instances</a></li>
+            <li role="listitem"><a href="/items"  title="Items menu item">Items</a></li>
+            <li role="listitem"><a href="/people"  title="People menu item">People</a></li>
+            <li role="listitem"><a href="/organizations"  title="Organizations menu item">Organizations</a></li>
+    </ul>
+</nav>
+
+<div id="wrapper-content" role="main">        
+    
+    <!--[if lte IE 8]>
+    <noscript>
+        <p class="ie-alert">This site uses HTML elements that are not recognized by Internet Explorer 8 and below in the absence of JavaScript. As a result, the site will not be rendered appropriately. To correct this, please either enable JavaScript, upgrade to Internet Explorer 9, or use another browser. Here are the <a href="http://www.enable-javascript.com" title="javascript instructions">Here are the instructions for enabling JavaScript in your web browser</a>.</p>
+    </noscript>
+    <![endif]-->        
+        
+
+<section id="individual-intro" class="vcard" role="region" >
+    <!-- start section individual-info -->
+    <section id="individual-info"  role="region">
+
+    <section id="admin">
+        <h3 id="adminPanel">Admin Panel</h3><a class="edit-individual" href="/entityEdit?uri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642" title="Edit this individual">Edit this individual</a>
+        
+        <section id = "verbose-mode">
+            <span>Verbose property display is <b>off</b> | </span>
+            <a id="verbosePropertySwitch" class="verbose-toggle small" href="/display/n6642?verbose=true" title="verbose control">Turn on</a>
+        </section>
+
+        <p class="uri-link">Resource URI: <a href="http://vitrolib.cornell.edu/individual/n6642" target="_blank" title="Resource URI">http://vitrolib.cornell.edu/individual/n6642</a></p>
+    </section>
+
+
+        <header>
+                <h1 class="fn" itemprop="name">
+			<script type="text/javascript">
+			document.write(workTitle);
+			</script>
+		
+        <span class="display-title">Audio</span>
+        	        <span class="display-title">(work)</span>
+                    <span id="iconControlsVitro"><img id="uriIcon" title="http://vitrolib.cornell.edu/individual/n6642" class="middle" src="/images/individual/uriIcon.gif" alt="uri icon"/></span>
+                </h1>
+        </header>
+                
+            </section> <!-- individual-info -->
+        </section> <!-- individual-intro -->
+
+
+<!-- Property group menu or tabs -->
+
+<!-- 1 -->
+<ul class="propertyTabsList">
+    <li  class="groupTabSpacer">&nbsp;</li>
+            <li class="groupTabSpacer">&nbsp;</li>
+</ul>
+        <section id="other" class="property-group" role="region" style="display:block">
+        <nav id="scroller" class="scroll-up hidden" role="navigation">
+            <a href="#branding" title="scroll to property group menus" >
+                <img src="/images/individual/scroll-up.gif" alt="scroll to property group menus" />
+            </a>
+        </nav>
+    
+            <h2 id="other" pgroup="tabs" class="hidden">Other</h2>
+        <div id="otherGroup" >
+			
+			
+        
+        	
+			
+        
+           <article class="property" role="article">
+              
+                    <h3 id="responsibility" title="">Responsibility Statement        <a class="add-hasActivity" href="" title="Responsibility">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasActivity-Activity-List" displayLimit="5">
+         <li role="listitem">    
+
+
+    <a href="#" title=""><script type="text/javascript">
+    if(responsibility != 0) {
+    	document.write(responsibility);
+    }
+    </script></a>
+
+
+    <a class="edit-hasActivity" href="" title="edit this entry"><img class="edit-individual" src="/images/individual/editIcon.gif" alt="edit this entry" /></a>
+    <a class="delete-hasActivity" href="" title="delete this entry"><img  class="delete-individual" src="/images/individual/deleteIcon.gif" alt="delete this entry" /></a>
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+        
+        
+        	
+        
+            <article class="property" role="article">
+              
+                    <h3 id="hasActivity" title="">has activity        <a class="add-hasActivity" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FhasActivity&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FActivity" title="Add new has activity (faux) entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasActivity-Activity-List" displayLimit="5">
+         <li role="listitem">    
+
+
+    <a href="#" title=""><script type="text/javascript">if(agentName != 0) {document.write(agentName);}
+    if(activityLabel != 0) {
+    document.write(" (" + activityLabel + ")");
+    }
+    </script></a>
+
+
+    <a class="edit-hasActivity" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FhasActivity&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6957&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FActivity" title="edit this entry"><img class="edit-individual" src="/images/individual/editIcon.gif" alt="edit this entry" /></a>
+    <a class="delete-hasActivity" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FhasActivity&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6957&cmd=delete&objectKey=activity&statement_agentLabel=Twain%2C+Mark%2C+1835-1910&statement_agent=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fn79021164&statement_subclassLabel=Author&statement_activity=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6957&statement_activityLabel=Author&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fbibliotek-o.org%2Fontology%2FActivity&templateName=propStatement-workHasActivity.ftl" title="delete this entry"><img  class="delete-individual" src="/images/individual/deleteIcon.gif" alt="delete this entry" /></a>
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+			
+        
+        	
+        
+            <article class="property" role="article">
+              
+                    <h3 id="hasInstance" title="">Instances for Work        <a class="add-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="Add new instance of work entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasInstance-Instance-List" displayLimit="5">
+         <li role="listitem">    
+	<script type="text/javascript">
+	document.write(instanceTitle);
+	if(publicationLocation != 0 && publicationDate != 0 && publisherAgentName != 0) {
+		document.write(", " + publisherAgentName + ", " + publicationLocation + ", " + publicationDate);
+	}
+	</script>
+
+
+
+    <a class="edit-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="edit this entry"><img class="edit-individual" src="/images/individual/editIcon.gif" alt="edit this entry" /></a>
+    <a class="delete-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&cmd=delete&objectKey=instance&statement_mostSpecificType=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&statement_instance=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&templateName=propStatement-hasInstance.ftl" title="delete this entry"><img  class="delete-individual" src="/images/individual/deleteIcon.gif" alt="delete this entry" /></a>
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+            
+            
+                        <article class="property" role="article">
+              
+                    <h3 id="hasInstance" title="">Subject       <a class="add-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="Add new instance of work entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasInstance-Instance-List" displayLimit="5">
+         <li role="listitem">    
+	<script type="text/javascript">
+	document.write(subjectArea);
+	
+	</script>
+
+
+
+    <a class="edit-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="edit this entry"><img class="edit-individual" src="/images/individual/editIcon.gif" alt="edit this entry" /></a>
+    <a class="delete-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&cmd=delete&objectKey=instance&statement_mostSpecificType=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&statement_instance=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&templateName=propStatement-hasInstance.ftl" title="delete this entry"><img  class="delete-individual" src="/images/individual/deleteIcon.gif" alt="delete this entry" /></a>
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+            
+                   <article class="property" role="article">
+              
+                    <h3 id="hasInstance" title="">Language       <a class="add-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="Add new instance of work entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasInstance-Instance-List" displayLimit="5">
+         <li role="listitem">    
+	<script type="text/javascript">
+	if(language != 0) {
+	document.write(language);
+	}
+	</script>
+
+
+
+    <a class="edit-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="edit this entry"><img class="edit-individual" src="/images/individual/editIcon.gif" alt="edit this entry" /></a>
+    <a class="delete-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&objectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&cmd=delete&objectKey=instance&statement_mostSpecificType=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&statement_instance=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn4721&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance&templateName=propStatement-hasInstance.ftl" title="delete this entry"><img  class="delete-individual" src="/images/individual/deleteIcon.gif" alt="delete this entry" /></a>
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->     
+            
+            
+                        <article class="property" role="article">
+              
+                    <h3 id="hasInstance" title="">LCCN  <a class="add-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="Add new instance of work entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasInstance-Instance-List" displayLimit="5">
+         <li role="listitem">    
+	
+
+
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+            
+            
+                        <article class="property" role="article">
+              
+                    <h3 id="hasInstance" title="">Catalog Number    <a class="add-hasInstance" href="/editRequestDispatch?subjectUri=http%3A%2F%2Fvitrolib.cornell.edu%2Findividual%2Fn6642&predicateUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FhasInstance&domainUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FWork&rangeUri=http%3A%2F%2Fid.loc.gov%2Fontologies%2Fbibframe%2FInstance" title="Add new instance of work entry">
+        <img class="add-individual" src="/images/individual/addIcon.gif" alt="add" /></a>
+  </h3>
+                
+                <ul class="property-list" role="list" id="hasInstance-Instance-List" displayLimit="5">
+         <li role="listitem">    
+	
+
+
+
+    </li>
+                    
+                </ul>
+            </article> <!-- end property -->
+            
+            
+            
+        </div>
+        </section> <!-- end property-group -->
+<script>
+    var individualLocalName = "n6642";
+</script>
+
+
+
+
+
+
+
+    <script>
+        var individualRdfUrl = '/individual/n6642/n6642.rdf';
+    </script>
+<script>
+    var i18nStringsUriRdf = {
+        shareProfileUri: 'share the URI for this profile',
+        viewRDFProfile: 'view profile in RDF format',
+        closeString: 'close'
+    };
+	var i18nStrings = {
+	    displayLess: 'less',
+	    displayMoreEllipsis: '... more',
+	    showMoreContent: 'show more content',
+	};
+
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    i18n_confirmDelete = "Are you sure you want to delete this photo?";
+</script>
+
+
+        
+
+</div> <!-- #wrapper-content -->
+
+<footer role="contentinfo">
+    <p class="copyright">
+            <small>&copy;2017
+                VIVO Project
+             | <a class="terms" href="/termsOfUse" title="Terms of Use">Terms of Use</a></small> | 
+        Powered by <a class="powered-by-vitro" href="http://vitro.sourceforge.net"><strong>Vitro</strong></a>
+             | Version <a href="/revisionInfo" title="Version">0.1</a>
+    </p>
+    
+    <nav role="navigation">
+        <ul id="footer-nav" role="list">
+            <li role="listitem"><a href="/about" title="About">About</a></li>
+            <li role="listitem"><a href="http://www.vivoweb.org/support" target="blank" title="Support">Support</a></li>
+        </ul>
+    </nav>
+</footer>
+
+
+<script type="text/javascript" src="/js/individual/propertyGroupControls.js"></script>
+<script type="text/javascript" src="/js/imageUpload/imageUploadUtils.js"></script>
+<script type="text/javascript" src="/js/individual/moreLessController.js"></script>
+<script type="text/javascript" src="/js/individual/individualUriRdf.js"></script>
+<script type="text/javascript" src="/js/languageMenuUtils.js"></script>
+<script type="text/javascript" src="/js/userMenu/userMenuUtils.js"></script>
+<script type="text/javascript" src="/js/developer/developerPanel.js"></script>
+<script type="text/javascript" src="/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
+
+
+    </body>
+</html>

@@ -15,26 +15,20 @@
     	PREFIX bibframe: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
         
         SELECT DISTINCT 
-            ?activity ?activityLabel
-            ?subclassLabel
-            ?agent ?agentLabel 
+           ?work ?workTitle ?workLabel
         
         WHERE {
-            ?subject ?property ?activity .
-            ?activity a bib:Activity .
-            OPTIONAL {?activity rdfs:label ?activityLabel .}
+            ?subject ?property ?work .
             OPTIONAL {
-             ?activity bib:hasAgent ?agent .
-            ?agent rdfs:label ?agentLabel .
-            ?agent rdf:type foaf:Agent .
-            }
+            	?work rdfs:label ?workLabel .}
             OPTIONAL {
-                ?activity vitro:mostSpecificType ?subclass .
-                ?subclass rdfs:subClassOf bib:Activity ;
-                    rdfs:label ?subclassLabel .
-            }
+	            ?work bibframe:title ?titleIndividual .
+				?titleIndividual rdf:type bibframe:Title .
+				?titleIndividual rdf:value ?workTitle .
+			}
+           
         }
     </query-select>
     
-    <template>propStatement-workHasActivity.ftl</template>
+    <template>propStatement-workHasPartWork.ftl</template>
 </list-view-config>
