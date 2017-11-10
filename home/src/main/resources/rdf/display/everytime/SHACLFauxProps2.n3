@@ -8,6 +8,8 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Is arrangement of" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ObjectPropertyDisplayConfig> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://example.org/bibliotek-o_shapes#AudioWorkToWorkPropertyGroup> .
+
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn283> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#configContextFor> <http://rdaregistry.info/Elements/u/P60242> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn283> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#hasConfiguration> <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn283> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#qualifiedBy> <http://id.loc.gov/ontologies/bibframe/Audio> .
