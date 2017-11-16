@@ -30,7 +30,7 @@ public class LCGFImpl implements ExternalConceptService {
 	
 	//Followed by ?q=whatever term
 
-	protected final String lcgfQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locgenres";
+	protected final String lcgfQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locgenres_ld4l_cache";
 
 
 
