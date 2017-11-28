@@ -21,12 +21,12 @@ var lookupWithContext = {
 	        
 	        initObjects:function() {
 	        	this.searchSubmit = $("#searchButton");
-	        	
+	        	 this.searchTerm = $('#searchTerm');
 	        },
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
-	        	this
+	        	
 	                           
 	        },
 	      
@@ -40,7 +40,7 @@ var lookupWithContext = {
 	        submitSearchTerm: function() {
 	        	//Get value of search term
 	        	var searchValue = this.searchTerm.val();
-	        	var dataServiceUrl = lookupWithContext.dataServiceUrl + "?searchTerm=" + encodeURIComponent(searchValue);
+	        	var dataServiceUrl = lookupWithContext.dataServiceUrl + "&searchTerm=" + encodeURIComponent(searchValue);
 	            //Show the loading icon until the results appear
 	        	//lookupWithContext.loadingIndicator.removeClass("hidden");
 	        	//remove the old search results if there are any
