@@ -1,0 +1,62 @@
+/* $This file is distributed under the terms of the license in LICENSE$ */
+
+.conceptsListContainer {
+	overflow:hidden;
+	width:100%;
+}
+.concepts .row {
+	clear:both;
+	float:left;
+	border-bottom: 1px solid #5F6464;
+}
+.conceptType {
+	width: 40px;
+}
+.conceptDefinition{
+	width:300px;
+}
+.additionalInfo {
+	width:300px;
+}
+
+.conceptRemoval {
+	width:50px;
+}
+
+/* For adding an empty element under the best match column*/
+.emptyColumn {
+	width:67px;
+	height:18px;
+	background: url("../images/conceptSpacer.png") no-repeat left center;  
+}
+
+
+
+
+/*For existing concepts, display will also be tabular with columns*/
+
+.existingConcept .row, .conceptHeadings .row {
+	clear:both;
+	float:left;
+}
+
+.existingConcept .column, 
+.conceptHeadings .column,
+.concepts .column {
+	float:left;
+	padding-right:3px;
+	clear:none !important; /*Overriding customFor div's clearing*/
+}
+/*label and semantic type if it exists*/
+.conceptLabel,
+.existingConcept .conceptLabelInfo, 
+.conceptHeadings .conceptLabelInfo,
+existingConcept .conceptVocabSource, 
+.conceptHeadings .conceptVocabSource {
+	width:220px;
+}
+
+.conceptHeadings .row {
+	border-bottom: 1px solid #5F6464;
+}
+
