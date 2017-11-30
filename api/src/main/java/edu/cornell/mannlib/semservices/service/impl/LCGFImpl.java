@@ -19,6 +19,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import edu.cornell.mannlib.semservices.bo.Concept;
+import edu.cornell.mannlib.semservices.bo.RelatedTermInfo;
+
 import edu.cornell.mannlib.semservices.service.ExternalConceptService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -166,21 +168,21 @@ public class LCGFImpl implements ExternalConceptService {
 		return StringUtils.join(notesArray, " ");
 	}
 
-	private List<String> getExactMatchURIList(JSONObject termResult) {
+	private List<RelatedTermInfo> getExactMatchURIList(JSONObject termResult) {
 		JSONObject context = getContextObject(termResult);
-		List<String> exactMatchURIs = getListForKey("Exact Match", context);
+		List<RelatedTermInfo> exactMatchURIs = getTermListForKey("Exact Match", context);
 		return exactMatchURIs;
 	}
 
-	private List<String> getNarrowerURIList(JSONObject termResult) {
+	private List<RelatedTermInfo> getNarrowerURIList(JSONObject termResult) {
 		JSONObject context = getContextObject(termResult);
-		List<String> narrowerURIs = getListForKey("Narrower", context);
+		List<RelatedTermInfo> narrowerURIs = getTermListForKey("Narrower", context);
 		return narrowerURIs;
 	}
 
-	private List<String> getBroaderURIList(JSONObject termResult) {
+	private List<RelatedTermInfo> getBroaderURIList(JSONObject termResult) {
 		JSONObject context = getContextObject(termResult);
-		List<String> broaderURIs = getListForKey("Broader", context);
+		List<RelatedTermInfo> broaderURIs = getTermListForKey("Broader", context);
 		return broaderURIs;
 
 	}
@@ -202,6 +204,18 @@ public class LCGFImpl implements ExternalConceptService {
 		}
 		return array;
 	}
+	
+	//JSON Object has key that returns array which needs to be converted to List<String>
+	private List<RelatedTermInfo> getTermListForKey(String key, JSONObject jsonObject) {
+		List<RelatedTermInfo> array = new ArrayList<RelatedTermInfo>();
+		if(jsonObject != null) {
+			if(jsonObject.containsKey(key)) {
+				JSONArray jsonArray = jsonObject.getJSONArray(key);
+				array = convertJSONArrayToTermList(jsonArray);
+			}
+		}
+		return array;
+	}
 
 	private List<String> convertJSONArrayToList(JSONArray jsonArray) {
 		List<String> listArray = new ArrayList<String>();
@@ -211,6 +225,19 @@ public class LCGFImpl implements ExternalConceptService {
 		}
 		return listArray;
 	}
+	
+	private List<RelatedTermInfo> convertJSONArrayToTermList(JSONArray jsonArray) {
+		List<RelatedTermInfo> listArray = new ArrayList<RelatedTermInfo>();
+		int len = jsonArray.size();
+		int l;
+		for(l = 0; l < len; l++) {
+			JSONObject jObject = jsonArray.getJSONObject(l);
+			listArray.add(new RelatedTermInfo( jObject.getString("label"), jObject.getString("uri") ));
+
+		}
+		return listArray;
+	}
+
 
 	@Override
 	public List<Concept> getConceptsByURIWithSparql(String uri) throws Exception {

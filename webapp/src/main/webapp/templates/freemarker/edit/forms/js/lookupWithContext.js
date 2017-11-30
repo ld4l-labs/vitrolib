@@ -178,20 +178,37 @@ var lookupWithContext = {
 		if(broaderUris != null && broaderUris.length > 0) {
     		var b;
     		htmlAdditionalInfo = "<b>Broader:</b> <br/>";
-    		htmlAdditionalInfo += broaderUris.join(" ,");
+    		htmlAdditionalInfo += lookupWithContext.generateRelatedURIsDisplay(broaderUris);
     	}
 		if(narrowerUris != null && narrowerUris.length > 0) {
     		var b;
     		htmlAdditionalInfo = "<b>Narrower:</b> <br/>";
-    		htmlAdditionalInfo += narrowerUris.join(" ,");
+    		htmlAdditionalInfo += lookupWithContext.generateRelatedURIsDisplay(narrowerUris);
     	}
 		if(exactMatchUris != null && exactMatchUris.length > 0) {
     		var b;
     		htmlAdditionalInfo = "Exact Match: <br/>";
-    		htmlAdditionalInfo += exactMatchUris.join(" ,");
+    		htmlAdditionalInfo += lookupWithContext.generateRelatedURIsDisplay(exactMatchUris);
     	}
     	return "<div class='column additionalInfo'>" + htmlAdditionalInfo + "</div>";
 		
+	},
+	
+	//relatedURIs are of the format [ {uri: , id: , label: }]
+	generateRelatedURIsDisplay:function(relatedURIs) {
+		var htmlAdd = "";
+		var len = relatedURIs.length;
+		var i;
+		for(i = 0; i < len; i++) {
+			var uriInfo = relatedURIs[i];
+			var label = uriInfo["label"];
+			var uri = uriInfo["uri"];
+			if(i != 0) {
+				htmlAdd += "<br/>";
+			}
+			htmlAdd += "<a href='" + uri + "'>" + label + "</a>";
+		}
+		return htmlAdd;
 	}
 	
 	        
