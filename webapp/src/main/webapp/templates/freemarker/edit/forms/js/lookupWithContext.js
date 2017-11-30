@@ -151,12 +151,24 @@ var lookupWithContext = {
 	    		//Certain vocabulary services might return a long list of alternate labels, in which case we will show fewer 
 	    		//display only upto a certain number of alternate labels and use an ellipsis to signify there
 	    		//are additional terms
+	    		/*
 	    		if(altLabels.length > lookupWithContext.maxNumberAlternateLabels) {
 	    			displayAltLabels = altLabels.slice(0, lookupWithContext.maxNumberAlternateLabels) + ",...";
-	    		}
-	    		labelDisplay += "<br> (" + displayAltLabels + ")";
+	    		}*/
+	    		displayAltLabels = lookupWithContext.generateAltLabelsDisplay(altLabels);
+	    		labelDisplay += "<br> Alternate Labels:" + displayAltLabels + "";
 	    	}
 	    	return labelDisplay;
+	    },
+	    generateAltLabelsDisplay:function(altLabels) {
+	    	var html = "";
+	    	var d;
+	    	var len = altLabels.length;
+	    	for(d = 0; d < len; d++) {
+	    		var altLabel = altLabels[d];
+	    		html += "<br/>" + altLabel;
+	    	}
+	    	return  html;
 	    },
 	    generateIndividualTypeDisplay:function(type) {
 	    	if(type != null && type.length > 0) {
@@ -209,6 +221,17 @@ var lookupWithContext = {
 			htmlAdd += "<a href='" + uri + "'>" + label + "</a>";
 		}
 		return htmlAdd;
+	},
+	/**Get all existing genre form relationships - for now hardcoding this but need to see how to tie this into custom form work**/
+	retrieveExistingValues:function() {
+		//Do ajax request
+		var query = lookupConfig["existingValuesQuery"];
+		//Replace subject with subject URI and predicate with predicate URI
+		
+		var URL = queryAJAXURL + "?query=" + encodeURIComponent(query);
+		//$.getJSON(queryAJAXURL, function(results) {
+			
+		//});
 	}
 	
 	        

@@ -161,7 +161,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"
+        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
+        queryAJAXURL:"${urls.base}/ajax/sparqlQuery"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -198,4 +199,5 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContextConfig.js"></script>',
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContext.js"></script>')}
