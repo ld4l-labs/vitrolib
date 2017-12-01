@@ -28,12 +28,12 @@ public class LCNAFImpl implements ExternalConceptService {
 	
 	//Followed by ?q=whatever term
 	//protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/loc/names";
-	protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locjena";
+	protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locnames_ld4l_cache";
 	//Subauthorities include /locjena/personal_name, corporate_name, and title
 	//http://elr37-dev.library.cornell.edu/qa/show/linked_data/locjena/names/n82045653
 
 	//Followed by id
-	protected final String lcnafTerm = "https://elr37-dev.library.cornell.edu/qa/show/linked_data/loc/names/";
+	protected final String lcnafTerm = "https://elr37-dev.library.cornell.edu/qa/show/linked_data/loc_direct/names/";
 	@Override
 	public List<Concept> getConcepts(String term) throws Exception {
 		List<Concept> conceptList = new ArrayList<Concept>();
