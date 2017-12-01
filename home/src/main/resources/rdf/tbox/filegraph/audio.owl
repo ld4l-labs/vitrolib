@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    WARNING:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT, this file will change frequently and significantly as development continues.
+    
+    Note:  http://audio.biblioteko-o.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
+  -->
+
+
+<rdf:RDF xmlns="http://audio.biblioteko-o.org/"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bib="http://bibliotek-o.org/ontology/"
+    xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1#" xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#">
+
+<!-- ONTOLOGY DECLARATION -->
+
+    <owl:Ontology rdf:about="http://audio.biblioteko-o.org/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
+            0.0</owl:versionInfo>
+        <rdfs:label xml:lang="en">Audio extension of bibliotek-o</rdfs:label>
+        <vann:preferredNamespacePrefix>audio</vann:preferredNamespacePrefix>
+        <rdfs:comment xml:lang="en">This measurements ontology was developed as a stand alone
+            ontology as part of the bibliotek-o BIBFRAME 2.0 extension ontology
+            project</rdfs:comment>
+        <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+    </owl:Ontology>
+
+
+    <!-- CLASSES -->
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/CaptureAndStorageTechnique">
+    <rdfs:label>Capture and storage technique</rdfs:label>
+    <skos:definition>The type of equipment used in making the recording, as opposed to the type of equipment required for playback.</skos:definition>
+    <skos:scopeNote xml:lang="en">This class is derived from the MARC 21 007 position 13 for sound recordings, https://www.loc.gov/marc/bibliographic/bd007s.html..</skos:scopeNote>
+</owl:Class>
+
+<owl:Class rdf:about="http://audio.biblioteko-o.org/PerformedMusic">
+    <rdfs:label>Performed Music</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+    <skos:definition>An audio work consisting of content expressed through music in an audible form, not necessarily performed live. To denote a live performance a bib:PerformedMusic should be linked to a live event.</skos:definition>
+    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1011.</skos:scopeNote>
+</owl:Class>
+  
+<owl:Class rdf:about="http://audio.biblioteko-o.org/Sounds">
+    <rdfs:label>Sounds</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+    <skos:definition>An audio work consisting of content other than language or music, expressed in an audible form.</skos:definition>
+    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1012.</skos:scopeNote>
+  </owl:Class>
+  
+<owl:Class rdf:about="http://audio.biblioteko-o.org/SpokenWord">
+    <rdfs:label>Spoken word</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
+    <skos:definition>An audio work consisting of content expressed through language in an audible form.</skos:definition>
+    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1013.</skos:scopeNote>
+  </owl:Class>
+  
+    <!-- OBJECT PROPERTIES -->
+
+    <owl:ObjectProperty rdf:about="http://audio.biblioteko-o.org/hasCuttingType">
+        <rdfs:label xml:lang="en">Has type of cutting</rdfs:label>
+        <skos:definition xml:lang="en">The relationship between a resource and the recording process in which a stylus cuts a vertical or lateral groove into an audio disc.</skos:definition>
+        <owl:inverseOf rdf:resource="http://measurement.biblioteko-o.org/isCuttingTypeFor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://audio.biblioteko-o.org/isCuttingTypeFor">
+        <rdfs:label xml:lang="en">Is cutting type for</rdfs:label>
+        <skos:definition xml:lang="en">The relationship between the recording process in which a stylus cuts a vertical or lateral groove into an audio disc and resource with this cutting type.</skos:definition>
+        <owl:inverseOf rdf:resource="http://measurement.biblioteko-o.org/hasCuttingType"/>
+    </owl:ObjectProperty>
+    
+    <!-- Individuals -->
+    
+    
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/acousticalCaptureDirectStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+        <rdfs:label xml:lang="en">Acoustical capture, direct storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/DirectStorageNotAcoustical">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+        <rdfs:label xml:lang="en">Direct storage, not acoustical</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/DirectStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+        <rdfs:label xml:lang="en">Direct storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/AnalogElectricalStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+        <rdfs:label xml:lang="en">Analog electrical storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+</rdf:RDF>
