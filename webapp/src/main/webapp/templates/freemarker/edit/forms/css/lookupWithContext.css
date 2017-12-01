@@ -60,3 +60,10 @@ existingConcept .conceptVocabSource,
 	border-bottom: 1px solid #5F6464;
 }
 
+/* list item for info */
+.conceptInfoListItem {
+	list-style:disc outside none;
+	margin-left:5px;
+	padding-left:3px;
+}
+

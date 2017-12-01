@@ -53,7 +53,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>${titleVerb} Genre Form</h2>
+<h2>Manage Associated Genre Forms</h2>
 
 <#if submissionErrors?has_content>
  
@@ -90,15 +90,29 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
 
      
-      <ul id="existingConcepts">
+      <ul id="existingConcepts" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Genre Form </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
       </ul>
        
 
-
+	<br/>
 
 
     <form id="addConceptForm" class="customForm" action="${submitUrl}">
-	<h4 class="services">Lookup Genre Form</h4>
+	<h4 class="services">Lookup and Add Genre Form</h4>
   
     <p class="inline-search">
         <input type="text" id="searchTerm" label="Search" class="acSelector" size="35" />
@@ -162,7 +176,10 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-        queryAJAXURL:"${urls.base}/ajax/sparqlQuery"
+        queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+        subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

@@ -24,11 +24,12 @@ var lookupWithContext = {
 	        	 this.searchTerm = $('#searchTerm');
 	        	 this.maxNumberAlternateLabels = 4;
 	        	 this.showHideSearchResults = $("#showHideResults");
+	        	 this.loadingIndicator = $("#indicator");
 	        },
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
-	        	
+	        	this.retrieveExistingValues();
 	                           
 	        },
 	      
@@ -44,7 +45,7 @@ var lookupWithContext = {
 	        	var searchValue = this.searchTerm.val();
 	        	var dataServiceUrl = lookupWithContext.dataServiceUrl + "&searchTerm=" + encodeURIComponent(searchValue);
 	            //Show the loading icon until the results appear
-	        	//lookupWithContext.loadingIndicator.removeClass("hidden");
+	        	lookupWithContext.loadingIndicator.removeClass("hidden");
 	        	//remove the old search results if there are any
 	        	//$("#selectedConcept").empty();
 	        	//Hide and reset the show more button
@@ -83,7 +84,7 @@ var lookupWithContext = {
 	                
 	                if(htmlAdd.length) {
 	                	//hide the loading icon again
-	                	//lookupWithContext.loadingIndicator.addClass("hidden");
+	                	lookupWithContext.loadingIndicator.addClass("hidden");
 	                	$('#selectedConcept').html(htmlAdd);
 	                	if (htmlAdd.indexOf("No search results") >= 0) {
 	                		//lookupWithContext.showHiddenElements(hasResults);
@@ -96,6 +97,8 @@ var lookupWithContext = {
 	                	   //lookupWithContext.displayUptoMaxResults();
 	                	   //lookupWithContext.showHideSearchResults.show();
 	                    }
+	                	//bind events for opening term links
+	                	lookupWithContext.bindTermResultsEvents();
 	                }
 	                
 	                
@@ -105,8 +108,8 @@ var lookupWithContext = {
 	        },
 	        
 	        addResultsHeader:function() {
-	        	var htmlAdd = "<li class='concepts'><div class='row'><div class='col-12'><span class='column conceptLabel'>" +
-	        	"Genre Form" + " </span><span class='column conceptDefinition'>Definition</span><span class='column additionalInfo'>Additional Info</span></div></div></li>";
+	        	var htmlAdd = "<li class='concepts'><div class='row'><div class='col-12'><div class='column conceptLabel'>" +
+	        	"Genre Form" + " </div><div class='column conceptDefinition'>Notes</div><div class='column additionalInfo'>Additional Info</div></div></div></li>";
 	        	return htmlAdd;
 	    },
 	    displayConceptSearchResult:function(conceptResult) {
@@ -130,7 +133,7 @@ var lookupWithContext = {
 	        "<div class='col-12'>" +
 	    	"<div class='column conceptLabel'>" +
 	    	lookupWithContext.generateIndividualCUIInput(cuiURI, label, type, definedBy, broaderUris, narrowerUris) +  
-	    	lookupWithContext.generateIndividualLabelsDisplay(label, altLabels) + lookupWithContext.generateIndividualTypeDisplay(type) + "</div>" + 
+	    	lookupWithContext.generateIndividualLabelsDisplay(cuiURI, label, altLabels) + lookupWithContext.generateIndividualTypeDisplay(type) + "</div>" + 
 	    	lookupWithContext.generateIndividualDefinitionDisplay(definition) +
 	    	lookupWithContext.generateIndividualAdditionalInfoDisplay(broaderUris, narrowerUris, exactMatchUris) +
 	    	"</div>" +
@@ -144,8 +147,8 @@ var lookupWithContext = {
 	    		"broaderUris='" + broaderUris + "' narrowerUris='" + narrowerUris + "'/>";
 	    },
 	    //In case there are multiple labels display those
-	    generateIndividualLabelsDisplay:function(label, altLabels) {
-	    	var labelDisplay = label;
+	    generateIndividualLabelsDisplay:function(cuiURI, label, altLabels) {
+	    	var labelDisplay = "<a href='#' uri='" + cuiURI + "' class='openAuth'>" + label + "</a>";
 	    	var displayAltLabels = altLabels;
 	    	if(altLabels != null && altLabels.length > 0) {
 	    		//Certain vocabulary services might return a long list of alternate labels, in which case we will show fewer 
@@ -164,9 +167,13 @@ var lookupWithContext = {
 	    	var html = "";
 	    	var d;
 	    	var len = altLabels.length;
+	    	
 	    	for(d = 0; d < len; d++) {
 	    		var altLabel = altLabels[d];
-	    		html += "<br/>" + altLabel;
+	    		html += "<li class='conceptInfoListItem'>" + altLabel + "</li>";
+	    	}
+	    	if(len > 0) {
+	    		html = "<ul>" + html + "</ul>";
 	    	}
 	    	return  html;
 	    },
@@ -215,10 +222,10 @@ var lookupWithContext = {
 			var uriInfo = relatedURIs[i];
 			var label = uriInfo["label"];
 			var uri = uriInfo["uri"];
-			if(i != 0) {
-				htmlAdd += "<br/>";
-			}
-			htmlAdd += "<a href='" + uri + "'>" + label + "</a>";
+			htmlAdd += "<li class='conceptInfoListItem'><a href='" + uri + "'>" + label + "</a></li>";
+		}
+		if(len > 0) {
+			htmlAdd = "<ul>" + htmlAdd + "</ul>";
 		}
 		return htmlAdd;
 	},
@@ -227,11 +234,71 @@ var lookupWithContext = {
 		//Do ajax request
 		var query = lookupConfig["existingValuesQuery"];
 		//Replace subject with subject URI and predicate with predicate URI
+		query = query.replace("?subject", "<" + lookupWithContext.subjectURI + ">");
+		query = query.replace("?predicate", "<" + lookupWithContext.predicateURI + ">");
+		var URL = lookupWithContext.queryAJAXURL + "?query=" + encodeURIComponent(query);
+		$.getJSON(URL, function(results) {
+			if((results != null) && ("results" in results) && ("bindings" in results["results"])) {
+				var bindings = results["results"]["bindings"];
+				//Array of var name to value
+				var len = bindings.length;
+				
+				var html = "";
+				var b;
+				for(b = 0; b < len; b++) {
+					var binding = bindings[b];
+					if("object" in binding && "label" in binding) {
+						var uri = binding["object"]["value"];
+						var label = binding["label"]["value"];
+						html += lookupWithContext.generateExistingValueRow(uri, label);
+						
+					}
+				}
+				
+				$("#existingConcepts").append(html);
+				$("#existingConcepts").show();
+				//Bind event listeners to existing concepts here
+				lookupWithContext.bindExistingTermEvents();
+			}
+		});
+	},
+	generateExistingValueRow:function(uri, label) {
+		var html = "<li class='existingConcept conceptsListContainer'>" + 
+            "<div class='container'>" + 
+                "<div class='row'>" + 
+                    "<div class='col-12'>" + 
+                        "<div class='column conceptLabelInfo'><a href='#' uri='" + uri + "' class='openAuth'>" + label + "</a>"  +  
+                        "</div>" + 
+                        "<div class='column conceptRemoval'>" + 
+                            "<a href='" + lookupWithContext.primitiveEdit + "' class='remove' title='remove' uri='" + uri + "'>Remove</a>" + 
+                        "</div>" + 
+                    "</div>" + 
+                "</div>" + 
+            "</div>" + 
+        "</li>";
+		return html;
+	},
+	bindExistingTermEvents:function() {
+		//Bind opening of auth
+		$("#existingConcepts a.openAuth").click(function(e) {
+			var uri = $(this).attr("uri");
+    		lookupWithContext.openAuthURL(uri, e);
+            return false;
+		});
 		
-		var URL = queryAJAXURL + "?query=" + encodeURIComponent(query);
-		//$.getJSON(queryAJAXURL, function(results) {
-			
-		//});
+	},
+	bindTermResultsEvents:function() {
+		//Bind term result events
+		$("#selectedConcept a.openAuth").click(function(e) {
+			var uri = $(this).attr("uri");
+    		lookupWithContext.openAuthURL(uri, e);
+            return false;
+		});
+	},
+	openAuthURL:function(uri, e) {
+		//open new window with 
+		 window.open(uri);
+		 e.preventDefault();
 	}
 	
 	        
