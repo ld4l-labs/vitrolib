@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://performedmusicontology.org/ontology/"
+    xml:base="http://performedmusicontology.org/ontology/"
+    xmlns:rdakit="http://metadataregistry.org/uri/profile/rdakit/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:regap="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://performedmusicontology.org/ontology/">
+        <owl:versionIRI rdf:resource="http://performedmusicontology.org/ontology/"/>
+    </owl:Ontology>
+    
+    <!-- http://performedmusicontology.org/ontology/Audition -->
+
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/Audition">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Event in which a performer or actor is applying for a position in an ensemble, cast, film, etc.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/BenefitConcert -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/BenefitConcert">
+        <rdfs:subClassOf rdf:resource="http://performedmusicontology.org/ontology/Concert"/>
+        <skos:definition>Concert held for charitable purposes, i.e., to raise funds or awareness</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/Ceremony -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/Ceremony">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Ritual event, performed on special occasions (e.g., death, baptism, wedding, graduation, equinox, coronation, victory)</skos:definition>
+    </owl:Class>
+    
+    
+    
+    <!-- http://performedmusicontology.org/ontology/CommandPerformance -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/CommandPerformance">
+        <rdfs:subClassOf rdf:resource="http://performedmusicontology.org/ontology/Concert"/>
+        <skos:definition>Performance done at the request of a monarch or other head of state.</skos:definition>
+    </owl:Class>
+    
+    
+    
+    <!-- http://performedmusicontology.org/ontology/Concert -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/Concert">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Live musical performance of one or more works in front of an audience</skos:definition>
+    </owl:Class>
+    
+    
+    
+    <!-- http://performedmusicontology.org/ontology/ConcertSeries -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/ConcertSeries">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Group of concerts in the same geographic area by a single performer or brought together by a common theme, usually available for sale as a package. e.g., an orchestra concert season, a series featuring chamber ensembles.</skos:definition>
+    </owl:Class>
+    
+    
+    
+    <!-- http://performedmusicontology.org/ontology/ConcertTour -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ntology/ConcertTour">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Series of concerts by a performer or group of performers in different cities, countries, or locations.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/DiscCutting -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/DiscCutting">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/SoundCharacteristic"/>
+        <rdfs:label>Disc cutting process</rdfs:label>
+        <skos:definition>Recording process in which a stylus cuts a vertical or lateral groove into an audio disc.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/FirstPerformance -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/FirstPerformance">
+        <rdfs:subClassOf rdf:resource="http://performedmusicontology.org/ontology/Performance"/>
+        <skos:definition>The world premiere performance of a work.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/LivePerformance -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/LivePerformance">
+        <rdfs:subClassOf rdf:resource="http://performedmusicontology.org/ontology/Performance"/>
+        <skos:definition>Performance that is recorded at a concert.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/MasterClass -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/MasterClass">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Event in which a recognized performer critiques the performances of one or more other performers.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/OpenMicPerformance -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/OpenMicPerformance">
+        <rdfs:subClassOf rdf:resource="http://performedmusicontology.org/ontology/Performance"/>
+        <skos:definition>Live performance at a coffee house, night club, or other venue by amateur performers.</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/Performance">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/efrbroo/F31_Performance"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Event in which a performer or group of performers present a work to an audience or in a recording studio.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/RecordingSession -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/RecordingSession">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Event in which one or more performances are recorded with the aim of producing a recording for issue.</skos:definition>
+    </owl:Class>
+    
+    <!-- http://performedmusicontology.org/ontology/Rehearsal -->
+    
+    <owl:Class rdf:about="http://performedmusicontology.org/ontology/Rehearsal">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Event"/>
+        <skos:definition>Event in which a performer or group of performers prepare for a performance in a concert.</skos:definition>
+    </owl:Class>
+    
+    
+    <!-- Individuals -->
+    
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/FPM12">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Traditional way of describing the speed of audio cylinders.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</rdfs:label>
+        <skos:definition>Playing speed of 12 feet per minute x 10.</skos:definition>
+    </owl:NamedIndividual>
+    
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS.9">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Speed occurs on half-speed mini-cassettes used in small portable recorders.</rdfs:comment>
+        <rdfs:label>15/16 ips</rdfs:label>
+        <skos:definition>Playing speed of 15/16 inches per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS1.8">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Speed occurs on standard audiocassettes.</rdfs:comment>
+        <rdfs:label>1 7/8 ips</rdfs:label>
+        <skos:definition>Playing speed of 1 7/8 inches per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS15">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Occcurs on reel-to-reel, studio tapes.</rdfs:comment>
+        <rdfs:label>15 ips</rdfs:label>
+        <skos:definition>Playing speed of 15 inches per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS3.75">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Speed occurs on consumer and nonprofessional reel-to-reel tapes, cartridges and very unusual cassette tapes.</rdfs:comment>
+        <rdfs:label>3.75 ips</rdfs:label>
+        <skos:definition>Playing speed of 3.75 inches per second</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS30">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Occurs on reel-to-reel, studio tapes, but is rarely used.</rdfs:comment>
+        <rdfs:label>30 ips</rdfs:label>
+        <skos:definition>Playing speed of 30 inches per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS7.5">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Speed occurs in reel-to-reel, nonprofessional, and studio tapes.</rdfs:comment>
+        <rdfs:label>7.5 ips</rdfs:label>
+        <skos:definition>Playing speed of 7.5 inches per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/MPS1.4">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>Speed is calculated from the distance the playback mechanism covers on the surface of the disc per second, and not the number of revolutions of the disc. It is associated with compact discs (CDs)</rdfs:comment>
+        <rdfs:label>1.4 mps</rdfs:label>
+        <skos:definition>Playing speed of 1.4 meters per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM16">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>For audio discs</rdfs:comment>
+        <rdfs:label>16 rpm</rdfs:label>
+        <skos:definition>Playing speed of 16 revolutions per minute.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM33">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>For audio discs.</rdfs:comment>
+        <rdfs:label>33 1/3 rpm</rdfs:label>
+        <skos:definition>Playing speed of 33 1/3 revolutions per minute. Often shortened to &quot;33&quot;.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM45">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>For audio discs.</rdfs:comment>
+        <rdfs:label>45 rpm</rdfs:label>
+        <skos:definition>Playing speed of 45 revolutions per minute.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM78">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>For audio discs</rdfs:comment>
+        <rdfs:label>78 rpm</rdfs:label>
+        <skos:definition>Playing speed of 78 revolutions per minute.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM8">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
+        <rdfs:comment>For audio discs</rdfs:comment>
+        <rdfs:label>8 rpm</rdfs:label>
+        <skos:definition>Playing speed of 8 revolutions per minute.</skos:definition>
+    </owl:NamedIndividual>
+</rdf:RDF>

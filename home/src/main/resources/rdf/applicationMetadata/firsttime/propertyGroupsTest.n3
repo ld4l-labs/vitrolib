@@ -1,0 +1,50 @@
+@prefix schema: <http://schema.org/> .
+@prefix bib:  <http://bibliotek-o.org/ontology/> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix legacy: <http://bibliotek-o.org/ontology/legacy/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcam:  <http://purl.org/dc/dcam/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix olca:  <http://www.lingvoj.org/olca#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix reg:   <http://metadataregistry.org/uri/profile/regap/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vivo:  <http://vivoweb.org/ontology/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix wot:   <http://xmlns.com/wot/0.1/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix afn:   <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix cnt:   <http://www.w3.org/2011/content#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xhtml: <http://www.w3.org/1999/xhtml> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix lode:  <http://linkedevents.org/ontology/> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://example.org/bibliotek-o_shapes#TypeFormPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#TypeFormPropertyGroup> rdfs:label "Type and form property group" . <http://example.org/bibliotek-o_shapes#TypeFormPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "0"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#TypeFormPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group title information for the resource." . 
+<http://example.org/bibliotek-o_shapes#ItemActivityPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#ItemActivityPropertyGroup> rdfs:label "Activity property group" . <http://example.org/bibliotek-o_shapes#ItemActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "1"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#ItemActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group Agent role information for the resource." . 
+<http://example.org/bibliotek-o_shapes#TitlePropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#TitlePropertyGroup> rdfs:label "Title property group" . <http://example.org/bibliotek-o_shapes#TitlePropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "1"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#TitlePropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group title information for the resource." . 
+<http://example.org/bibliotek-o_shapes#InstanceActivityPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#InstanceActivityPropertyGroup> rdfs:label "Activity property group" . <http://example.org/bibliotek-o_shapes#InstanceActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "2"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#InstanceActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group Agent role information for the resource." . 
+<http://example.org/bibliotek-o_shapes#WorkActivityPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#WorkActivityPropertyGroup> rdfs:label "Activity property group" . <http://example.org/bibliotek-o_shapes#WorkActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "2"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#WorkActivityPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group Agent role information for the resource." . 
+<http://example.org/bibliotek-o_shapes#SubjectAndCoveragePropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#SubjectAndCoveragePropertyGroup> rdfs:label "Audio work subject and coverage property group" . <http://example.org/bibliotek-o_shapes#SubjectAndCoveragePropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "3"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+<http://example.org/bibliotek-o_shapes#MeasurementPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#MeasurementPropertyGroup> rdfs:label "Measurement property group" . <http://example.org/bibliotek-o_shapes#MeasurementPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "4"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#MeasurementPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group measurement information for the resource." . 
+<http://example.org/bibliotek-o_shapes#AudioWorkToWorkPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#AudioWorkToWorkPropertyGroup> rdfs:label "Work to work property group" . <http://example.org/bibliotek-o_shapes#AudioWorkToWorkPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "4"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+<http://example.org/bibliotek-o_shapes#AudioInstanceCharacteristicsPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#AudioInstanceCharacteristicsPropertyGroup> rdfs:label "Audio Instance Characteristics" . <http://example.org/bibliotek-o_shapes#AudioInstanceCharacteristicsPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "5"^^<http://www.w3.org/2001/XMLSchema#integer> . <http://example.org/bibliotek-o_shapes#AudioInstanceCharacteristicsPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To group information about the Audio-specific instance characteristics, e.g. playback channel." . 
+<http://example.org/bibliotek-o_shapes#WorkToWorkPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#WorkToWorkPropertyGroup> rdfs:label "Work to work property group" . <http://example.org/bibliotek-o_shapes#WorkToWorkPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "5"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+<http://example.org/bibliotek-o_shapes#InstanceToItemPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#InstanceToItemPropertyGroup> rdfs:label "Work to Instance property group" . <http://example.org/bibliotek-o_shapes#InstanceToItemPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "6"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+<http://example.org/bibliotek-o_shapes#WorkToInstancePropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#WorkToInstancePropertyGroup> rdfs:label "Work to Instance property group" . <http://example.org/bibliotek-o_shapes#WorkToInstancePropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "6"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+<http://example.org/bibliotek-o_shapes#AudioWorkMiscellaneousPropertyGroup> rdf:type <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> . <http://example.org/bibliotek-o_shapes#AudioWorkMiscellaneousPropertyGroup> rdfs:label "Work to Instance property group" . <http://example.org/bibliotek-o_shapes#AudioWorkMiscellaneousPropertyGroup> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRank> "7"^^<http://www.w3.org/2001/XMLSchema#integer> . 
