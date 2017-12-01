@@ -30,7 +30,7 @@ public class LCSHQAImpl implements ExternalConceptService {
 	
 	//Followed by ?q=whatever term
 	//protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/loc/names";
-	protected final String lcshQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locsubjects";
+	protected final String lcshQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locsubjects_ld4l_cache";
 	//Subauthorities include /locjena/personal_name, corporate_name, and title
 	//http://elr37-dev.library.cornell.edu/qa/show/linked_data/locjena/names/n82045653
 
