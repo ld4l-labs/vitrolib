@@ -10,9 +10,18 @@
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#/> .
 
 ##### ONTOLOGY METADATA #####
 
+<http://id.loc.gov/ontologies/bibframe/> 
+    rdfs:label "BIBFRAME vocabulary"@en-US ;  
+    vitro:ontologyPrefixAnnot "bf"^^xsd:string .
+    
+<http://bibliotek-o.org/ontology/> 
+    rdfs:label "bibliotek-o: a BIBFRAME Ontology Extension"@en-US ;  
+    vitro:ontologyPrefixAnnot "bib"^^xsd:string .
+    
 <http://www.w3.org/2011/content#> 
     rdfs:label "Content Ontology"@en-US ;  
     vitro:ontologyPrefixAnnot "cnt"^^xsd:string .
@@ -26,7 +35,7 @@
     vitro:ontologyPrefixAnnot "dcterms"^^xsd:string .
     
 <http://purl.org/spar/fabio/> 
-    rdfs:label "FaBIO (FRBR-Aligned Bibliographic Ontology)"@en-US ;  
+    rdfs:label "FaBiO (FRBR-Aligned Bibliographic Ontology)"@en-US ;  
     vitro:ontologyPrefixAnnot "fabio"^^xsd:string .
 
 <http://xmlns.com/foaf/0.1/> 
@@ -220,7 +229,8 @@ bibframe:Family
 ## TOPICS ##
 ##
 
-#removed topic
+skos:Concept
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouptopics> .
 
     
 ##
