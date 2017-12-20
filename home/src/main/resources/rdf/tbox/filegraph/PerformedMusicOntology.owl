@@ -134,6 +134,14 @@
     <!-- Individuals -->
     
     
+    <!-- http://performedmusicontology.org/ontology/EightTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/EightTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>8-track</rdfs:label>
+        <skos:definition>Magnetic tape divided into 8 audio tracks that run parallel with each other, on which sound and other electro-acoustic signals are captured.</skos:definition>
+    </owl:NamedIndividual>
+    
     <owl:NamedIndividual rdf:about="http://performedmusicontology.org/FPM12">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
         <rdfs:comment>Traditional way of describing the speed of audio cylinders.</rdfs:comment>
@@ -141,6 +149,21 @@
         <skos:definition>Playing speed of 12 feet per minute x 10.</skos:definition>
     </owl:NamedIndividual>
     
+    <!-- http://performedmusicontology.org/ontology/FullTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/FullTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>full track</rdfs:label>
+        <skos:definition>Magnetic tape with 1 audio track on which sound and other electro-acoustic signals are captured.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <!-- http://performedmusicontology.org/ontology/HalfTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/HalfTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>half track</rdfs:label>
+        <skos:definition>Magnetic tape divided into 2 audio tracks that run parallel with each other, on which sound and other electro-acoustic signals are captured.</skos:definition>
+    </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/IPS.9">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
@@ -184,11 +207,27 @@
         <skos:definition>Playing speed of 7.5 inches per second.</skos:definition>
     </owl:NamedIndividual>
     
+    <!-- http://performedmusicontology.org/ontology/LateralCut -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/LateralCut">
+        <rdf:type rdf:resource="http://performedmusicontology.org/ontology/DiscCutting"/>
+        <rdfs:label>Lateral cut</rdfs:label>
+        <skos:definition>Recording process in which a stylus cuts a side-to-side groove into a phonograph record.</skos:definition>
+    </owl:NamedIndividual>
+    
     <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/MPS1.4">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/PlayingSpeed"/>
         <rdfs:comment>Speed is calculated from the distance the playback mechanism covers on the surface of the disc per second, and not the number of revolutions of the disc. It is associated with compact discs (CDs)</rdfs:comment>
         <rdfs:label>1.4 mps</rdfs:label>
         <skos:definition>Playing speed of 1.4 meters per second.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <!-- http://performedmusicontology.org/ontology/QuarterTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/QuarterTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>quarter track</rdfs:label>
+        <skos:definition>Magnetic tape divided into 4 audio tracks that run parallel with each other, in which sound and other electro-acoustic signals are captured.</skos:definition>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/RPM16">
@@ -225,4 +264,30 @@
         <rdfs:label>8 rpm</rdfs:label>
         <skos:definition>Playing speed of 8 revolutions per minute.</skos:definition>
     </owl:NamedIndividual>
+    
+    <!-- http://performedmusicontology.org/ontology/SixteenTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/SixteenTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>16-track</rdfs:label>
+        <skos:definition>Magnetic tape divided into 16 audio tracks that run parallel with each other, on which sound and other electro-acoustic signals are captured.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <!-- http://performedmusicontology.org/ontology/TwelveTrack -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/TwelveTrack">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/TapeConfig"/>
+        <rdfs:label>12-track</rdfs:label>
+        <skos:definition>Magnetic tape divided into 12 audio tracks that run parallel with each other, on which sound and other electro-acoustic signals are captured.</skos:definition>
+    </owl:NamedIndividual>
+    
+    <!-- http://performedmusicontology.org/ontology/Vertical -->
+    
+    <owl:NamedIndividual rdf:about="http://performedmusicontology.org/ontology/Vertical">
+        <rdf:type rdf:resource="http://performedmusicontology.org/ontology/DiscCutting"/>
+        <rdfs:label>Vertical cut</rdfs:label>
+        <skos:altLabel>Hill and dale</skos:altLabel>
+        <skos:definition>Recording process in which a stylus cuts a vertical groove into a phonograph record.</skos:definition>
+    </owl:NamedIndividual>
+    
 </rdf:RDF>
