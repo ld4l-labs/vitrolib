@@ -66,23 +66,23 @@
     <!-- Individuals -->
     
     
-    <owl:NamedIndividual rdf:about="http:/audio.biblioteko-o.org/acousticalCaptureDirectStorage">
-        <rdf:type rdf:resource="http:/audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/acousticalCaptureDirectStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
         <rdfs:label xml:lang="en">Acoustical capture, direct storage</rdfs:label>
     </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="http:/audio.biblioteko-o.org/DirectStorageNotAcoustical">
-        <rdf:type rdf:resource="http:/audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/DirectStorageNotAcoustical">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
         <rdfs:label xml:lang="en">Direct storage, not acoustical</rdfs:label>
     </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="http:/audio.biblioteko-o.org/DirectStorage">
-        <rdf:type rdf:resource="http:/audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/DirectStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
         <rdfs:label xml:lang="en">Direct storage</rdfs:label>
     </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="http:/audio.biblioteko-o.org/AnalogElectricalStorage">
-        <rdf:type rdf:resource="http:/audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
+    <owl:NamedIndividual rdf:about="http://audio.biblioteko-o.org/AnalogElectricalStorage">
+        <rdf:type rdf:resource="http://audio.biblioteko-o.org/CaptureAndStorageTechnique"/>
         <rdfs:label xml:lang="en">Analog electrical storage</rdfs:label>
     </owl:NamedIndividual>
     
