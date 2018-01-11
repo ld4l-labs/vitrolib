@@ -5,6 +5,19 @@
 <http://schema.org/recordedAt> rdf:type owl:ObjectProperty .
 <http://schema.org/recordedIn> rdf:type owl:ObjectProperty .
 <http://schema.org/duration> rdf:type owl:ObjectProperty .
+<http://schema.org/location> rdf:type owl:ObjectProperty .
 
-
-<http://schema.org/CreativeWork> rdf:type owl:Class .
+<http://schema.org/CreativeWork> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/SocialEvent>  rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/ExhibitionEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/SportsEvent>  rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/EducationEvent>   rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/DeliveryEvent>    rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/FoodEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/DanceEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/ComedyEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/BusinessEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/Festival> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/EventSeries> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/TheaterEvent> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .
+<http://schema.org/ScreeningEvent>  rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .

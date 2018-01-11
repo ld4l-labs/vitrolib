@@ -39,6 +39,30 @@
     <skos:definition>The type of equipment used in making the recording, as opposed to the type of equipment required for playback.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the MARC 21 007 position 13 for sound recordings, https://www.loc.gov/marc/bibliographic/bd007s.html..</skos:scopeNote>
 </owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/CuePointMarkerNote">
+    <rdfs:label>Cue point markers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining that there are Cue point markers on the disc. (about the same as beat markers) Wording: Cue point markers on disc[s].</skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/NumberedSRJacketNote">
+    <rdfs:label>Numbered SR Jacket Note</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://audio.biblioteko-o.org/WritingOnAlbumNote"/>
+    <skos:definition>A note explaining this copy was numbered by Bambaataa on the jacket. Wording: Numbered #[x] on jacket. </skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/InitialsOrNumberOnLabelNote">
+    <rdfs:label>Initials and/or numbers on disc label</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://audio.biblioteko-o.org/WritingOnAlbumNote"/>
+    <skos:definition>A note explaining this copy was numbered and/or initialed by Bambaataa on the label. Wording: Numbered #[x] on disc label. </skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/NotInOriginalJacketNote">
+    <rdfs:label>SR doesn’t match the jacket.</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining SR doesn’t match the jacket. Wording: Not in original jacket. </skos:definition>
+</owl:Class>
 
 <owl:Class rdf:about="http://audio.biblioteko-o.org/PerformedMusic">
     <rdfs:label>Performed Music</rdfs:label>
@@ -46,20 +70,57 @@
     <skos:definition>An audio work consisting of content expressed through music in an audible form, not necessarily performed live. To denote a live performance a bib:PerformedMusic should be linked to a live event.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1011.</skos:scopeNote>
 </owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/PostItNoteNote">
+    <rdfs:label>Post-It Note on LP</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining there is a post-it on the LP jacket, Wording: Sticky note attached to jacket, reading: “[text]” (most likely from the first round of sorting done in New York City). </skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/SignatureNote">
+    <rdfs:label>Signature Note</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://audio.biblioteko-o.org/WritingOnAlbumNote"/>
+    <skos:definition>A note explaining there is a signature on the copy, Wording: Provenance: Afrika Bambaataa (signature). Or if signed with initials: Provenance: A[frika] B[ambaataa] (signature). </skos:definition>
+</owl:Class>
   
 <owl:Class rdf:about="http://audio.biblioteko-o.org/Sounds">
     <rdfs:label>Sounds</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
     <skos:definition>An audio work consisting of content other than language or music, expressed in an audible form.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1012.</skos:scopeNote>
-  </owl:Class>
+</owl:Class>
   
 <owl:Class rdf:about="http://audio.biblioteko-o.org/SpokenWord">
     <rdfs:label>Spoken word</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
     <skos:definition>An audio work consisting of content expressed through language in an audible form.</skos:definition>
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1013.</skos:scopeNote>
-  </owl:Class>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote">
+    <rdfs:label>Tape on LP’s disc label or cover</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining there is tape on disc label or cover to obscure the title, artist, etc. (Bam put this tape on LPs) Wording: Title [or artist’s name, etc.] obscured with black tape [or white sticker] on label [or jacket].</skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/TracksOfInterestNote">
+    <rdfs:label>Track numbers of interest indicated</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://audio.biblioteko-o.org/WritingOnAlbumNote"/>
+    <skos:definition>A note explaining there tracks marked with a star, or track numbers of interest listed. Wording: Track numbers of interest indicated on jacket [or label]. </skos:definition>
+</owl:Class>  
+
+<owl:Class rdf:about="http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote">
+    <rdfs:label>Two copies housed together</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining there are two copies of the same LP in the same sleeve. Wording: Two copies housed together.</skos:definition>
+</owl:Class>
+    
+<owl:Class rdf:about="http://audio.biblioteko-o.org/WritingOnAlbumNote">
+    <rdfs:label>Writing directly on the album cover, etc.</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+    <skos:definition>A note explaining there is writing directly on the LP jacket, sleeve, label, etc. This was done by Bambaataa, Wording: Manuscript note on outer jacket [etc.]:  “[text].” </skos:definition>
+</owl:Class>
+
   
     <!-- OBJECT PROPERTIES -->
     
