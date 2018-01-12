@@ -12,37 +12,16 @@
 @prefix bib: <http://bibliotek-o.org/ontology/> .
 @prefix schema: <http://schema.org/> .
 
-#In older generated version, this was 128 and applied for any work to work has part
-#Replaced with specific audio to audio part 284
-#local:fpgn128 a  :ConfigContext ; :configContextFor <http://purl.org/dc/terms/hasPart>;:hasConfiguration local:fpgenconfig128; :qualifiedBy bf:Work ; :qualifiedByDomain bf:Work .	local:fpgenconfig128 a  :ObjectPropertyDisplayConfig ; vitro:collateBySubclassAnnot   false ; vitro:displayLimitAnnot "0"^^xsd:int ; vitro:displayRankAnnot  "0"^^xsd:int ; vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;	vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ; vitro:offerCreateNewOptionAnnot true ; vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ; vitro:selectFromExistingAnnot  true ; :displayName "related works/content listing" .
-#List view for related works/content listing (for 740 field)
-local:fpgenconfig284 :listViewConfigFile "listViewConfig-workHasPartWork.xml"^^xsd:string .
-local:fpgenconfig284 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
- <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasPartWork.jsonld" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig264> :listViewConfigFile "listViewConfig-workHasPartWork.xml"^^xsd:string .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig264> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasPartWork.jsonld" .
 
-# Genre Form addition FOR WORK
-#Used to be 70, changed to 218
-local:fpgenconfig218 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
- <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasGenreForm.jsonld";
- <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasGenreForm.ftl" .
- 
- 
- #These were changed from original to 
- #Work has Activity configuration
- #Changed from 28 in original to audio has activity 278
- local:fpgenconfig278 :listViewConfigFile "listViewConfig-workHasActivity.xml"^^xsd:string .
- #Instance Has Activity configuration
- #Has activity changed from 39 to 306
- local:fpgenconfig306 :listViewConfigFile "listViewConfig-instanceHasActivity.xml"^^xsd:string .  
- #Subject - changed from 34 in original to 283 in new version
- local:fpgenconfig283 :listViewConfigFile "listViewConfig-subject.xml"^^xsd:string .  
- 
- 
- ## Not in SHACL yet so copied from original generated properties
- # Annotation at work level, ties to specific jsonld
- # Keep this as is because annotation not currently in SHACL but this will probably change
- # Copied from original file here
- local:fpgn11 a  :ConfigContext ; :configContextFor <http://bibliotek-o.org/ontology/isTargetOf>;:hasConfiguration local:fpgenconfig11 ; :qualifiedBy oa:Annotation ; :qualifiedByDomain bf:Work .	local:fpgenconfig11 a  :ObjectPropertyDisplayConfig ; vitro:collateBySubclassAnnot   false ; vitro:displayLimitAnnot "0"^^xsd:int ; vitro:displayRankAnnot  "0"^^xsd:int ; vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;	vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ; vitro:offerCreateNewOptionAnnot true ; vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ; vitro:selectFromExistingAnnot  true ; :displayName "has annotation " .
- local:fpgenconfig11 <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
-  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "isTargetOf.jsonld";
- :listViewConfigFile "listViewConfig-isTargetOf.xml"^^xsd:string .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig283> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasGenreForm.jsonld"; 
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasGenreForm.ftl" .
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig217> :listViewConfigFile "listViewConfig-workHasActivity.xml"^^xsd:string . 
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig217>  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "workHasActivity.jsonld" . 
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig220> :listViewConfigFile "listViewConfig-subject.xml"^^xsd:string .  
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig220> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasLCSH.jsonld"; 
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasLCSH.ftl" .
