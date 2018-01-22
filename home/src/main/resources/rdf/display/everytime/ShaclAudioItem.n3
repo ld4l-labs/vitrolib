@@ -27,6 +27,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Record identifier string value and type of identifier" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Identified by" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioItemMiscellaneousPropertyGroup> .
@@ -38,6 +39,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Copy specific notes. These note types apply specifically to the Cornell Hip Hop Collection" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Copy specific notes" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig311> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioItemMiscellaneousPropertyGroup> .
@@ -49,6 +51,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Other title" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/TitlePropertyGroup> .
@@ -60,6 +63,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "To link an item to an event, e.g. concert, or event series, e.g. a tour, in which the item was used or associated" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Associated with an event" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/ItemProvenanceGroup> .

@@ -27,6 +27,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Record identifier string value and type of identifier" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Identified by" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig292> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/InstanceMiscellaneousPropertyGroup> .
@@ -38,6 +39,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "The type of equipment used in making the recording, as opposed to the type of equipment required for playback." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Capture and storage technique" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -49,6 +51,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Playing speed" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -60,6 +63,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Number of tracks on an audiotape, e.g., 12 track." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Tape configuration" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -71,6 +75,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Recording process in which a stylus cuts a vertical or lateral groove into an audio disc." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Disc cutting" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig296> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -82,6 +87,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A number of sound channels used to make a recording." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Configuration of playback channels" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -93,6 +99,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A groove pitch of an analog cylinder." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Groove pitch of an analog cylinder" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -104,6 +111,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A groove width of an analog disc." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Groove width of an analog disc" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -115,6 +123,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A groove width of an analog disc." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Groove width of an analog disc" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -126,8 +135,9 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A relationship between an original carrier and the carrier of a reproduction made from the original." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Kind of disc, cylinder or tape" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Kind of disc, cylinder or tape in relation to original carrier" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ObjectPropertyDisplayConfig> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#collateBySubclassAnnot> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -137,6 +147,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "An equalization system, noise reduction system, etc., used in making an audio recording." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Special playback characteristic" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -148,6 +159,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "A method used to encode audio content for playback.." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Type of recording" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/AudioInstanceCharacteristicsPropertyGroup> .
@@ -159,6 +171,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Other title" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <http://bibliotek-o.org/shapes/audio/TitlePropertyGroup> .
