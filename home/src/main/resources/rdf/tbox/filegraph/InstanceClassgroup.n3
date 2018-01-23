@@ -1,0 +1,180 @@
+@prefix schema: <http://schema.org/> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix legacy: <http://bibliotek-o.org/ontology/legacy/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dcam:  <http://purl.org/dc/dcam/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix olca:  <http://www.lingvoj.org/olca#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix reg:   <http://metadataregistry.org/uri/profile/regap/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vivo:  <http://vivoweb.org/ontology/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix wot:   <http://xmlns.com/wot/0.1/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix cnt:   <http://www.w3.org/2011/content#> .
+@prefix afn:   <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xhtml: <http://www.w3.org/1999/xhtml> .
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix lode:  <http://linkedevents.org/ontology/> .
+@prefix bib:   <http://bibliotek-o.org/ontology/> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+bibframe:Instance  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmCartridge  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:StereographDisc  vitro:inClassGroup
+                <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerChip  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerTapeReel  vitro:inClassGroup
+                <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioCassette  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:VideoCartridge  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioCartridge  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Cassette  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicroficheCassette
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FlipChart  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Volume  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Microscopic  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Projected  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Slide  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:OverheadTransparency
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Belt  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Microfiche  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerCard  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioBelt  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmStrip  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicrofilmReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Reel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:VideotapeReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bibframe:Archival  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicrofilmCartridge
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:VideoCassette  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Card  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:OnlineResource  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bibframe:Print  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicrofilmSlip  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioCylinder  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Tape  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmSlip  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Video  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerChipCartridge
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Cylinder  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerDisc  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:SoundTrackReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerTapeCartridge
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:StereographCard  vitro:inClassGroup
+                <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Microopaque  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bibframe:Manuscript  vitro:inClassGroup
+                <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Cartridge  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Disc  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Microfilm  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioDisc  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Sheet  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudiotapeReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicrofilmRoll  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Roll  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmStripCartridge
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmCassette  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:MicrofilmCassette
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Microform  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioRoll  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:AudioWireReel  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerTapeCassette
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:FilmRoll  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ComputerDiscCartridge
+        vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bibframe:Electronic  vitro:inClassGroup
+                <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:VideoDisc  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:Film  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+bib:ApertureCard  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupinstances> .

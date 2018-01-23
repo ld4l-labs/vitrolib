@@ -61,14 +61,12 @@
             <#else>                
                 <h1 class="fn" itemprop="name">
                     <#-- Label -->
-                    <#--  Getting rid of label entirely and replacing with Title instead -->
-                    <#--  --@p.label individual editable labelCount localesCount languageCount/-->
-                    <#if individualType?? && (individualType == "work" || individualType == "instance") >
-	                    <#assign titleRangeUri = "http://id.loc.gov/ontologies/bibframe/Title"/>
-	                    <#assign titleProperty = propertyGroups.pullProperty("http://id.loc.gov/ontologies/bibframe/title", titleRangeUri)>
-						<@displayTitle titleProperty titleRangeUri editable />
-					</#if>
-                    <#--  Most-specific types -->
+                    <#-- Title can be edited as per normal-->
+                    <#-- Not sure how to integrate label editing for now, can figure out later
+                     -->
+                     <#assign indLabel = individual.nameStatement>
+					 ${indLabel.value!}
+                  <#--  Most-specific types -->
                     <@p.mostSpecificTypes individual />
                     <@showSuperclassType individual />
                     <span id="iconControlsVitro"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></span>
