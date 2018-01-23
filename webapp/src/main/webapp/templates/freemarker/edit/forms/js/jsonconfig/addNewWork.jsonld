@@ -54,6 +54,7 @@
 		"?subject bibframe:hasInstance ?instance .",
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
+		"?instance rdfs:label ?instanceTitle .", 
 		"?instance bibframe:title ?instanceTitleIndividual .",
 		"?instanceTitleIndividual rdf:type bibframe:Title .",
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
@@ -95,7 +96,9 @@
 		"?eanUri rdfs:label ?ean .",
 		"?subject dcterms:subject ?lcsh.",
 		"?lcsh rdfs:label ?lcshTerm .",
-		"?lcsh rdf:type owl:Thing ."
+		"?lcsh rdf:type owl:Thing .",
+		"?instance bibframe:hasItem ?item .",
+		"?item rdfs:label ?instanceLabel ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
@@ -413,6 +416,15 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "lcshTerm"
-    }
+    },
+        {
+      "@id": "customform:addItem",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "item"
+    },
    ]
 }
