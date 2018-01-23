@@ -425,6 +425,6 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "item"
-    },
+    }
    ]
 }
