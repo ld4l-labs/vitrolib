@@ -19,6 +19,8 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
+        "?subject ?predicate ?objectVar .",
+        "?objectVar bib:isSubjectOf ?subject .",
 		"?objectVar rdfs:label ?lcshTerm .",
 		"?objectVar rdf:type owl:Thing ."
       ],
