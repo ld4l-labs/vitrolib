@@ -23,6 +23,6 @@
             
             
             &lt;p&gt;See more information on the &lt;a href="ld4l.org"&gt;LD4L Gateway&lt;/a&gt;.&lt;/p&gt;</j.0:aboutText>
-        <j.0:themeDir rdf:datatype="http://www.w3.org/2001/XMLSchema#string">themes/vitro</j.0:themeDir>
+        <j.0:themeDir rdf:datatype="http://www.w3.org/2001/XMLSchema#string">themes/vitrolib</j.0:themeDir>
     </rdf:Description>
 </rdf:RDF>
