@@ -5,23 +5,17 @@
      is also used to generate the property statement during a deletion.  
  -->
 
-<@showActivity statement />
+<@showTitle statement />
 
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
      next statement -->
-<#macro showActivity statement>
+<#macro showTitle statement>
 
-<#if statement.work?? && statement.workTitle??>
-    <a href="${profileUrl(statement.uri("work"))}" title="${statement.workTitle}">${statement.workTitle}</a>
-    <#if statement.subclassLabel??>
-        (${statement.subclassLabel?replace(" activity", "")})
-    </#if>
-<#-- If there is no work, still show activity -->
-<#else>    
-	<#if statement.activity?? && statement.activityLabel??>
-		    <a href="${profileUrl(statement.uri("activity"))}" title="${statement.activityLabel}">${statement.activityLabel}[Activity]</a>
-
-	</#if>
+<#if statement.titleIndividual?? && statement.title??>
+    <a href="${profileUrl(statement.uri("titleIndividual"))}" title="${statement.title}">${statement.title}</a>
 </#if>
 
+<#if statement.titleElement?? && statement.titleElementType?? && statement.titleElementValue?? && statement.titleElementTypeLabel??>
+    <a href="${profileUrl(statement.uri("titleElement"))}" title="${statement.titleElementValue}">${statement.titleElementValue} (${statement.titleElementTypeLabel}</a>
+</#if>
 </#macro>

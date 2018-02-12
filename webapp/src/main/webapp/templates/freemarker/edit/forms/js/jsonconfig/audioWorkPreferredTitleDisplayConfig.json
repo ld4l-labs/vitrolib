@@ -1,0 +1,6 @@
+var displayConfig = {
+	"fieldOrder" :  ["title" ],
+	"fieldDisplayProperties" : {
+		"title": {"label":"Title"}
+	}
+};
