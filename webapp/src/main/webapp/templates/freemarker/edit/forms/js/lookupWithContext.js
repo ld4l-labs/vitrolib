@@ -142,7 +142,7 @@ var lookupWithContext = {
 	    	return htmlAdd;
 	    }, 
 	    generateIndividualCUIInput:function(cuiURI, label, type, definedBy, broaderUris, narrowerUris) {
-	    	return 	"<input type='checkbox'  name='CUI' value='" + cuiURI + "' label='" + 
+	    	return 	"<input type='checkbox'  name='genreForm' value='" + cuiURI + "' label='" + 
 	    		label + "' conceptType='" + type + "' conceptDefinedBy='" + definedBy + "' " +
 	    		"broaderUris='" + broaderUris + "' narrowerUris='" + narrowerUris + "'/>";
 	    },

@@ -119,8 +119,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         <input type="button" class="submit concept-search" id="searchButton" name="searchButton" value="${i18n().search_service_btn}"/>&nbsp;
     </p>
     
-    <input type="hidden" id="conceptNode" name="conceptNode" value=""/> <!-- Field value populated by JavaScript -->
-    <input type="hidden" id="conceptLabel" name="conceptLabel" value="" />  <!-- Field value populated by JavaScript -->
+    <input type="hidden" id="genreFormLabel" name="genreFormLabel" value="" />  <!-- Field value populated by JavaScript -->
 	<input type="hidden" id="conceptSource" name="conceptSource" value="" /> <!-- Field value populated by JavaScript -->
     <input type="hidden" id="conceptSemanticTypeURI" name="conceptSemanticTypeURI" value="" /> <!-- Field value populated by JavaScript -->
     <input type="hidden" id="conceptSemanticTypeLabel" name="conceptSemanticTypeLabel" value="" /> <!-- Field value populated by JavaScript -->
