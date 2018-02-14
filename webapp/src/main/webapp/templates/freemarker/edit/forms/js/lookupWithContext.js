@@ -25,6 +25,11 @@ var lookupWithContext = {
 	        	 this.maxNumberAlternateLabels = 4;
 	        	 this.showHideSearchResults = $("#showHideResults");
 	        	 this.loadingIndicator = $("#indicator");
+	        	 this.objectUris = $("#objectUri");
+	        	 this.objectLabels = $("#objectLabel");
+	        	 this.form = $("#addConceptForm");
+	        	 this.formSubmit = $("#submit");
+	        	 this.errors = $('#errors');
 	        },
 
 	        // Initial page setup. Called only at page load.
@@ -39,6 +44,16 @@ var lookupWithContext = {
 	                lookupWithContext.submitSearchTerm();
 	                return false;
 	        	});
+	        	
+	        	this.formSubmit.click(function() {
+	        		var returnValue = lookupWithContext.prepareSubmit(); 
+	        		if(returnValue) 
+	        			this.form.submit();
+	        		else
+	        			return false;
+	        	});
+	        	
+	           
 	        },
 	        submitSearchTerm: function() {
 	        	//Get value of search term
@@ -299,7 +314,41 @@ var lookupWithContext = {
 		//open new window with 
 		 window.open(uri);
 		 e.preventDefault();
-	}
+	},
+ prepareSubmit:function() {
+    	var checkedElements = $("input[name='genreForm']:checked");
+    	if(!lookupWithContext.validateConceptSelection(checkedElements)) {
+    		return false;
+    	}
+    	var i;
+    	var len = checkedElements.length;
+    	var checkedURI, checkedLabel;
+    	
+    	var uris = [];
+    	var labels = [];
+   	
+    	checkedElements.each(function() {
+    		var checkedElement = $(this);
+    		checkedURI = checkedElement.val();
+    		checkedLabel = checkedElement.attr("label");
+    		//Additional attributes can be utilized if need be    	
+    		uris.push(checkedURI);
+    		labels.push(checkedLabel);
+    	
+    	});
+    	lookupWithContext.objectUris.val(uris);
+    	lookupWithContext.objectLabels.val(labels);
+    	
+    	return true;
+    },
+    validateConceptSelection:function(checkedElements) {
+    	var numberElements = checkedElements.length;
+    	if(numberElements < 1) {
+    		lookupWithContext.errors.html("<p class='validationError'>No results selected for saving.</p>");
+    		return false;
+    	}
+    	return true;
+    }
 	
 	        
 

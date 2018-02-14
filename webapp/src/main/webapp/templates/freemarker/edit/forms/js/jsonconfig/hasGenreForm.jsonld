@@ -19,15 +19,26 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-      	"?subject bibframe:genreForm ?genreForm .",
-		"?genreForm rdfs:label ?genreFormLabel .",
-		"?genreForm rdf:type owl:Thing ."
+      	"?subject bibframe:genreForm ?objectUri .",
+		"?objectUri rdfs:label ?objectLabel .",
+		"?objectUri rdf:type owl:Thing ."
       ],
-      customform:dynamic_vars" : [
-        "?genreForm",
-        "?genreFormLabel"
+      "customform:dynamic_variables" : [
+        "?objectUri",
+        "?objectLabel"
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+    },
+    {
+      "@id": "customform:addgf_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectUri ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -48,17 +59,17 @@
        "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingGenreForm WHERE {  ?subject bibframe:genreForm ?existingGenreForm. }   ",      
-      "customform:varName": "genreForm"
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingObjectUri WHERE {  ?subject bibframe:genreForm ?existingObjectUri. }   ",      
+      "customform:varName": "objectUri"
     },
     {
-      "@id": "customform:whcor_genreFormLabel",
+      "@id": "customform:whcor_objectLabel",
       "@type": [
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingGenreFormLabel WHERE {  ?subject bibframe:genreForm ?genreForm. ?genreForm rdfs:label ?genreFormLabel .}   ",      
-      "customform:varName": "genreFormLabel"
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingObjectLabel WHERE {  ?subject bibframe:genreForm ?objectUri. ?objectUri rdfs:label ?existingObjectLabel .}   ",      
+      "customform:varName": "objectLabel"
     }
    ]
 }

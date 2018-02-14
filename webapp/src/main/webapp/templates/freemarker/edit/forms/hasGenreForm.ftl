@@ -119,13 +119,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         <input type="button" class="submit concept-search" id="searchButton" name="searchButton" value="${i18n().search_service_btn}"/>&nbsp;
     </p>
     
-    <input type="hidden" id="genreFormLabel" name="genreFormLabel" value="" />  <!-- Field value populated by JavaScript -->
-	<input type="hidden" id="conceptSource" name="conceptSource" value="" /> <!-- Field value populated by JavaScript -->
-    <input type="hidden" id="conceptSemanticTypeURI" name="conceptSemanticTypeURI" value="" /> <!-- Field value populated by JavaScript -->
-    <input type="hidden" id="conceptSemanticTypeLabel" name="conceptSemanticTypeLabel" value="" /> <!-- Field value populated by JavaScript -->
-    <input type="hidden" id="conceptBroaderURI" name="conceptBroaderURI" value=""/><!-- Field value populated by JavaScript -->
-    <input type="hidden" id="conceptNarrowerURI" name="conceptNarrowerURI" value=""/><!-- Field value populated by JavaScript -->
-    <div id="indicator" class="hidden">
+    <input type="hidden" id="objectUri" name="objectUri" value="" /> <!-- Field value populated by JavaScript -->
+    <input type="hidden" id="objectLabel" name="objectLabel" value="" />  <!-- Field value populated by JavaScript -->
+	  <div id="indicator" class="hidden">
     	<img id="loadingIndicator" class="indicator" src="${urls.base}/images/indicatorWhite.gif" alt="${i18n().processing_indicator}"/>
     </div>
     <div id="selectedConcept" name="selectedConcept" class="acSelection">
@@ -138,16 +134,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   
     <div id="errors" name="errors"></div>
     
-    <p class="submit">
-        <input type="submit" id="submit" name="submit" value="${i18n().add_selected_concept}" />
-        
-    </p>
+   
 
 
        <p class="submit">
             <input type="hidden" name = "editKey" value="${editKey}"/>
             <input type="hidden" name="configFile" value="${configFile}" />
-            <input type="submit" id="submit" value="${i18n().save_button}"/><span class="or"> ${i18n().or} </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
+            <input type="submit" id="submit" name="formSubmit" value="${i18n().save_button}"/><span class="or"> OR </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
