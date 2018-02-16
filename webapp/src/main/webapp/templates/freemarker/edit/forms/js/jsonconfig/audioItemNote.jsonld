@@ -46,7 +46,7 @@
        "customform:fieldOptions": {
         "@id": "customform:whcor_objectVarTypeFieldOptions"
       },
-      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  SELECT ?existingObjectVarType   WHERE {?objectVar rdf:type ?existingObjectVarType .}    "
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  PREFIX vitro:<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> SELECT ?existingObjectVarType   WHERE {?objectVar vitro:mostSpecificType ?existingObjectVarType .}    "
       
     },
     {
