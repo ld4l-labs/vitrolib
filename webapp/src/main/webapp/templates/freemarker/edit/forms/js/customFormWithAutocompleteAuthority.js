@@ -526,7 +526,12 @@ var customForm = {
         $acDiv.show();
         $acDiv.find("input").val(uri);
         $acDiv.find("span").html(label);
-        $acDiv.find("a.verifyMatch").attr('href', this.baseHref + uri);
+        //If uri is local, then this holds otherwise external uri which should be opened independently
+        var verifyUrl = this.baseHref + uri;
+        if(!customForm.checkVerifyMatchNamespace(uri)) {
+        	verifyUrl = uri;
+        }
+        $acDiv.find("a.verifyMatch").attr('href', verifyUrl);
 
         $changeLink = $acDiv.find('a.changeSelection');
         $changeLink.click(function() {
@@ -745,6 +750,17 @@ var customForm = {
 		//from that object, the old relationship will be removed in n3 processing
         var $acDiv = this.acSelections[$(selectedObj).attr('acGroupName')];
         $acDiv.find("input").val(customForm.blankSentinel);
+	},
+	//Adding function that enables checking whether the URI is of the local namespace or not
+	//if not, opens up URI without base href (i.e. not VitroLib base URL)
+	checkVerifyMatchNamespace:function(uri) {
+		var prefix = "";
+		//expect this variable to defined in template and passed along here
+		if(typeof customForm.localNamespacePrefix != "undefined") {
+			prefix = customForm.localNamespacePrefix;
+		}
+	
+		return(uri.startsWith(prefix));
 	}
 	
 };
