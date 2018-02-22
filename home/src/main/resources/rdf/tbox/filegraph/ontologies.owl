@@ -16,6 +16,7 @@
   <owl:Ontology rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
   <owl:Ontology rdf:about="http://www.w3.org/2000/01/rdf-schema#"/>
   <owl:Ontology rdf:about="http://schema.org/"/>
+  <owl:Ontology rdf:about="http://www.w3.org/2004/02/skos/core#"/>
   
   <!--
     Not needed. It's automatically loaded with vitro.

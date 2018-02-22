@@ -8,7 +8,6 @@
     "vivo": "http://vivoweb.org/ontology/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "bibframe": "http://id.loc.gov/ontologies/bibframe/",
-    "owl": "http://www.w3.org/2002/07/owl#",
     "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
   },
   "@graph": [
@@ -20,11 +19,11 @@
       ],
       "customform:pattern": [
         "?subject ?predicate ?objectVar .",
-        "?objectVar bib:isSubjectOf ?subject .",
-		"?objectVar rdfs:label ?lcshTerm .",
-		"?objectVar rdf:type owl:Thing ."
+		"?objectVar rdf:type bibframe:Title .",
+		"?objectVar rdfs:label ?title .",
+		"?objectVar rdf:value ?title ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -33,21 +32,17 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       
+     
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
-  
- 
     {
-      "@id": "customform:whcor_lcshTerm",
+      "@id": "customform:title",
       "@type": [
-       "forms:FormComponent",
-       "forms:LiteralField"
+        "forms:FormComponent",
+        "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLcshTerm WHERE {  ?objectVar rdfs:label ?existingLcshTerm .}   ",      
-      "customform:mayUseNewResource": true,
-      "customform:varName": "lcshTerm"
+      "customform:varName": "title"
     }
-   ]
+    ]
 }
