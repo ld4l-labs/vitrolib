@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -60,6 +62,7 @@ public class NotificationSetup implements ServletContextListener {
 	        public void run() {
 	            System.out.println("NOTIFY");
 	            readInFile();
+	            readInbox();
 	            //timer.cancel(); //Terminate the timer thread
 	        }
 	        
@@ -86,5 +89,29 @@ public class NotificationSetup implements ServletContextListener {
 
 	    	}
 	    }
+	 
+	 	//Read in notification
+	 private void readInbox() {
+		 try {
+			 System.out.println("Read Inbox");
+		 String urlToRead = "https://linkedresearch.org/inbox/csarven.ca/dokieli-rww/";
+		  StringBuilder result = new StringBuilder();
+	      URL url = new URL(urlToRead);
+	      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	      conn.setRequestMethod("GET");
+	      conn.setRequestProperty("Accept", "application/ld+json");
+	      //conn.setRequestProperty("Accept", "text/turtle");
+	      BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	      String line;
+	      while ((line = rd.readLine()) != null) {
+	         result.append(line);
+	      }
+	      rd.close();
+	      System.out.println(result.toString());
+		 } catch(Exception ex) {
+			 System.out.println("Error occurred");
+			 ex.printStackTrace();
+		 }
+	 }
 
 }
