@@ -46,7 +46,7 @@ var hasActivity = {
 	        },
 	        copyActivityLabel:function() {
 	        	//Find selected activity label
-	        	var selectedLabel = $("#activityType:selected").text();
+	        	var selectedLabel = $("#activityType option:selected").text();
 	        	$("#activityLabel").val(selectedLabel);
 	        }
 	        

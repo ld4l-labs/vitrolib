@@ -53,7 +53,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>Manage Associated Genre Forms</h2>
 
 <#if submissionErrors?has_content>
  
@@ -145,7 +144,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
 	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 	            </p>
-	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  ${flagClearLabelForExisting}="true" />
+	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
 	        </div>
   		</div>
  		
