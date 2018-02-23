@@ -6,6 +6,6 @@ var displayConfig = {
 		"agentType":{"label": "Agent Type"},
 		"activityType": {"label": "Activity Type",
 		"constantList": [{"label":"Donor","uri":"http://bibliotek-o.org/ontology/DonorActivity"},
-		{"uri":"http://bibliotek-o.org/1.1/ontology/AcquisitionActivity"}]}
+		{"uri":"http://bibliotek-o.org/ontology/AcquisitionActivity","label":"Acquisition Activity"}]}
 	}
 };

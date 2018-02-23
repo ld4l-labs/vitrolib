@@ -6,6 +6,7 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
+<#assign defaultNamespace = editConfiguration.defaultNamespace>
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -211,7 +212,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         acTypes: {},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
         urisInScope : urisInScope,
-	    literalsInScope : literalsInScope
+	    literalsInScope : literalsInScope,
+	    defaultNamespace: "${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

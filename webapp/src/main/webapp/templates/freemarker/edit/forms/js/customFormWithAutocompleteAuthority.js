@@ -756,8 +756,8 @@ var customForm = {
 	checkVerifyMatchNamespace:function(uri) {
 		var prefix = "";
 		//expect this variable to defined in template and passed along here
-		if(typeof customForm.localNamespacePrefix != "undefined") {
-			prefix = customForm.localNamespacePrefix;
+		if(typeof customForm.defaultNamespace != "undefined") {
+			prefix = customForm.defaultNamespace;
 		}
 	
 		return(uri.startsWith(prefix));
