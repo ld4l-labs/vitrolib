@@ -5,6 +5,7 @@ package edu.cornell.mannlib.semservices.service.impl;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -92,12 +93,21 @@ public class LCNAFImpl extends QuestioningAuthority {
 		HashMap<String, String> additionalInfo =new HashMap<String, String>();
 		if(termResult.containsKey("context")) {
 			JSONObject context = termResult.getJSONObject("context");
-			if(context != null && context.containsKey("RWO")) {
-				String rwoURI = context.getString("RWO");
-				additionalInfo.put("RWO", rwoURI);
+			//Translate context to hashmap, if the value is an object, return string representation for now
+			//This may need to change later and we may just want to return the entire context object as is
+			if(context != null) {
+				try {
+					Set <String> keys = (Set<String>) context.keySet();
+					for(String key: keys) {
+						additionalInfo.put(key, context.get(key).toString());
+					} 
+				} catch(Exception ex) {
+					logger.error("Error occurred in retrieving contextual information for " + termResult.toString());
+				}
+				
 			}
 		}
-		return null;
+		return additionalInfo;
 	}
 
 

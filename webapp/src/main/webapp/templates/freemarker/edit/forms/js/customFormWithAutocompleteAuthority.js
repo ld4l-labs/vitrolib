@@ -345,7 +345,9 @@ var customForm = {
                 });
             },
             select: function(event, ui) {
-                customForm.showAutocompleteSelection(ui.item.label, ui.item.uri, $(selectedObj));
+            	var uri = customForm.extractObjectURIForAuthority(ui.item);
+            	//RWO URI is returned from above when relevant/available, otherwise the URI coming back from the search result is used
+                customForm.showAutocompleteSelection(ui.item.label, uri, $(selectedObj));
                 if ( $(selectedObj).attr('acGroupName') == customForm.typeSelector.attr('acGroupName') ) {
                     customForm.typeSelector.val(ui.item.msType);
                 }
@@ -761,6 +763,19 @@ var customForm = {
 		}
 	
 		return(uri.startsWith(prefix));
+	},
+	//This is being hardcoded in for now - the different cases, but these should really be represented as separate objects and function
+	extractObjectURIForAuthority:function(item) {
+		//Certain authorities such as LOC require a RWO or other such entity
+		//For now, checking if the context object has this and then using
+		if("additionalInformation" in item) {
+			var additionalInformation = item["additionalInformation"];
+			if(additionalInformation != null && "RWO" in additionalInformation) {
+				var RWOURI = additionalInformation["RWO"];
+				return RWOURI;
+			}
+		}
+		return item["uri"];
 	}
 	
 };

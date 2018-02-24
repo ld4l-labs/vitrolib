@@ -126,14 +126,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
 		<div> 
-			<p>
-			<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-			<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-			<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+			<div id="vocabSource">
+				<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 
-			</p>
+			</div>
 	        <p>
-	            <label for=""> ${requiredHint}</label>
+	            <label for="agent"> Person or Organization${requiredHint}</label>
 	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
 	        </p>
 	
@@ -159,6 +159,25 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
             	</select>
         </p>
   		</div>
+  
+  		<div> 
+	        <p>
+	            <label for="location"> Location</label>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="location">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	        </div>
+  		</div>
+  
   
   		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
     
