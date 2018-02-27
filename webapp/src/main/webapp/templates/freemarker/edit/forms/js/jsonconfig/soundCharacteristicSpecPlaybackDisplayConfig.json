@@ -1,0 +1,6 @@
+var displayConfig = {
+	"fieldOrder" :  ["objectVar"],
+	"fieldDisplayProperties" : {
+		"objectVar": {"label":"Special Playback Characteristics"}
+	}
+};
