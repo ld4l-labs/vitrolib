@@ -4,11 +4,11 @@ var displayConfig = {
 		"objectValue": {"label":"Note"},
 		"objectVarType": {
 			"label": "Note Type", 
-			"constantList":[{"uri":"http://audio.biblioteko-o.org/ContentsNote"},
-			{"uri":"http://audio.biblioteko-o.org/SummaryNote"},
-			{"uri":"http://audio.biblioteko-o.org/SupplementaryContentNote"},
-			{"uri":"http://audio.biblioteko-o.org/ReviewNote"},
-			{"uri":"http://audio.biblioteko-o.org/PurposeNote"}]
+			"constantList":[{"label":"Contents note","uri":"http://audio.bibliotek-o.org/ContentsNote"},
+			{"label":"Summary note","uri":"http://audio.bibliotek-o.org/SummaryNote"},
+			{"label":"Supplementary content note","uri":"http://audio.bibliotek-o.org/SupplementaryContentNote"},
+			{"label":"Review note","uri":"http://audio.bibliotek-o.org/ReviewNote"},
+			{"label":"Purpose and use note","uri":"http://audio.bibliotek-o.org/PurposeNote"}]
 		}
 	}
 };

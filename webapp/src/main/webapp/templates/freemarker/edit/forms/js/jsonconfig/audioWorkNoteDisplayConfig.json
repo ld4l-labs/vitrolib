@@ -4,17 +4,11 @@ var displayConfig = {
 		"objectValue": {"label":"Note"},
 		"objectVarType": {
 			"label": "Note Type", 
-			"constantList":[{"label":"Writing directly on the album cover, etc.","uri":"http://audio.biblioteko-o.org/WritingOnAlbumNote"},
-			{"label":"Numbered SR Jacket Note","uri":"http://audio.biblioteko-o.org/NumberedSRJacketNote"},
-			{"label":"Initials and/or numbers on disc label","uri":"http://audio.biblioteko-o.org/InitialsOrNumberOnLabelNote"},
-			{"label":"Post-It Note on LP","uri":"http://audio.biblioteko-o.org/PostItNoteNote"},
-			{"label":"Signature Note","uri":"http://audio.biblioteko-o.org/SignatureNote"},
-			{"label":"Cue point markers","uri":"http://audio.biblioteko-o.org/CuePointMarkerNote"},
-			{"label":"Track numbers of interest indicated","uri":"http://audio.biblioteko-o.org/TracksOfInterestNote"},
-			{"label":"Tape on LP’s disc label or cover","uri":"http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote"},
-			{"label":"SR doesn’t match the jacket.","uri":"http://audio.biblioteko-o.org/NotInOriginalJacketNote"},
-			{"label":"Two copies housed together","uri":"http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote"},
-			{"label":"Note","uri":"http://id.loc.gov/ontologies/bibframe/Note"}]
+			"constantList":[{"label":"Contents note","uri":"http://audio.bibliotek-o.org/ContentsNote"},
+			{"label":"Summary note","uri":"http://audio.bibliotek-o.org/SummaryNote"},
+			{"label":"Supplementary content note","uri":"http://audio.bibliotek-o.org/SupplementaryContentNote"},
+			{"label":"Review note","uri":"http://audio.bibliotek-o.org/ReviewNote"},
+			{"label":"Purpose and use note","uri":"http://audio.bibliotek-o.org/PurposeNote"}]
 		}
 	}
 };

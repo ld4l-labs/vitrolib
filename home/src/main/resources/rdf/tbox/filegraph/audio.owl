@@ -40,7 +40,7 @@
     <skos:scopeNote xml:lang="en">This class is derived from the MARC 21 007 position 13 for sound recordings, https://www.loc.gov/marc/bibliographic/bd007s.html..</skos:scopeNote>
 </owl:Class> 
    
-<owl:Class rdf:about="ContentsNote">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/ContentsNote">
     <rdfs:label xml:lang="en">Contents note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition xml:lang="en">A note to provide a main contents of the resource rather than linking to an external table of contents or creating separate part/whole relationships to the entities that comprise the whole. Ideally, part whole relationships would be created instead of the this type of note.</skos:definition>
@@ -85,7 +85,7 @@
     <skos:definition>A note explaining there is a post-it on the LP jacket, Wording: Sticky note attached to jacket, reading: “[text]” (most likely from the first round of sorting done in New York City). </skos:definition>
 </owl:Class>
     
-<owl:Class rdf:about="PurposeNote">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/PurposeNote">
     <rdfs:label xml:lang="en">Purpose and use note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition xml:lang="en">A note about the intended purpose or use of the resource.</skos:definition>
@@ -93,7 +93,7 @@
     <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 </owl:Class>
     
-<owl:Class rdf:about="ReviewNote">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/ReviewNote">
     <rdfs:label xml:lang="en">Review note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition xml:lang="en">A note providing a review of the resource.</skos:definition>
@@ -121,7 +121,7 @@
     <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1013.</skos:scopeNote>
 </owl:Class>
     
-<owl:Class rdf:about="SummaryNote">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/SummaryNote">
     <rdfs:label xml:lang="en">Summary note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition xml:lang="en">A note providing a summary of the resource.</skos:definition>
@@ -129,7 +129,7 @@
     <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 </owl:Class>
     
-<owl:Class rdf:about="SupplementaryContentNote">
+<owl:Class rdf:about="http://audio.bibliotek-o.org/SupplementaryContentNote">
     <rdfs:label xml:lang="en">Supplementary content note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition xml:lang="en">A note indicating the existence of supplementary content such as bibliographies, discographies, filmographies, and/or other bibliographic references in the described resource or in accompanying material.</skos:definition>
