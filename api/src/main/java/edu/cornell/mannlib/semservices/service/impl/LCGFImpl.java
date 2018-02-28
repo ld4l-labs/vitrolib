@@ -4,15 +4,8 @@
 
 package edu.cornell.mannlib.semservices.service.impl;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.ListIterator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -20,110 +13,21 @@ import org.apache.commons.logging.LogFactory;
 
 import edu.cornell.mannlib.semservices.bo.Concept;
 import edu.cornell.mannlib.semservices.bo.RelatedTermInfo;
-
-import edu.cornell.mannlib.semservices.service.ExternalConceptService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import net.sf.json.JSONSerializer;
 
-public class LCGFImpl implements ExternalConceptService {
+public class LCGFImpl extends QuestioningAuthority {
 
 	protected final Log logger = LogFactory.getLog(getClass());
-	private final String schemeUri =  "http://id.loc.gov/authorities/genreForms";
+	private final String schemeUri =  "http://id.loc.gov/authorities/names/";
+	protected final String authority = "locgenres_ld4l_cache";
 	
-	//Followed by ?q=whatever term
-
-	protected final String lcgfQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locgenres_ld4l_cache";
-
-
-
-	@Override
-	public List<Concept> getConcepts(String term) throws Exception {
-		List<Concept> conceptList = new ArrayList<Concept>();
-		
-		
-		JSONArray queryResults = getQueryResults(term);
-		if(queryResults != null) {
-			int queryResultsNumber = queryResults.size();
-			int q;
-			for (q = 0; q < queryResultsNumber; q++) {
-				JSONObject result = queryResults.getJSONObject(q);
-				
-				if(result != null) {
-					conceptList.add(createConcept(result));
-				}
-				
-			}
-		}
-
-		return conceptList;
+	public String getAuthority() {
+		return authority;
 	}
-
-
-
-	private String getLabel(JSONObject result) {
-		if(result != null) {
-			String label = result.getString("label");
-			return label;
-		}
+	
+	public String getSubAuthority() {
 		return null;
-	}
-
-
-	//Do query with term and retrieve results
-	private JSONArray getQueryResults(String term) {
-		try {
-			String encodedTerm = URLEncoder.encode(term, "UTF-8");
-			String serviceURL = lcgfQuery + "?q=" + encodedTerm;
-			String results = retrieveFromURL(serviceURL);
-			if(StringUtils.isNotEmpty(results)) {
-				JSONArray queryResults = (JSONArray) JSONSerializer.toJSON(results);
-				return queryResults;
-			}
-		} catch(Exception ex) {
-			logger.error("Error retrieving query results for term ", ex);
-		}
-		
-		return null;
-	}
-
-
-
-
-
-
-	private String retrieveFromURL(String url) throws Exception {
-		String results = new String();
-	      //System.out.println("url: "+url);
-	      try {
-
-	         StringWriter sw = new StringWriter();
-	         URL serviceUrl = new URL(url);
-
-	         BufferedReader in = new BufferedReader(new InputStreamReader(serviceUrl.openStream()));
-	         String inputLine;
-	         while ((inputLine = in.readLine()) != null) {
-	            sw.write(inputLine);
-	         }
-	         in.close();
-
-	         results = sw.toString();
-
-	      } catch (Exception ex) {
-	         logger.error("error occurred in servlet", ex);
-	         ex.printStackTrace();
-	         throw ex;
-	      }
-	      return results;
-	}
-
-
-
-
-
-
-	public List<Concept> processResults(String term) throws Exception {
-		return getConcepts(term);
 	}
 
 	
@@ -197,7 +101,7 @@ public class LCGFImpl implements ExternalConceptService {
 	private List<String> getListForKey(String key, JSONObject jsonObject) {
 		List<String> array = new ArrayList<String>();
 		if(jsonObject != null) {
-			if(jsonObject.containsKey(key)) {
+			if(jsonObject.containsKey(key) && (jsonObject.get(key) instanceof JSONArray)) {
 				JSONArray jsonArray = jsonObject.getJSONArray(key);
 				array = convertJSONArrayToList(jsonArray);
 			}
@@ -209,7 +113,7 @@ public class LCGFImpl implements ExternalConceptService {
 	private List<RelatedTermInfo> getTermListForKey(String key, JSONObject jsonObject) {
 		List<RelatedTermInfo> array = new ArrayList<RelatedTermInfo>();
 		if(jsonObject != null) {
-			if(jsonObject.containsKey(key)) {
+			if(jsonObject.containsKey(key) && (jsonObject.get(key) instanceof JSONArray)) {
 				JSONArray jsonArray = jsonObject.getJSONArray(key);
 				array = convertJSONArrayToTermList(jsonArray);
 			}

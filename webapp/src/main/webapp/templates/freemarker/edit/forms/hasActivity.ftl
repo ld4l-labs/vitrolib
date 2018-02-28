@@ -6,7 +6,7 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
-<#assign defaultNamespace = editConfiguration.defaultNamespace>
+<#assign defaultNamespace = editConfiguration.defaultNamespace />
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -39,10 +39,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 
 
-<#--  --assign pubTypeLiteralOptions = editConfiguration.pageData.pubType /-->
-<#-- In case of submission error, may already have publication type or title - although latter not likely, but storing values to be on safe side -->
-<#--  --assign publicationTypeValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "pubType") /-->
-
 
 <#--  Get the configfile name and include below -->
 <#assign configFile = editConfiguration.pageData.configFile />
@@ -58,29 +54,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>${titleVerb} Subject Heading</h2>
 
 <#if submissionErrors?has_content>
-  <#--  Some custom handling -->
-    <#--  --if collectionDisplayValue?has_content >
-        <#assign collectionValue = collectionDisplayValue />
-    </#if>
-    <#if bookDisplayValue?has_content >
-        <#assign bookValue = bookDisplayValue />
-    </#if>
-    <#if conferenceDisplayValue?has_content >
-        <#assign conferenceValue = conferenceDisplayValue />
-    </#if>
-    <#if eventDisplayValue?has_content >
-        <#assign eventValue = eventDisplayValue />
-    </#if>
-    <#if editorDisplayValue?has_content >
-        <#assign editorValue = editorDisplayValue />
-    </#if>
-    <#if publisherDisplayValue?has_content >
-        <#assign publisherValue = publisherDisplayValue />
-    </#if-->
-
+ 
     <section id="error-alert" role="alert">
         <img src="${urls.images}/iconAlert.png" width="24" height="24" alert="${i18n().error_alert_icon}" />
         <p>
@@ -107,94 +83,124 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <section id="hasLCSHSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="hasLCSH" class="customForm noIE67" action="${submitUrl}"  role="add subject heading" >
+<form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
 
     <div id="formcontent">
 
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
 
-      <div>
-      	
-      		  
-             
-          <p templateId="inputAcSelector">
-    		<label for="lcshTerm">LC Subject Heading</label>
-              <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
-              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
-          </p>
+     
+      <ul id="existingActivities" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Activity </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+       
+
+	<br/>
 
 
-          <div class="acSelection" acGroupName="lcshGroup" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected} Subject:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="objectVar" name="objectVar" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
-      
-      
-      <#-- '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames' -->
+	<h4 class="services">Add activity/role</h4>
+  
+  	<div>
+  		<p>
+  		<label for="activityType">Activity Type </label>
+  			   <select id="activityType" name="activityType" role="select">
+                
+            	</select>
+        </p>
+  		</div>
+  
+ 
+ 		
+ 		
+		<div> 
+			<div id="vocabSource">
+				<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 
-      <#--  Instance fields are in their own field set -->
+			</div>
+	        <p>
+	            <label for="agent"> Person or Organization${requiredHint}</label>
+	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="group">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+	        </div>
+  		</div>
+ 		
+ 		
+ 		
+ 		<div>
+  		<p>
+  		<label for="agentType">Agent Type </label>
+  			   <select id="agentType" name="agentType" role="select">
+                
+            	</select>
+        </p>
+  		</div>
+  
+  		<div> 
+	        <p>
+	            <label for="location"> Location</label>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="location">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	        </div>
+  		</div>
+  
+  
+  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
+    
+    <div id="errors" name="errors"></div>
+    
+   
 
 
        <p class="submit">
             <input type="hidden" name = "editKey" value="${editKey}"/>
             <input type="hidden" name="configFile" value="${configFile}" />
-            <input type="submit" id="submit" value="${i18n().save_button}"/><span class="or"> ${i18n().or} </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
+            <input type="submit" id="submit" name="formSubmit" value="${i18n().save_button}"/><span class="or"> OR </span><a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
     </form>
 
 
-    <#--  Form field option, Simple literal -->
-    <#--  Need to handle required vs. non-required, also put these in their own templates -->
-      <div templateId="literalTemplate" style="display:none" >
-          <p>
-              <label for=""></label>
-              <input size="60"  type="text" id="" name="" value="" />
-          </p>
 
-
-
-      </div>
-
-      <#--  Autocomplete literal template -->
-
-    <div templateId="autocompleteLiteralTemplate" style="display:none">
-          <p templateId="inputAcSelector">
-              <label for=""> ${requiredHint}</label>
-              <input class="acSelector" size="60"  type="text" id="" name="" acGroupName="group"  value="" />
-          </p>
-
-
-          <div class="acSelection" acGroupName="group" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected}:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="" name="" value=""  ${flagClearLabelForExisting}="true" />
-          </div>
-      </div>
-
-      <div templateId="selectDropdownTemplate" style="display:none">
-      <p>
-      <label for=""> </label>
-           <select id="" name="" role="select">
-
-              </select>
-        </p>
-      </div>
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
 <#include "existingValuesScript.ftl" />
+
     <script type="text/javascript">
     //No uris or literals in scope here
 
@@ -202,7 +208,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   //regular autocomplete url: acUrl: '${urls.base}/autocomplete?tokenize=true',
     var customFormData  = {
         sparqlQueryUrl: '${sparqlQueryUrl}',
-        acUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
+        dataServiceUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms',
         customFormAJAXUrl:'${urls.base}/ajax/customForm',
         editMode: '${editMode}',
         baseHref: '${urls.base}/individual?uri=',
@@ -211,14 +217,26 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-        urisInScope : urisInScope,
-	    literalsInScope : literalsInScope,
-	    defaultNamespace: "${defaultNamespace}"
+        queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+        subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
+        defaultNamespace:"${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
         orCreateNewOne: '${i18n().or_create_new_one}',
-        selectedString: '${i18n().selected}'
+        selectedString: '${i18n().selected}',
+        vocServiceUnavailable: '${i18n().vocabulary_service_unavailable}',
+	    noResultsFound: '${i18n().no_serch_results_found}',
+	    definitionString: '${i18n().definition_capitalized}',
+	    bestMatchString: '${i18n().best_match}',
+	    selectTermFromResults: '${i18n().select_term_from_results}',
+	    confirmTermDelete: '${i18n().confirm_term_deletion}',
+	    errorTernNotRemoved: '${i18n().error_term_not_deleted}',
+	    displayMoreEllipsis: '${i18n().display_more_ellipsis}',
+	    displayLess: '${i18n().display_less}',
+	    showMoreContent: '${i18n().show_more_content}'
     };
     //Prevent custom form on load on document ready so these event listeners can be associated AFTER form is loaded
     preventLoadFlag = true;
@@ -232,11 +250,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customForm.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />')}
+${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/lookupWithContext.css" />')}
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',              
+              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',      
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/hasActivity.js"></script>')}

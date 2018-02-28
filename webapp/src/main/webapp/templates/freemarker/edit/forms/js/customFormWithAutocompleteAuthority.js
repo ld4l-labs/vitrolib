@@ -345,7 +345,9 @@ var customForm = {
                 });
             },
             select: function(event, ui) {
-                customForm.showAutocompleteSelection(ui.item.label, ui.item.uri, $(selectedObj));
+            	var uri = customForm.extractObjectURIForAuthority(ui.item);
+            	//RWO URI is returned from above when relevant/available, otherwise the URI coming back from the search result is used
+                customForm.showAutocompleteSelection(ui.item.label, uri, $(selectedObj));
                 if ( $(selectedObj).attr('acGroupName') == customForm.typeSelector.attr('acGroupName') ) {
                     customForm.typeSelector.val(ui.item.msType);
                 }
@@ -526,7 +528,12 @@ var customForm = {
         $acDiv.show();
         $acDiv.find("input").val(uri);
         $acDiv.find("span").html(label);
-        $acDiv.find("a.verifyMatch").attr('href', this.baseHref + uri);
+        //If uri is local, then this holds otherwise external uri which should be opened independently
+        var verifyUrl = this.baseHref + uri;
+        if(!customForm.checkVerifyMatchNamespace(uri)) {
+        	verifyUrl = uri;
+        }
+        $acDiv.find("a.verifyMatch").attr('href', verifyUrl);
 
         $changeLink = $acDiv.find('a.changeSelection');
         $changeLink.click(function() {
@@ -745,6 +752,30 @@ var customForm = {
 		//from that object, the old relationship will be removed in n3 processing
         var $acDiv = this.acSelections[$(selectedObj).attr('acGroupName')];
         $acDiv.find("input").val(customForm.blankSentinel);
+	},
+	//Adding function that enables checking whether the URI is of the local namespace or not
+	//if not, opens up URI without base href (i.e. not VitroLib base URL)
+	checkVerifyMatchNamespace:function(uri) {
+		var prefix = "";
+		//expect this variable to defined in template and passed along here
+		if(typeof customForm.defaultNamespace != "undefined") {
+			prefix = customForm.defaultNamespace;
+		}
+	
+		return(uri.startsWith(prefix));
+	},
+	//This is being hardcoded in for now - the different cases, but these should really be represented as separate objects and function
+	extractObjectURIForAuthority:function(item) {
+		//Certain authorities such as LOC require a RWO or other such entity
+		//For now, checking if the context object has this and then using
+		if("additionalInformation" in item) {
+			var additionalInformation = item["additionalInformation"];
+			if(additionalInformation != null && "RWO" in additionalInformation) {
+				var RWOURI = additionalInformation["RWO"];
+				return RWOURI;
+			}
+		}
+		return item["uri"];
 	}
 	
 };

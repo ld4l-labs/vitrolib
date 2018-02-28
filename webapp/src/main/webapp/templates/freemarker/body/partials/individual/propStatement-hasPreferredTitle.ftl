@@ -5,20 +5,14 @@
      is also used to generate the property statement during a deletion.  
  -->
 
-<@showActivity statement />
+<@showPreferredTitle statement />
 
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
      next statement -->
-<#macro showActivity statement>
+<#macro showPreferredTitle statement>
 
-<#if statement.instance?? && statement.instanceTitle??>
-    <a href="${profileUrl(statement.uri("instance"))}" title="${statement.instanceTitle}">${statement.instanceTitle} <#if statement.mostSpecificTypeLabel??> (${statement.mostSpecificTypeLabel}) </#if></a>
-   <#if statement.publicationAgentName??>
-   	Publisher: ${statement.publicationAgentName}
-   </#if>
-   <#if statement.publicationDate??>
-   ${statement.publicationDate}
-   </#if>
+<#if statement.titleIndividual?? && statement.title??>
+    ${statement.title} 
 </#if>
 
 </#macro>

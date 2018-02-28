@@ -1,0 +1,14 @@
+var displayConfig = {
+	"fieldOrder" :  ["objectVarType", "objectValue"],
+	"fieldDisplayProperties" : {
+		"objectValue": {"label":"Note"},
+		"objectVarType": {
+			"label": "Note Type", 
+			"constantList":[{"label":"Contents note","uri":"http://audio.bibliotek-o.org/ContentsNote"},
+			{"label":"Summary note","uri":"http://audio.bibliotek-o.org/SummaryNote"},
+			{"label":"Supplementary content note","uri":"http://audio.bibliotek-o.org/SupplementaryContentNote"},
+			{"label":"Review note","uri":"http://audio.bibliotek-o.org/ReviewNote"},
+			{"label":"Purpose and use note","uri":"http://audio.bibliotek-o.org/PurposeNote"}]
+		}
+	}
+};

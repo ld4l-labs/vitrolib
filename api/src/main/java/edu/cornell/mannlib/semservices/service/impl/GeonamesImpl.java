@@ -7,10 +7,10 @@ package edu.cornell.mannlib.semservices.service.impl;
 import edu.cornell.mannlib.semservices.bo.Concept;
 import net.sf.json.JSONObject;
 
-public class LCSHQAImpl extends QuestioningAuthority {
+public class GeonamesImpl extends QuestioningAuthority {
 
-	protected final String schemeUri = "http://id.loc.gov/authorities/subjects";
-	protected final String authority = "locsubjects_ld4l_cache";
+	protected final String schemeUri = "http://geonames.org";
+	protected final String authority = "geonames_ld4l_cache";
 
 	public String getAuthority() {
 		return authority;
