@@ -15,17 +15,17 @@
     {
       "@id": "customform:addSubject_dynamicN3",
       "@type": [
-        "forms:DynamicN3Pattern",
+        "forms:RequiredN3Pattern",
         "forms:FormComponent"
       ],
       "customform:pattern": [
-        "?subject ?predicate ?lcsh .",
-        "?lcsh bib:isSubjectOf ?subject .",
-		"?lcsh rdfs:label ?lcshLabel .",
-		"?lcsh rdf:type owl:Thing ."
+        "?subject ?predicate ?objectVar .",
+        "?objectVar bib:isSubjectOf ?subject .",
+		"?objectVar rdfs:label ?lcshLabel .",
+		"?objectVar rdf:type owl:Thing ."
       ],
       "customform:dynamic_variables": [
-        "?lcsh",
+        "?objectVar",
         "?lcshLabel"  
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
@@ -49,7 +49,7 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLcshLabel WHERE {  ?lcsh rdfs:label ?existingLcshLabel .}   ",      
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLcshLabel WHERE {  ?objectVar rdfs:label ?existingLcshLabel .}   ",      
       "customform:mayUseNewResource": true,
       "customform:varName": "lcshLabel"
     }
