@@ -2,64 +2,37 @@
 
 package edu.cornell.mannlib.semservices.service.impl;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import edu.cornell.mannlib.semservices.bo.Concept;
-import edu.cornell.mannlib.semservices.service.ExternalConceptService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
 
-public class LCNAFImpl implements ExternalConceptService {
+public class LCNAFImpl extends QuestioningAuthority {
 
 	protected final Log logger = LogFactory.getLog(getClass());
-	private final String schemeUri = "http://id.loc.gov/authorities/names";
-	
-	//Followed by ?q=whatever term
-	//protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/loc/names";
-	protected final String lcnafQuery = "http://elr37-dev.library.cornell.edu/qa/search/linked_data/locnames_ld4l_cache";
-	//Subauthorities include /locjena/personal_name, corporate_name, and title
-	//http://elr37-dev.library.cornell.edu/qa/show/linked_data/locjena/names/n82045653
+	protected final String schemeUri = "http://id.loc.gov/authorities/names";
+	protected final String authority = "locnames_ld4l_cache";
 
+	
 	//Followed by id
 	protected final String lcnafTerm = "https://elr37-dev.library.cornell.edu/qa/show/linked_data/loc_direct/names/";
-	@Override
-	public List<Concept> getConcepts(String term) throws Exception {
-		List<Concept> conceptList = new ArrayList<Concept>();
-		
-		
-		JSONArray queryResults = getQueryResults(term);
-		if(queryResults != null) {
-			int queryResultsNumber = queryResults.size();
-			int q;
-			for (q = 0; q < queryResultsNumber; q++) {
-				JSONObject result = queryResults.getJSONObject(q);
-				String label = getLabel(result);
-				//Get individual term information to retrieve the URI
-				JSONObject termResult = getTermResult(result);
-				if(termResult != null) {
-					conceptList.add(createConcept(termResult));
-				}
-			}
-		}
-
-		return conceptList;
-	}
-
-
-
 	
+	public String getAuthority() {
+		return authority;
+	}
+	
+	public String getSubAuthority() {
+		return null;
+	}
 
 
 	private JSONObject getTermResult(JSONObject result) {
@@ -97,78 +70,6 @@ public class LCNAFImpl implements ExternalConceptService {
 	}
 
 
-
-
-
-
-	private String getLabel(JSONObject result) {
-		if(result != null) {
-			String label = result.getString("label");
-			return label;
-		}
-		return null;
-	}
-
-
-
-
-
-	//Do query with term and retrieve results
-	private JSONArray getQueryResults(String term) {
-		try {
-			String encodedTerm = URLEncoder.encode(term, "UTF-8");
-			String serviceURL = lcnafQuery + "?q=" + encodedTerm;
-			String results = retrieveFromURL(serviceURL);
-			if(StringUtils.isNotEmpty(results)) {
-				JSONArray queryResults = (JSONArray) JSONSerializer.toJSON(results);
-				return queryResults;
-			}
-		} catch(Exception ex) {
-			logger.error("Error retrieving query results for term ", ex);
-		}
-		
-		return null;
-	}
-
-
-
-
-
-
-	private String retrieveFromURL(String url) throws Exception {
-		String results = new String();
-	      //System.out.println("url: "+url);
-	      try {
-
-	         StringWriter sw = new StringWriter();
-	         URL serviceUrl = new URL(url);
-
-	         BufferedReader in = new BufferedReader(new InputStreamReader(serviceUrl.openStream()));
-	         String inputLine;
-	         while ((inputLine = in.readLine()) != null) {
-	            sw.write(inputLine);
-	         }
-	         in.close();
-
-	         results = sw.toString();
-
-	      } catch (Exception ex) {
-	         logger.error("error occurred in servlet", ex);
-	         ex.printStackTrace();
-	         throw ex;
-	      }
-	      return results;
-	}
-
-
-
-
-
-
-	public List<Concept> processResults(String term) throws Exception {
-		return getConcepts(term);
-	}
-
 	public Concept createConcept(JSONObject termResult) {
 
 		Concept concept = new Concept();
@@ -178,14 +79,40 @@ public class LCNAFImpl implements ExternalConceptService {
 		//concept.setBestMatch("true"); //not sure about best matches here
 		concept.setDefinedBy(schemeUri);
 		concept.setSchemeURI(this.schemeUri);
-		concept.setType(getType(termResult));
-		concept.setLabel(getLabelFromLinkedDataRequest(termResult));
-		concept.setAltLabelList(getAltLabelsFromLinkedDataRequest(termResult));
+		concept.setType(null);
+		concept.setLabel(getLabel(termResult));
+		concept.setAltLabelList(null);
 		//Add real world object information
-		HashMap<String, String> additionalInfo = getAdditionalInfo(termResult);
+		HashMap<String, String> additionalInfo = getRWOInfo(termResult);
 		concept.setAdditionalInformation(additionalInfo);
 		return concept;
 	}
+
+
+	private HashMap<String, String> getRWOInfo(JSONObject termResult) {
+		HashMap<String, String> additionalInfo =new HashMap<String, String>();
+		if(termResult.containsKey("context")) {
+			JSONObject context = termResult.getJSONObject("context");
+			//Translate context to hashmap, if the value is an object, return string representation for now
+			//This may need to change later and we may just want to return the entire context object as is
+			if(context != null) {
+				try {
+					Set <String> keys = (Set<String>) context.keySet();
+					for(String key: keys) {
+						additionalInfo.put(key, context.get(key).toString());
+					} 
+				} catch(Exception ex) {
+					logger.error("Error occurred in retrieving contextual information for " + termResult.toString());
+				}
+				
+			}
+		}
+		return additionalInfo;
+	}
+
+
+
+
 
 
 	private HashMap<String, String> getAdditionalInfo(JSONObject termResult) {
@@ -251,20 +178,6 @@ public class LCNAFImpl implements ExternalConceptService {
 		return null;
 	}
 
-
-
-
-
-
-	//We don't need this right now
-
-	@Override
-	public List<Concept> getConceptsByURIWithSparql(String uri) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 		
 
 }

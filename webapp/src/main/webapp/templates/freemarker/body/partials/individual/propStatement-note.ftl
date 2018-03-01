@@ -5,14 +5,14 @@
      is also used to generate the property statement during a deletion.  
  -->
 
-<@showTitle statement />
+<@showNote statement />
 
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
      next statement -->
-<#macro showTitle statement>
+<#macro showNote statement>
 
-<#if statement.title?? && statement.titleIndividual??>
-    ${statement.title} 
+<#if statement.object?? && statement.objectValue??>
+    ${statement.objectValue} <#if statement.objectMostSpecificTypeLabel??>(${statement.objectMostSpecificTypeLabel})</#if>
 </#if>
 
 </#macro>

@@ -102,44 +102,11 @@
     {
       "@id": "customform:whcor_activityTypeListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://bibliotek-o.org/ontology/Activity"
-      }
+      ]
     },
-    {
-      "@id": "customform:workHasActivity",
-      "@type": [
-        "forms:FormBuilder",
-        "forms:SimpleFormBuilder"
-      ],
-      "customform:component": [
-        {
-          "@id": "customform:whcor_requiredN3"
-        },
-        {
-          "@id": "customform:whcor_fieldAgent"
-        },
-        {
-          "@id": "customform:whcor_fieldAgentName"
-        },
-        {
-          "@id": "customform:whcor_fieldActivityType"
-        },
-        {
-          "@id": "customform:whcor_fieldActivityLabel"
-        },
-        {
-          "@id": "customform:whcor_optionalN3"
-        },
-        {
-          "@id": "customform:whcor_fieldAgentType"
-        }
-      ],
-      "customform:returnTo": "HERE"
-    },
+    
     {
       "@id": "customform:whcor_fieldActivityType",
       "@type": [

@@ -16,6 +16,16 @@
         <owl:versionIRI rdf:resource="http://performedmusicontology.org/ontology/"/>
     </owl:Ontology>
     
+    <!-- http://performedmusicontology.org/ontology/associatedWith -->
+    
+    <owl:ObjectProperty rdf:about="http://performedmusicontology.org/ontology/associatedWith">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>associated with</rdfs:label>
+        <skos:definition>Event or Work that is associated in a general way with another event or work, instance or item, e.g., the Bible used at a presidential inauguration.</skos:definition>
+    </owl:ObjectProperty>
+    
+    
     <!-- http://performedmusicontology.org/ontology/Audition -->
 
     

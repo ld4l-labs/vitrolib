@@ -1,0 +1,20 @@
+var displayConfig = {
+	"fieldOrder" :  ["objectVarType", "objectValue"],
+	"fieldDisplayProperties" : {
+		"objectValue": {"label":"Note"},
+		"objectVarType": {
+			"label": "Note Type", 
+			"constantList":[{"uri":"http://audio.biblioteko-o.org/WritingOnAlbumNote"},
+			{"uri":"http://audio.biblioteko-o.org/NumberedSRJacketNote"},
+			{"uri":"http://audio.biblioteko-o.org/InitialsOrNumberOnLabelNote"},
+			{"uri":"http://audio.biblioteko-o.org/PostItNoteNote"},
+			{"uri":"http://audio.biblioteko-o.org/SignatureNote"},
+			{"uri":"http://audio.biblioteko-o.org/CuePointMarkerNote"},
+			{"uri":"http://audio.biblioteko-o.org/TracksOfInterestNote"},
+			{"uri":"http://audio.biblioteko-o.org/TapeOnLPDiscLabelOrCoverNote"},
+			{"uri":"http://audio.biblioteko-o.org/NotInOriginalJacketNote"},
+			{"uri":"http://audio.biblioteko-o.org/TwoCopiesInSameSleeveNote"},
+			{"uri":"http://audio.biblioteko-o.org/SummaryNote"}]
+		}
+	}
+};
