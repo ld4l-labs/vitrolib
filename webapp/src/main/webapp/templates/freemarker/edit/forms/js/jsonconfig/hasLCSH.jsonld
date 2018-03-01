@@ -15,7 +15,7 @@
     {
       "@id": "customform:addSubject_dynamicN3",
       "@type": [
-        "forms:RequiredN3Pattern",
+        "forms:DynamicN3Pattern",
         "forms:FormComponent"
       ],
       "customform:pattern": [
