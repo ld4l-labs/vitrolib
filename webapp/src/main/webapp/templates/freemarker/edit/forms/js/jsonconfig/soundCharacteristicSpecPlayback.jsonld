@@ -42,7 +42,7 @@
       ],
       "customform:optionSparqlQuery": {
         "@id": "queryoptions",
-        "query":"SELECT ?uri ?label WHERE {?uri  <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/specPlayback> . ?uri <http://www.w3.org/2004/02/skos/core#prefLabel> ?label . FILTER( lang(?label) = 'en' )}"
+        "query":"SELECT ?uri ?label WHERE {?uri  <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/specPlayback> . ?uri <http://www.w3.org/2004/02/skos/core#prefLabel> ?label . FILTER( lang(?label) = 'en' )} ORDER BY ?label"
       }
     },
     {
