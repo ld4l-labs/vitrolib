@@ -19,15 +19,15 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-      	"?subject predicate ?objectVar .",
-		"?objectVar rdfs:label ?objectLabel .",
-		"?objectVar rdf:type owl:Thing ."
+      	"?subject ?predicate ?objectVar . ",
+		"?objectVar rdfs:label ?objectLabel . ",
+		"?objectVar rdf:type owl:Thing . "
       ],
       "customform:dynamic_variables" : [
         "?objectVar",
         "?objectLabel"
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
     },
     {
       "@id": "customform:addGenreForm_requiredN3",
@@ -36,11 +36,11 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       	"?subject predicate ?objectVar .",
-		"?objectVar rdfs:label ?objectLabel .",
-		"?objectVar rdf:type owl:Thing ."
+       	"?subject ?predicate ?objectVar . ",
+		"?objectVar rdfs:label ?objectLabel . ",
+		"?objectVar rdf:type owl:Thing . "
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
     },
     {
       "@id": "customform:addGenreForm_optionalN3",
@@ -51,7 +51,7 @@
       "customform:pattern": [
        
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
     },
   
     {
@@ -61,7 +61,7 @@
        "forms:UriField"
       ],
       "customform:mayUseNewResource": true,
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingObjectVar WHERE {  ?subject predicate ?existingObjectVar. }   ",      
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  SELECT ?existingObjectVar WHERE {  ?subject ?predicate ?existingObjectVar . }   ",      
       "customform:varName": "objectVar"
     },
     {
@@ -70,7 +70,7 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingObjectLabel WHERE {  ?subject predicate ?objectVar. ?objectVar rdfs:label ?existingObjectLabel .}   ",      
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingObjectLabel WHERE {  ?subject ?predicate ?objectVar . ?objectVar rdfs:label ?existingObjectLabel . }   ",      
       "customform:varName": "objectLabel"
     }
    ]
