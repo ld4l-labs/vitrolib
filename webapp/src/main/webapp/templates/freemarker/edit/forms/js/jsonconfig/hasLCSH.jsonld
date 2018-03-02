@@ -21,8 +21,8 @@
       "customform:pattern": [
         "?subject ?predicate ?objectVar . ",
         "?objectVar bib:isSubjectOf ?subject . ",
-		"?objectVar rdfs:label ?lcshLabel . ",
-		"?objectVar rdf:type owl:Thing . "
+        "?objectVar rdfs:label ?lcshLabel . ",
+        "?objectVar rdf:type owl:Thing . "
       ],
       "customform:dynamic_variables": [
         "?objectVar",
