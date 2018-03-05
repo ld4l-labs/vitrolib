@@ -30,19 +30,6 @@
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
     },
     {
-      "@id": "customform:addGenreForm_requiredN3",
-      "@type": [
-        "forms:RequiredN3Pattern",
-        "forms:FormComponent"
-      ],
-      "customform:pattern": [
-        "?subject ?predicate ?objectVar . ",
-        "?objectVar rdfs:label ?objectLabel . ",
-        "?objectVar rdf:type owl:Thing . "
-      ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
-    },
-    {
       "@id": "customform:addGenreForm_optionalN3",
       "@type": [
         "forms:OptionalN3Pattern",
