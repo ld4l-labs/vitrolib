@@ -319,13 +319,20 @@ var customForm = {
                 if($(selectedObj).attr("acUrl")) {
                 	acUrl = $(selectedObj).attr("acUrl");
                 }
-                
+                var groupName = $(selectedObj).attr('acGroupName');
+                var selectedSearchType = null;
+                if("acTypes" in customForm && groupName in customForm.acTypes) {
+                	selectedSearchType = customForm.acTypes[groupName];
+                }
+
                 
                 $.ajax({
                     url: acUrl,
                     dataType: 'json',
                     data: {
-                        searchTerm: request.term
+                        searchTerm: request.term,
+                        term: request.term, //used by internal autocomplete
+                        type:selectedSearchType //used for internal search and ignored by other search services
                     },
                     complete: function(xhr, status) {
                         // Not sure why, but we need an explicit json parse here. 
@@ -338,9 +345,14 @@ var customForm = {
                         //if(customForm.doRemoveConceptSubclasses()) {
                         //	filteredResults = customForm.removeConceptSubclasses(filteredResults);
                         //}
-
-                        customForm.acCache[request.term] = filteredResults["conceptList"];
-                        response(filteredResults["conceptList"]);
+                        //TODO: More robust handling here based on type of request - handling both internal autocomplete and external concept service here
+                        if(filteredResults != null && "conceptList" in filteredResults) {
+                        	customForm.acCache[request.term] = filteredResults["conceptList"];
+                        	response(filteredResults["conceptList"]);
+                        } else {
+                        	customForm.acCache[request.term] = filteredResults;
+                        	response(filteredResults);
+                        }
                     }
                 });
             },

@@ -118,7 +118,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		<div> 
 	        <p templateId="inputAcSelector">
 	            <label for="eventName"> Event</label>
-	            <input class="acSelector" size="60"  type="text" id="eventLookupName" name="eventLookupName" acGroupName="eventLookup"  value="" />
+	            <input class="acSelector" size="60"  type="text" id="eventLookupName" name="eventLookupName" acGroupName="eventLookup"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
 	        </p>
 	
 		
@@ -214,7 +214,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         //blankSentinel: '${blankSentinel}',
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
-        acTypes: {},
+        acTypes: {"eventLookup":"http://id.loc.gov/ontologies/bibframe/Event"},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
         queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
         subjectURI:"${editConfiguration.subjectUri}",
