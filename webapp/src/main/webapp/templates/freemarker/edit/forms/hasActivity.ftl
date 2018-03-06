@@ -134,11 +134,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 			</div>
 	        <p>
 	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
 	        </p>
 	
 		
-	        <div class="acSelection" acGroupName="group">
+	        <div class="acSelection" acGroupName="agent">
 	            <p class="inline">
 	                <label>${i18n().selected}:</label>
 	                <span class="acSelectionInfo"></span>
@@ -163,7 +163,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		<div> 
 	        <p>
 	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
 	        </p>
 	
 		
