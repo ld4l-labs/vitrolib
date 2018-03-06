@@ -118,9 +118,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		  
              
           <p templateId="inputAcSelector">
-    		<label for="lcshTerm">LC Subject Heading</label>
+    		<label for="lcshLabel">LC Subject Heading</label>
               <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
-              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
+              <input class="acSelector" size="60"  type="text" id="lcshLabel" name="lcshLabel" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
           </p>
 
 
