@@ -18,6 +18,8 @@
             ?instance ?instanceTitle
             ?publicationAgentName ?publicationDate 
             ?mostSpecificType ?mostSpecificTypeLabel
+            ?publicationLocationName
+            ?identifierValue ?identifierType
     
         WHERE {
             ?subject ?property ?instance .
@@ -41,6 +43,17 @@
 			   ?publicationAgent rdfs:label ?publicationAgentName .
 			   ?publicationAgent bib:isAgentOf ?publicationActivity .
 			   }
+			    OPTIONAL {
+              ?publicationActivity schema:location ?publicationLocation .
+              ?publicationLocation rdfs:label ?publicationLocationName . 
+			   }
+            }
+            
+            OPTIONAL {
+            	?instance bibframe:identifiedBy ?identifierUri .
+            	?identifierUri rdf:value ?identifierValue .
+            	?identifierUri vitro:mostSpecificType ?identifierType .
+            	?identifierUri rdf:type bibframe:AudioIssueNumber .
             }
         }
     </query-select>

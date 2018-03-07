@@ -6,6 +6,7 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
+<#assign defaultNamespace = editConfiguration.defaultNamespace />
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -358,7 +359,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"
+        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
+       	defaultNamespace:"${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

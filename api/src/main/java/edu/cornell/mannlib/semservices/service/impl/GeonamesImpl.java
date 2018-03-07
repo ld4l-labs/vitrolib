@@ -10,7 +10,8 @@ import net.sf.json.JSONObject;
 public class GeonamesImpl extends QuestioningAuthority {
 
 	protected final String schemeUri = "http://geonames.org";
-	protected final String authority = "geonames_ld4l_cache";
+	//protected final String authority = "geonames_ld4l_cache";
+	protected final String authority = "geonames_direct";
 
 	public String getAuthority() {
 		return authority;
