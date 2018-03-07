@@ -150,23 +150,34 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
               </select>
       		</p>
-          <p templateId="inputAcSelector">
+      		
+      		
+      		<div> 
+				<div id="vocabSource">
+					<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+	
+				</div>
+		        <p>
+		            <label for="agent"> Person or Organization${requiredHint}</label>
+		            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+		        </p>
+		
+			
+		        <div class="acSelection" acGroupName="agent">
+		            <p class="inline">
+		                <label>${i18n().selected}:</label>
+		                <span class="acSelectionInfo"></span>
+		                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+		                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+		            </p>
+		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+		        </div>
+  			</div>
+      		
+      		
     
-              <input type="hidden"  name="activityLabel" id="activityLabel"/>
-              <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
-          </p>
-
-
-          <div class="acSelection" acGroupName="group" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected}:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
       </div>
       
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
@@ -269,16 +280,26 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                 <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
                 <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
             </p>
-            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  ${flagClearLabelForExisting}="true" />
+            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  />
           </div>
         </div>
-	<!-- Commenting out for now -->
-        <!--div
-          <p>
-            <label for="instanceTitle">Place of Publication</label>
-            <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
-          </p>
-        </div-->
+		<div> 
+	        <p>
+	            <label for="location"> Location</label>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="location">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	        </div>
+  		</div>
         
         <div>
           <p>

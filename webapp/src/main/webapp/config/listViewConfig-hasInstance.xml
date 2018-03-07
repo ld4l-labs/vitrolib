@@ -14,6 +14,8 @@
     	PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
     	PREFIX bibframe: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
     	PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+    	PREFIX schema: &lt;http://schema.org/&gt;
+    	
         SELECT DISTINCT 
             ?instance ?instanceTitle
             ?publicationAgentName ?publicationDate 
