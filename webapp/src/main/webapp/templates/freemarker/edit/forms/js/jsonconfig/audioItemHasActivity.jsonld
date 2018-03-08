@@ -74,15 +74,12 @@
       "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX prov: <http://www.w3.org/ns/prov#>    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   SELECT ?existingAgentName   WHERE {?objectVar bib:hasAgent ?agent .?agent rdfs:label ?existingAgentName . }    ",
       "customform:varName": "agentName"
     },
-    {
+   	{
       "@id": "customform:whcor_agentListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
+      ]
     },
     {
       "@id": "customform:whcor_fieldAgentType",

@@ -3,7 +3,13 @@ var displayConfig = {
 	"fieldDisplayProperties" : {
 		"activityLabel": {"label":"Activity Label", "hidden":"true"},
 		"agentName": {"label": "Agent Name", "autocomplete":"true", "labelFieldFor": "agent", "type":"http://xmlns.com/foaf/0.1/Agent"},
-		"agentType":{"label": "Agent Type"},
+		"agentType":{
+			"label": "Agent Type",
+			"constantList": [{"uri":"http://bibliotek-o.org/ontology/Meeting", "label":"Meeting"},
+			{"uri":"http://xmlns.com/foaf/0.1/Organization", "label":"Organization"},
+			{"uri":"http://xmlns.com/foaf/0.1/Agent", "label":"Agent"},
+			{"uri":"http://xmlns.com/foaf/0.1/Person", "label":"Person"}]
+		}, 
 		"activityType": {"label": "Activity Type",
 		"constantList": [{"label":"Donor","uri":"http://bibliotek-o.org/ontology/DonorActivity"},
 		{"uri":"http://bibliotek-o.org/ontology/AcquisitionActivity","label":"Acquisition Activity"}]}

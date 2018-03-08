@@ -21,7 +21,7 @@
             ?publicationAgentName ?publicationDate 
             ?mostSpecificType ?mostSpecificTypeLabel
             ?publicationLocationName
-            ?identifierValue ?identifierType
+            (group_concat(DISTINCT ?identifierValue) AS ?identifierValues)
     
         WHERE {
             ?subject ?property ?instance .
@@ -57,7 +57,7 @@
             	?identifierUri vitro:mostSpecificType ?identifierType .
             	?identifierUri rdf:type bibframe:AudioIssueNumber .
             }
-        }
+        } GROUP BY  ?instance ?instanceTitle ?publicationAgentName ?publicationDate ?mostSpecificType ?mostSpecificTypeLabel ?publicationLocationName
     </query-select>
     
     <template>propStatement-hasInstance.ftl</template>

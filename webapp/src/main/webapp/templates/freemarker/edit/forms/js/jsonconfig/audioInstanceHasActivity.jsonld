@@ -77,12 +77,9 @@
     {
       "@id": "customform:whcor_agentListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
+      ]
     },
     {
       "@id": "customform:whcor_fieldAgentType",
@@ -94,9 +91,6 @@
         "@id": "customform:whcor_agentListFieldOptions"
       },
       "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
-      "customform:validator": {
-        "@id": "customform:whcor_nonemptyValidator"
-      },
       "customform:varName": "agentType"
     },
     {

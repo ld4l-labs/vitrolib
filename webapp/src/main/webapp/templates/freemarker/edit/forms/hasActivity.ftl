@@ -221,7 +221,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
         primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}"
+        defaultNamespace:"${defaultNamespace}",
+        eraseLabelsForFields:["locationName", "agentName"]
+
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

@@ -22,8 +22,8 @@
    <#if statement.publicationLocationName??>
    , ${statement.publicationLocationName}
    </#if>
-   <#if statement.identifierValue??>
-   , Audio Issue Number: ${statement.identifierValue}
+   <#if statement.identifierValues??>
+   , Audio Issue Number(s): ${statement.identifierValues}
    </#if>
 </#if>
 

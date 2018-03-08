@@ -290,6 +290,9 @@ var customForm = {
         	}
         	
             customForm.deleteAcHelpText();
+            //in case of edit mode, erase labels for fields that have existing labels
+            //useful for external autocomplete since we may want to remove 
+            //customForm.eraseFieldValues();
         });
     },
     
@@ -788,7 +791,39 @@ var customForm = {
 			}
 		}
 		return item["uri"];
+	},
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
+	eraseFieldValues:function() {
+		if("editMode" in customForm && customForm["editMode"] == "edit"
+			&& "eraseLabelsForFields" in customForm) {
+			//Get existing values and replace existing value there
+			var existingValuesInput = $("input[name='existingValuesRetrieved']");
+			//create a JSON object from this
+			if(existingValuesInput) {
+				var existingJson = JSON.parse(existingValuesInput);
+				if(existingJson) {
+					var eraseLabelsArray = customForm["eraseLabelsForFields"];
+					var label, l;
+					var len = eraseLabelsArray.length;
+					for(l = 0; l < len; l++) {
+						label = eraseLabelsArray[l];
+						if(label in existingJson) {
+							existingJson[label] = [""]; //set to empty
+						}
+					}
+				}
+			}
+		}
 	}
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
 	
 };
 

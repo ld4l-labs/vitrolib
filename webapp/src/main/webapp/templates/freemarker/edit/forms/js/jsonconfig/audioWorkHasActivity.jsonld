@@ -68,12 +68,9 @@
     {
       "@id": "customform:whcor_agentListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
+      ]
     },
     {
       "@id": "customform:whcor_fieldAgentType",
