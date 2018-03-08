@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Date;
@@ -25,6 +27,8 @@ import javax.servlet.ServletContextListener;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.ResourceFactory;
+import org.apache.jena.vocabulary.RDF;
 
 import edu.cornell.mannlib.vitro.webapp.modelaccess.ModelAccess;
 import edu.cornell.mannlib.vitro.webapp.startup.StartupStatus;
@@ -63,10 +67,62 @@ public class NotificationSetup implements ServletContextListener {
 	            System.out.println("NOTIFY");
 	            readInFile();
 	            readInbox();
+	            testPostToInbox();
 	            //timer.cancel(); //Terminate the timer thread
+	            
 	        }
 	        
-	    	private void readInFile() {
+	    	private void testPostToInbox() {
+	    		try {
+	    		String url="http://url.com";
+	    		URL object=new URL("https://linkedresearch.org/inbox/ld4l/");
+
+	    		HttpURLConnection con = (HttpURLConnection) object.openConnection();
+	    		con.setDoOutput(true);
+	    		con.setDoInput(true);
+	    		con.setRequestProperty("Content-Type", "application/ld+json");
+	    		con.setRequestProperty("Accept", "application/ld+json");
+	    		con.setRequestMethod("POST");
+	    		
+	    		
+	    		Model m = ModelFactory.createDefaultModel();
+	    		m.add(ResourceFactory.createResource("http://example.org"), RDF.type, ResourceFactory.createResource("http://ldnexampletest.org"));
+	    		StringWriter s = new StringWriter();
+	    		m.write(s, "JSON-LD");
+	    		System.out.println(s.toString());
+	    		String output = new String();
+	    		s.write(output);
+	    		OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
+	    		wr.write(s.toString());
+	    		wr.flush();
+	    		
+	    		int responseCode = con.getResponseCode();
+	    		System.out.println("POST Response Code :: " + responseCode);
+
+	    		if (responseCode == HttpURLConnection.HTTP_OK) { //success
+	    			BufferedReader in = new BufferedReader(new InputStreamReader(
+	    					con.getInputStream()));
+	    			String inputLine;
+	    			StringBuffer response = new StringBuffer();
+
+	    			while ((inputLine = in.readLine()) != null) {
+	    				response.append(inputLine);
+	    			}
+	    			in.close();
+
+	    			// print result
+	    			System.out.println(response.toString());
+	    		} else {
+	    			System.out.println("POST request not worked");
+	    		}
+	    		} catch(Exception ex) {
+	    			System.out.println("Error occurred");
+	    		}
+	    	
+				
+			}
+
+			private void readInFile() {
 	    		String fileName = "C:/Users/hjk54/Documents/Ld4L/NotificationTest/NotificationTest.txt";
 	    		
 	    		try {      
