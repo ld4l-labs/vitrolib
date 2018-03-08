@@ -60,15 +60,16 @@ public class NotificationSetup implements ServletContextListener {
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
 		// Nothing to tear down.
+		timer.cancel();
 	}
 	
 	 class NotificationTask extends TimerTask {
 	        public void run() {
 	            System.out.println("NOTIFY");
-	            readInFile();
-	            readInbox();
+	            //readInFile();
+	            //readInbox();
 	            testPostToInbox();
-	            //timer.cancel(); //Terminate the timer thread
+	            timer.cancel(); //Terminate the timer thread
 	            
 	        }
 	        
@@ -99,7 +100,7 @@ public class NotificationSetup implements ServletContextListener {
 	    		int responseCode = con.getResponseCode();
 	    		System.out.println("POST Response Code :: " + responseCode);
 
-	    		if (responseCode == HttpURLConnection.HTTP_OK) { //success
+	    		if (responseCode == 201) { //success
 	    			BufferedReader in = new BufferedReader(new InputStreamReader(
 	    					con.getInputStream()));
 	    			String inputLine;
@@ -115,9 +116,13 @@ public class NotificationSetup implements ServletContextListener {
 	    		} else {
 	    			System.out.println("POST request not worked");
 	    		}
+	    		wr.close();
+
+	    		con.disconnect();
 	    		} catch(Exception ex) {
 	    			System.out.println("Error occurred");
 	    		}
+	    	
 	    	
 				
 			}
