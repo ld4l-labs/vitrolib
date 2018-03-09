@@ -59,7 +59,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Work</h2>
+<h2>Content Listing</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -128,16 +128,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         </p>
       </div>
       
-      <#-- Language -->
-      
-        <div>
-      <p>
-      <label for="language">Language ${requiredHint}</label>
-           <select id="language" name="language" role="select">
-
-              </select>
-        </p>
-      </div>
+     
     <#--  Autocomplete field for AUTHOR using LOC NAF field -->
 
       <div>
@@ -194,7 +185,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
              
           <p templateId="inputAcSelector">
     		<label for="lgftTerm">LC Genreform</label>
-              <input type="hidden"  name="lgftLabel" id="lcshLabel"/>
               <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
           </p>
 
