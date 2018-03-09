@@ -12,3 +12,8 @@
 <http://id.loc.gov/ontologies/bibframe/Instance>
       vitro:customDisplayViewAnnot
               "individual-instance.ftl"^^xsd:string .
+              
+              
+<http://id.loc.gov/ontologies/bibframe/Item>
+      vitro:customDisplayViewAnnot
+              "individual-item.ftl"^^xsd:string .
