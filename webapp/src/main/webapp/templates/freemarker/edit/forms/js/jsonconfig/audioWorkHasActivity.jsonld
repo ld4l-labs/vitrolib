@@ -82,7 +82,7 @@
       "customform:fieldOptions": {
         "@id": "customform:whcor_agentListFieldOptions"
       },
-      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .  FILTER(str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Person\" || str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Agent\" || str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Organization\" || str(?existingAgentType) = \"http://bibliotek-o.org/ontology/Meeting\")}    ",
       "customform:varName": "agentType"
     },
     {
