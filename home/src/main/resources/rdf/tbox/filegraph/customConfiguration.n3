@@ -31,4 +31,15 @@
 #<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewEventTemplate.ftl";
 #<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewEvent.jsonld" .
 
+##Checking if type will automatically load
+<http://id.loc.gov/ontologies/bibframe/Instance>  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewWorkTemplate.ftl";
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewWork.jsonld" .
+
+<http://id.loc.gov/ontologies/bibframe/Item>  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewWorkTemplate.ftl";
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewWork.jsonld" .
+
+
+
 

@@ -292,6 +292,7 @@ var customForm = {
             customForm.deleteAcHelpText();
             //in case of edit mode, erase labels for fields that have existing labels
             //useful for external autocomplete since we may want to remove 
+            //useful for label but not other statements that need to remain
             //customForm.eraseFieldValues();
         });
     },
@@ -803,8 +804,8 @@ var customForm = {
 			//Get existing values and replace existing value there
 			var existingValuesInput = $("input[name='existingValuesRetrieved']");
 			//create a JSON object from this
-			if(existingValuesInput) {
-				var existingJson = JSON.parse(existingValuesInput);
+			if(existingValuesInput && existingValuesInput.val() != "") {
+				var existingJson = JSON.parse(existingValuesInput.val());
 				if(existingJson) {
 					var eraseLabelsArray = customForm["eraseLabelsForFields"];
 					var label, l;
@@ -815,6 +816,9 @@ var customForm = {
 							existingJson[label] = [""]; //set to empty
 						}
 					}
+					//Set the input value
+					var stringifiedJson = JSON.stringify(existingJson);
+					existingValuesInput.val(stringifiedJson);
 				}
 			}
 		}

@@ -40,9 +40,10 @@
         "forms:FormComponent",
         "forms:OptionalN3Pattern"
       ],
-      "customform:prefixes": "@prefix  bib: <http://bibliotek-o.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  @prefix schema: <http://schema.org/> . ",
+      "customform:prefixes": "@prefix  bib: <http://bibliotek-o.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
       "customform:pattern": ["?agent a ?agentType.  ", "?agent rdfs:label ?agentName.",  "?agent foaf:name ?agentName .  ",
-      						"?objectVar schema:location ?location ."," ?location rdfs:label ?locationName . "]
+      						"?objectVar schema:location ?location .", "?location rdfs:label ?locationName . ",
+      						"?location rdf:type gn:Feature ."]
     },
     {
       "@id": "customform:whcor_fieldActivityLabel",

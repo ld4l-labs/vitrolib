@@ -19,7 +19,8 @@
                 <#assign rangeClass = property.rangeUri?substring(property.rangeUri?last_index_of("/")+1)>
             </#if>
         
-        	
+        	<#-- hardcoding removal of preferred title here, can put it back in when need be -->
+        	<#if property.uri != "http://bibliotek-o.org/ontology/hasPreferredTitle">
         	<#--  If faux property OR regular property AND no faux property FOR that property on page -->
         	<#if (property.isFauxProperty == true) || (!property.isFauxProperty == true && !fauxHash?keys?seq_contains(property.uri))>
         
@@ -73,4 +74,5 @@
                 </ul>
             </article> <!-- end property -->
             </#if>
+            </#if> <!-- Not has preferred title-->
         </#list>
