@@ -25,11 +25,6 @@
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual rdf:value ?title .",
 		"?titleIndividual bibframe:titleOf ?subject .",
-		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
-		"?mainTitleElement rdf:type bib:MainTitleElement .",
-		"?mainTitleElement rdf:value ?title .",
-		"?mainTitleElement rdfs:label ?title .",
-		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
 		"?subject rdf:type ?workType .",
 		"?subject dcterms:language ?language ."
       ],
@@ -76,6 +71,9 @@
 		"?publicationActivity rdf:type bib:PublicationActivity .",
 		"?publicationActivity dcterms:date ?publicationDate .",
 		"?publicationActivity rdfs:label ?publicationActivityLabel .",
+		"?publicationActivity schema:location ?location .",
+		"?location rdfs:label ?locationName . ",
+		"?location rdf:type gn:Feature .",
 		"?instance rdf:type ?instanceType .",
 		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
 		"?instance bibframe:identifiedBy ?issueIdentifier .",
@@ -99,9 +97,14 @@
 		"?lcsh rdf:type owl:Thing .",
 		"?instance bibframe:hasItem ?item .",
 		"?item rdf:type bibframe:Item .",
-		"?item rdfs:label ?instanceTitle. "
+		"?item rdfs:label ?instanceTitle. ",
+		"?item bibframe:title ?itemTitleIndividual .",
+		"?itemTitleIndividual rdf:type bibframe:Title .",
+		"?itemTitleIndividual rdfs:label ?instanceTitle .",
+		"?itemTitleIndividual rdf:value ?instanceTitle .",
+		"?itemTitleIndividual bibframe:titleOf ?item ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
     },
     {
       "@id": "customform:addWork_subject",
@@ -426,6 +429,31 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "item"
+    },
+     {
+      "@id": "customform:whcor_itemTitleIndividual",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "itemTitleIndividual"
+    },
+     {
+      "@id": "customform:locationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "location"
+    },
+     {
+      "@id": "customform:locationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "locationName"
     }
    ]
 }

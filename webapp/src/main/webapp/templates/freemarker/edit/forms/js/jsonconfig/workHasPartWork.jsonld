@@ -26,11 +26,7 @@
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual rdf:value ?title .",
 		"?titleIndividual bibframe:titleOf ?objectVar .",
-		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
-		"?mainTitleElement rdf:type bib:MainTitleElement .",
-		"?mainTitleElement rdf:value ?title .",
-		"?mainTitleElement rdfs:label ?title .",
-		"?mainTitleElement dcterms:isPartOf ?titleIndividual ."
+		"?objectVar rdf:type ?workType ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -41,10 +37,21 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-      
-		
+		"?objectVar dcterms:language ?language .",
+		"?objectVar bib:hasActivity ?activity .",
+		"?activity rdf:type ?activityType.",
+		"?activity rdfs:label ?activityLabel.",
+		"?activity bib:hasAgent ?agent .", 
+		"?activity bib:isActivityOf ?objectVar .",
+		"?agent rdf:type foaf:Agent.",
+		"?agent foaf:name ?agentName.",
+		"?agent rdfs:label ?agentName .",
+		"?agent bib:isAgentOf ?activity .",
+		"?objectVar dcterms:subject ?lgft.",
+		"?lgft rdfs:label ?lgftTerm .",
+		"?lgft rdf:type owl:Thing ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
     },
     {
       "@id": "customform:addWork_object",
@@ -64,16 +71,7 @@
       "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   SELECT ?existingTitle WHERE {  ?objectVar  bibframe:title ?titleIndividual .  ?titleIndividual rdf:value ?existingTitle . }   ",
       "customform:varName": "title"
     },
-     {
-      "@id": "customform:addWork_mainTitleElement",
-      "@type": [
-        "forms:FormComponent",
-        "forms:UriField"
-      ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   PREFIX dcterms: <http://purl.org/dc/terms/> SELECT ?existingMainTitleElement WHERE {  ?objectVar  bibframe:title ?titleIndividual .  ?titleIndividual dcterms:hasPart ?existingMainTitleElement . }   ",
-      "customform:mayUseNewResource": true,
-      "customform:varName": "mainTitleElement"
-    },
+    
      {
       "@id": "customform:addWork_titleIndividual",
       "@type": [
@@ -83,6 +81,87 @@
       "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   PREFIX dcterms: <http://purl.org/dc/terms/> SELECT ?existingTitleIndividual WHERE {  ?objectVar  bibframe:title ?existingTitleIndividual . }   ",
 	  "customform:mayUseNewResource": true,
       "customform:varName": "titleIndividual"
+    },
+     {
+      "@id": "customform:whcor_lgft",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lgft"
+    },
+    {
+      "@id": "customform:whcor_lgftTerm",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "lgftTerm"
+    },
+     {
+      "@id": "customform:whcor_activityType",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:varName": "activityType"
+    },
+        {
+      "@id": "customform:whcor_activityLabel",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "activityLabel"
+    },
+     {
+      "@id": "customform:whcor_workActivity",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "activity"
+    },
+    {
+      "@id": "customform:whcor_workAgent",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "agent"
+    },
+    {
+      "@id": "customform:whcor_workAgentName",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "agentName"
+    },
+     {
+      "@id": "customform:addWork_workType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "workType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_workTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_workTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Work"
+      }
     }
     
    ]

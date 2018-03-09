@@ -290,6 +290,10 @@ var customForm = {
         	}
         	
             customForm.deleteAcHelpText();
+            //in case of edit mode, erase labels for fields that have existing labels
+            //useful for external autocomplete since we may want to remove 
+            //useful for label but not other statements that need to remain
+            //customForm.eraseFieldValues();
         });
     },
     
@@ -319,13 +323,20 @@ var customForm = {
                 if($(selectedObj).attr("acUrl")) {
                 	acUrl = $(selectedObj).attr("acUrl");
                 }
-                
+                var groupName = $(selectedObj).attr('acGroupName');
+                var selectedSearchType = null;
+                if("acTypes" in customForm && groupName in customForm.acTypes) {
+                	selectedSearchType = customForm.acTypes[groupName];
+                }
+
                 
                 $.ajax({
                     url: acUrl,
                     dataType: 'json',
                     data: {
-                        searchTerm: request.term
+                        searchTerm: request.term,
+                        term: request.term, //used by internal autocomplete
+                        type:selectedSearchType //used for internal search and ignored by other search services
                     },
                     complete: function(xhr, status) {
                         // Not sure why, but we need an explicit json parse here. 
@@ -338,9 +349,14 @@ var customForm = {
                         //if(customForm.doRemoveConceptSubclasses()) {
                         //	filteredResults = customForm.removeConceptSubclasses(filteredResults);
                         //}
-
-                        customForm.acCache[request.term] = filteredResults["conceptList"];
-                        response(filteredResults["conceptList"]);
+                        //TODO: More robust handling here based on type of request - handling both internal autocomplete and external concept service here
+                        if(filteredResults != null && "conceptList" in filteredResults) {
+                        	customForm.acCache[request.term] = filteredResults["conceptList"];
+                        	response(filteredResults["conceptList"]);
+                        } else {
+                        	customForm.acCache[request.term] = filteredResults;
+                        	response(filteredResults);
+                        }
                     }
                 });
             },
@@ -776,7 +792,42 @@ var customForm = {
 			}
 		}
 		return item["uri"];
+	},
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
+	eraseFieldValues:function() {
+		if("editMode" in customForm && customForm["editMode"] == "edit"
+			&& "eraseLabelsForFields" in customForm) {
+			//Get existing values and replace existing value there
+			var existingValuesInput = $("input[name='existingValuesRetrieved']");
+			//create a JSON object from this
+			if(existingValuesInput && existingValuesInput.val() != "") {
+				var existingJson = JSON.parse(existingValuesInput.val());
+				if(existingJson) {
+					var eraseLabelsArray = customForm["eraseLabelsForFields"];
+					var label, l;
+					var len = eraseLabelsArray.length;
+					for(l = 0; l < len; l++) {
+						label = eraseLabelsArray[l];
+						if(label in existingJson) {
+							existingJson[label] = [""]; //set to empty
+						}
+					}
+					//Set the input value
+					var stringifiedJson = JSON.stringify(existingJson);
+					existingValuesInput.val(stringifiedJson);
+				}
+			}
+		}
 	}
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
 	
 };
 

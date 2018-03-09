@@ -14,10 +14,14 @@
     	PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
     	PREFIX bibframe: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
     	PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+    	PREFIX schema: &lt;http://schema.org/&gt;
+    	
         SELECT DISTINCT 
             ?instance ?instanceTitle
             ?publicationAgentName ?publicationDate 
             ?mostSpecificType ?mostSpecificTypeLabel
+            ?publicationLocationName
+            (group_concat(DISTINCT ?identifierValue) AS ?identifierValues)
     
         WHERE {
             ?subject ?property ?instance .
@@ -41,8 +45,19 @@
 			   ?publicationAgent rdfs:label ?publicationAgentName .
 			   ?publicationAgent bib:isAgentOf ?publicationActivity .
 			   }
+			    OPTIONAL {
+              ?publicationActivity schema:location ?publicationLocation .
+              ?publicationLocation rdfs:label ?publicationLocationName . 
+			   }
             }
-        }
+            
+            OPTIONAL {
+            	?instance bibframe:identifiedBy ?identifierUri .
+            	?identifierUri rdf:value ?identifierValue .
+            	?identifierUri vitro:mostSpecificType ?identifierType .
+            	?identifierUri rdf:type bibframe:AudioIssueNumber .
+            }
+        } GROUP BY  ?instance ?instanceTitle ?publicationAgentName ?publicationDate ?mostSpecificType ?mostSpecificTypeLabel ?publicationLocationName
     </query-select>
     
     <template>propStatement-hasInstance.ftl</template>

@@ -111,59 +111,59 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	<br/>
 
 
-	<h4 class="services">Add activity/role</h4>
+	<h4 class="services">Add event</h4>
   
   	<div>
-  		<p>
-  		<label for="activityType">Activity Type </label>
-  			   <select id="activityType" name="activityType" role="select">
-                
-            	</select>
-        </p>
-  		</div>
-  
- 
- 		
- 		
-		<div> 
-			<div id="vocabSource">
-				<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
-
-			</div>
-	        <p>
-	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+  		<p> Lookup existing locally created event </p>
+  		<div> 
+	        <p templateId="inputAcSelector">
+	            <label for="eventName"> Event</label>
+	            <input class="acSelector" size="60"  type="text" id="eventLookupName" name="eventLookupName" acGroupName="eventLookup"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
 	        </p>
 	
 		
-	        <div class="acSelection" acGroupName="agent">
+	        <div class="acSelection" acGroupName="eventLookup" templateId="literalSelection">
 	            <p class="inline">
-	                <label>${i18n().selected}:</label>
+	                <label>${i18n().selected} Event:</label>
 	                <span class="acSelectionInfo"></span>
 	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
 	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 	            </p>
-	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+	            <input class="acUriReceiver" type="hidden" id="eventUri" name="eventUri" value=""  ${flagClearLabelForExisting}="true" />
 	        </div>
   		</div>
- 		
- 		
- 		
- 		<div>
+  		
+  		<p> OR Create a new event below:
+  		
+  		<div> 
+	        <p>
+	            <label for="eventName">Event label</label>
+	            <input size="60"  type="text" id="eventName" name="eventName" value="" />
+	        </p>
+  		</div>
+  		
+  		<div>
   		<p>
-  		<label for="agentType">Agent Type </label>
-  			   <select id="agentType" name="agentType" role="select">
+  		<label for="eventType">Event Type</label>
+  			   <select id="eventType" name="eventType" role="select">
                 
             	</select>
         </p>
   		</div>
-  
+  		
   		<div> 
 	        <p>
-	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	            <label for="eventName">Date of the event</label>
+	            <input size="60"  type="text" id="eventDate" name="eventDate" value="" />
+	        </p>
+  		</div>
+  		
+ 
+ 		
+		<div> 
+	        <p>
+	            <label for="location">Location</label>
+	            <input class="acSelector" size="60"  type="text" id="eventLocationName" name="eventLocationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
 	        </p>
 	
 		
@@ -174,13 +174,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
 	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 	            </p>
-	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	            <input class="acUriReceiver" type="hidden" id="eventLocation" name="eventLocation" value=""  />
 	        </div>
   		</div>
   
-  
-  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
-    
+ 		
+ 		    
     <div id="errors" name="errors"></div>
     
    
@@ -215,15 +214,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         //blankSentinel: '${blankSentinel}',
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
-        acTypes: {},
+        acTypes: {"eventLookup":"http://id.loc.gov/ontologies/bibframe/Event"},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
         queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
         primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
-
+        defaultNamespace:"${defaultNamespace}", 
+        eraseLabelsForFields:["eventLocationName"]
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

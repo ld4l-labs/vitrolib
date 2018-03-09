@@ -59,7 +59,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Work</h2>
+<h2>Content Listing</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -128,16 +128,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         </p>
       </div>
       
-      <#-- Language -->
-      
-        <div>
-      <p>
-      <label for="language">Language ${requiredHint}</label>
-           <select id="language" name="language" role="select">
-
-              </select>
-        </p>
-      </div>
+     
     <#--  Autocomplete field for AUTHOR using LOC NAF field -->
 
       <div>
@@ -187,140 +178,34 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
 		        </div>
   			</div>
+  			
+  			  <div>
+      	
+      		  <!-- Hardcoding in genre forms -->
+             
+          <p templateId="inputAcSelector">
+    		<label for="lgftTerm">LC Genreform</label>
+              <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
+          </p>
+
+
+          <div class="acSelection" acGroupName="lgftGroup" templateId="literalSelection">
+              <p class="inline">
+                  <label>${i18n().selected} Genreform:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="lgft" name="lgft" value=""  />
+              <#--  $ {flagClearLabelForExisting}="true"  -->
+          </div>
+      </div>
       		
       		
     
       </div>
       
-      <#--  Autocomplete field for Subject Headings using LOC SH field -->
-
-      <div>
-      	
-      		  
-             
-          <p templateId="inputAcSelector">
-    		<label for="lcshTerm">LC Subject Heading</label>
-              <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
-              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
-          </p>
-
-
-          <div class="acSelection" acGroupName="lcshGroup" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected} Subject:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="lcsh" name="lcsh" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
       
-      
-      <#-- '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames' -->
-
-      <#--  Instance fields are in their own field set -->
-      <fieldset class="workform__fieldset">
-        <legend class="workform__legend"><strong>Has Instance</strong> (RDA Manifestation) </legend>
-
-        <div>
-          <p>
-            <label for="instanceTitle">Title</label>
-            <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
-          </p>
-        </div>
-        
-        <div>
-          <p>
-            <label for="statementResponsibility">Statement of Responsibility</label>
-            <input size="60"  type="text" id="statementResponsibility" name="statementResponsibility" value="" />
-          </p>
-        </div>
-
-		<#-- Instance Type -->
-	<div>
-      <p><#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
-
-
-      		<label for="instanceType">Type</label>
-           <select id="instanceType" name="instanceType" role="select">
-
-              </select>
-        </p>
-      </div>
-      
-      <div>
-          <p>
-            <label for="issueNumber">Issue Number</label>
-            <input size="60"  type="text" id="issueNumber" name="issueNumber" value="" />
-          </p>
-        </div>
-      
-         <div>
-          <p>
-            <label for="issueNumber">Matrix Number</label>
-            <input size="60"  type="text" id="matrixNumber" name="matrixNumber" value="" />
-          </p>
-        </div>
-        
-       <div>
-          <p>
-            <label for="issueNumber">UPC</label>
-            <input size="60"  type="text" id="upc" name="upc" value="" />
-          </p>
-        </div>
-
-       <div>
-          <p>
-            <label for="issueNumber">EAN</label>
-            <input size="60"  type="text" id="ean" name="ean" value="" />
-          </p>
-        </div>
-
-
-        <div>
-          <p>
-            <label for="publisherAgentName"> Publisher</label>
-            <input class="acSelector" size="60"  type="text" id="publisherAgentName" name="publisherAgentName" acGroupName="publisherGroup"  value="" />
-          </p>
-
-          <div class="acSelection" acGroupName="publisherGroup" templateId="literalSelection">
-            <p class="inline">
-                <label>${i18n().selected}:</label>
-                <span class="acSelectionInfo"></span>
-                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-            </p>
-            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  />
-          </div>
-        </div>
-		<div> 
-	        <p>
-	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="location">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
-	        </div>
-  		</div>
-        
-        <div>
-          <p>
-            <label for="instanceTitle">Date of Publication</label>
-            <input size="60"  type="text" id="publicationDate" name="publicationDate" value="" />
-          </p>
-        </div>
-       <input type="hidden" name="publicationActivityLabel" id="publicationActivityLabel" value=""/> 
-      </fieldset>
     </div>
 
 
@@ -334,46 +219,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     </form>
 
 
-    <#--  Form field option, Simple literal -->
-    <#--  Need to handle required vs. non-required, also put these in their own templates -->
-      <div templateId="literalTemplate" style="display:none" >
-          <p>
-              <label for=""></label>
-              <input size="60"  type="text" id="" name="" value="" />
-          </p>
 
-
-
-      </div>
-
-      <#--  Autocomplete literal template -->
-
-    <div templateId="autocompleteLiteralTemplate" style="display:none">
-          <p templateId="inputAcSelector">
-              <label for=""> ${requiredHint}</label>
-              <input class="acSelector" size="60"  type="text" id="" name="" acGroupName="group"  value="" />
-          </p>
-
-
-          <div class="acSelection" acGroupName="group" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected}:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="" name="" value=""  ${flagClearLabelForExisting}="true" />
-          </div>
-      </div>
-
-      <div templateId="selectDropdownTemplate" style="display:none">
-      <p>
-      <label for=""> </label>
-           <select id="" name="" role="select">
-
-              </select>
-        </p>
-      </div>
+   
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
 

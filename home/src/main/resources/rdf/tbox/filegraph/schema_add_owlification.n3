@@ -4,7 +4,7 @@
 
 <http://schema.org/recordedAt> rdf:type owl:ObjectProperty .
 <http://schema.org/recordedIn> rdf:type owl:ObjectProperty .
-<http://schema.org/duration> rdf:type owl:ObjectProperty .
+<http://schema.org/duration> rdf:type owl:DatatypeProperty .
 <http://schema.org/location> rdf:type owl:ObjectProperty .
 
 <http://schema.org/CreativeWork> rdf:type owl:Class; rdfs:subClassOf <http://schema.org/Event> .

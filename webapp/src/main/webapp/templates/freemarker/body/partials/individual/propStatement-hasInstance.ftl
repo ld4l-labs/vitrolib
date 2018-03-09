@@ -16,8 +16,14 @@
    <#if statement.publicationAgentName??>
    	Publisher: ${statement.publicationAgentName}
    </#if>
-   <#if statement.publicationDate??>
-   ${statement.publicationDate}
+ 	<#if statement.publicationDate??>
+    , ${statement.publicationDate}
+   </#if>
+   <#if statement.publicationLocationName??>
+   , ${statement.publicationLocationName}
+   </#if>
+   <#if statement.identifierValues??>
+   , Audio Issue Number(s): ${statement.identifierValues}
    </#if>
 </#if>
 

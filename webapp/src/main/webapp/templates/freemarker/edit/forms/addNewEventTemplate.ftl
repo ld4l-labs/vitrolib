@@ -111,11 +111,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	<br/>
 
 
-	<h4 class="services">Add activity/role</h4>
+	<h4 class="services">Recorded At</h4>
+	<div> Lookup event </div>
   
-  	<div>
+  	<div> Create new event
   		<p>
-  		<label for="activityType">Activity Type </label>
+  		<label for="eventType">Event Type</label>
   			   <select id="activityType" name="activityType" role="select">
                 
             	</select>
@@ -134,11 +135,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 			</div>
 	        <p>
 	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
 	        </p>
 	
 		
-	        <div class="acSelection" acGroupName="agent">
+	        <div class="acSelection" acGroupName="group">
 	            <p class="inline">
 	                <label>${i18n().selected}:</label>
 	                <span class="acSelectionInfo"></span>
@@ -163,7 +164,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		<div> 
 	        <p>
 	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="group"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
 	        </p>
 	
 		
@@ -221,9 +222,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
         primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
-
+        defaultNamespace:"${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
