@@ -8,7 +8,8 @@ var displayConfig = {
 			"constantList": [{"uri":"http://bibliotek-o.org/ontology/Meeting", "label":"Meeting"},
 			{"uri":"http://xmlns.com/foaf/0.1/Organization", "label":"Organization"},
 			{"uri":"http://xmlns.com/foaf/0.1/Agent", "label":"Agent"},
-			{"uri":"http://xmlns.com/foaf/0.1/Person", "label":"Person"}]
+			{"uri":"http://xmlns.com/foaf/0.1/Person", "label":"Person"}],
+			"defaultValue":"uri":"http://xmlns.com/foaf/0.1/Person"
 		}, 
 		"activityType": {
 			"label": "Activity Type", 

@@ -108,7 +108,31 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <section id="addNewWork" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="addNewWork" class="customForm noIE67" action="${submitUrl}"  role="add work" >
+<form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
+
+
+	<div id="workActionTypeOptions">
+		<input name="workActionType" type="radio" checked="checked" value="lookupLocalWork"/>Lookup local work
+		<input name="workActionType type="radio" value="createNewWork"/>Create new work
+	</div>
+	
+	<div id="lookupLocalWork">
+          <p>
+              <label for=""> Existing Work: </label>
+              <input class="acSelector" size="60"  type="text" id="objectLabel" name="objectLabel" acGroupName="localwork"  value="" />
+          </p>
+
+
+          <div class="acSelection" acGroupName="localwork">
+              <p class="inline">
+                  <label>${i18n().selected}:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="objectVar" name="objectVar" value=""  ${flagClearLabelForExisting}="true" />
+          </div>
+      </div>
 
     <div id="formcontent">
     <#--  New Work fields -->
@@ -156,11 +180,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		
       		
       		<div> 
+				<div id="actionTypeOptions">
+					<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
+					<input type="radio" name="actionType"  value="create">Create new agent
+				</div>
 				<div id="vocabSource">
-					<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
-	
+					<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 				</div>
 		        <p>
 		            <label for="agent"> Person or Organization${requiredHint}</label>
@@ -267,4 +294,5 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/workHasPart.js"></script>')}

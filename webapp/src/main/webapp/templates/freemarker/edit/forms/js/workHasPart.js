@@ -4,7 +4,7 @@
 //And NOT generating fields
 //For now, we are only using this when creating an entirely new object, but later will incorporate editing functionality as well
 
-var hasActivity = {
+var workHasPart = {
 		  onLoad: function() {
 	    	 	this.mixIn();  
 	    	 	this.initObjects();
@@ -20,15 +20,15 @@ var hasActivity = {
 	        },
 	        
 	        initObjects:function() {
-	        	this.searchUrlButton = $("input[name='selectAcUrl']");
-	        	this.formSubmit = $("input[name='formSubmit'");
-	        	this.actionType = $("input[name='actionType']");
+	        	this.workActionType = $("input[name='workActionType']");
+	        	this.newWorkForm = $("div#formcontent");
+	        	this.lookupWorkDiv = $("#lookupLocalWork");
 	        },
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
-	        	//Make invisible for now
-	        	$("div#agentTypeDropdown").hide();
+	        	//Lookup is checked
+	        	this.newWorkForm.hide();
 	                           
 	        },
 	      
@@ -43,12 +43,16 @@ var hasActivity = {
 	        	});
 	        	
 	        	//If create new chosen, then show lookupType
-	        	this.actionType.change(function() {
+	        	this.workActionType.change(function() {
 	        		var actionTypeVal = $(this).val();
-	        		if(actionTypeVal == "create")
-	        			$("#agentType").show();
-	        		else
-	        			$("#agentType").hide();
+	        		if(actionTypeVal == "createNewWork") {
+	        			workHasPart.newWorkForm.show() ;
+	        			workHasPart.lookupWorkDiv.hide();
+	        		}
+	        		else {
+	        			workHasPart.newWorkForm.hide() ;
+	        			workHasPart.lookupWorkDiv.show();
+	        		}
 	        	});
 	        	
 	        	this.formSubmit.click(function() {
@@ -71,5 +75,5 @@ var hasActivity = {
 };
 
 $(document).ready(function() {   
-    hasActivity.onLoad();
+    workHasPart.onLoad();
 }); 

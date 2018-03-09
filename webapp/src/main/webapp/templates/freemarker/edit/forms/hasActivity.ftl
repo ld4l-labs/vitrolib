@@ -126,10 +126,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
 		<div> 
+			<div id="actionTypeOptions">
+				<input checked="checked" type="radio" name="actionType"  value="lookup"> Lookup agent
+				<input type="radio" name="actionType"  value="create"> Create new agent
+			</div>
 			<div id="vocabSource">
-				<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-				<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+				<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 
 			</div>
 	        <p>
@@ -151,7 +155,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
  		
- 		<div>
+ 		<div role="agentTypeDropdown">
   		<p>
   		<label for="agentType">Agent Type </label>
   			   <select id="agentType" name="agentType" role="select">

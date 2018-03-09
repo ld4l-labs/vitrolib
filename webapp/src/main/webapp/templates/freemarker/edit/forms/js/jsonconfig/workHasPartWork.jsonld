@@ -18,15 +18,8 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-        "?subject ?predicate ?objectVar .",
-        "?objectVar rdfs:label ?title .",
-		"?objectVar  bibframe:title ?titleIndividual .",
-		"?objectVar rdf:type bibframe:Work . ",
-		"?titleIndividual rdf:type bibframe:Title .",
-		"?titleIndividual rdfs:label ?title .",
-		"?titleIndividual rdf:value ?title .",
-		"?titleIndividual bibframe:titleOf ?objectVar .",
-		"?objectVar rdf:type ?workType ."
+        "?subject ?predicate ?objectVar ."
+      
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -37,7 +30,14 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-		"?objectVar dcterms:language ?language .",
+        "?objectVar rdfs:label ?title .",
+		"?objectVar  bibframe:title ?titleIndividual .",
+		"?objectVar rdf:type bibframe:Work . ",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual rdf:value ?title .",
+		"?titleIndividual bibframe:titleOf ?objectVar .",
+		"?objectVar rdf:type ?workType .",
 		"?objectVar bib:hasActivity ?activity .",
 		"?activity rdf:type ?activityType.",
 		"?activity rdfs:label ?activityLabel.",
