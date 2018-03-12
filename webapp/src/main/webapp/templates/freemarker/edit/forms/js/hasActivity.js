@@ -24,6 +24,7 @@ var hasActivity = {
 	        	this.formSubmit = $("input[name='formSubmit'");
 	        	this.actionType = $("input[name='actionType']");
 	        	this.agentTypeDiv = $("div#agentTypeDropdown");
+	        	this.vocabSource = $("div#vocabSource");
 	        },
 
 	        // Initial page setup. Called only at page load.
@@ -46,14 +47,19 @@ var hasActivity = {
 	        	//If create new chosen, then show lookupType
 	        	this.actionType.change(function() {
 	        		var actionTypeVal = $(this).val();
-	        		if(actionTypeVal == "create")
+	        		if(actionTypeVal == "create") {
+	        			hasActivity.vocabSource.hide();
 	        			hasActivity.agentTypeDiv.show();
-	        		else
+	        		}
+	        		else {
+	        			hasActivity.vocabSource.show();
 	        			hasActivity.agentTypeDiv.hide();
+	        		}
 	        	});
 	        	
 	        	this.formSubmit.click(function() {
 	        		hasActivity.copyActivityLabel();
+	        		//TODO: also set agent type for lookup based on value selected for lookup
 	        		return true;
 	        	});
 	        	
