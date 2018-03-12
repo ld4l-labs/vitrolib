@@ -1,10 +1,6 @@
 /* $This file is distributed under the terms of the license in /doc/license.txt$ */
 
-//In this particular case, we are using this JavaScript in the case where we are employing an external template
-//And NOT generating fields
-//For now, we are only using this when creating an entirely new object, but later will incorporate editing functionality as well
-
-var workHasPart = {
+var selectEntity = {
 		  onLoad: function() {
 	    	 	this.mixIn();  
 	    	 	this.initObjects();
@@ -20,29 +16,26 @@ var workHasPart = {
 	        },
 	        
 	        initObjects:function() {
-	        	this.workActionType = $("input[name='workActionType']");
-	        	this.newWorkForm = $("div#formcontent");
-	        	this.lookupWorkDiv = $("#lookupLocalWork");
+	        	this.actionType = $("input[name='actionType']");
+	        	this.newEntityDiv = $("div#actionCreateNew");
+	        	this.lookupEntityDiv = $("div#actionLookupExisting");
 	        },
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
-	        	//Lookup is checked
-	        	this.newWorkForm.hide();
-	                           
 	        },
 	      
 	        bindEventListeners:function() {
 	        	//If create new chosen, then show lookupType
-	        	this.workActionType.change(function() {
+	        	this.actionType.change(function() {
 	        		var actionTypeVal = $(this).val();
-	        		if(actionTypeVal == "createNewWork") {
-	        			workHasPart.newWorkForm.show() ;
-	        			workHasPart.lookupWorkDiv.hide();
+	        		if(actionTypeVal == "createEntity") {
+	        			selectEntity.newEntityDiv.show() ;
+	        			selectEntity.lookupEntityDiv.hide();
 	        		}
 	        		else {
-	        			workHasPart.newWorkForm.hide() ;
-	        			workHasPart.lookupWorkDiv.show();
+	        			selectEntity.newEntityDiv.hide() ;
+	        			selectEntity.lookupEntityDiv.show();
 	        		}
 	        	});
 	        	
@@ -55,5 +48,5 @@ var workHasPart = {
 };
 
 $(document).ready(function() {   
-    workHasPart.onLoad();
+    selectEntity.onLoad();
 }); 

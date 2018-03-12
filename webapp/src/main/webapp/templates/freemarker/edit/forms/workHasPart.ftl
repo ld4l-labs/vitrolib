@@ -113,13 +113,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 	<div id="workActionTypeOptions">
 		<input name="workActionType" type="radio" checked="checked" value="lookupLocalWork"/>Lookup local work
-		<input name="workActionType type="radio" value="createNewWork"/>Create new work
+		<input name="workActionType" type="radio" value="createNewWork"/>Create new work
 	</div>
 	
 	<div id="lookupLocalWork">
           <p>
               <label for=""> Existing Work: </label>
-              <input class="acSelector" size="60"  type="text" id="objectLabel" name="objectLabel" acGroupName="localwork"  value="" />
+              <input class="acSelector" size="60"  type="text" id="objectLabel" name="objectLabel" acGroupName="localwork"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
           </p>
 
 
@@ -181,8 +181,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		
       		<div> 
 				<div id="actionTypeOptions">
-					<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
-					<input type="radio" name="actionType"  value="create">Create new agent
+					<input checked="checked" type="radio" name="actionType" value="lookup">Lookup agent
+					<input type="radio" name="actionType" value="create">Create new agent
 				</div>
 				<div id="vocabSource">
 					<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
@@ -265,7 +265,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         //blankSentinel: '${blankSentinel}',
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
-        acTypes: {},
+        acTypes: {"localwork":"http://id.loc.gov/ontologies/bibframe/Audio"},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
        	defaultNamespace:"${defaultNamespace}"
     };

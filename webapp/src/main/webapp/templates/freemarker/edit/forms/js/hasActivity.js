@@ -23,12 +23,13 @@ var hasActivity = {
 	        	this.searchUrlButton = $("input[name='selectAcUrl']");
 	        	this.formSubmit = $("input[name='formSubmit'");
 	        	this.actionType = $("input[name='actionType']");
+	        	this.agentTypeDiv = $("div#agentTypeDropdown");
 	        },
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
 	        	//Make invisible for now
-	        	$("div#agentTypeDropdown").hide();
+	        	this.agentTypeDiv.hide();
 	                           
 	        },
 	      
@@ -39,16 +40,16 @@ var hasActivity = {
 	        		var agentNameInput = $("#agentName");
 	        		agentNameInput.attr("acUrl", selectedUrl);
 	        		//Also change the value of the agent type dropdown on the basis of what is checked
-	        		hasActivity.setAgentType(selectInput.attr("lookupType"));
+	        		hasActivity.setAgentType(selectedInput.attr("lookupType"));
 	        	});
 	        	
 	        	//If create new chosen, then show lookupType
 	        	this.actionType.change(function() {
 	        		var actionTypeVal = $(this).val();
 	        		if(actionTypeVal == "create")
-	        			$("#agentType").show();
+	        			hasActivity.agentTypeDiv.show();
 	        		else
-	        			$("#agentType").hide();
+	        			hasActivity.agentTypeDiv.hide();
 	        	});
 	        	
 	        	this.formSubmit.click(function() {
