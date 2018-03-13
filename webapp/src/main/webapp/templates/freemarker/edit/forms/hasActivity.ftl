@@ -87,26 +87,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
     <div id="formcontent">
 
-      <#--  Autocomplete field for Subject Headings using LOC SH field -->
-
-     
-      <ul id="existingActivities" style="display:none">
-          	 <li class='conceptHeadings conceptsListContainer'>
-             <div class='container'>
-                 <div class='row'>
-                     <div class='col-12'>
-                         <div class='column conceptLabelInfo'>
-                            <h4>Activity </h4>
-                         </div>
-                         
-                         <div class='column conceptRemoval'>&nbsp;
-                         </div>
-                     </div>
-                 </div>
-             </div>
-    	 	</li>
-      </ul>
-       
+      <#--  Autocomplete field for Subject Headings using LOC SH field --> 
 
 	<br/>
 
@@ -125,19 +106,29 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  
  		
  		
- 		<fieldset>
+ 		<fieldset class="workform__fieldset">
 		<div> 
 			<div id="actionTypeOptions">
-				<input checked="checked" type="radio" name="actionType"  value="lookup"> Lookup agent
-				<input type="radio" name="actionType"  value="create"> Create new agent
+				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
+				<input type="radio" name="actionType"  value="create">Create new agent
 			</div>
+			<br/>
 			
 			<div id="vocabSource">
 				<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
 				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
 				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
-
 			</div>
+			
+			<div id="agentTypeDropdown" role="agentTypeDropdown">
+		  		<p>
+		  		<label for="agentType">Agent Type </label>
+		  			   <select id="agentType" name="agentType" role="select">
+		                
+		            	</select>
+		        </p>
+	  		</div>
+	  		
 	        <p>
 	            <label for="agent"> Person or Organization${requiredHint}</label>
 	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
@@ -157,14 +148,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
  		
- 		<div id="agentTypeDropdown" role="agentTypeDropdown">
-  		<p>
-  		<label for="agentType">Agent Type </label>
-  			   <select id="agentType" name="agentType" role="select">
-                
-            	</select>
-        </p>
-  		</div>
+ 		
   		</fieldset>
   
   		<div> 

@@ -49,9 +49,10 @@
 		"?agent bib:isAgentOf ?activity .",
 		"?objectVar dcterms:subject ?lgft.",
 		"?lgft rdfs:label ?lgftTerm .",
-		"?lgft rdf:type owl:Thing ."
+		"?lgft rdf:type skos:Concept .",
+		"?objectVar schema:duration ?duration ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> ."
     },
     {
       "@id": "customform:addWork_object",
@@ -162,6 +163,14 @@
       "customform:classUri": {
         "@id": "http://id.loc.gov/ontologies/bibframe/Work"
       }
+    },
+    {
+      "@id": "customform:duration",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "duration"
     }
     
    ]

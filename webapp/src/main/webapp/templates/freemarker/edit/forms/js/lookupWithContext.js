@@ -157,7 +157,9 @@ var lookupWithContext = {
 	    	return htmlAdd;
 	    }, 
 	    generateIndividualCUIInput:function(cuiURI, label, type, definedBy, broaderUris, narrowerUris) {
-	    	return 	"<input type='checkbox'  name='genreForm' value='" + cuiURI + "' label='" + 
+	    	//Changing input type from radio button to checkbox for now until
+	    	//dynamic addition works
+	    	return 	"<input type='radio'  name='genreForm' value='" + cuiURI + "' label='" + 
 	    		label + "' conceptType='" + type + "' conceptDefinedBy='" + definedBy + "' " +
 	    		"broaderUris='" + broaderUris + "' narrowerUris='" + narrowerUris + "'/>";
 	    },

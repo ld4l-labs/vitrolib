@@ -75,7 +75,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 <#assign requiredHint = "<span class='requiredHint'> *</span>" />
 <#assign yearHint     = "<span class='hint'>(${i18n().year_hint_format})</span>" />
-
+<#assign actionText=""/>
+<#if editMode = "edit">
+	<#assign actionText = "Edit Selected"/>
+<#else>
+	<#assign actionText = "Select or Add New">
+</#if>
 <#if editMode = "error">
  <div>Error</div>
 <#else>
@@ -91,15 +96,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	<br/>
 
 
-	<h4 class="services">Select or Add new</h4>
+	<h4 class="services">${actionText}</h4>
 
-
+	<#if editMode = "add">
 	<div id="entityActionType">
 		<input type="radio" checked="checked" name="actionType" value="lookupEntity">Lookup existing
 		<input type="radio" name="actionType" value="createEntity">Create new
 
 	</div>
-	
+	</#if>
 	<div id="actionLookupExisting">
 	  	<p>Lookup existing </p>
   		<div> 
@@ -121,14 +126,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		</div>
 	</div>
 
-  	<div id="actionCreateNewe"> 
+	<#if editMode = "add">
+  	<div id="actionCreateNew"> 
   		  <p>Create new entity</p>
           <p>
               <label for="entityTitle">Title</label>
               <input size="60"  type="text" id="entityTitle" name="entityTitle" value="" />
           </p>
   	</div>	
-  
+  	</#if>
   		  
     <div id="errors" name="errors"></div>
     

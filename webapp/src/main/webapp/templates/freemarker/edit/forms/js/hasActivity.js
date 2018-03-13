@@ -59,7 +59,7 @@ var hasActivity = {
 	        	
 	        	this.formSubmit.click(function() {
 	        		hasActivity.copyActivityLabel();
-	        		//TODO: also set agent type for lookup based on value selected for lookup
+	        		hasActivity.updateAgentType();
 	        		return true;
 	        	});
 	        	
@@ -72,9 +72,15 @@ var hasActivity = {
 	        },
 	        setAgentType:function(lookupType) {
 	        	$("#agentType").val(lookupType);
-	        }
-	        
-
+	        },
+	       updateAgentType:function() {
+	    	   //if lookup selected, then need to set agent type value
+	    	   var actionTypeVal = hasActivity.actionType.val();
+	    	   if(actionTypeVal == "lookup") {
+	    		   var lookupType = hasActivity.actionType.attr("lookupType");
+	    		   hasActivity.setAgentType(lookupType);
+	    	   }
+	       }
 };
 
 $(document).ready(function() {   

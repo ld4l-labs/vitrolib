@@ -58,8 +58,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         <#assign disabledVal=""/>
 </#if>
 
+<#assign actionText=""/>
+<#if editMode = "add">
+	<#assign actionText="Add "/>
+<#else>
+	<#assign actionText="Edit "/>
+</#if>
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>Content Listing</h2>
+<h2>${actionText} Content Listing</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -110,12 +116,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
 
-
+<#if editMode = "add">
 	<div id="workActionTypeOptions">
 		<input name="workActionType" type="radio" checked="checked" value="lookupLocalWork"/>Lookup local work
 		<input name="workActionType" type="radio" value="createNewWork"/>Create new work
 	</div>
-	
+</#if>	
 	<div id="lookupLocalWork">
           <p>
               <label for=""> Existing Work: </label>
@@ -134,7 +140,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </div>
       </div>
 
-    <div id="formcontent">
+<#if editMode = "add">
+<div id="formcontent">
     <#--  New Work fields -->
       <#--  Title -->
      <p>
@@ -157,7 +164,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
       <div>
       		<p>
-      		  <label for="agentName"> Author or Other Role${requiredHint}</label>
+      		  <label for="agentName"> Agent Activity or Role${requiredHint}</label>
               <select name="activityType" id="activityType" role="select">
 	              <option value="http://bibliotek-o.org/ontology/ComposerActivity">Composer</option>
 					<option value="http://bibliotek-o.org/ontology/ArrangerActivity">Arranger</option>
@@ -178,17 +185,21 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
               </select>
       		</p>
       		
-      		
+      		<fieldset>
       		<div> 
-				<div id="actionTypeOptions">
-					<input checked="checked" type="radio" name="actionType" value="lookup">Lookup agent
-					<input type="radio" name="actionType" value="create">Create new agent
-				</div>
 				<div id="vocabSource">
 					<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
 					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
 					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 				</div>
+				<!--div id="agentTypeDropdown" role="agentTypeDropdown">
+			  		<p>
+			  		<label for="agentType">Agent Type </label>
+			  			   <select id="agentType" name="agentType" role="select">
+			                
+			            	</select>
+			        </p>
+		  		</div-->
 		        <p>
 		            <label for="agent"> Person or Organization${requiredHint}</label>
 		            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
@@ -205,36 +216,39 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
 		        </div>
   			</div>
+  			</fieldset>
   			
-  			  <div>
-      	
-      		  <!-- Hardcoding in genre forms -->
-             
-          <p templateId="inputAcSelector">
-    		<label for="lgftTerm">LC Genreform</label>
-              <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
-          </p>
-
-
-          <div class="acSelection" acGroupName="lgftGroup" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected} Genreform:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="lgft" name="lgft" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
-      		
-      		
-    
-      </div>
-      
-      
-    </div>
-
+			<div>
+				<!-- Duration -->
+				<div>
+					 <p>
+			              <label for="duration">Duration:</label>
+			              <input size"60"  type="text" id="duration" name="duration" value="" />
+	          		</p>
+			     </div>
+		      		<!-- Hardcoding in genre forms -->
+		             
+		          <p templateId="inputAcSelector">
+		    		<label for="lgftTerm">LC Genreform</label>
+		              <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
+		          </p>
+		
+		
+		          <div class="acSelection" acGroupName="lgftGroup" templateId="literalSelection">
+		              <p class="inline">
+		                  <label>${i18n().selected} Genreform:</label>
+		                  <span class="acSelectionInfo"></span>
+		                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+		                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+		              </p>
+		              <input class="acUriReceiver" type="hidden" id="lgft" name="lgft" value=""  />
+		              <#--  $ {flagClearLabelForExisting}="true"  -->
+		          </div>
+          
+      		</div>
+      	</div>
+</div>
+</#if>
 
        <p class="submit">
             <input type="hidden" name = "editKey" value="${editKey}"/>
