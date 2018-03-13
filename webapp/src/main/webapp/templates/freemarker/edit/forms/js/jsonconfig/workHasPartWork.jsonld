@@ -47,7 +47,7 @@
 		"?agent foaf:name ?agentName.",
 		"?agent rdfs:label ?agentName .",
 		"?agent bib:isAgentOf ?activity .",
-		"?objectVar dcterms:subject ?lgft.",
+		"?objectVar bibframe:genreForm ?lgft.",
 		"?lgft rdfs:label ?lgftTerm .",
 		"?lgft rdf:type skos:Concept .",
 		"?objectVar schema:duration ?duration ."

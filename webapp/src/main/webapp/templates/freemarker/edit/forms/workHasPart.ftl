@@ -115,17 +115,23 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
-
+<#if editMode = "edit">
+	     <p>
+              <label for=""> Click to edit work </label>
+              <a href="${profileUrl(editConfiguration.objectUri)}"><input  size="60"  type="button" id="title" name="title" acGroupName="localwork"  value="" ></a>
+              
+          </p>
+</#if>
 <#if editMode = "add">
 	<div id="workActionTypeOptions">
 		<input name="workActionType" type="radio" checked="checked" value="lookupLocalWork"/>Lookup local work
 		<input name="workActionType" type="radio" value="createNewWork"/>Create new work
 	</div>
-</#if>	
+
 	<div id="lookupLocalWork">
           <p>
               <label for=""> Existing Work: </label>
-              <input class="acSelector" size="60"  type="text" id="objectLabel" name="objectLabel" acGroupName="localwork"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
+              <input class="acSelector" size="60"  type="text" id="title" name="title" acGroupName="localwork"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
           </p>
 
 
@@ -140,14 +146,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </div>
       </div>
 
-<#if editMode = "add">
+
 <div id="formcontent">
     <#--  New Work fields -->
       <#--  Title -->
-     <p>
+      <!-- New work should just utilize the same title field as above -->
+     <!--p>
               <label for="title">Title ${requiredHint}</label>
               <input size="60"  type="text" id="title" name="title" value="" />
-     </p>
+     </p-->
 
      <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
      <div>
@@ -248,7 +255,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		</div>
       	</div>
 </div>
-</#if>
+
 
        <p class="submit">
             <input type="hidden" name = "editKey" value="${editKey}"/>
@@ -257,6 +264,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
+       </#if>
     </form>
 
 

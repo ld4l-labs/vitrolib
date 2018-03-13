@@ -77,7 +77,7 @@ var hasActivity = {
 	    	   //if lookup selected, then need to set agent type value
 	    	   var actionTypeVal = hasActivity.actionType.val();
 	    	   if(actionTypeVal == "lookup") {
-	    		   var lookupType = hasActivity.actionType.attr("lookupType");
+	    		   var lookupType = $("input[name='selectAcUrl']:checked").attr("lookupType");
 	    		   hasActivity.setAgentType(lookupType);
 	    	   }
 	       }

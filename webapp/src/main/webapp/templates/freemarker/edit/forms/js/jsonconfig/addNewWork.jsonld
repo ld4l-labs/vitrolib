@@ -113,7 +113,7 @@
             "forms:FieldDependencies"
           ],
          
-          "customform:dependencies": ["matrixNumberUri,matrixNumber", "eanUri,ean", "upcUri,upc", "issueIdentifier,issueNumber", "publisherAgent,publisherAgentName"]
+          "customform:dependencies": ["matrixNumberUri,matrixNumber"]
     },
     {
       "@id": "customform:addWork_subject",
