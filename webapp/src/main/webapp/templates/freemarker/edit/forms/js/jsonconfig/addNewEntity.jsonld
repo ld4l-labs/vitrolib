@@ -13,17 +13,15 @@
   },
   "@graph": [
     {
-      "@id": "customform:addgf_requiredN3",
+      "@id": "customform:addWork_requiredN3",
       "@type": [
         "forms:RequiredN3Pattern",
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       	"?subject bibframe:genreForm ?objectUri .",
-		"?objectUri rdfs:label ?objectLabel .",
-		"?objectUri rdf:type skos:Concept ."
+        "?subject ?predicate ?objectVar ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> . "
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
     {
       "@id": "customform:addWork_optionalN3",
@@ -32,29 +30,32 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       
+        "?objectVar rdfs:label ?entityTitle .",
+		"?objectVar bibframe:title ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?entityTitle .",
+		"?titleIndividual rdf:value ?entityTitle .",
+		"?titleIndividual bibframe:titleOf ?objectVar .",
+		"?objectVar rdf:type bibframe:Instance . "
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
-  
     {
-      "@id": "customform:whcor_genreForm",
-      "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
-      ],
-      "customform:mayUseNewResource": true,
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingObjectUri WHERE {  ?subject bibframe:genreForm ?existingObjectUri. }   ",      
-      "customform:varName": "objectUri"
-    },
-    {
-      "@id": "customform:whcor_objectLabel",
+      "@id": "customform:title",
       "@type": [
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingObjectLabel WHERE {  ?subject bibframe:genreForm ?objectUri. ?objectUri rdfs:label ?existingObjectLabel .}   ",      
-      "customform:varName": "objectLabel"
+      "customform:varName": "entityTitle"
+    },
+    {
+      "@id": "customform:titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,      
+      "customform:varName": "titleIndividual"
     }
    ]
 }
