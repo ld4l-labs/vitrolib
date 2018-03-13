@@ -30,6 +30,7 @@ var lookupWithContext = {
 	        	 this.form = $("#addConceptForm");
 	        	 this.formSubmit = $("#submit");
 	        	 this.errors = $('#errors');
+	        	 this.removeConceptLinks = $('a.remove');
 	        },
 
 	        // Initial page setup. Called only at page load.
@@ -53,7 +54,59 @@ var lookupWithContext = {
 	        			return false;
 	        	});
 	        	
+	        	 
 	           
+	        },
+	        removeExistingConcept: function(link) {
+	            var removeLast = false,
+	                message = "Are you sure you wish to remove this concept?";
+	                
+	            if (!confirm(message)) {
+	                return false;
+	            }
+	            
+	            if ($(link)[0] === $('.remove:last')[0]) {
+	                removeLast = true;
+	            } 
+	            //Using primitive rdf edit which expects an n3 string for deletion
+	            $.ajax({
+	                url: $(link).attr('href'),
+	                type: 'POST', 
+	                data: {
+	            		additions: '', 
+	                    retractions: lookupWithContext.generateDeletionN3($(link).attr("uri"))
+	                },
+	                dataType: 'json',
+	                context: link, // context for callback
+	                complete: function(request, status) {
+	                    var existingConcept,
+	                        conceptNodeUri;
+	                
+	                    if (status === 'success') {
+	                        
+	                        existingConcept = $(this).parents('.existingConcept');
+	                        existingConcept.fadeOut(400, function() {
+	                            var numConcepts;
+	                            // For undo link: add to a deletedAuthorships array
+	                            // Remove from the DOM                       
+	                            $(this).remove();
+	                            // Actions that depend on the author having been removed from the DOM:
+	                            numConcepts = $('.existingConcept').length; // retrieve the length after removing authorship from the DOM        
+	                        });
+
+	                    } else {
+	                        alert("Error removing concept");
+	                    }
+	                }
+	            });        
+	        },
+	        generateDeletionN3: function(conceptNodeUri) {
+	        	var n3String = "<" + lookupWithContext.subjectURI + "> <" + lookupWithContext.predicateURI + "> <" + conceptNodeUri + "> .";
+	        	//add inverse string to also be removed
+	        	//if(lookupWithContext.inversePredicateUri.length > 0) {
+	        	//	n3String += "<" + conceptNodeUri + "> <" + lookupWithContext.inversePredicateUri + "> <" + lookupWithContext.subjectUri + "> .";
+	        	//}
+	        	return n3String;
 	        },
 	        submitSearchTerm: function() {
 	        	//Get value of search term
@@ -157,7 +210,9 @@ var lookupWithContext = {
 	    	return htmlAdd;
 	    }, 
 	    generateIndividualCUIInput:function(cuiURI, label, type, definedBy, broaderUris, narrowerUris) {
-	    	return 	"<input type='checkbox'  name='genreForm' value='" + cuiURI + "' label='" + 
+	    	//Changing input type from radio button to checkbox for now until
+	    	//dynamic addition works
+	    	return 	"<input type='radio'  name='genreForm' value='" + cuiURI + "' label='" + 
 	    		label + "' conceptType='" + type + "' conceptDefinedBy='" + definedBy + "' " +
 	    		"broaderUris='" + broaderUris + "' narrowerUris='" + narrowerUris + "'/>";
 	    },
@@ -300,6 +355,10 @@ var lookupWithContext = {
     		lookupWithContext.openAuthURL(uri, e);
             return false;
 		});
+		$("a.remove").click(function() {
+            lookupWithContext.removeExistingConcept(this);
+            return false;
+   	 });
 		
 	},
 	bindTermResultsEvents:function() {

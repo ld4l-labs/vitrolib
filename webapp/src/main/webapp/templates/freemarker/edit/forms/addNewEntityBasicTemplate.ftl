@@ -75,103 +75,67 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 <#assign requiredHint = "<span class='requiredHint'> *</span>" />
 <#assign yearHint     = "<span class='hint'>(${i18n().year_hint_format})</span>" />
-
+<#assign actionText=""/>
+<#if editMode = "edit">
+	<#assign actionText = "Edit Selected"/>
+<#else>
+	<#assign actionText = "Select or Add New">
+</#if>
 <#if editMode = "error">
  <div>Error</div>
 <#else>
 
-<section id="hasLCSHSection" role="region">
+<section id="addEntitySection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
 <form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
 
     <div id="formcontent">
-
-      <#--  Autocomplete field for Subject Headings using LOC SH field --> 
+       
 
 	<br/>
 
 
-	<h4 class="services">Add activity/role</h4>
-  
-  	<div>
-  		<p>
-  		<label for="activityType">Activity Type </label>
-  			   <select id="activityType" name="activityType" role="select">
-                
-            	</select>
-        </p>
-  		</div>
-  
- 
- 		
- 		
- 		<fieldset class="workform__fieldset">
-		<div> 
-			<div id="actionTypeOptions">
-				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
-				<input type="radio" name="actionType"  value="create">Create new agent
-			</div>
-			<br/>
-			
-			<div id="vocabSource">
-				<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-				<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
-			</div>
-			
-			<div id="agentTypeDropdown" role="agentTypeDropdown">
-		  		<p>
-		  		<label for="agentType">Agent Type </label>
-		  			   <select id="agentType" name="agentType" role="select">
-		                
-		            	</select>
-		        </p>
-	  		</div>
-	  		
-	        <p>
-	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="agent">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-	        </div>
-  		</div>
- 		
- 		
- 		
- 		
-  		</fieldset>
-  
+	<h4 class="services">${actionText}</h4>
+
+	<#if editMode = "add">
+	<div id="entityActionType">
+		<input type="radio" checked="checked" name="actionType" value="lookupEntity">Lookup existing
+		<input type="radio" name="actionType" value="createEntity">Create new
+
+	</div>
+	</#if>
+	<div id="actionLookupExisting">
+	  	<p>Lookup existing </p>
   		<div> 
-	        <p>
-	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        <p templateId="inputAcSelector">
+	            <label for="eventName"> Event</label>
+	            <input class="acSelector" size="60"  type="text" id="entityLookupName" name="entityLookupName" acGroupName="entityLookup"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
 	        </p>
 	
 		
-	        <div class="acSelection" acGroupName="location">
+	        <div class="acSelection" acGroupName="eventLookup" templateId="literalSelection">
 	            <p class="inline">
-	                <label>${i18n().selected}:</label>
+	                <label>${i18n().selected} Entity:</label>
 	                <span class="acSelectionInfo"></span>
 	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
 	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 	            </p>
-	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	            <input class="acUriReceiver" type="hidden" id="entityLookupUri" name="entityLookupUri" value=""  ${flagClearLabelForExisting}="true" />
 	        </div>
   		</div>
-  
-  
-  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
-    
+	</div>
+
+	<#if editMode = "add">
+  	<div id="actionCreateNew"> 
+  		  <p>Create new entity</p>
+          <p>
+              <label for="entityTitle">Title</label>
+              <input size="60"  type="text" id="entityTitle" name="entityTitle" value="" />
+          </p>
+  	</div>	
+  	</#if>
+  		  
     <div id="errors" name="errors"></div>
     
    
@@ -212,9 +176,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
         primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
-
+        defaultNamespace:"${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -252,4 +214,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/hasActivity.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewEntity.js"></script>')}
