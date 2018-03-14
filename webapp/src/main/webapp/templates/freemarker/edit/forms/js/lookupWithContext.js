@@ -212,7 +212,7 @@ var lookupWithContext = {
 	    generateIndividualCUIInput:function(cuiURI, label, type, definedBy, broaderUris, narrowerUris) {
 	    	//Changing input type from radio button to checkbox for now until
 	    	//dynamic addition works
-	    	return 	"<input type='radio'  name='genreForm' value='" + cuiURI + "' label='" + 
+	    	return 	"<input type='radio'  name='objectVar' value='" + cuiURI + "' label='" + 
 	    		label + "' conceptType='" + type + "' conceptDefinedBy='" + definedBy + "' " +
 	    		"broaderUris='" + broaderUris + "' narrowerUris='" + narrowerUris + "'/>";
 	    },
@@ -375,7 +375,7 @@ var lookupWithContext = {
 		 e.preventDefault();
 	},
  prepareSubmit:function() {
-    	var checkedElements = $("input[name='genreForm']:checked");
+    	var checkedElements = $("input[name='objectVar']:checked");
     	if(!lookupWithContext.validateConceptSelection(checkedElements)) {
     		return false;
     	}
@@ -395,7 +395,7 @@ var lookupWithContext = {
     		labels.push(checkedLabel);
     	
     	});
-    	lookupWithContext.objectUris.val(uris);
+    	//lookupWithContext.objectUris.val(uris);
     	lookupWithContext.objectLabels.val(labels);
     	
     	return true;
