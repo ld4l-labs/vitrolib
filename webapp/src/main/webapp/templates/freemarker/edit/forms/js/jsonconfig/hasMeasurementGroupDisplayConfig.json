@@ -1,0 +1,43 @@
+var displayConfig = {
+    "fieldOrder" :  ["value", "unit", "dimension"],
+    "fieldDisplayProperties" : {
+        "value": {"label":"Numeric value"},
+        "unit": {
+            "label": "Unit",
+            "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"Centimeter"},
+                            {"label":"Foot","uri":"http://qudt.org/vocab/unit#Foot"},
+                            {"label":"Gram","uri":"http://qudt.org/vocab/unit#Gram"},
+                            {"label":"Inch","uri":"http://qudt.org/vocab/unit#Inch"},
+                            {"label":"Kilogram","uri":"http://qudt.org/vocab/unit#Kilogram"},
+                            {"label":"Kilometer ","uri":"http://qudt.org/vocab/unit#Kilometer"},
+                            {"label":"Meter","uri":"http://qudt.org/vocab/unit#Meter"},
+                            {"label":"Mile US Statute","uri":"http://qudt.org/vocab/unit#MileUSStatute"},
+                            {"label":"Millimeter","uri":"http://qudt.org/vocab/unit#Millimeter"},
+                            {"label":"Metric Ton","uri":"http://qudt.org/vocab/unit#MetricTon"},
+                            {"label":"Ounce Mass","uri":"http://qudt.org/vocab/unit#OunceMass"},
+                            {"label":"Pound Mass","uri":"http://qudt.org/vocab/unit#PoundMass"}]
+        },
+        "dimension": {
+            "label": "Dimension or other aspect",
+            "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
+                            {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
+                            {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
+                            {"uri":"http://vocab.getty.edu/aat/300055644", "label": "Height"},
+                            {"uri":"http://vocab.getty.edu/aat/300055645", "label": "Length"},
+                            {"uri":"http://vocab.getty.edu/aat/300055646", "label": "Thickness"},
+                            {"uri":"http://vocab.getty.edu/aat/300055647", "label": "Width"},
+                            {"uri":"http://vocab.getty.edu/aat/300055649", "label": "Volume (Quantity or Mass)"},
+                            {"uri":"http://vocab.getty.edu/aat/300056240", "label": "Weight"},
+                            {"uri":"http://vocab.getty.edu/aat/300072633", "label": "Depth"},
+                            {"uri":"http://vocab.getty.edu/aat/300312044", "label": "Footprint"},
+                            {"uri":"http://vocab.getty.edu/aat/300404162", "label": "Sizes"},
+                            {"uri":"http://vocab.getty.edu/aat/300404164", "label": "Breadth"},
+                            {"uri":"http://vocab.getty.edu/aat/300404403", "label": "Footage"},
+                            {"uri":"http://vocab.getty.edu/aat/300404430", "label": "Capacity"},
+                            {"uri":"http://vocab.getty.edu/aat/300404431", "label": "Base"},
+                            {"uri":"http://vocab.getty.edu/aat/300404432", "label": "Target"},
+                            {"uri":"http://vocab.getty.edu/aat/300404433", "label": "Count"},
+                            {"uri":"http://vocab.getty.edu/aat/300404437", "label": "Interval"}]
+        }
+    }
+};
