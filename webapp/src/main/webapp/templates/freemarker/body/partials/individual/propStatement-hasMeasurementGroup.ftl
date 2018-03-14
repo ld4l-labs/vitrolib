@@ -13,13 +13,13 @@
 <#if statement.measurementGroup??>
     Measurements:
     <#if statement.measurement1??>
-        ${statement.dimensionLabel1}}: ${statement.measurementValue1} ${statement.unitLabel1}
+        <a href="${profileUrl(statement.uri("measurement1"))}" title="${i18n().name}">${statement.dimensionLabel1}}: ${statement.value1} ${statement.unitLabel1}</a>     
     </#if>
     <#if statement.measurement2??>
-        ${statement.dimensionLabel2}}: ${statement.measurementValue2} ${statement.unitLabel2}
+        <a href="${profileUrl(statement.uri("measurement2"))}" title="${i18n().name}">${statement.dimensionLabel2}}: ${statement.value2} ${statement.unitLabel2}</a>   
     </#if>
     <#if statement.measurement3??>
-        ${statement.dimensionLabel3}}: ${statement.measurementValue3} ${statement.unitLabel3}
+        <a href="${profileUrl(statement.uri("measurement3"))}" title="${i18n().name}">${statement.dimensionLabel3}}: ${statement.value3} ${statement.unitLabel3}</a>   
     </#if>
 </#if>
 

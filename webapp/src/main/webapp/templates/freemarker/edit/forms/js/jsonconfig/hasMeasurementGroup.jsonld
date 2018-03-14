@@ -28,7 +28,7 @@
         "?objectVar measure:hasMeasurement ?measurement1 . " ,
         "?measurement1 measure:isMeasurementOf ?objectVar . ",
         "?measurement1 rdf:type measure:Measurement . " ,
-        "?measurement1 rdf:value ?measurementValue1 . " ,
+        "?measurement1 rdf:value ?value1 . " ,
         "?measurement1 measure:hasUnit ?unit1 . " ,
         "?unit1 rdf:type qudt:Unit , skos:Concept . " ,
         "?unit1 measure:isUnitOf ?measurement1 . " ,
@@ -68,7 +68,7 @@
       "customform:varName": "dimension1"
     },
     {
-      "@id": "customform:hasMeasurementGroup_measurementValue1",
+      "@id": "customform:hasMeasurementGroup_value1",
       "@type": [
         "forms:LiteralField",
         "forms:FormComponent"
@@ -76,7 +76,7 @@
       "customform:rangeDatatypeUri": {
         "@id": "xsd:string"
       },
-      "customform:varName": "measurementValue1"
+      "customform:varName": "value1"
     },   
     {
       "@id": "customform:hasMeasurementGroup_unitLabel1",
@@ -110,6 +110,7 @@
         "?objectVar measure:hasMeasurement ?measurement2 . " ,
         "?measurement2 measure:isMeasurementOf ?objectVar . ",
         "?measurement2 rdf:type measure:Measurement . " ,
+        "?measurement2 rdf:value ?value2 . " ,
         "?measurement2 measure:hasUnit ?unit2 . " ,
         "?unit2 rdf:type qudt:Unit , skos:Concept . " ,
         "?unit2 measure:isUnitOf ?measurement2 . " ,
@@ -121,6 +122,7 @@
         "?objectVar measure:hasMeasurement ?measurement3 . " ,
         "?measurement3 measure:isMeasurementOf ?objectVar . ",
         "?measurement3 rdf:type measure:Measurement . " ,
+        "?measurement3 rdf:value ?value3 . " ,
         "?measurement3 measure:hasUnit ?unit3 . " ,
         "?unit3 rdf:type qudt:Unit , skos:Concept . " ,
         "?unit3 measure:isUnitOf ?measurement3 . " ,
@@ -160,7 +162,7 @@
       "customform:varName": "dimension2"
     },
     {
-      "@id": "customform:hasMeasurementGroup_measurementValue2",
+      "@id": "customform:hasMeasurementGroup_value2",
       "@type": [
         "forms:LiteralField",
         "forms:FormComponent"
@@ -168,7 +170,7 @@
       "customform:rangeDatatypeUri": {
         "@id": "xsd:string"
       },
-      "customform:varName": "measurementValue2"
+      "customform:varName": "value2"
     },   
     {
       "@id": "customform:hasMeasurementGroup_unitLabel2",
@@ -220,7 +222,7 @@
       "customform:varName": "dimension3"
     },
     {
-      "@id": "customform:hasMeasurementGroup_measurementValue3",
+      "@id": "customform:hasMeasurementGroup_value3",
       "@type": [
         "forms:LiteralField",
         "forms:FormComponent"
@@ -228,7 +230,7 @@
       "customform:rangeDatatypeUri": {
         "@id": "xsd:string"
       },
-      "customform:varName": "measurementValue3"
+      "customform:varName": "value3"
     }, 
     {
       "@id": "customform:hasMeasurementGroup_unitLabel3",

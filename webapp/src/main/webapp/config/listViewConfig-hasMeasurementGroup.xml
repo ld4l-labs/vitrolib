@@ -15,7 +15,7 @@
         
         SELECT ?measurementGroup
             ?measurement1
-            ?measurementValue1
+            ?value1
             ?unit1
             ?unitLabel1
             ?dimension1 
@@ -30,7 +30,7 @@
                 measure:hasMeasurement ?measurement1 .
                 
             ?measurement1 a measure:Measure ;
-                rdf:value ?measurementValue1 ;
+                rdf:value ?value1 ;
                 measure:hasUnit ?unit1 ;
                 measure:measures ?dimension1 .
                 
@@ -45,7 +45,7 @@
                 ?measurementGroup measure:hasMeasurement ?measurement2 .
     
                 ?measurement2 a measure:Measure ;
-                    rdf:value ?measurementValue2 ;
+                    rdf:value ?value2 ;
                     measure:hasUnit ?unit2 ;
                     measure:measures ?dimension2 .
                 
@@ -58,7 +58,7 @@
                     ?measurementGroup measure:hasMeasurement ?measurement3 .
                     
                     ?measurement3 a measure:Measure ;
-                        rdf:value ?measurementValue3 ;
+                        rdf:value ?value3 ;
                         measure:hasUnit ?unit3 ;
                         measure:measures ?dimension3 .
                     
