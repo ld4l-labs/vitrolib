@@ -19,9 +19,9 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-       	"?subject bibframe:genreForm ?objectUri .",
-		"?objectUri rdfs:label ?objectLabel .",
-		"?objectUri rdf:type skos:Concept ."
+       	"?subject bibframe:genreForm ?objectVar .",
+		"?objectVar rdfs:label ?objectLabel .",
+		"?objectVar rdf:type skos:Concept ."
       ],
       "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> . "
     },
@@ -45,7 +45,7 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   SELECT ?existingObjectUri WHERE {  ?subject bibframe:genreForm ?existingObjectUri. }   ",      
-      "customform:varName": "objectUri"
+      "customform:varName": "objectVar"
     },
     {
       "@id": "customform:whcor_objectLabel",
