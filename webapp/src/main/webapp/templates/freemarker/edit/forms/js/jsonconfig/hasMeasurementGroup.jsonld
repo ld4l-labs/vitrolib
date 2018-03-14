@@ -10,6 +10,7 @@
     "bibframe": "http://id.loc.gov/ontologies/bibframe/",
     "measure": "http://measurement.example.org/",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
   },
   "@graph": [
@@ -28,13 +29,15 @@
         "?measurement1 rdf:type measure:Measurement . " ,
         "?measurement1 rdf:value ?measurementValue1 . " ,
         "?measurement1 measure:hasUnit ?unit1 . " ,
+        "?unit1 rdf:type skos:Concept . " ,
         "?unit1 measure:isUnitOf ?measurement1 . " ,
         "?unit1 rdf:value ?unitLabel1 . " ,
         "?measurement1 measure:measures ?dimension1 . " ,
+        "?dimension1 rdf:type skos:Concept . " ,
         "?dimension measure:measuredBy ?measurement1 . " ,
         "?dimension1 rdfs:label ?dimensionLabel1 . "
       ],
-      "customform:prefixes": "@prefix measure: <http://measurement.example.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> . @prefix measure: <http://measurement.example.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
     {
       "@id": "customform:hasMeasurementGroup_measurement1",
@@ -107,22 +110,26 @@
         "?measurement2 measure:isMeasurementOf ?objectVar . ",
         "?measurement2 rdf:type measure:Measurement . " ,
         "?measurement2 measure:hasUnit ?unit2 . " ,
+        "?unit2 rdf:type skos:Concept . " ,
         "?unit2 measure:isUnitOf ?measurement2 . " ,
         "?unit2 rdf:value ?unitLabel2 . " ,
         "?measurement2 measure:measures ?dimension2 . " ,
-        "?dimension measure:measuredBy ?measurement2 . " ,
+        "?dimension2 rdf:type skos:Concept . " ,
+        "?dimension2 measure:measuredBy ?measurement2 . " ,
         "?dimension2 rdfs:label ?dimensionLabel2 . " ,
         "?objectVar measure:hasMeasurement ?measurement3 . " ,
         "?measurement3 measure:isMeasurementOf ?objectVar . ",
         "?measurement3 rdf:type measure:Measurement . " ,
         "?measurement3 measure:hasUnit ?unit3 . " ,
+        "?unit3 rdf:type skos:Concept . " ,
         "?unit3 measure:isUnitOf ?measurement3 . " ,
         "?unit3 rdf:value ?unitLabel3 . " ,
         "?measurement3 measure:measures ?dimension3 . " ,
+        "?dimension3 rdf:type skos:Concept . " ,
         "?dimension measure:measuredBy ?measurement3 . " ,
         "?dimension3 rdfs:label ?dimensionLabel3 . "      
       ],
-      "customform:prefixes": "@prefix measure: <http://measurement.example.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .  @prefix measure: <http://measurement.example.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
     {
       "@id": "customform:hasMeasurementGroup_measurement2",

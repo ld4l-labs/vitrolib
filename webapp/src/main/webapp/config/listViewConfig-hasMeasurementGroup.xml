@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- Default list view config file for object properties 
+    
+     See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    <query-select>    
+        PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX measure: &lt;http://measurement.example.org/&gt;
+        
+        SELECT ?measurementGroup
+            ?measurement1
+            ?measurementValue1
+            ?unit1
+            ?unitLabel1
+            ?dimension1 
+            ?dimensionLabel1
+            ?localName 
+            
+        WHERE {
+        
+            ?subject ?property ?measurementGroup .
+            
+            ?measurementGroup a measure:MeasurementGroup ;
+                measure:hasMeasurement ?measurement1 .
+                
+            ?measurement1 a measure:Measure ;
+                rdf:value ?measurementValue1 ;
+                measure:hasUnit ?unit1 ;
+                measure:measures ?dimension1 .
+                
+            ?unit1 rdfs:label ?unitLabel1 .
+            
+            ?dimension1 rdfs:label ?dimensionLabel1 .
+        
+            LET (?localName := afn:localname(?measurementGroup)) 
+            
+            OPTIONAL { 
+            
+                ?measurementGroup measure:hasMeasurement ?measurement2 .
+    
+                ?measurement2 a measure:Measure ;
+                    rdf:value ?measurementValue2 ;
+                    measure:hasUnit ?unit2 ;
+                    measure:measures ?dimension2 .
+                
+                ?unit2 rdfs:label ?unitLabel2 .
+                
+                ?dimension2 rdfs:label ?dimensionLabel2 .  
+            
+                OPTIONAL {
+    
+                    ?measurementGroup measure:hasMeasurement ?measurement3 .
+                    
+                    ?measurement3 a measure:Measure ;
+                        rdf:value ?measurementValue3 ;
+                        measure:hasUnit ?unit3 ;
+                        measure:measures ?dimension3 .
+                    
+                    ?unit3 rdfs:label ?unitLabel3 .
+                    
+                    ?dimension3 rdfs:label ?dimensionLabel3 .  
+
+                }
+            } 
+        } ORDER BY ASC( ?dimensionLabel1 ) ASC( ?dimensionLabel2 ) ASC( ?dimensionLabel3 )
+    </query-select>
+    
+
+    <template>propStatement-hasMeasurementGroup.ftl</template>
+</list-view-config>
