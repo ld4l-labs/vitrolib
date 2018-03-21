@@ -207,6 +207,6 @@
         "@id": "xsd:string"
       },
       "customform:varName": "value3"
-    }  
+    }
   ]
 }
