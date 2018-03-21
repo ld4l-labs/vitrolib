@@ -10,8 +10,7 @@
         PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
-        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
-        PREFIX measure: &lt;http://measurement.example.org/&gt;
+        PREFIX measure: &lt;http://measurement.bibliotek-o.org/&gt;
         
         SELECT ?measurementGroup
             ?measurement1
@@ -20,7 +19,18 @@
             ?unitLabel1
             ?dimension1 
             ?dimensionLabel1
-            ?localName 
+            ?measurement2
+            ?value2
+            ?unit2
+            ?unitLabel2
+            ?dimension2 
+            ?dimensionLabel2
+            ?measurement3
+            ?value3
+            ?unit3
+            ?unitLabel3
+            ?dimension3 
+            ?dimensionLabel3
             
         WHERE {
         
@@ -29,7 +39,7 @@
             ?measurementGroup a measure:MeasurementGroup ;
                 measure:hasMeasurement ?measurement1 .
                 
-            ?measurement1 a measure:Measure ;
+            ?measurement1 a measure:Measurement ;
                 rdf:value ?value1 ;
                 measure:hasUnit ?unit1 ;
                 measure:measures ?dimension1 .
@@ -37,14 +47,12 @@
             ?unit1 rdfs:label ?unitLabel1 .
             
             ?dimension1 rdfs:label ?dimensionLabel1 .
-        
-            LET (?localName := afn:localname(?measurementGroup)) 
             
             OPTIONAL { 
             
                 ?measurementGroup measure:hasMeasurement ?measurement2 .
     
-                ?measurement2 a measure:Measure ;
+                ?measurement2 a measure:Measurement ;
                     rdf:value ?value2 ;
                     measure:hasUnit ?unit2 ;
                     measure:measures ?dimension2 .
@@ -57,7 +65,7 @@
     
                     ?measurementGroup measure:hasMeasurement ?measurement3 .
                     
-                    ?measurement3 a measure:Measure ;
+                    ?measurement3 a measure:Measurement  ;
                         rdf:value ?value3 ;
                         measure:hasUnit ?unit3 ;
                         measure:measures ?dimension3 .
