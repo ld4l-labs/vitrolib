@@ -2,9 +2,9 @@ var displayConfig = {
     "fieldOrder" :  ["value1", "unit1", "dimension1", "value2", "unit2", "dimension2", "value3", "unit3", "dimension3"],
     "fieldDisplayProperties" : {
     
-        "value1": {"label":"Numeric value"},
+        "value1": {"label":"First Numeric value"},
         "unit1": {
-            "label": "Unit",
+            "label": "First Unit",
             "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
@@ -19,7 +19,7 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension1": {
-            "label": "Dimension or other aspect",
+            "label": "First Dimension or other aspect",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
@@ -41,9 +41,9 @@ var displayConfig = {
                             {"uri":"http://vocab.getty.edu/aat/300404437", "label": "Interval"}]
         },
         
-        "value2": {"label":"Numeric value"},
+        "value2": {"label":"Second Numeric value"},
         "unit2": {
-            "label": "Unit",
+            "label": "Second Unit",
             "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
@@ -58,7 +58,7 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension2": {
-            "label": "Dimension or other aspect",
+            "label": "Second Dimension or other aspect",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
@@ -80,9 +80,9 @@ var displayConfig = {
                             {"uri":"http://vocab.getty.edu/aat/300404437", "label": "Interval"}]
         },
         
-        "value3": {"label":"Numeric value"},
+        "value3": {"label":"Third Numeric value"},
         "unit3": {
-            "label": "Unit",
+            "label": "Third Unit",
             "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
@@ -97,7 +97,7 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension3": {
-            "label": "Dimension or other aspect",
+            "label": "Third Dimension or other aspect",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
