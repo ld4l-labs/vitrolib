@@ -65,11 +65,11 @@ public class NotificationSetup implements ServletContextListener {
 	
 	 class NotificationTask extends TimerTask {
 	        public void run() {
-	            System.out.println("NOTIFY");
+	            //System.out.println("NOTIFY");
 	            //readInFile();
 	            //readInbox();
-	            testPostToInbox();
-	            timer.cancel(); //Terminate the timer thread
+	            //testPostToInbox();
+	            //timer.cancel(); //Terminate the timer thread
 	            
 	        }
 	        
@@ -90,18 +90,11 @@ public class NotificationSetup implements ServletContextListener {
 	    		m.add(ResourceFactory.createResource("http://example.org"), RDF.type, ResourceFactory.createResource("http://ldnexampletest.org"));
 	    		StringWriter s = new StringWriter();
 	    		m.write(s, "JSON-LD");
-	    		System.out.println(s.toString());
-	    		String output = new String();
-	    		s.write(output);
 	    		OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
 	    		wr.write(s.toString());
 	    		wr.flush();
-	    		
-	    		int responseCode = con.getResponseCode();
-	    		System.out.println("POST Response Code :: " + responseCode);
-
-	    		if (responseCode == 201) { //success
-	    			BufferedReader in = new BufferedReader(new InputStreamReader(
+	    		wr.close();
+	    		  BufferedReader in = new BufferedReader(new InputStreamReader(
 	    					con.getInputStream()));
 	    			String inputLine;
 	    			StringBuffer response = new StringBuffer();
@@ -113,11 +106,8 @@ public class NotificationSetup implements ServletContextListener {
 
 	    			// print result
 	    			System.out.println(response.toString());
-	    		} else {
-	    			System.out.println("POST request not worked");
-	    		}
-	    		wr.close();
-
+	    		
+	    		
 	    		con.disconnect();
 	    		} catch(Exception ex) {
 	    			System.out.println("Error occurred");
