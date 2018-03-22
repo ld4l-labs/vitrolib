@@ -76,7 +76,7 @@
 
                 }
             } 
-        } ORDER BY ASC( ?dimensionLabel1 ) ASC( ?dimensionLabel2 ) ASC( ?dimensionLabel3 )
+        } 
     </query-select>
     
 
