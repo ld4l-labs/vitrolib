@@ -2,10 +2,11 @@ var displayConfig = {
     "fieldOrder" :  ["value1", "unit1", "dimension1", "value2", "unit2", "dimension2", "value3", "unit3", "dimension3"],
     "fieldDisplayProperties" : {
     
-        "value1": {"label":"First Numeric value"},
+        "value1": {"label":"First numeric value *", "description": "Numeric value for the measurement"},
         "unit1": {
-            "label": "First Unit",
-            "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
+            "label": "First unit *",
+            "description": "Unit used to express the measurement",
+            "constantList":[{"label":"centimeter", "uri":"http://qudt.org/vocab/unit#Centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
                             {"label":"inch","uri":"http://qudt.org/vocab/unit#Inch"},
@@ -19,7 +20,8 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension1": {
-            "label": "First Dimension or other aspect",
+            "label": "First dimension or other aspect *",
+            "description": "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource.",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
@@ -41,10 +43,11 @@ var displayConfig = {
                             {"uri":"http://vocab.getty.edu/aat/300404437", "label": "Interval"}]
         },
         
-        "value2": {"label":"Second Numeric value"},
+        "value2": {"label":"Second numeric value", "description": "Numeric value for the measurement"},
         "unit2": {
-            "label": "Second Unit",
-            "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
+            "label": "Second unit",
+            "description": "Unit used to express the measurement",
+            "constantList":[{"label":"centimeter", "uri":"http://qudt.org/vocab/unit#Centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
                             {"label":"inch","uri":"http://qudt.org/vocab/unit#Inch"},
@@ -58,7 +61,8 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension2": {
-            "label": "Second Dimension or other aspect",
+            "label": "Second dimension or other aspect",
+            "description": "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource.",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
@@ -80,10 +84,11 @@ var displayConfig = {
                             {"uri":"http://vocab.getty.edu/aat/300404437", "label": "Interval"}]
         },
         
-        "value3": {"label":"Third Numeric value"},
+        "value3": {"label":"Third numeric value", "description": "Numeric value for the measurement"},
         "unit3": {
-            "label": "Third Unit",
-            "constantList":[{"uri":"http://qudt.org/vocab/unit#Centimeter", "label":"centimeter"},
+            "label": "Third unit",
+            "description": "Unit used to express the measurement",
+            "constantList":[{"label":"centimeter", "uri":"http://qudt.org/vocab/unit#Centimeter"},
                             {"label":"foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"gram","uri":"http://qudt.org/vocab/unit#Gram"},
                             {"label":"inch","uri":"http://qudt.org/vocab/unit#Inch"},
@@ -97,7 +102,8 @@ var displayConfig = {
                             {"label":"pound","uri":"http://qudt.org/vocab/unit#PoundMass"}]
         },
         "dimension3": {
-            "label": "Third Dimension or other aspect",
+            "label": "Third dimension or other aspect",
+            "description": "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource.",
             "constantList":[{"uri":"http://vocab.getty.edu/aat/300055621", "label": "Area"},
                             {"uri":"http://vocab.getty.edu/aat/300055623", "label": "Circumference"},
                             {"uri":"http://vocab.getty.edu/aat/300055624", "label": "Diameter"},
