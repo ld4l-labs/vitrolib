@@ -46,6 +46,17 @@
       "customform:varName": "measurement1"
     },
     {
+      "@id": "customform:hasMeasurementGroup_value1",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:rangeDatatypeUri": {
+        "@id": "xsd:string"
+      },
+      "customform:varName": "value1"
+    },      
+    {
       "@id": "customform:hasMeasurementGroup_unit1",
       "@type": [
         "forms:FormComponent",
@@ -57,15 +68,8 @@
       "customform:mayUseNewResource": false,
       "customform:varName": "unit1"
     },
-     {
-      "@id": "customform:unit1FieldOptions",
-      "@type": [
-        "forms:ConstantList",
-        "forms:FieldOptions"
-      ]
-    },
     {
-      "@id": "customform:dimension1FieldOptions",
+      "@id": "customform:unit1FieldOptions",
       "@type": [
         "forms:ConstantList",
         "forms:FieldOptions"
@@ -77,24 +81,20 @@
         "forms:FormComponent",
         "forms:UriField"
       ],
-       "customform:fieldOptions": {
-         "@id": "customform:dimensionFieldOptions"
+      "customform:fieldOptions": {
+         "@id": "customform:dimension1FieldOptions"
       },
       "customform:mayUseNewResource": false,
       "customform:varName": "dimension1"
     },
     {
-      "@id": "customform:hasMeasurementGroup_value1",
+      "@id": "customform:dimension1FieldOptions",
       "@type": [
-        "forms:LiteralField",
-        "forms:FormComponent"
-      ],
-      "customform:rangeDatatypeUri": {
-        "@id": "xsd:string"
-      },
-      "customform:varName": "value1"
-    },       
-       
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+ 
     {
       "@id": "customform:hasMeasurementGroup_optionalN3",
       "@type": [
@@ -131,30 +131,6 @@
       "customform:varName": "measurement2"
     },
     {
-      "@id": "customform:hasMeasurementGroup_unit2",
-      "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
-      ],
-        "customform:fieldOptions": {
-        "@id": "customform:unit1FieldOptions"
-      },
-      "customform:mayUseNewResource": false,
-      "customform:varName": "unit2"
-    },
-    {
-      "@id": "customform:hasMeasurementGroup_dimension2",
-      "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
-      ],
-       "customform:fieldOptions": {
-        "@id": "customform:dimensionFieldOptions"
-      },
-      "customform:mayUseNewResource": false,
-      "customform:varName": "dimension2"
-    },
-    {
       "@id": "customform:hasMeasurementGroup_value2",
       "@type": [
         "forms:LiteralField",
@@ -164,7 +140,46 @@
         "@id": "xsd:string"
       },
       "customform:varName": "value2"
-    },   
+    },      
+    {
+      "@id": "customform:hasMeasurementGroup_unit2",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:unit2FieldOptions"
+      },
+      "customform:mayUseNewResource": false,
+      "customform:varName": "unit2"
+    },
+    {
+      "@id": "customform:unit2FieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    {
+      "@id": "customform:hasMeasurementGroup_dimension2",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:fieldOptions": {
+         "@id": "customform:dimension2FieldOptions"
+      },
+      "customform:mayUseNewResource": false,
+      "customform:varName": "dimension2"
+    },
+    {
+      "@id": "customform:dimension2FieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    
     {
       "@id": "customform:hasMeasurementGroup_measurement3",
       "@type": [
@@ -173,30 +188,6 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "measurement3"
-    },
-    {
-      "@id": "customform:hasMeasurementGroup_unit3",
-      "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
-      ],
-        "customform:fieldOptions": {
-        "@id": "customform:unit1FieldOptions"
-      },
-      "customform:mayUseNewResource": false,
-      "customform:varName": "unit3"
-    },
-    {
-      "@id": "customform:hasMeasurementGroup_dimension3",
-      "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
-      ],
-       "customform:fieldOptions": {
-        "@id": "customform:dimensionFieldOptions"
-      },
-      "customform:mayUseNewResource": false,
-      "customform:varName": "dimension3"
     },
     {
       "@id": "customform:hasMeasurementGroup_value3",
@@ -208,6 +199,44 @@
         "@id": "xsd:string"
       },
       "customform:varName": "value3"
+    },      
+    {
+      "@id": "customform:hasMeasurementGroup_unit3",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:unit3FieldOptions"
+      },
+      "customform:mayUseNewResource": false,
+      "customform:varName": "unit3"
+    },
+    {
+      "@id": "customform:unit3FieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    {
+      "@id": "customform:hasMeasurementGroup_dimension3",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:fieldOptions": {
+         "@id": "customform:dimension3FieldOptions"
+      },
+      "customform:mayUseNewResource": false,
+      "customform:varName": "dimension3"
+    },
+    {
+      "@id": "customform:dimension3FieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
     }
   ]
 }
