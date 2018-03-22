@@ -91,7 +91,7 @@
     <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055624">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
-        <rdfs:label xml:lang="nl">diameter</rdfs:label>
+        <rdfs:label xml:lang="en">diameter</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055624"/>
         <skos:prefLabel xml:lang="en">diameter</skos:prefLabel>
         <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
