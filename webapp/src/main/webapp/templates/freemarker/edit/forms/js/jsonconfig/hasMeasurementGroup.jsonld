@@ -28,11 +28,11 @@
         "?objectVar measure:hasMeasurement ?measurement1 . " ,
         "?measurement1 measure:isMeasurementOf ?objectVar . ",
         "?measurement1 rdf:type measure:Measurement . " ,
+        "?measurement1 rdf:value ?value1 ." , 
         "?measurement1 measure:hasUnit ?unit1 . " ,
         "?unit1 measure:isUnitOf ?measurement1 . " ,
         "?measurement1 measure:measures ?dimension1 . " ,
-        "?dimension1 measure:measuredBy ?measurement1 . ",
-        "?measurement1 rdf:value ?value1 ." 
+        "?dimension1 measure:measuredBy ?measurement1 . "
       ],
       "customform:prefixes": "@prefix qudt: <http://qudt.org/schema/qudt#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> . @prefix measure: <http://measurement.bibliotek-o.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
@@ -48,8 +48,8 @@
     {
       "@id": "customform:hasMeasurementGroup_unit1",
       "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
+        "forms:FormComponent",
+        "forms:UriField"
       ],
       "customform:fieldOptions": {
         "@id": "customform:unit1FieldOptions"
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "@id": "customform:dimensionFieldOptions",
+      "@id": "customform:dimension1FieldOptions",
       "@type": [
         "forms:ConstantList",
         "forms:FieldOptions"
@@ -74,11 +74,11 @@
     {
       "@id": "customform:hasMeasurementGroup_dimension1",
       "@type": [
-       "forms:FormComponent",
-       "forms:UriField"
+        "forms:FormComponent",
+        "forms:UriField"
       ],
        "customform:fieldOptions": {
-        "@id": "customform:dimensionFieldOptions"
+         "@id": "customform:dimensionFieldOptions"
       },
       "customform:mayUseNewResource": false,
       "customform:varName": "dimension1"
@@ -93,7 +93,8 @@
         "@id": "xsd:string"
       },
       "customform:varName": "value1"
-    },          
+    },       
+       
     {
       "@id": "customform:hasMeasurementGroup_optionalN3",
       "@type": [
@@ -104,19 +105,19 @@
         "?objectVar measure:hasMeasurement ?measurement2 . " ,
         "?measurement2 measure:isMeasurementOf ?objectVar . ",
         "?measurement2 rdf:type measure:Measurement . " ,
+        "?measurement2 rdf:value ?value2 .", 
         "?measurement2 measure:hasUnit ?unit2 . " ,
         "?unit2 measure:isUnitOf ?measurement2 . " ,
         "?measurement2 measure:measures ?dimension2 . " ,
         "?dimension2 measure:measuredBy ?measurement2 . " ,
-        "?measurement2 rdf:value ?value2 .", 
         "?objectVar measure:hasMeasurement ?measurement3 . " ,
         "?measurement3 measure:isMeasurementOf ?objectVar . ",
         "?measurement3 rdf:type measure:Measurement . " ,
+        "?measurement3 rdf:value ?value3 ." ,
         "?measurement3 measure:hasUnit ?unit3 . " ,
         "?unit3 measure:isUnitOf ?measurement3 . " ,
         "?measurement3 measure:measures ?dimension3 . " ,
-        "?dimension3 measure:measuredBy ?measurement3 . ",
-        "?measurement3 rdf:value ?value3 ."  
+        "?dimension3 measure:measuredBy ?measurement3 . "
       ],
       "customform:prefixes": "@prefix qudt: <http://qudt.org/schema/qudt#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .  @prefix measure: <http://measurement.bibliotek-o.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
     },
