@@ -2155,7 +2155,7 @@
     </owl:Class>
     
     <owl:Class rdf:about="http://bibliotek-o.org/ontology/SourceCode">
-        <rdfs:label xml:lang="en">Software</rdfs:label>    
+        <rdfs:label xml:lang="en">Source code</rdfs:label>    
         <skos:definition xml:lang="en">A text listing of commands to be compiled or assembled into an executable computer program.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
         <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
