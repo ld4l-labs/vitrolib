@@ -65,11 +65,11 @@ public class NotificationSetup implements ServletContextListener {
 	
 	 class NotificationTask extends TimerTask {
 	        public void run() {
-	            //System.out.println("NOTIFY");
+	            System.out.println("NOTIFY");
 	            //readInFile();
-	            //readInbox();
+	            readInbox();
 	            //testPostToInbox();
-	            //timer.cancel(); //Terminate the timer thread
+	            timer.cancel(); //Terminate the timer thread
 	            
 	        }
 	        
@@ -145,7 +145,7 @@ public class NotificationSetup implements ServletContextListener {
 	 private void readInbox() {
 		 try {
 			 System.out.println("Read Inbox");
-		 String urlToRead = "https://linkedresearch.org/inbox/csarven.ca/dokieli-rww/";
+		 String urlToRead = "https://linkedresearch.org/inbox/ld4l/";
 		  StringBuilder result = new StringBuilder();
 	      URL url = new URL(urlToRead);
 	      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
