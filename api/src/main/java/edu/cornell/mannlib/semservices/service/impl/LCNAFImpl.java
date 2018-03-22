@@ -83,14 +83,14 @@ public class LCNAFImpl extends QuestioningAuthority {
 		concept.setLabel(getLabel(termResult));
 		concept.setAltLabelList(null);
 		//Add real world object information
-		HashMap<String, String> additionalInfo = getRWOInfo(termResult);
+		HashMap<String, Object> additionalInfo = getRWOInfo(termResult);
 		concept.setAdditionalInformation(additionalInfo);
 		return concept;
 	}
 
 
-	private HashMap<String, String> getRWOInfo(JSONObject termResult) {
-		HashMap<String, String> additionalInfo =new HashMap<String, String>();
+	private HashMap<String, Object> getRWOInfo(JSONObject termResult) {
+		HashMap<String, Object> additionalInfo =new HashMap<String, Object>();
 		if(termResult.containsKey("context")) {
 			JSONObject context = termResult.getJSONObject("context");
 			//Translate context to hashmap, if the value is an object, return string representation for now
@@ -99,7 +99,7 @@ public class LCNAFImpl extends QuestioningAuthority {
 				try {
 					Set <String> keys = (Set<String>) context.keySet();
 					for(String key: keys) {
-						additionalInfo.put(key, context.get(key).toString());
+						additionalInfo.put(key, context.get(key));
 					} 
 				} catch(Exception ex) {
 					logger.error("Error occurred in retrieving contextual information for " + termResult.toString());

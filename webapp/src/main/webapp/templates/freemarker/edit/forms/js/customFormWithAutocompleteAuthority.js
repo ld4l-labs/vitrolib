@@ -787,8 +787,12 @@ var customForm = {
 		if("additionalInformation" in item) {
 			var additionalInformation = item["additionalInformation"];
 			if(additionalInformation != null && "RWO" in additionalInformation) {
-				var RWOURI = additionalInformation["RWO"];
-				return RWOURI;
+				//Results are stored in array now
+				var rwoArray =  additionalInformation["RWO"];
+				if(rwoArray.length > 0) {
+					var RWOURI = rwoArray[0];
+					return RWOURI;
+				}
 			}
 		}
 		return item["uri"];
