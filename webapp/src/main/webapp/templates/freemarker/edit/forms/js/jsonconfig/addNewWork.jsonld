@@ -55,11 +55,6 @@
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
 		"?instanceTitleIndividual rdf:value ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
-		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
-		"?instanceMainTitleElement rdf:type bib:MainTitleElement .",
-		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
-		"?instanceMainTitleElement rdf:value ?instanceTitle .",
-		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual .",
 		"?instance bib:hasActivity ?publicationActivity .",
 		"?publicationActivity bib:hasAgent ?publisherAgent .", 
 		"?publicationActivity bib:isActivityOf ?instance .",
@@ -113,7 +108,7 @@
             "forms:FieldDependencies"
           ],
          
-          "customform:dependencies": ["matrixNumberUri,matrixNumber"]
+          "customform:dependencies": ["matrixNumberUri,matrixNumber", "eanUri, ean", "lcsh, lcshTerm", "issueIdentifier, issueNumber", "upcUri, upc", "agent, agentName", "location, locationName", "publisherAgentName, publisherAgent"]
     },
     {
       "@id": "customform:addWork_subject",
@@ -427,7 +422,6 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:mayUseNewResource": true,
       "customform:varName": "lcshTerm"
     },
         {

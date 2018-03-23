@@ -48,6 +48,7 @@ var addNewWorkSpecific = {
     	$("form").submit(function(event) {
     		addNewWorkSpecific.updateActivityLabel(event);
     		addNewWorkSpecific.updatePublicationActivityLabel(event);
+    		addNewWorkSpecific.updatePublicationActivityURI();
     	})
     	
     },
@@ -59,6 +60,15 @@ var addNewWorkSpecific = {
     updatePublicationActivityLabel:function(event) {
     	//Update activity label
 		$("#publicationActivityLabel").val("Publication");
+    },
+    //on submit, check if none of date, location, agent are filled, then ensure activity uri does not get created
+    updatePublicationActivityURI:function() {
+    	var date = $("input[name='publicationDate']").val();
+    	var location = $("input[name='locationName']").val();
+    	var agentName = $("input[name='agentName']").val();
+    	if(date == "" && location == "" & agentName == "") {
+    		$("input[name='publicationActivity']").val(">SUBMITTED VALUE WAS BLANK<");
+    	}
     }
    
 

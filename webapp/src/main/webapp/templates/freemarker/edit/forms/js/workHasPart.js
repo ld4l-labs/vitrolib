@@ -39,10 +39,19 @@ var workHasPart = {
 	        		if(actionTypeVal == "createNewWork") {
 	        			workHasPart.newWorkForm.show() ;
 	        			workHasPart.lookupWorkDiv.hide();
+	        			//Disable lookup input
+	        			$("#existingTitle").attr("disabled", "disabled");
+	        			//Enable all new form inputs
+	        			$("div#formContent").find("input, textarea, select").removeAttr("disabled");
+
 	        		}
 	        		else {
 	        			workHasPart.newWorkForm.hide() ;
 	        			workHasPart.lookupWorkDiv.show();
+	        			$("#existingTitle").removeAttr("disabled");
+	        			//Disable all new form inputs
+	        			$("div#formContent").find("input, textarea, select").attr("disabled", "disabled");
+
 	        		}
 	        	});
 	        	

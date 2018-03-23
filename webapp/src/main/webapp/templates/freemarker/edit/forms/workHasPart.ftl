@@ -130,8 +130,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
 	<div id="lookupLocalWork">
           <p>
-              <label for=""> Existing Work: </label>
-              <input class="acSelector" size="60"  type="text" id="title" name="title" acGroupName="localwork"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
+              <label for="title"> Existing Work </label>
+              <input class="acSelector" size="60"  type="text" id="existingTitle" name="title" acGroupName="localwork"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
           </p>
 
 
@@ -144,17 +144,17 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
               </p>
               <input class="acUriReceiver" type="hidden" id="objectVar" name="objectVar" value=""  ${flagClearLabelForExisting}="true" />
           </div>
-      </div>
+    </div>
 
 
 <div id="formcontent">
     <#--  New Work fields -->
       <#--  Title -->
       <!-- New work should just utilize the same title field as above -->
-     <!--p>
+     <p>
               <label for="title">Title ${requiredHint}</label>
-              <input size="60"  type="text" id="title" name="title" value="" />
-     </p-->
+              <input size="60"  type="text" id="newTitle" name="title" value="" />
+     </p>
 
      <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
      <div>
