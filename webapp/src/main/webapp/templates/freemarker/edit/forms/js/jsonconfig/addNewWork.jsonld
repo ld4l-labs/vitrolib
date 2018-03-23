@@ -108,7 +108,7 @@
             "forms:FieldDependencies"
           ],
          
-          "customform:dependencies": ["matrixNumberUri,matrixNumber", "eanUri, ean", "lcsh, lcshTerm", "issueIdentifier, issueNumber", "upcUri, upc", "agent, agentName", "location, locationName"]
+          "customform:dependencies": ["matrixNumberUri,matrixNumber", "eanUri, ean", "lcsh, lcshTerm", "issueIdentifier, issueNumber", "upcUri, upc", "agent, agentName", "location, locationName", "publisherAgentName, publisherAgent"]
     },
     {
       "@id": "customform:addWork_subject",

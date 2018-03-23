@@ -320,6 +320,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </p>
         </div>
        <input type="hidden" name="publicationActivityLabel" id="publicationActivityLabel" value=""/> 
+       <input type="hidden" name="publicationActivity" id="publicationActivity" value=""/> 
       </fieldset>
     </div>
 
