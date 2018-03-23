@@ -179,7 +179,14 @@
                 "forms:FieldOptions"
              ]
         },
-
+        {
+            "@id": "customform:dependencies",
+            "@type": [
+                "forms:FormComponent",
+                "forms:FieldDependencies"
+            ],     
+            "customform:dependencies": ["measurement2, value2, unit2, dimension2"]
+        },  
         {
             "@id": "customform:hasMeasurementGroup_measurement3",
             "@type": [
@@ -237,6 +244,14 @@
                 "forms:ConstantList",
                 "forms:FieldOptions"
              ]
-        }
+        },
+        {
+            "@id": "customform:dependencies",
+            "@type": [
+                "forms:FormComponent",
+                "forms:FieldDependencies"
+            ],     
+            "customform:dependencies": ["measurement3, value3, unit3, dimension3"]
+        }  
     ]
 }
