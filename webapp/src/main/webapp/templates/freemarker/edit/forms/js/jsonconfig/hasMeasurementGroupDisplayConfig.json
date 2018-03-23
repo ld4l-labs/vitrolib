@@ -47,7 +47,7 @@ var displayConfig = {
         "unit2": {
             "label": "Second unit",
             "description": "Unit used to express the measurement",
-              "constantList":[{"label":"Centimeter", "uri":"http://qudt.org/vocab/unit#Centimeter"},
+            "constantList":[{"label":"Centimeter", "uri":"http://qudt.org/vocab/unit#Centimeter"},
                             {"label":"Foot","uri":"http://qudt.org/vocab/unit#Foot"},
                             {"label":"Gram","uri":"http://qudt.org/vocab/unit#Gram"},
                             {"label":"Inch","uri":"http://qudt.org/vocab/unit#Inch"},
