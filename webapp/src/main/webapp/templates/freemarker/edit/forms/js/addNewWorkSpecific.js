@@ -65,7 +65,7 @@ var addNewWorkSpecific = {
     updatePublicationActivityURI:function() {
     	var date = $("input[name='publicationDate']").val();
     	var location = $("input[name='locationName']").val();
-    	var agentName = $("input[name='agentName']").val();
+    	var agentName = $("input[name='publisherAgentName']").val();
     	if(date == "" && location == "" & agentName == "") {
     		$("input[name='publicationActivity']").val(">SUBMITTED VALUE WAS BLANK<");
     	}
