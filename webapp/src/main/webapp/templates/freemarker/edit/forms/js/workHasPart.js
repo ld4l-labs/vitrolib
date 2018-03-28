@@ -37,27 +37,36 @@ var workHasPart = {
 	        	this.workActionType.change(function() {
 	        		var actionTypeVal = $(this).val();
 	        		if(actionTypeVal == "createNewWork") {
-	        			workHasPart.newWorkForm.show() ;
-	        			workHasPart.lookupWorkDiv.hide();
-	        			//Disable lookup input
-	        			$("#existingTitle").attr("disabled", "disabled");
-	        			//Enable all new form inputs
-	        			$("div#formContent").find("input, textarea, select").removeAttr("disabled");
-
+	        			workHasPart.disableAndHideExistingWorkForm();
+	        			workHasPart.showAndEnableNewWorkForm();
 	        		}
 	        		else {
-	        			workHasPart.newWorkForm.hide() ;
-	        			workHasPart.lookupWorkDiv.show();
-	        			$("#existingTitle").removeAttr("disabled");
-	        			//Disable all new form inputs
-	        			$("div#formContent").find("input, textarea, select").attr("disabled", "disabled");
-
+	        			workHasPart.showAndEnableExistingWorkForm();
+	        			workHasPart.disableAndHideNewWorkForm();
 	        		}
 	        	});
-	        	
-	        	
-	        	
-	           
+
+	        },
+	        disableAndHideNewWorkForm:function() {
+	        	//Disable all new form inputs
+    			$("div#formContent").find("input, textarea, select").attr("disabled", "disabled");
+    			//Hide the new work form
+    			workHasPart.newWorkForm.hide() ;
+	        },
+	        showAndEnableNewWorkForm:function() {
+	        	//Show new form and enable inputs
+    			workHasPart.newWorkForm.show() ;
+    			$("div#formContent").find("input, textarea, select").removeAttr("disabled");	   
+	        },
+	        disableAndHideExistingWorkForm:function() {
+	        	//Disable lookup input
+    			$("#existingTitle").attr("disabled", "disabled");
+    			workHasPart.lookupWorkDiv.hide();
+	        },
+	        showAndEnableExistingWorkForm:function() {
+	        	//show the existing form and remove disabled attribute
+    			workHasPart.lookupWorkDiv.show();
+    			$("#existingTitle").removeAttr("disabled");
 	        }
 	        
 
