@@ -111,7 +111,28 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  <div>Error</div>
 <#else>
 
-<section id="addNewWork" role="region">
+
+<section id="existingParts">
+ <ul id="existingParts" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Genre Form </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+</section>
+
+
+<section id="addNewPart" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
@@ -283,7 +304,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {"localwork":"http://id.loc.gov/ontologies/bibframe/Audio"},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-       	defaultNamespace:"${defaultNamespace}"
+       	defaultNamespace:"${defaultNamespace}",
+       	queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+       	subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -302,6 +327,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customForm.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />')}
+${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/lookupWithContext.css" />')}
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
@@ -310,5 +336,5 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>',
+			'<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContextConfig.js"></script>',
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/workHasPart.js"></script>')}

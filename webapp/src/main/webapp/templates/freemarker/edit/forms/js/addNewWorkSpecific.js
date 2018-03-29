@@ -41,10 +41,13 @@ var addNewWorkSpecific = {
     	
     	//On submit, copy label fields or populate as needed (for anything dynamic)
     	$("form").submit(function(event) {
+    		//update activity labels for work and instance level based on activity type selected
     		addNewWorkSpecific.updateActivityLabel(event);
     		addNewWorkSpecific.updatePublicationActivityLabel(event);
+    		//clear autocomplete fields so that these values are not submitted
+    		addNewWorkSpecific.clearEmptyAutocompleteFields();
     		addNewWorkSpecific.updatePublicationActivityURI();
-    	})
+    	});
     	
     	//Update which input is used for search
     	$("input[name='selectAcUrl']").change(function() {
@@ -73,6 +76,20 @@ var addNewWorkSpecific = {
     	var agentName = $("input[name='publisherAgentName']").val();
     	if(date == "" && location == "" & agentName == "") {
     		$("input[name='publicationActivity']").val(">SUBMITTED VALUE WAS BLANK<");
+    	}
+    },
+    clearEmptyAutocompleteFields:function() {
+    	var fieldNames = ["locationName", "publisherAgentName", "agentName", "lcshTerm"];
+    	var f;
+    	for(f = 0; f < fieldNames.length; f++) {
+    		addNewWorkSpecific.clearEmptyAutocompleteField(fieldNames[f]);
+    	}
+    },
+    clearEmptyAutocompleteField(fieldName) {
+    	var fieldElement = $("input[name='" + fieldName + "']");
+    	var fieldValue = fieldElement.val();
+    	if(fieldValue.match("^" + addNewWorkSpecific.selectAnExisting)) {
+    		fieldElement.val("");
     	}
     },
     setAgentType:function(lookupType) {
