@@ -142,7 +142,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
       <div>
       		<p>
-      		  <label for="agentName"> Author or Other Role${requiredHint}</label>
+      		  <label for="agentName">Role${requiredHint}</label>
               <select name="activityType" id="activityType" role="select">
 	              <option value="http://bibliotek-o.org/ontology/ComposerActivity">Composer</option>
 					<option value="http://bibliotek-o.org/ontology/ArrangerActivity">Arranger</option>
@@ -162,13 +162,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 					<option value="http://bibliotek-o.org/ontology/BroadcasterActivity">Broadcaster</option>
               </select>
       		</p>
-      		
+      		<input type="hidden" name="agentType" id="agentType" value=""/>
       		
       		<div> 
 				<div id="vocabSource">
-					<input checked="checked" type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-					<input type="radio" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+					<input checked="checked" type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Person" value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+					<input type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Organization" value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+					<input type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Agent"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
 	
 				</div>
 		        <p>

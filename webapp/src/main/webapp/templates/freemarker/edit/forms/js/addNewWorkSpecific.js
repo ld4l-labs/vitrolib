@@ -37,12 +37,7 @@ var addNewWorkSpecific = {
     			$("#instanceTitle").val(titleValue);
     		}
     	});
-    	//Copy activity label
-    	/*
-    	$("select[name=activityType]").change(function() {
-    		var optionText = $("#activityType option:selected").text();
-    		$("#activityLabel").val(optionText);
-    	});*/
+    	
     	
     	//On submit, copy label fields or populate as needed (for anything dynamic)
     	$("form").submit(function(event) {
@@ -50,6 +45,16 @@ var addNewWorkSpecific = {
     		addNewWorkSpecific.updatePublicationActivityLabel(event);
     		addNewWorkSpecific.updatePublicationActivityURI();
     	})
+    	
+    	//Update which input is used for search
+    	$("input[name='selectAcUrl']").change(function() {
+    		var selectedInput = $("input[name='selectAcUrl']:checked");
+    		var selectedUrl = selectedInput.val();
+    		var agentNameInput = $("#agentName");
+    		agentNameInput.attr("acUrl", selectedUrl);
+    		//Also change the value of the agent type dropdown on the basis of what is checked
+    		addNewWorkSpecific.setAgentType(selectedInput.attr("lookupType"));
+    	});
     	
     },
     updateActivityLabel:function(event) {
@@ -69,6 +74,9 @@ var addNewWorkSpecific = {
     	if(date == "" && location == "" & agentName == "") {
     		$("input[name='publicationActivity']").val(">SUBMITTED VALUE WAS BLANK<");
     	}
+    },
+    setAgentType:function(lookupType) {
+    	$("#agentType").val(lookupType);
     }
    
 

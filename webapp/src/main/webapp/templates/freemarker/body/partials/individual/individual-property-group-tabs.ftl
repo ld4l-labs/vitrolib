@@ -9,7 +9,6 @@
 <!-- ${propertyGroups.all?size} -->
 <ul class="propertyTabsList">
     <li  class="groupTabSpacer">&nbsp;</li>
-    <#--  Commenting out portions before we redo property groups or figure out how to apply this info -->
 <#list propertyGroups.all as groupTabs>
     <#if ( groupTabs.properties?size > 0 ) >
         <#assign groupName = groupTabs.getName(nameForOtherGroup)>
@@ -21,7 +20,7 @@
     	    <#assign groupNameHtmlId = "${i18n().properties}" >
         </#if>
         <#if tabCount = 1 >
-            <#--  li class="selectedGroupTab clickable" groupName="${groupNameHtmlId?replace("/","-")}">${groupName?capitalize}</li-->
+            <li class="selectedGroupTab clickable" groupName="${groupNameHtmlId?replace("/","-")}">${groupName?capitalize}</li>
             <li class="groupTabSpacer">&nbsp;</li>
             <#assign tabCount = 2>
         <#else>

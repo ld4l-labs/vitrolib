@@ -170,6 +170,15 @@
        "forms:LiteralField"
       ],
       "customform:varName": "duration"
+    },
+     {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["lgft,lgftTerm", "title,titleIndividual", "agent,agentName", "activity,activityType"]
     }
     
    ]

@@ -49,14 +49,14 @@ var workHasPart = {
 	        },
 	        disableAndHideNewWorkForm:function() {
 	        	//Disable all new form inputs
-    			$("div#formContent").find("input, textarea, select").attr("disabled", "disabled");
+    			$("div#formcontent").find("input, textarea, select").attr("disabled", "disabled");
     			//Hide the new work form
     			workHasPart.newWorkForm.hide() ;
 	        },
 	        showAndEnableNewWorkForm:function() {
 	        	//Show new form and enable inputs
     			workHasPart.newWorkForm.show() ;
-    			$("div#formContent").find("input, textarea, select").removeAttr("disabled");	   
+    			$("div#formcontent").find("input, textarea, select").removeAttr("disabled");	   
 	        },
 	        disableAndHideExistingWorkForm:function() {
 	        	//Disable lookup input
@@ -67,7 +67,12 @@ var workHasPart = {
 	        	//show the existing form and remove disabled attribute
     			workHasPart.lookupWorkDiv.show();
     			$("#existingTitle").removeAttr("disabled");
-	        }
+	        }/*,
+	        //On submit, if existing URI selected, then add >submitted value was blank< for any
+	        //fields that require a new resource: 
+	        eliminateNewResourceURIsForExistingWork:function() {
+	        	//if none of the items for activity, 
+	        }*/
 	        
 
 };
