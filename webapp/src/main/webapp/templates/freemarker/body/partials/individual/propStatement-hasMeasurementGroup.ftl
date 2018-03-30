@@ -15,15 +15,15 @@
     <a href="${profileUrl(statement.measurementGroup)}">Measurements:</a><br/>
 
     <#if statement.measurement1??>
-        <#assign unitLabel1 = getUnits(statement.value1, statement.unitLabel1)>
+        <#local unitLabel1 = getUnits(statement.value1, statement.unitLabel1)>
         - <a href="${profileUrl(statement.measurement1)}">${statement.dimensionLabel1?cap_first}: ${statement.value1} ${unitLabel1}</a><br/> 
 
         <#if statement.measurement2??>
-            <#assign unitLabel2 = getUnits(statement.value2, statement.unitLabel2)>
+            <#local unitLabel2 = getUnits(statement.value2, statement.unitLabel2)>
             - <a href="${profileUrl(statement.measurement2)}">${statement.dimensionLabel2?cap_first}: ${statement.value2} ${unitLabel2}</a><br/>   
 
             <#if statement.measurement3??>
-                <#assign unitLabel3 = getUnits(statement.value2, statement.unitLabel3)>
+                <#local unitLabel3 = getUnits(statement.value2, statement.unitLabel3)>
                 - <a href="${profileUrl(statement.measurement3)}">${statement.dimensionLabel3?cap_first}: ${statement.value3} ${unitLabel3}</a><br/>    
             </#if>
         </#if>
