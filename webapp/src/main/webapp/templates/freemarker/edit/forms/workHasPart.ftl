@@ -111,7 +111,28 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  <div>Error</div>
 <#else>
 
-<section id="addNewWork" role="region">
+
+<section id="existingParts">
+ <ul id="existingParts" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Genre Form </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+</section>
+
+
+<section id="addNewPart" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
@@ -153,14 +174,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <!-- New work should just utilize the same title field as above -->
      <p>
               <label for="title">Title ${requiredHint}</label>
-              <input size="60"  type="text" id="newTitle" name="title" value="" />
+              <input size="60"  type="text" id="newTitle" name="title" value="" disabled="disabled"/>
      </p>
 
      <#--  Type: Subclasses of WORK Class - or classes within classgroup? -->
      <div>
       <p>
       <label for="workType">Type ${requiredHint}</label>
-           <select id="workType" name="workType" role="select">
+           <select id="workType" name="workType" role="select" disabled="disabled">
 
               </select>
         </p>
@@ -172,7 +193,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <div>
       		<p>
       		  <label for="agentName"> Agent Activity or Role${requiredHint}</label>
-              <select name="activityType" id="activityType" role="select">
+              <select name="activityType" id="activityType" role="select" disabled="disabled">
 	              <option value="http://bibliotek-o.org/ontology/ComposerActivity">Composer</option>
 					<option value="http://bibliotek-o.org/ontology/ArrangerActivity">Arranger</option>
 					<option value="http://bibliotek-o.org/ontology/LibrettistActivity">Librettist</option>
@@ -195,21 +216,14 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       		<fieldset>
       		<div> 
 				<div id="vocabSource">
-					<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+					<input checked="checked" type="radio" lookupType="http://xmlns.com/foaf/0.1/Person" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson" disabled="disabled"> LOC Person
+					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Organization" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization" disabled="disabled"> LOC Organization
+					<input type="radio" lookupType="http://xmlns.com/foaf/0.1/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru" disabled="disabled"> ISNI
 				</div>
-				<!--div id="agentTypeDropdown" role="agentTypeDropdown">
-			  		<p>
-			  		<label for="agentType">Agent Type </label>
-			  			   <select id="agentType" name="agentType" role="select">
-			                
-			            	</select>
-			        </p>
-		  		</div-->
+				
 		        <p>
 		            <label for="agent"> Person or Organization${requiredHint}</label>
-		            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+		            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson" disabled="disabled"/>
 		        </p>
 		
 			
@@ -220,7 +234,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 		                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
 		                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 		            </p>
-		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  disabled="disabled"/>
 		        </div>
   			</div>
   			</fieldset>
@@ -230,25 +244,25 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 				<div>
 					 <p>
 			              <label for="duration">Duration:</label>
-			              <input size"60"  type="text" id="duration" name="duration" value="" />
+			              <input size"60"  type="text" id="duration" name="duration" value="" disabled="disabled"/>
 	          		</p>
 			     </div>
 		      		<!-- Hardcoding in genre forms -->
 		             
-		          <p templateId="inputAcSelector">
+		          <p>
 		    		<label for="lgftTerm">LC Genreform</label>
-		              <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms"/>
+		              <input class="acSelector" size="60"  type="text" id="lgftTerm" name="lgftTerm" acGroupName="lgftGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2FgenreForms" disabled="disabled"/>
 		          </p>
 		
 		
-		          <div class="acSelection" acGroupName="lgftGroup" templateId="literalSelection">
+		          <div class="acSelection" acGroupName="lgftGroup" >
 		              <p class="inline">
 		                  <label>${i18n().selected} Genreform:</label>
 		                  <span class="acSelectionInfo"></span>
 		                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
 		                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
 		              </p>
-		              <input class="acUriReceiver" type="hidden" id="lgft" name="lgft" value=""  />
+		              <input class="acUriReceiver" type="hidden" id="lgft" name="lgft" value=""  disabled="disabled"/>
 		              <#--  $ {flagClearLabelForExisting}="true"  -->
 		          </div>
           
@@ -290,7 +304,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {"localwork":"http://id.loc.gov/ontologies/bibframe/Audio"},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-       	defaultNamespace:"${defaultNamespace}"
+       	defaultNamespace:"${defaultNamespace}",
+       	queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+       	subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -309,6 +327,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customForm.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />')}
+${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/lookupWithContext.css" />')}
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
@@ -317,5 +336,5 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/addNewWorkSpecific.js"></script>',
+			'<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContextConfig.js"></script>',
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/workHasPart.js"></script>')}

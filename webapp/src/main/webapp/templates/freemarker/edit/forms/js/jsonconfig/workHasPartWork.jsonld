@@ -69,7 +69,6 @@
         "forms:FormComponent",
         "forms:LiteralField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   SELECT ?existingTitle WHERE {  ?objectVar  bibframe:title ?titleIndividual .  ?titleIndividual rdf:value ?existingTitle . }   ",
       "customform:varName": "title"
     },
     
@@ -79,7 +78,6 @@
         "forms:FormComponent",
         "forms:UriField"
       ],
-      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   PREFIX dcterms: <http://purl.org/dc/terms/> SELECT ?existingTitleIndividual WHERE {  ?objectVar  bibframe:title ?existingTitleIndividual . }   ",
 	  "customform:mayUseNewResource": true,
       "customform:varName": "titleIndividual"
     },
@@ -170,6 +168,15 @@
        "forms:LiteralField"
       ],
       "customform:varName": "duration"
+    },
+     {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["lgft,lgftTerm", "title,titleIndividual", "agent,agentName", "activity,activityType"]
     }
     
    ]

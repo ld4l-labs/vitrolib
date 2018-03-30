@@ -41,3 +41,6 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig214> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewEntity.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewEntityBasicTemplate.ftl" .
 ## Has item
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewItem.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewEntityBasicTemplate.ftl" .  
+
+## Adding recordedAt preprocessor
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig289> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customModelChangePreprocessorAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.preprocessors.AuthorityHackPreprocessor"^^<http://www.w3.org/2001/XMLSchema#string> .
