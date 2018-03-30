@@ -93,7 +93,7 @@
                 "forms:ConstantList",
                 "forms:FieldOptions"
             ]
-        },
+        }, 
  
         {
             "@id": "customform:hasMeasurementGroup_optionalN3",
