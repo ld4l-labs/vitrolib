@@ -6,6 +6,44 @@
      See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
 
 <list-view-config>
+    <query-construct>
+        PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
+        PREFIX measure: &lt;http://measurement.bibliotek-o.org/&gt;
+        
+        CONSTRUCT {
+            ?subject ?property ?measurementGroup .
+            
+            ?measurementGroup a measure:MeasurementGroup ; 
+                measure:hasMeasurement ?measurement .
+                
+            ?measurement a measure:Measurement ;
+                rdf:value ?value ;
+                measure:hasUnit ?unit ;
+                measure:measures ?dimension .
+                
+            ?unit rdfs:label ?unitLabel .
+            
+            ?dimension rdfs:label ?dimensionLabel .
+        
+        } WHERE {
+            ?subject ?property ?measurementGroup .
+            
+            ?measurementGroup a measure:MeasurementGroup ;
+                measure:hasMeasurement ?measurement .
+                
+            ?measurement a measure:Measurement ;
+                rdf:value ?value ;
+                measure:hasUnit ?unit ;
+                measure:measures ?dimension .
+                
+            ?unit rdfs:label ?unitLabel .
+            
+            ?dimension rdfs:label ?dimensionLabel .
+        }
+    </query-construct>
+    
     <query-select>    
         PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
@@ -13,62 +51,97 @@
         PREFIX measure: &lt;http://measurement.bibliotek-o.org/&gt;
         
         SELECT DISTINCT 
-        ?measurementGroup 
-        ?measurement1 ?value1 
-        ?unitLabel1 ?dimensionLabel1   
-        ?measurement2 ?value2 
-        ?unitLabel2 ?dimensionLabel2   
-        ?measurement3 ?value3 
-        ?unitLabel3 ?dimensionLabel3             
+            ?measurementGroup 
+            ?measurement1 ?value1 
+            ?unitLabel1 ?dimensionLabel1   
+            ?measurement2 ?value2 
+            ?unitLabel2 ?dimensionLabel2   
+            ?measurement3 ?value3 
+            ?unitLabel3 ?dimensionLabel3             
         
         WHERE { 
+            {
+                ?subject ?property ?measurementGroup .
         
-            ?subject ?property ?measurementGroup .
+                ?measurementGroup a measure:MeasurementGroup ;
+                    measure:hasMeasurement ?measurement1 , ?measurement2 , ?measurement3 .
         
-            ?measurementGroup a measure:MeasurementGroup ;
-                measure:hasMeasurement ?measurement1 .
+                ?measurement1 a measure:Measurement ;
+                    rdf:value ?value1 ;
+                    measure:hasUnit ?unit1 ;
+                    measure:measures ?dimension1 .
         
-            ?measurement1 a measure:Measurement ;
-                rdf:value ?value1 ;
-                measure:hasUnit ?unit1 ;
-                measure:measures ?dimension1 .
+                ?unit1 rdfs:label ?unitLabel1 .
         
-            ?unit1 rdfs:label ?unitLabel1 .
+                ?dimension1 rdfs:label ?dimensionLabel1 .
         
-            ?dimension1 rdfs:label ?dimensionLabel1 .
-        
-            OPTIONAL {
-        
-                ?measurementGroup measure:hasMeasurement ?measurement2 . 
-            
                 ?measurement2 a measure:Measurement ;
                     rdf:value ?value2 ;
                     measure:hasUnit ?unit2 ;
                     measure:measures ?dimension2 .
-            
-                ?unit2 rdfs:label ?unitLabel2 .
-            
-                ?dimension2 rdfs:label ?dimensionLabel2 .   
-            
-                OPTIONAL {
-            
-                    ?measurementGroup measure:hasMeasurement ?measurement3 . 
-                
-                    ?measurement3 a measure:Measurement ;
-                        rdf:value ?value3 ;
-                        measure:hasUnit ?unit3 ;
-                        measure:measures ?dimension3 .
-                
-                    ?unit2 rdfs:label ?unitLabel3 .
-                
-                    ?dimension3 rdfs:label ?dimensionLabel3 . 
         
-                }                 
-            } FILTER ( ( STR(?measurement1) > STR(?measurement2) )  &amp;&amp; 
-                    ( STR(?measurement2) > STR(?measurement3) ) )
+                ?unit2 rdfs:label ?unitLabel2 .
+        
+                ?dimension2 rdfs:label ?dimensionLabel2 .
+        
+                ?measurement3 a measure:Measurement ;
+                    rdf:value ?value3 ;
+                    measure:hasUnit ?unit3 ;
+                    measure:measures ?dimension3 .
+        
+                ?unit3 rdfs:label ?unitLabel3 .
+        
+                ?dimension3 rdfs:label ?dimensionLabel3 .
+        
+                FILTER ( STR(?measurement1) > STR(?measurement2) &amp;&amp;                        
+                         STR(?measurement2) > STR(?measurement3) 
+                ) 
+        
+            } UNION {
+        
+                ?subject ?property ?measurementGroup .
+        
+                ?measurementGroup a measure:MeasurementGroup ;
+                    measure:hasMeasurement ?measurement1 , ?measurement2  .
+        
+                ?measurement1 a measure:Measurement ;
+                    rdf:value ?value1 ;
+                    measure:hasUnit ?unit1 ;
+                    measure:measures ?dimension1 .
+        
+                ?unit1 rdfs:label ?unitLabel1 .
+                
+                ?dimension1 rdfs:label ?dimensionLabel1 .
+        
+                ?measurement2 a measure:Measurement ;
+                    rdf:value ?value2 ;
+                    measure:hasUnit ?unit2 ;
+                    measure:measures ?dimension2 .
+        
+                ?unit2 rdfs:label ?unitLabel2 .
+        
+                ?dimension2 rdfs:label ?dimensionLabel2 .
+        
+                FILTER ( STR(?measurement1) > STR(?measurement2) ) 
+        
+            } UNION {
+        
+                ?subject ?property ?measurementGroup .
+        
+                ?measurementGroup a measure:MeasurementGroup ;
+                    measure:hasMeasurement ?measurement1   .
+        
+                ?measurement1 a measure:Measurement ;
+                    rdf:value ?value1 ;
+                    measure:hasUnit ?unit1 ;
+                    measure:measures ?dimension1 .
+        
+                ?unit1 rdfs:label ?unitLabel1 .
+        
+                ?dimension1 rdfs:label ?dimensionLabel1 .
+            }                  
         }   
     </query-select>
-    
-    
+        
     <template>propStatement-hasMeasurementGroup.ftl</template>
 </list-view-config>
