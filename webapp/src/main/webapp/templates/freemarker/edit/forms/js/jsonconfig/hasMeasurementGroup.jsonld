@@ -94,6 +94,14 @@
                 "forms:FieldOptions"
             ]
         },
+        {
+            "@id": "customform:dependencies",
+            "@type": [
+                "forms:FormComponent",
+                "forms:FieldDependencies"
+            ],     
+            "customform:dependencies": ["measurement1, value1, unit1, dimension1"]
+        },  
  
         {
             "@id": "customform:hasMeasurementGroup_optionalN3",

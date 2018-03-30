@@ -79,7 +79,7 @@
   </rdf:Description>
   
   <rdf:Description rdf:about="http://qudt.org/vocab/unit#Kilometer">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilometer </rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilometer</rdfs:label>
     <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Kilometre"/>
     <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1091</qudt:code>
     <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>

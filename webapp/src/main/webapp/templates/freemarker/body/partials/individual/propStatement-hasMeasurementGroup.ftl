@@ -15,16 +15,60 @@
     <a href="${profileUrl(statement.measurementGroup)}">Measurements:</a><br/>
 
     <#if statement.measurement1??>
-        <a href="${profileUrl(statement.measurement1)}">${statement.dimensionLabel1}: ${statement.value1} ${statement.unitLabel1}</a><br/> 
+        <#assign unitLabel1 = getUnits(statement.value1, statement.unitLabel1)>
+        - <a href="${profileUrl(statement.measurement1)}">${statement.dimensionLabel1?cap_first}: ${statement.value1} ${unitLabel1}</a><br/> 
 
         <#if statement.measurement2??>
-            <a href="${profileUrl(statement.measurement2)}">${statement.dimensionLabel2}: ${statement.value2} ${statement.unitLabel2}</a><br/>   
+            <#assign unitLabel2 = getUnits(statement.value2, statement.unitLabel2)>
+            - <a href="${profileUrl(statement.measurement2)}">${statement.dimensionLabel2?cap_first}: ${statement.value2} ${unitLabel2}</a><br/>   
 
             <#if statement.measurement3??>
-                <a href="${profileUrl(statement.measurement3)}">${statement.dimensionLabel3}: ${statement.value3} ${statement.unitLabel3}</a><br/>    
+                <#assign unitLabel3 = getUnits(statement.value2, statement.unitLabel3)>
+                - <a href="${profileUrl(statement.measurement3)}">${statement.dimensionLabel3?cap_first}: ${statement.value3} ${unitLabel3}</a><br/>    
             </#if>
         </#if>
     </#if>
 </#if>
 
 </#macro>
+
+<#function getUnits value unitLabel>
+    <#return getNumber(value, lowercase(unitLabel))>
+</#function>
+
+<#function getNumber value label>
+    <#if value?number == 1>
+        <#return label>
+    </#if>
+
+    <#switch label>
+        <#case "foot">
+            <#return "feet">
+        <#case "inch">
+            <#return "inches">
+        <#case "mile US statute">
+            <#return "miles US statute">
+        <#case "ounce mass">
+            <#return "ounces mass"> 
+        <#case "pound mass">
+            <#return "pounds mass"> 
+        <#default>
+            <#return label + "s"> 
+    </#switch>
+</#function>
+
+<#function lowercase label>
+
+    <#switch label>
+         <#case "Mile US Statute">
+            <#return "mile US statute">
+        <#case "Metric Ton">
+            <#return "metric ton">
+        <#case "Ounce Mass">
+            <#return "ounce mass">
+        <#case "Pound Mass">
+            <#return "pound mass"> 
+        <#default>
+            <#return label?lower_case>    
+    </#switch>
+</#function>
