@@ -122,7 +122,7 @@
         
                 ?dimension2 rdfs:label ?dimensionLabel2 .
         
-                FILTER ( STR(?measurement1) > STR(?measurement2) ) 
+                FILTER ( ?measurement1 != ?measurement2 ) 
         
             } UNION {
         
