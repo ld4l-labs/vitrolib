@@ -137,11 +137,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
 <#if editMode = "edit">
-	     <p>
+	     <!--p>
               <label for=""> Click to edit work </label>
-              <a href="${profileUrl(editConfiguration.objectUri)}"><input  size="60"  type="button" id="title" name="title" acGroupName="localwork"  value="" ></a>
+              <a href="${profileUrl(editConfiguration.objectUri)}"><input  size="60"  type="button" id="title" name="title" acGroupName="localwork"  value="${editConfiguration.objectPr}" ></a>
               
-          </p>
+          </p-->
 </#if>
 <#if editMode = "add">
 	<div id="workActionTypeOptions">

@@ -311,11 +311,12 @@ var customForm = {
         		//That will be overwritten if value selected from autocomplete
         		//We do this everytime the user types anything in the autocomplete box
         		customForm.initDefaultBlankURI(selectedObj);
-                if (request.term in customForm.acCache) {
+        		//Get rid of the cache for now
+                /*if (request.term in customForm.acCache) {
                     // console.log('found term in cache');
                     response(customForm.acCache[request.term]);
                     return;
-                }
+                }*/
                 
                 //We want the ability to have multiple autocompletes to different sources in the same page
                 //Here, we check whether the selected object has a URL on it
@@ -328,6 +329,10 @@ var customForm = {
                 if("acTypes" in customForm && groupName in customForm.acTypes) {
                 	selectedSearchType = customForm.acTypes[groupName];
                 }
+                
+                //Add loading icon
+                var loadingIconHtml = "<div id='indicator'><img id='loadingIndicator' class='indicator' alt='processing'/></div>";
+                $(selectedObj).parent().append(loadingIconHtml);
 
                 
                 $.ajax({
@@ -339,6 +344,8 @@ var customForm = {
                         type:selectedSearchType //used for internal search and ignored by other search services
                     },
                     complete: function(xhr, status) {
+                    	//Get rid of loading icon
+                    	$(selectedObj).parent().find("div#indicator").remove();
                         // Not sure why, but we need an explicit json parse here. 
                         var results = $.parseJSON(xhr.responseText);                        
                         var filteredResults = customForm.filterAcResults(results);

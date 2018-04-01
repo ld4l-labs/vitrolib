@@ -71,13 +71,6 @@
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
     <skos:definition>A note explaining SR doesn’t match the jacket. Wording: Not in original jacket. </skos:definition>
 </owl:Class>
-
-<owl:Class rdf:about="http://audio.bibliotek-o.org/PerformedMusic">
-    <rdfs:label>Performed Music</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
-    <skos:definition>An audio work consisting of content expressed through music in an audible form, not necessarily performed live. To denote a live performance a bib:PerformedMusic should be linked to a live event.</skos:definition>
-    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1011.</skos:scopeNote>
-</owl:Class>
     
 <owl:Class rdf:about="http://audio.bibliotek-o.org/PostItNoteNote">
     <rdfs:label>Post-It Note on LP</rdfs:label>
@@ -105,20 +98,6 @@
     <rdfs:label>Signature Note</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://audio.bibliotek-o.org/WritingOnAlbumNote"/>
     <skos:definition>A note explaining there is a signature on the copy, Wording: Provenance: Afrika Bambaataa (signature). Or if signed with initials: Provenance: A[frika] B[ambaataa] (signature). </skos:definition>
-</owl:Class>
-  
-<owl:Class rdf:about="http://audio.bibliotek-o.org/Sounds">
-    <rdfs:label>Sounds</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
-    <skos:definition>An audio work consisting of content other than language or music, expressed in an audible form.</skos:definition>
-    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1012.</skos:scopeNote>
-</owl:Class>
-  
-<owl:Class rdf:about="http://audio.bibliotek-o.org/SpokenWord">
-    <rdfs:label>Spoken word</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Audio"/>
-    <skos:definition>An audio work consisting of content expressed through language in an audible form.</skos:definition>
-    <skos:scopeNote xml:lang="en">This class is derived from the RDA Content Type: http://rdaregistry.info/termList/RDAContentType/1013.</skos:scopeNote>
 </owl:Class>
     
 <owl:Class rdf:about="http://audio.bibliotek-o.org/SummaryNote">
