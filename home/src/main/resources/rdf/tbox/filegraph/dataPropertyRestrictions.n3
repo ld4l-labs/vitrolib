@@ -4,7 +4,21 @@
 
 <http://id.loc.gov/ontologies/bibframe/Audio>
       rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty <http://schema.org/duration> ;
-                owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
-              ] .
+      [ a       owl:Restriction ;
+	owl:onProperty <http://schema.org/duration> ;
+	owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
+      ] .
+              
+<http://id.loc.gov/ontologies/bibframe/Instance>
+      rdfs:subClassOf
+      [ a       owl:Restriction ;
+	owl:onProperty <http://id.loc.gov/ontologies/bibframe/editionStatement> ;
+	owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
+      ] .
+              
+<http://id.loc.gov/ontologies/bibframe/Instance>
+      rdfs:subClassOf
+      [ a       owl:Restriction ;
+	owl:onProperty <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement> ;
+	owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
+      ] .

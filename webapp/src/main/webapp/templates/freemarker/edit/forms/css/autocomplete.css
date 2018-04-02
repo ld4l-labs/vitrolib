@@ -22,3 +22,7 @@ li.ui-menu-item a.ui-corner-all {
     font-style: italic;
     color: #555;	
 }
+/*Added this*/
+.ui-autocomplete-loading {
+    background: rgba(0, 0, 0, 0) url("../../../../../images/indicatorWhite.gif") no-repeat scroll right center;
+}

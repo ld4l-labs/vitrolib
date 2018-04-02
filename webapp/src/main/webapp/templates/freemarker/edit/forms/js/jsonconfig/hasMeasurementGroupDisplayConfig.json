@@ -1,7 +1,7 @@
 var displayConfig = {
-    "fieldOrder" :  ["value1", "unit1", "dimension1", "value2", "unit2", "dimension2", "value3", "unit3", "dimension3"],
+    "fieldOrder" :  ["groupDescription", "value1", "unit1", "dimension1", "value2", "unit2", "dimension2", "value3", "unit3", "dimension3"],
     "fieldDisplayProperties" : {
-    
+        "groupDescription": {"label":"Qualifying information about the measurement"},
         "value1": {"label":"First numeric value *", "description": "Numeric value for the measurement"},
         "unit1": {
             "label": "First unit *",
