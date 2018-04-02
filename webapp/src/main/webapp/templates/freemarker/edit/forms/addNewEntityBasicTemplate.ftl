@@ -109,7 +109,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	  	<p>Lookup existing </p>
   		<div> 
 	        <p templateId="inputAcSelector">
-	            <label for="eventName"> Event</label>
+	            <label for="entityLookupName"> Entity</label>
 	            <input class="acSelector" size="60"  type="text" id="entityLookupName" name="entityLookupName" acGroupName="entityLookup"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
 	        </p>
 	

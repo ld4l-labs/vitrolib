@@ -44,3 +44,6 @@
 
 ## Adding recordedAt preprocessor
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig289> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customModelChangePreprocessorAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.preprocessors.AuthorityHackPreprocessor"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+## Measurement group
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig309> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasMeasurement.ftl" .  

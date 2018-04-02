@@ -103,6 +103,15 @@
       "customform:varName": "eventLocationName",
        "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>   PREFIX bib: <http://bibliotek-o.org/ontology/>   PREFIX schema: <http://schema.org/>   SELECT ?eventLocationName     WHERE {?objectVar schema:location ?eventLocation . ?eventLocation rdfs:label ?eventLocationName .}  "
       
+    },
+      {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["eventLocation, eventLocationName"]
     }
     
    ]

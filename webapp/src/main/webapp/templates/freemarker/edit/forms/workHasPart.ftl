@@ -119,7 +119,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                  <div class='row'>
                      <div class='col-12'>
                          <div class='column conceptLabelInfo'>
-                            <h4>Genre Form </h4>
+                            <h4>Content Part </h4>
                          </div>
                          
                          <div class='column conceptRemoval'>&nbsp;
@@ -131,18 +131,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       </ul>
 </section>
 
-
+<br/>
 <section id="addNewPart" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
 <form id="workHasPart" class="customForm noIE67" action="${submitUrl}"  role="add work" >
-<#if editMode = "edit">
-	     <!--p>
-              <label for=""> Click to edit work </label>
-              <a href="${profileUrl(editConfiguration.objectUri)}"><input  size="60"  type="button" id="title" name="title" acGroupName="localwork"  value="${editConfiguration.objectPr}" ></a>
-              
-          </p-->
-</#if>
+
 <#if editMode = "add">
 	<div id="workActionTypeOptions">
 		<input name="workActionType" type="radio" checked="checked" value="lookupLocalWork"/>Lookup local work

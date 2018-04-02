@@ -330,9 +330,7 @@ var customForm = {
                 	selectedSearchType = customForm.acTypes[groupName];
                 }
                 
-                //Add loading icon
-                var loadingIconHtml = "<div id='indicator'><img id='loadingIndicator' class='indicator' alt='processing'/></div>";
-                $(selectedObj).parent().append(loadingIconHtml);
+                
 
                 
                 $.ajax({
@@ -344,8 +342,7 @@ var customForm = {
                         type:selectedSearchType //used for internal search and ignored by other search services
                     },
                     complete: function(xhr, status) {
-                    	//Get rid of loading icon
-                    	$(selectedObj).parent().find("div#indicator").remove();
+                    	
                         // Not sure why, but we need an explicit json parse here. 
                         var results = $.parseJSON(xhr.responseText);                        
                         var filteredResults = customForm.filterAcResults(results);
