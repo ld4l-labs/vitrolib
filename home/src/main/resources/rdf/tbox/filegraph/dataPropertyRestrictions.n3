@@ -22,3 +22,10 @@
 	owl:onProperty <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement> ;
 	owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
       ] .
+      
+<http://measurement.bibliotek-o.org/Measurement> 
+ rdfs:subClassOf
+      [ a       owl:Restriction ;
+	owl:onProperty rdf:value ;
+	owl:allValuesFrom <http://www.w3.org/2001/XMLSchema#string> 
+      ] .
