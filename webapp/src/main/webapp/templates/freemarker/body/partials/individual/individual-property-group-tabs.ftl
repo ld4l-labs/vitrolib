@@ -9,19 +9,22 @@
 <!-- ${propertyGroups.all?size} -->
 <ul class="propertyTabsList">
     <li  class="groupTabSpacer">&nbsp;</li>
-    <#--  Commenting out portions before we redo property groups or figure out how to apply this info -->
 <#list propertyGroups.all as groupTabs>
     <#if ( groupTabs.properties?size > 0 ) >
         <#assign groupName = groupTabs.getName(nameForOtherGroup)>
         <#if groupName?has_content>
 		    <#--the function replaces spaces in the name with underscores, also called for the property group menu-->
     	    <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
+    	    <#-- Get rid of any brackets for now -->
+    	    <#assign groupNameHtmlId = groupNameHtmlId?replace("(","") >
+    	    <#assign groupNameHtmlId = groupNameHtmlId?replace(")","") >
+
         <#else>
             <#assign groupName = "${i18n().properties_capitalized}">
     	    <#assign groupNameHtmlId = "${i18n().properties}" >
         </#if>
         <#if tabCount = 1 >
-            <#--  li class="selectedGroupTab clickable" groupName="${groupNameHtmlId?replace("/","-")}">${groupName?capitalize}</li-->
+            <li class="selectedGroupTab clickable" groupName="${groupNameHtmlId?replace("/","-")}">${groupName?capitalize}</li>
             <li class="groupTabSpacer">&nbsp;</li>
             <#assign tabCount = 2>
         <#else>
@@ -39,6 +42,9 @@
     <#if (group.properties?size > 0)>
         <#assign groupName = group.getName(nameForOtherGroup)>
         <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
+        <#-- Getting rid of brackets since they throw off jquery -->
+        <#assign groupNameHtmlId = groupNameHtmlId?replace("(","") >
+    	<#assign groupNameHtmlId = groupNameHtmlId?replace(")","") >
         <#assign verbose = (verbosePropertySwitch.currentValue)!false>
         <section id="${groupNameHtmlId?replace("/","-")}" class="property-group" role="region" style="<#if (sectionCount > 1) >display:none<#else>display:block</#if>">
         <nav id="scroller" class="scroll-up hidden" role="navigation">
@@ -51,6 +57,8 @@
         <#if groupName?has_content>
 		    <#--the function replaces spaces in the name with underscores, also called for the property group menu-->
     	    <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
+    	    <#assign groupNameHtmlId = groupNameHtmlId?replace("(","") >
+    		<#assign groupNameHtmlId = groupNameHtmlId?replace(")","") >
             <h2 id="${groupNameHtmlId?replace("/","-")}" pgroup="tabs" class="hidden">${groupName?capitalize}</h2>
         <#else>
             <h2 id="properties" pgroup="tabs" class="hidden">${i18n().properties_capitalized}</h2>

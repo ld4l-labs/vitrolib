@@ -1,6 +1,7 @@
 <http://rdaregistry.info/termList/grooveWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://rdaregistry.info/termList/grooveWidth> <http://purl.org/dc/elements/1.1/title> "RDA Groove Width of an Analog Disc" .
-<http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/GrooveWidthofDiscConcept> .
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/grooveWidth> .
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/1131> .
@@ -63,7 +64,8 @@
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/2004/02/skos/core#definition> "En rillebredde for en analog plate, typisk rundt 40 riller per centimeter eller 100 riller per tomme."@no .
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "En rillebredde for en analog plate, typisk rundt 40 riller per centimeter eller 100 riller per tomme."@no .
 <http://rdaregistry.info/termList/grooveWidth/1001> <http://www.w3.org/2004/02/skos/core#scopeNote> "Brede riller forekommer prim\u00E6rt p\u00E5 b\u00E6rere av skjellakk som inneholder eldre akustiske og elektriske opptak."@no .
-<http://rdaregistry.info/termList/grooveWidth/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/grooveWidth/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/grooveWidth/1002><http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/GrooveWidthofDiscConcept> .
 <http://rdaregistry.info/termList/grooveWidth/1002> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/grooveWidth> .
 <http://rdaregistry.info/termList/grooveWidth/1002> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/grooveWidth/1002> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/1132> .

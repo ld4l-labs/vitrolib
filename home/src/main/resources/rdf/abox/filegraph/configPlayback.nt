@@ -1,6 +1,7 @@
 <http://rdaregistry.info/termList/configPlayback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://rdaregistry.info/termList/configPlayback> <http://purl.org/dc/elements/1.1/title> "RDA Configuration of Playback Channels" .
-<http://rdaregistry.info/termList/configPlayback/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/configPlayback/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/configPlayback/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> .
 <http://rdaregistry.info/termList/configPlayback/1001> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/configPlayback> .
 <http://rdaregistry.info/termList/configPlayback/1001> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/configPlayback/1001> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/874> .
@@ -38,7 +39,8 @@
 <http://rdaregistry.info/termList/configPlayback/1001> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "mono"@no .
 <http://rdaregistry.info/termList/configPlayback/1001> <http://www.w3.org/2004/02/skos/core#definition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av \u00E9n enkelt kanal for monofonisk lyd."@no .
 <http://rdaregistry.info/termList/configPlayback/1001> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av \u00E9n enkelt kanal for monofonisk lyd."@no .
-<http://rdaregistry.info/termList/configPlayback/1003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/configPlayback/1003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/configPlayback/1003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> .
 <http://rdaregistry.info/termList/configPlayback/1003> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/configPlayback> .
 <http://rdaregistry.info/termList/configPlayback/1003> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/configPlayback/1003> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/876> .
@@ -76,7 +78,8 @@
 <http://rdaregistry.info/termList/configPlayback/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "kvadrofonisk"@no .
 <http://rdaregistry.info/termList/configPlayback/1003> <http://www.w3.org/2004/02/skos/core#definition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av fire kanaler for kvadrofonisk lyd."@no .
 <http://rdaregistry.info/termList/configPlayback/1003> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av fire kanaler for kvadrofonisk lyd."@no .
-<http://rdaregistry.info/termList/configPlayback/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/configPlayback/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/configPlayback/1002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> .
 <http://rdaregistry.info/termList/configPlayback/1002> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/configPlayback> .
 <http://rdaregistry.info/termList/configPlayback/1002> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/configPlayback/1002> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/875> .
@@ -114,7 +117,8 @@
 <http://rdaregistry.info/termList/configPlayback/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "stereo"@no .
 <http://rdaregistry.info/termList/configPlayback/1002> <http://www.w3.org/2004/02/skos/core#definition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av to kanaler for stereofonisk lyd."@no .
 <http://rdaregistry.info/termList/configPlayback/1002> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av to kanaler for stereofonisk lyd."@no .
-<http://rdaregistry.info/termList/configPlayback/1004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rdaregistry.info/termList/configPlayback/1004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://rdaregistry.info/termList/configPlayback/1004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> .
 <http://rdaregistry.info/termList/configPlayback/1004> <http://www.w3.org/2004/02/skos/core#inScheme> <http://rdaregistry.info/termList/configPlayback> .
 <http://rdaregistry.info/termList/configPlayback/1004> <http://metadataregistry.org/uri/profile/regap/status> <http://metadataregistry.org/uri/RegStatus/1001> .
 <http://rdaregistry.info/termList/configPlayback/1004> <http://metadataregistry.org/uri/profile/regap/identifier> <http://metadataregistry.org/concepts/877> .
@@ -152,5 +156,5 @@
 <http://rdaregistry.info/termList/configPlayback/1004> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "surround"@no .
 <http://rdaregistry.info/termList/configPlayback/1004> <http://www.w3.org/2004/02/skos/core#definition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av mer enn fire kanaler for surroundlyd."@no .
 <http://rdaregistry.info/termList/configPlayback/1004> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "En konfigurasjon av kanaler for avspilling som best\u00E5r av mer enn fire kanaler for surroundlyd."@no .
-<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
 <http://metadataregistry.org/uri/RegStatus/1001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Published"@en .

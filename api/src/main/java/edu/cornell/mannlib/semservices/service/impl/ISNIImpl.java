@@ -38,7 +38,8 @@ public class ISNIImpl implements ExternalConceptService {
 	private final static String isniQuery = "http://isni.oclc.nl/sru/DB=1.2/?query=pica.nw+%3D+%22";
 	private final static String maxRecordsToReturn = "10";
 	private final static String isniQuerySuffix = "%22&operation=searchRetrieve&recordSchema=isni-b&maximumRecords=" + maxRecordsToReturn;
-	private final static String isniSortKey = "&sortKeys=RLV%2Cpica%2C0%2C%2C"; // this should be 'relevance' order but doesn't appear to make a difference in returned data.
+	//Changing sort key to LST_nd,pica,0 from RLV,pica,0,,
+	private final static String isniSortKey = "&sortKeys=LST_nd%2Cpica%2C0"; // this should be 'relevance' order but doesn't appear to make a difference in returned data.
 	
 	private static final Log logger = LogFactory.getLog(ISNIImpl.class);
 

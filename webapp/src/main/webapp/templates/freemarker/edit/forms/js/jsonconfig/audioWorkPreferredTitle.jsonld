@@ -42,7 +42,9 @@
         "forms:FormComponent",
         "forms:LiteralField"
       ],
-      "customform:varName": "title"
+      "customform:varName": "title",
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  SELECT ?existingTitle   WHERE {?objectVar rdf:value ?existingTitle .}    "
+      
     }
     ]
 }

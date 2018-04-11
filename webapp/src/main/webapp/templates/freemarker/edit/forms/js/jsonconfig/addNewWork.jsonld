@@ -25,11 +25,6 @@
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual rdf:value ?title .",
 		"?titleIndividual bibframe:titleOf ?subject .",
-		"?titleIndividual dcterms:hasPart ?mainTitleElement .",
-		"?mainTitleElement rdf:type bib:MainTitleElement .",
-		"?mainTitleElement rdf:value ?title .",
-		"?mainTitleElement rdfs:label ?title .",
-		"?mainTitleElement dcterms:isPartOf ?titleIndividual .",
 		"?subject rdf:type ?workType .",
 		"?subject dcterms:language ?language ."
       ],
@@ -60,11 +55,6 @@
 		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
 		"?instanceTitleIndividual rdf:value ?instanceTitle .",
 		"?instanceTitleIndividual bibframe:titleOf ?instance .",
-		"?instanceTitleIndividual dcterms:hasPart ?instanceMainTitleElement .",
-		"?instanceMainTitleElement rdf:type bib:MainTitleElement .",
-		"?instanceMainTitleElement rdfs:label ?instanceTitle .",
-		"?instanceMainTitleElement rdf:value ?instanceTitle .",
-		"?instanceMainTitleElement dcterms:isPartOf ?instanceTitleIndividual .",
 		"?instance bib:hasActivity ?publicationActivity .",
 		"?publicationActivity bib:hasAgent ?publisherAgent .", 
 		"?publicationActivity bib:isActivityOf ?instance .",
@@ -76,6 +66,9 @@
 		"?publicationActivity rdf:type bib:PublicationActivity .",
 		"?publicationActivity dcterms:date ?publicationDate .",
 		"?publicationActivity rdfs:label ?publicationActivityLabel .",
+		"?publicationActivity schema:location ?location .",
+		"?location rdfs:label ?locationName . ",
+		"?location rdf:type gn:Feature .",
 		"?instance rdf:type ?instanceType .",
 		"?instance bibframe:responsibilityStatement ?statementResponsibility .",
 		"?instance bibframe:identifiedBy ?issueIdentifier .",
@@ -98,9 +91,24 @@
 		"?lcsh rdfs:label ?lcshTerm .",
 		"?lcsh rdf:type owl:Thing .",
 		"?instance bibframe:hasItem ?item .",
-		"?item rdfs:label ?instanceLabel ."
+		"?item rdf:type bibframe:Item .",
+		"?item rdfs:label ?instanceTitle. ",
+		"?item bibframe:title ?itemTitleIndividual .",
+		"?itemTitleIndividual rdf:type bibframe:Title .",
+		"?itemTitleIndividual rdfs:label ?instanceTitle .",
+		"?itemTitleIndividual rdf:value ?instanceTitle .",
+		"?itemTitleIndividual bibframe:titleOf ?item ."
       ],
-      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    },
+      {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["matrixNumberUri,matrixNumber", "eanUri, ean", "lcsh, lcshTerm", "issueIdentifier, issueNumber", "upcUri, upc", "agent, agentName", "location, locationName", "publisherAgentName, publisherAgent"]
     },
     {
       "@id": "customform:addWork_subject",
@@ -414,7 +422,6 @@
        "forms:FormComponent",
        "forms:LiteralField"
       ],
-      "customform:mayUseNewResource": true,
       "customform:varName": "lcshTerm"
     },
         {
@@ -425,6 +432,31 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:varName": "item"
+    },
+     {
+      "@id": "customform:whcor_itemTitleIndividual",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "itemTitleIndividual"
+    },
+     {
+      "@id": "customform:locationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "location"
+    },
+     {
+      "@id": "customform:locationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "locationName"
     }
    ]
 }

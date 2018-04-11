@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectVar ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?objectVar rdfs:label ?entityTitle .",
+		"?objectVar bibframe:title ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?entityTitle .",
+		"?titleIndividual rdf:value ?entityTitle .",
+		"?titleIndividual bibframe:titleOf ?objectVar .",
+		"?objectVar rdf:type bibframe:Instance . "
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+    },
+    {
+      "@id": "customform:title",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "entityTitle"
+    },
+    {
+      "@id": "customform:titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,      
+      "customform:varName": "titleIndividual"
+    }
+   ]
+}

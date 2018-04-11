@@ -1,0 +1,19 @@
+var displayConfig = {
+	"fieldOrder" :  ["objectVarType", "objectValue"],
+	"fieldDisplayProperties" : {
+		"objectValue": {"label":"Note"},
+		"objectVarType": {
+			"label": "Note Type", 
+			"constantList":[{"label":"Writing directly on the album cover, etc.","uri":"http://audio.bibliotek-o.org/WritingOnAlbumNote"},
+			{"label":"Numbered SR Jacket Note","uri":"http://audio.bibliotek-o.org/NumberedSRJacketNote"},
+			{"label":"Initials and/or numbers on disc label","uri":"http://audio.bibliotek-o.org/InitialsOrNumberOnLabelNote"},{"label":"Post-It Note on LP","uri":"http://audio.bibliotek-o.org/PostItNoteNote"},
+			{"label":"Signature Note","uri":"http://audio.bibliotek-o.org/SignatureNote"},
+			{"label":"Cue point markers","uri":"http://audio.bibliotek-o.org/CuePointMarkerNote"},
+			{"label":"Track numbers of interest indicated","uri":"http://audio.bibliotek-o.org/TracksOfInterestNote"},
+			{"label":"Tape on LP’s disc label or cover","uri":"http://audio.bibliotek-o.org/TapeOnLPDiscLabelOrCoverNote"},
+			{"label":"SR doesn’t match the jacket.","uri":"http://audio.bibliotek-o.org/NotInOriginalJacketNote"},
+			{"label":"Two copies housed together","uri":"http://audio.bibliotek-o.org/TwoCopiesInSameSleeveNote"},
+			{"label":"Summary note","uri":"http://audio.bibliotek-o.org/SummaryNote"}]
+		}
+	}
+};

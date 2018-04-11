@@ -290,6 +290,10 @@ var customForm = {
         	}
         	
             customForm.deleteAcHelpText();
+            //in case of edit mode, erase labels for fields that have existing labels
+            //useful for external autocomplete since we may want to remove 
+            //useful for label but not other statements that need to remain
+            //customForm.eraseFieldValues();
         });
     },
     
@@ -307,11 +311,12 @@ var customForm = {
         		//That will be overwritten if value selected from autocomplete
         		//We do this everytime the user types anything in the autocomplete box
         		customForm.initDefaultBlankURI(selectedObj);
-                if (request.term in customForm.acCache) {
+        		//Get rid of the cache for now
+                /*if (request.term in customForm.acCache) {
                     // console.log('found term in cache');
                     response(customForm.acCache[request.term]);
                     return;
-                }
+                }*/
                 
                 //We want the ability to have multiple autocompletes to different sources in the same page
                 //Here, we check whether the selected object has a URL on it
@@ -319,15 +324,25 @@ var customForm = {
                 if($(selectedObj).attr("acUrl")) {
                 	acUrl = $(selectedObj).attr("acUrl");
                 }
+                var groupName = $(selectedObj).attr('acGroupName');
+                var selectedSearchType = null;
+                if("acTypes" in customForm && groupName in customForm.acTypes) {
+                	selectedSearchType = customForm.acTypes[groupName];
+                }
                 
+                
+
                 
                 $.ajax({
                     url: acUrl,
                     dataType: 'json',
                     data: {
-                        searchTerm: request.term
+                        searchTerm: request.term,
+                        term: request.term, //used by internal autocomplete
+                        type:selectedSearchType //used for internal search and ignored by other search services
                     },
                     complete: function(xhr, status) {
+                    	
                         // Not sure why, but we need an explicit json parse here. 
                         var results = $.parseJSON(xhr.responseText);                        
                         var filteredResults = customForm.filterAcResults(results);
@@ -338,14 +353,21 @@ var customForm = {
                         //if(customForm.doRemoveConceptSubclasses()) {
                         //	filteredResults = customForm.removeConceptSubclasses(filteredResults);
                         //}
-
-                        customForm.acCache[request.term] = filteredResults["conceptList"];
-                        response(filteredResults["conceptList"]);
+                        //TODO: More robust handling here based on type of request - handling both internal autocomplete and external concept service here
+                        if(filteredResults != null && "conceptList" in filteredResults) {
+                        	customForm.acCache[request.term] = filteredResults["conceptList"];
+                        	response(filteredResults["conceptList"]);
+                        } else {
+                        	customForm.acCache[request.term] = filteredResults;
+                        	response(filteredResults);
+                        }
                     }
                 });
             },
             select: function(event, ui) {
-                customForm.showAutocompleteSelection(ui.item.label, ui.item.uri, $(selectedObj));
+            	var uri = customForm.extractObjectURIForAuthority(ui.item);
+            	//RWO URI is returned from above when relevant/available, otherwise the URI coming back from the search result is used
+                customForm.showAutocompleteSelection(ui.item.label, uri, $(selectedObj));
                 if ( $(selectedObj).attr('acGroupName') == customForm.typeSelector.attr('acGroupName') ) {
                     customForm.typeSelector.val(ui.item.msType);
                 }
@@ -526,7 +548,12 @@ var customForm = {
         $acDiv.show();
         $acDiv.find("input").val(uri);
         $acDiv.find("span").html(label);
-        $acDiv.find("a.verifyMatch").attr('href', this.baseHref + uri);
+        //If uri is local, then this holds otherwise external uri which should be opened independently
+        var verifyUrl = this.baseHref + uri;
+        if(!customForm.checkVerifyMatchNamespace(uri)) {
+        	verifyUrl = uri;
+        }
+        $acDiv.find("a.verifyMatch").attr('href', verifyUrl);
 
         $changeLink = $acDiv.find('a.changeSelection');
         $changeLink.click(function() {
@@ -745,7 +772,70 @@ var customForm = {
 		//from that object, the old relationship will be removed in n3 processing
         var $acDiv = this.acSelections[$(selectedObj).attr('acGroupName')];
         $acDiv.find("input").val(customForm.blankSentinel);
+	},
+	//Adding function that enables checking whether the URI is of the local namespace or not
+	//if not, opens up URI without base href (i.e. not VitroLib base URL)
+	checkVerifyMatchNamespace:function(uri) {
+		var prefix = "";
+		//expect this variable to defined in template and passed along here
+		if(typeof customForm.defaultNamespace != "undefined") {
+			prefix = customForm.defaultNamespace;
+		}
+	
+		return(uri.startsWith(prefix));
+	},
+	//This is being hardcoded in for now - the different cases, but these should really be represented as separate objects and function
+	extractObjectURIForAuthority:function(item) {
+		//Certain authorities such as LOC require a RWO or other such entity
+		//For now, checking if the context object has this and then using
+		if("additionalInformation" in item) {
+			var additionalInformation = item["additionalInformation"];
+			if(additionalInformation != null && "RWO" in additionalInformation) {
+				//Results are stored in array now
+				var rwoArray =  additionalInformation["RWO"];
+				if(rwoArray.length > 0) {
+					var RWOURI = rwoArray[0];
+					return RWOURI;
+				}
+			}
+		}
+		return item["uri"];
+	},
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
+	eraseFieldValues:function() {
+		if("editMode" in customForm && customForm["editMode"] == "edit"
+			&& "eraseLabelsForFields" in customForm) {
+			//Get existing values and replace existing value there
+			var existingValuesInput = $("input[name='existingValuesRetrieved']");
+			//create a JSON object from this
+			if(existingValuesInput && existingValuesInput.val() != "") {
+				var existingJson = JSON.parse(existingValuesInput.val());
+				if(existingJson) {
+					var eraseLabelsArray = customForm["eraseLabelsForFields"];
+					var label, l;
+					var len = eraseLabelsArray.length;
+					for(l = 0; l < len; l++) {
+						label = eraseLabelsArray[l];
+						if(label in existingJson) {
+							existingJson[label] = [""]; //set to empty
+						}
+					}
+					//Set the input value
+					var stringifiedJson = JSON.stringify(existingJson);
+					existingValuesInput.val(stringifiedJson);
+				}
+			}
+		}
 	}
+	/*Also being included here but may be better off in a separate function or file
+	//Functions on submit
+	 //if the form has an erase existing values array, replace those values with empty fields
+    //This is important specifically with respect to external lookups which need a label to be saved
+    //but not retracted when a different external entity is selected*/
 	
 };
 

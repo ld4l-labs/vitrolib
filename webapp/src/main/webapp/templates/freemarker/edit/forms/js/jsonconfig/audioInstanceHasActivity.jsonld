@@ -32,9 +32,6 @@
       ],
       "customform:mayUseNewResource": true,
       "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>   SELECT ?existingAgent WHERE {  ?objectVar bib:hasAgent ?existingAgent . }   ",
-      "customform:validator": {
-        "@id": "customform:whcor_nonemptyValidator"
-      },
       "customform:varName": "agent"
     },
     {
@@ -43,8 +40,10 @@
         "forms:FormComponent",
         "forms:OptionalN3Pattern"
       ],
-      "customform:prefixes": "@prefix  bib: <http://bibliotek-o.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  ",
-      "customform:pattern": ["?agent a ?agentType.  ?agent rdfs:label ?agentName.  ?agent foaf:name ?agentName .  "]
+      "customform:prefixes": "@prefix  bib: <http://bibliotek-o.org/ontology/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . @prefix  foaf: <http://xmlns.com/foaf/0.1/> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+      "customform:pattern": ["?agent a ?agentType.  ", "?agent rdfs:label ?agentName.",  "?agent foaf:name ?agentName .  ",
+      						"?objectVar schema:location ?location .", "?location rdfs:label ?locationName . ",
+      						"?location rdf:type gn:Feature ."]
     },
     {
       "@id": "customform:whcor_fieldActivityLabel",
@@ -59,13 +58,6 @@
       "customform:varName": "activityLabel"
     },
     {
-      "@id": "customform:whcor_nonemptyValidator",
-      "@type": [
-        "forms:NonEmptyFieldValidator",
-        "forms:FieldValidator"
-      ]
-    },
-    {
       "@id": "customform:whcor_fieldAgentName",
       "@type": [
         "forms:LiteralField",
@@ -77,12 +69,9 @@
     {
       "@id": "customform:whcor_agentListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
-      }
+      ]
     },
     {
       "@id": "customform:whcor_fieldAgentType",
@@ -93,53 +82,17 @@
       "customform:fieldOptions": {
         "@id": "customform:whcor_agentListFieldOptions"
       },
-      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .}    ",
-      "customform:validator": {
-        "@id": "customform:whcor_nonemptyValidator"
-      },
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>     SELECT ?existingAgentType   WHERE {?objectVar bib:hasAgent ?agent . ?agent vitro:mostSpecificType ?existingAgentType .  FILTER(str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Person\" || str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Agent\" || str(?existingAgentType) = \"http://xmlns.com/foaf/0.1/Organization\" || str(?existingAgentType) = \"http://bibliotek-o.org/ontology/Meeting\")}    ",
       "customform:varName": "agentType"
     },
     {
       "@id": "customform:whcor_activityTypeListFieldOptions",
       "@type": [
-        "forms:ChildVClassesWithParent",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://bibliotek-o.org/ontology/Activity"
-      }
+      ]
     },
-    {
-      "@id": "customform:workHasActivity",
-      "@type": [
-        "forms:FormBuilder",
-        "forms:SimpleFormBuilder"
-      ],
-      "customform:component": [
-        {
-          "@id": "customform:whcor_requiredN3"
-        },
-        {
-          "@id": "customform:whcor_fieldAgent"
-        },
-        {
-          "@id": "customform:whcor_fieldAgentName"
-        },
-        {
-          "@id": "customform:whcor_fieldActivityType"
-        },
-        {
-          "@id": "customform:whcor_fieldActivityLabel"
-        },
-        {
-          "@id": "customform:whcor_optionalN3"
-        },
-        {
-          "@id": "customform:whcor_fieldAgentType"
-        }
-      ],
-      "customform:returnTo": "HERE"
-    },
+    
     {
       "@id": "customform:whcor_fieldActivityType",
       "@type": [
@@ -150,10 +103,25 @@
         "@id": "customform:whcor_activityTypeListFieldOptions"
       },
       "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>     PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>      SELECT ?existingActivityType      WHERE {?objectVar vitro:mostSpecificType ?existingActivityType .   }    ",
-      "customform:validator": {
-        "@id": "customform:whcor_nonemptyValidator"
-      },
       "customform:varName": "activityType"
+    },
+     {
+      "@id": "customform:whcor_locationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  PREFIX schema:  <http://schema.org/>    SELECT ?existingLocation   WHERE {?objectVar schema:location ?existingLocation .}    ",
+      "customform:varName": "location"
+    },
+     {
+      "@id": "customform:whcor_locationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  PREFIX schema:  <http://schema.org/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLocationName   WHERE {?objectVar schema:location ?existingLocation .?existingLocation rdfs:label ?existingLocationName .}    ",
+      "customform:varName": "locationName"
     }
   ]
 }

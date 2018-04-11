@@ -1,0 +1,121 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://rdaregistry.info/termList/RDAGeneration/1001>
+        rdfs:label  "derivative master"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1014>
+        rdfs:label  "service copy"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1008>
+        rdfs:label  "LPCM"@en .
+
+<http://rdaregistry.info/termList/configPlayback/1003>
+        rdfs:label  "quadraphonic"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1002>
+        rdfs:label  "CX encoded"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1006>
+        rdfs:label  "master tape"@en .
+
+<http://rdaregistry.info/termList/grooveWidth/1002>
+        rdfs:label  "microgroove"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1013>
+        rdfs:label  "original negative"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1007>
+        rdfs:label  "Dolby-C encoded"@en .
+
+<http://rdaregistry.info/termList/configPlayback/1002>
+        rdfs:label  "stereo"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1001>
+        rdfs:label  "CCIR encoded"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1005>
+        rdfs:label  "master"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1018>
+        rdfs:label  "viewing copy"@en .
+
+<http://rdaregistry.info/termList/grooveWidth/1001>
+        rdfs:label  "coarse groove"@en .
+
+<http://rdaregistry.info/termList/groovePitch/1006>
+        rdfs:label  "standard"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1012>
+        rdfs:label  "master positive"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1006>
+        rdfs:label  "Dolby-B encoded"@en .
+
+<http://rdaregistry.info/termList/configPlayback/1001>
+        rdfs:label  "mono"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1004>
+        rdfs:label  "first generation"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1017>
+        rdfs:label  "test pressing"@en .
+
+<http://metadataregistry.org/uri/RegStatus/1008>
+        rdfs:label  "Deprecated"@en .
+
+<http://rdaregistry.info/termList/groovePitch/1005>
+        rdfs:label  "fine"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1011>
+        rdfs:label  "reference print"@en .
+
+<http://rdaregistry.info/termList/typeRec/1002>
+        rdfs:label  "digital"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1005>
+        rdfs:label  "Dolby-A encoded"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1009>
+        rdfs:label  "original"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1003>
+        rdfs:label  "duplicate"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1016>
+        rdfs:label  "tape duplication master"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1010>
+        rdfs:label  "printing master"@en .
+
+<http://metadataregistry.org/uri/RegStatus/1001>
+        rdfs:label  "Published"@en .
+
+<http://rdaregistry.info/termList/typeRec/1001>
+        rdfs:label  "analog"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1004>
+        rdfs:label  "Dolby"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1008>
+        rdfs:label  "mother"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1002>
+        rdfs:label  "disc master"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1015>
+        rdfs:label  "stamper"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1009>
+        rdfs:label  "NAB standard"@en .
+
+<http://rdaregistry.info/termList/configPlayback/1004>
+        rdfs:label  "surround"@en .
+
+<http://rdaregistry.info/termList/specPlayback/1003>
+        rdfs:label  "dbx encoded"@en .
+
+<http://rdaregistry.info/termList/RDAGeneration/1007>
+        rdfs:label  "mixed generation"@en .

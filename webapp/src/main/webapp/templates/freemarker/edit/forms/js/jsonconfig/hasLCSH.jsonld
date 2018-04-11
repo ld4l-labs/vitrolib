@@ -46,7 +46,6 @@
        "forms:LiteralField"
       ],
       "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLcshTerm WHERE {  ?objectVar rdfs:label ?existingLcshTerm .}   ",      
-      "customform:mayUseNewResource": true,
       "customform:varName": "lcshTerm"
     }
    ]

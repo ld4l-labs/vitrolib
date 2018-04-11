@@ -1,0 +1,266 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+        "bib": "http://bibliotek-o.org/ontology/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "vivo": "http://vivoweb.org/ontology/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+        "measure": "http://measurement.bibliotek-o.org/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "qudt": "http://qudt.org/schema/qudt#",
+        "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+    },
+    "@graph": [
+        {
+            "@id": "customform:hasMeasurementGroup_requiredN3",
+            "@type": [
+                "forms:RequiredN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+                "?subject ?predicate ?objectVar .",
+                "?objectVar measure:isMeasurementGroupOf ?subject . " ,
+                "?objectVar rdf:type measure:MeasurementGroup . " ,
+                "?objectVar measure:hasMeasurement ?measurement1 . " ,
+                "?measurement1 measure:isMeasurementOf ?objectVar . ",
+                "?measurement1 rdf:type measure:Measurement . " ,
+                "?measurement1 rdf:value ?value1 ." , 
+                "?measurement1 measure:hasUnit ?unit1 . " ,
+                "?unit1 measure:isUnitOf ?measurement1 . " ,
+                "?measurement1 measure:measures ?dimension1 . " ,
+                "?dimension1 measure:measuredBy ?measurement1 . "
+            ],
+            "customform:prefixes": "@prefix qudt: <http://qudt.org/schema/qudt#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> . @prefix measure: <http://measurement.bibliotek-o.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_measurement1",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:mayUseNewResource": true,
+            "customform:varName": "measurement1"
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_value1",
+            "@type": [
+                "forms:LiteralField",
+                "forms:FormComponent"
+            ],
+            "customform:rangeDatatypeUri": {
+                "@id": "xsd:string"
+            },
+            "customform:varName": "value1"
+        },      
+        {
+            "@id": "customform:hasMeasurementGroup_unit1",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:unit1FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+            "customform:varName": "unit1"
+        },
+        {
+            "@id": "customform:unit1FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+            ]
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_dimension1",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:dimension1FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+        "customform:varName": "dimension1"
+        },
+        {
+            "@id": "customform:dimension1FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+            ]
+        }, 
+ 
+        {
+            "@id": "customform:hasMeasurementGroup_optionalN3",
+            "@type": [
+                "forms:OptionalN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+            	"?objectVar dcterms:description ?groupDescription .",
+                "?objectVar measure:hasMeasurement ?measurement2 . " ,
+                "?measurement2 measure:isMeasurementOf ?objectVar . ",
+                "?measurement2 rdf:type measure:Measurement . " ,
+                "?measurement2 rdf:value ?value2 .", 
+                "?measurement2 measure:hasUnit ?unit2 . " ,
+                "?unit2 measure:isUnitOf ?measurement2 . " ,
+                "?measurement2 measure:measures ?dimension2 . " ,
+                "?dimension2 measure:measuredBy ?measurement2 . " ,
+                "?objectVar measure:hasMeasurement ?measurement3 . " ,
+                "?measurement3 measure:isMeasurementOf ?objectVar . ",
+                "?measurement3 rdf:type measure:Measurement . " ,
+                "?measurement3 rdf:value ?value3 ." ,
+                "?measurement3 measure:hasUnit ?unit3 . " ,
+                "?unit3 measure:isUnitOf ?measurement3 . " ,
+                "?measurement3 measure:measures ?dimension3 . " ,
+                "?dimension3 measure:measuredBy ?measurement3 . "
+            ],
+            "customform:prefixes": "@prefix qudt: <http://qudt.org/schema/qudt#> . @prefix skos: <http://www.w3.org/2004/02/skos/core#> .  @prefix measure: <http://measurement.bibliotek-o.org/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> ."
+        },
+         {
+            "@id": "customform:hasMeasurementGroup_groupDescription",
+            "@type": [
+                "forms:LiteralField",
+                "forms:FormComponent"
+            ],
+            "customform:varName": "groupDescription"
+        },  
+        {
+            "@id": "customform:hasMeasurementGroup_measurement2",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:mayUseNewResource": true,
+            "customform:varName": "measurement2"
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_value2",
+            "@type": [
+                "forms:LiteralField",
+                "forms:FormComponent"
+            ],
+            "customform:rangeDatatypeUri": {
+                "@id": "xsd:string"
+            },
+            "customform:varName": "value2"
+        },      
+        {
+            "@id": "customform:hasMeasurementGroup_unit2",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:unit2FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+            "customform:varName": "unit2"
+        },
+        {
+            "@id": "customform:unit2FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+            ]
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_dimension2",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:dimension2FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+            "customform:varName": "dimension2"
+        },
+        {
+            "@id": "customform:dimension2FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+             ]
+        },
+        {
+            "@id": "customform:dependencies",
+            "@type": [
+                "forms:FormComponent",
+                "forms:FieldDependencies"
+            ],     
+            "customform:dependencies": ["measurement2, value2, unit2, dimension2"]
+        },  
+        {
+            "@id": "customform:hasMeasurementGroup_measurement3",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:mayUseNewResource": true,
+            "customform:varName": "measurement3"
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_value3",
+            "@type": [
+                "forms:LiteralField",
+                "forms:FormComponent"
+            ],
+            "customform:rangeDatatypeUri": {
+                "@id": "xsd:string"
+            },
+            "customform:varName": "value3"
+        },      
+        {
+            "@id": "customform:hasMeasurementGroup_unit3",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:unit3FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+            "customform:varName": "unit3"
+        },
+        {
+            "@id": "customform:unit3FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+            ]
+        },
+        {
+            "@id": "customform:hasMeasurementGroup_dimension3",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:fieldOptions": {
+                "@id": "customform:dimension3FieldOptions"
+            },
+            "customform:mayUseNewResource": false,
+            "customform:varName": "dimension3"
+        },
+        {
+            "@id": "customform:dimension3FieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"
+             ]
+        },
+        {
+            "@id": "customform:dependencies",
+            "@type": [
+                "forms:FormComponent",
+                "forms:FieldDependencies"
+            ],     
+            "customform:dependencies": ["measurement3, value3, unit3, dimension3"]
+        }  
+    ]
+}

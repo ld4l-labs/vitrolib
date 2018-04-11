@@ -7,7 +7,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://rdaregistry.info/termList/groovePitch/1005> a skos:Concept ;
+<http://rdaregistry.info/termList/groovePitch/1005> a skos:Concept , <http://audio.bibliotek-o.org/GroovePitchOfCylinderConcept> ;
     rdakit:toolkitDefinition "Pas del solc d’un cilindre analògic d’entre 60-64 voltes per cm, o 150 a 160 voltes per polzada, per als cilindres en format dictat de 6 1/8 polzades, o 200 voltes per polzada per als cilindres de 4 minuts."@ca,
         "Rilleegenskab for en analog cylinder med en rilledybde på 60-64 omgange pr. cm (150 eller 160 omgange pr. tomme) for 6 1/8 tommedikteringsformatcylindere, eller 200 TPI for fireminutcylindere."@da,
         "Eine Rilleneigenschaft eines analogen Zylinders mit einem Rillenabstand von 60-64 Umdrehungen pro cm (150 oder 160 Umdrehungen pro Zoll) für 6 1/8 Zoll-Diktierphonographen oder 200 TPI für \"4-Minuten\"-Zylinder."@de,
@@ -58,7 +58,7 @@
         "mịn"@vi,
         "细纹"@zh .
 
-<http://rdaregistry.info/termList/groovePitch/1006> a skos:Concept ;
+<http://rdaregistry.info/termList/groovePitch/1006> a skos:Concept , <http://audio.bibliotek-o.org/GroovePitchOfCylinderConcept> ;
     rdakit:toolkitDefinition "Pas del solc d’un cilindre analògic de 40 voltes per cm o 100 voltes per polzada."@ca,
         "Rillekarakteristika for en analog cylinder med en rilledybde på 40 omgange pr. cm (100 omgange pr. tomme)."@da,
         "Eine Rilleneigenschaft eines analogen Zylinders mit einem Rillenabstand von 40 Umdrehungen pro cm (100 Umdrehungen pro Zoll)."@de,

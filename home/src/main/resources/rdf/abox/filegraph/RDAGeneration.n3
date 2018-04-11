@@ -7,7 +7,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://rdaregistry.info/termList/RDAGeneration/1002> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1002> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en negativ metalkopi af en optagelse, der (typisk) er skåret på en lakbelagt disc vha. en discdrejebænk; lakoriginalen ødelægges under processen."@da,
         "Eine Kopiengeneration für eine negative Metallkopie eines Aufnahme-Schnitts mithilfe einer Drehmaschine (typischerweise) auf einer mit Lack beschichteten Platte. Das Lack-Original wird bei diesem Vorgang zerstört."@de,
         "A generation that is a negative metal copy of a recording cut typically onto a lacquer-coated disc by means of a disc lathe; the lacquer original is destroyed in the process."@en,
@@ -46,7 +46,7 @@
         "Dette begrepet gjelder lydressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1003> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1003> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Eine Kopiengeneration für eine Reproduktion (meist mit einer negativen Polarität) der ursprünglichen Bild- oder Tonspur, bei der ein Duplikatnegativ anhand des Masterpositivs erstellt wurde, welches wiederum aus einem früheren Negativ hergestellt wurde."@de,
         "A generation that is a reproduction, usually with negative polarity, of the original picture or sound track, where a duplicate negative is made from a master positive, which in turn was made from an earlier negative."@en,
         "Sukupolven määrite, joka on alkuperäisen kuvan tai ääniraidan jäljitelmä, tavallisesti negatiivisella polariteetilla, jossa negatiivinen duplikaatti on valmistettu master-positiivista, joka vuorostaan on valmistettu aiemmasta negatiivista."@fi,
@@ -90,7 +90,7 @@
         "Dette begrepet gjelder spillefilmressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên phim điện ảnh."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1004> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1004> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af den originale kamerafilm eller videobånd anvendt for at indspille produktionen."@da,
         "Eine Kopiengeneration für den ursprünglichen Kamerafilm oder das ursprüngliche Videoband, welcher/welches für die Aufnahme der Produktion verwendet wurde."@de,
         "A generation that is the original camera film or videotape used to record the production."@en,
@@ -137,7 +137,7 @@
         "Dette begrepet gjelder mikroform- og videoressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên vi dạng và video."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1006> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1006> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af den oprindeligt indspillede version af et bånd, hvorfra kopier kan laves."@da,
         "Eine Kopiengeneration für eine original aufgezeichnete Version eines Bandes, von dem Kopien gemacht werden können."@de,
         "A generation that is the original recorded version of a tape from which copies can be made."@en,
@@ -177,7 +177,7 @@
         "Dette begrepet gjelder lydressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1007> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1007> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en kombination af generationer af film, for hvilke det ikke er muligt at angive mere præcise termer."@da,
         "Eine Kopiengeneration für eine Kombination von Filmgenerationen, für die es nicht möglich ist, einen präziseren Terminus zu vergeben."@de,
         "A generation that is a combination of generations for which it is not possible to assign more precise terms."@en,
@@ -210,7 +210,7 @@
         "blandet generasjon"@no,
         "thế hệ hỗn hợp"@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1008> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1008> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en positiv metalkopi af en discmaster, der anvendes til at skabe en eller flere patricer."@da,
         "Eine Kopiengeneration für eine positive Metallkopie eines Disk-Masters, die verwendet wird, um ein oder mehrere Matrizen zu erstellen."@de,
         "A generation that is a positive metal copy of a disc master used to create one or more stampers."@en,
@@ -250,7 +250,7 @@
         "Dette begrepet gjelder lydressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1010> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1010> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der anvendes til at fremstille efterfølgende generationer af mikroformer."@da,
         "Eine Kopiengeneration die verwendet wird, um spätere Generationen von Mikroformen zu erstellen."@de,
         "A generation that is used to produce subsequent generations of microforms."@en,
@@ -290,7 +290,7 @@
         "trykkemaster"@no,
         "bản in chủ"@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1011> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1011> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en frigivet udgivelse, som er godkendt af producenten og direktøren for en film."@da,
         "Eine Kopiengeneration für eine Druckfreigabe, die vom Produzenten und Regisseur eines Films genehmigt wurde."@de,
         "A generation that is a release print approved by the producer and director of a film."@en,
@@ -330,7 +330,7 @@
         "Dette begrepet gjelder spillefilmressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên phim điện ảnh."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1012> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1012> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af et positivt tryk skabt af en tidligere generation negativ film og der bruges til fremstilling af duplikat negativer frem for projektion."@da,
         "Eine Kopiengeneration für einen Positivdruck, der aus einer früheren Negativdruckgeneration erstellt wird und anstelle von Projektionen verwendet wird, um Duplikatnegative zu erstellen."@de,
         "A generation that is a positive print made from an earlier generation negative film and used for the preparation of duplicate negatives rather than projection."@en,
@@ -372,7 +372,7 @@
         "Dette begrepet gjelder spillefilmressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên phim điện ảnh."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1013> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1013> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation af film, normalt med negativ polaritet eksponeret i et kamera og dermed af bedre kvalitet end nogen efterfølgende generation eller derivat."@da,
         "Eine Kopiengeneration für Filme (normalerweise mit negativer Polarität), die in einer Kamera belichtet werden und deshalb von besserer Qualität sind, als jede nachfolgende Kopiengeneration oder Derivat."@de,
         "A generation usually of negative polarity for film exposed in a camera and thus of better quality than any subsequent generation or derivative."@en,
@@ -412,7 +412,7 @@
         "Dette begrepet gjelder spillefilmressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên phim điện ảnh."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1014> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1014> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation der primært er beregnet til brug."@da,
         "Eine Kopiengeneration die in erster Linie für die Benutzung gedacht ist."@de,
         "A generation that is intended primarily for use."@en,
@@ -452,7 +452,7 @@
         "brukseksemplar"@no,
         "bản sao phục vụ"@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1015> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1015> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en negativ hårdmetalkopi af en discmaster, der kan sættes i en presse og bruges til at præge rillemønsteret i en produktionskørsel af discs."@da,
         "Eine Kopiengeneration die aus einer negativen Hartmetallkopie eines Disk-Masters besteht, die in eine Presse montiert und verwendet werden kann, um das Rillenmuster in einem Disk-Fertigungslauf zu prägen."@de,
         "A generation that is a hard metal negative copy of a disc master that can be mounted within a press and used to impress the groove pattern in a production run of discs."@en,
@@ -492,7 +492,7 @@
         "Dette begrepet gjelder lydressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1016> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1016> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en båndkopi, normalt en førstegenerationskopi af masteren, der anvendes til at skabe flere kopier af indholdet."@da,
         "Eine Kopiengeneration für eine Bandkopie (üblicherweise einer Kopie der ersten Generation vom Master), die verwendet wird, um mehrfache Kopien des Inhalts zu erstellen (z. B. für Kompaktkassetten)."@de,
         "A generation that is a tape copy, usually a first generation copy of the master, used for creating multiple copies of the content."@en,
@@ -532,7 +532,7 @@
         "Dette begrepet gjelder lydressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1017> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1017> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en eller flere kørsler af presninger, der anvendes til at tjekke for fejl, før der produceres."@da,
         "Eine Kopiengeneration die aus einem kurzen Presslauf besteht, der verwendet wird, um vor dem Lauf einer vollständigen Pressung nach Fehlern zu suchen."@de,
         "A generation that is one of a short run of pressings used to check for any flaws before running a full pressing."@en,
@@ -572,7 +572,7 @@
         "Dette begrepet gjelder lydressurser. Det første trykket som blir sendt til anmeldere, DJ-er, etc., er ikke inkludert."@no,
         "Thuật ngữ này áp dụng cho tài nguyên audio. Bản ban đầu gửi chi người duyệt, D.J, v.v..., không được bao gồm."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1018> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1018> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der består af en kopi, der må anvendes af forskere."@da,
         "Eine Kopiengeneration die zu wissenschaftlichen Zwecken vorgeführt werden kann."@de,
         "A generation that is a copy that may be viewed by researchers."@en,
@@ -612,7 +612,7 @@
         "Dette begrepet gjelder spillefilmressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên phim điện ảnh."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1001> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1001> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation af digital ressource, der er afledt fra masteren."@da,
         "Eine Kopiengeneration die vom Master abgeleitet ist."@de,
         "A generation that is derived from the master."@en,
@@ -653,7 +653,7 @@
         "Dette begrepet gjelder digitale ressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên số."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1009> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1009> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation, der er den første af en digitalt skabt ressource."@da,
         "Eine Kopiengeneration für eine erste, digital hergestellte Ressource."@de,
         "A generation that is the first of a resource created digitally."@en,
@@ -694,7 +694,7 @@
         "Dette begrepet gjelder digitale ressurser."@no,
         "Thuật ngữ này áp dụng cho tài nguyên số."@vi .
 
-<http://rdaregistry.info/termList/RDAGeneration/1005> a skos:Concept ;
+<http://rdaregistry.info/termList/RDAGeneration/1005> a skos:Concept , <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
     rdakit:toolkitDefinition "Generation af en digital ressource, der er skabt ved en digitaliseringsproces ved højeste opløsning og ofte anvendt til at lave afledte kopier."@da,
         "Eine Kopiengeneration die beim Digitalisierungsprozess mit der höchsten Auflösung erzeugt wird und häufig verwendet wird, um davon abgeleitete Kopien zu machen."@de,
         "A generation that is created from the process of digitization at the highest resolution and often used to make derivative copies."@en,

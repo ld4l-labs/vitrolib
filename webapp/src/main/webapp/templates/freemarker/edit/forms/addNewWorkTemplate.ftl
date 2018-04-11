@@ -6,6 +6,7 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
+<#assign defaultNamespace = editConfiguration.defaultNamespace />
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -141,31 +142,54 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
       <div>
       		<p>
-      		  <label for="agentName"> Author or Other Role${requiredHint}</label>
+      		  <label for="agentName">Role${requiredHint}</label>
               <select name="activityType" id="activityType" role="select">
-	              <option value="http://bibliotek-o.org/ontology/AuthorActivity">Author</option>
-	              <option value="http://bibliotek-o.org/ontology/CreatorActivity">Creator</option>
-	              <option value="http://bibliotek-o.org/ontology/CopyrightHolderActivity">Copyright Holder</option>
-	              <option value="http://bibliotek-o.org/ontology/PerformerActivity">Perfomer</option>
+	              <option value="http://bibliotek-o.org/ontology/ComposerActivity">Composer</option>
+					<option value="http://bibliotek-o.org/ontology/ArrangerActivity">Arranger</option>
+					<option value="http://bibliotek-o.org/ontology/LibrettistActivity">Librettist</option>
+					<option value="http://bibliotek-o.org/ontology/LyricistActivity">Lyricist</option>
+					<option value="http://bibliotek-o.org/ontology/PerformerActivity">Performer</option>
+					<option value="http://bibliotek-o.org/ontology/ConductorActivity">Conductor</option>
+					<option value="http://bibliotek-o.org/ontology/MusicianActivity">Musician</option>
+					<option value="http://bibliotek-o.org/ontology/SingerActivity">Singer</option>
+					<option value="http://bibliotek-o.org/ontology/InstrumentalistActivity">Instrumentalist</option>
+					<option value="http://bibliotek-o.org/ontology/NarratorActivity">Narrator</option>
+					<option value="http://bibliotek-o.org/ontology/CommentatorActivity">Commentator</option>
+					<option value="http://bibliotek-o.org/ontology/ProducerActivity">Producer</option>
+					<option value="http://bibliotek-o.org/ontology/MusicalDirectorActivity">Musical director</option>
+					<option value="http://bibliotek-o.org/ontology/SoundDesignerActivity">Sound designer</option>
+					<option value="http://bibliotek-o.org/ontology/RecordistActivity">Recordist</option>
+					<option value="http://bibliotek-o.org/ontology/BroadcasterActivity">Broadcaster</option>
               </select>
       		</p>
-          <p templateId="inputAcSelector">
+      		<input type="hidden" name="agentType" id="agentType" value=""/>
+      		
+      		<div> 
+				<div id="vocabSource">
+					<input checked="checked" type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Person" value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+					<input type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Organization" value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+					<input type="radio" name="selectAcUrl" lookupType="http://xmlns.com/foaf/0.1/Agent"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fisni.oclc.nl%2Fsru"> ISNI
+	
+				</div>
+		        <p>
+		            <label for="agent"> Person or Organization${requiredHint}</label>
+		            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+		        </p>
+		
+			
+		        <div class="acSelection" acGroupName="agent">
+		            <p class="inline">
+		                <label>${i18n().selected}:</label>
+		                <span class="acSelectionInfo"></span>
+		                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+		                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+		            </p>
+		            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
+		        </div>
+  			</div>
+      		
+      		
     
-              <input type="hidden"  name="activityLabel" id="activityLabel"/>
-              <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="group"  value="" />
-          </p>
-
-
-          <div class="acSelection" acGroupName="group" templateId="literalSelection">
-              <p class="inline">
-                  <label>${i18n().selected}:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
       </div>
       
       <#--  Autocomplete field for Subject Headings using LOC SH field -->
@@ -268,16 +292,26 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                 <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
                 <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
             </p>
-            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  ${flagClearLabelForExisting}="true" />
+            <input class="acUriReceiver" type="hidden" id="publisherAgent" name="publisherAgent" value=""  />
           </div>
         </div>
-	<!-- Commenting out for now -->
-        <!--div
-          <p>
-            <label for="instanceTitle">Place of Publication</label>
-            <input size="60"  type="text" id="publicationLocation" name="publicationLocation" value="" />
-          </p>
-        </div-->
+		<div> 
+	        <p>
+	            <label for="location"> Location</label>
+	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="location">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	        </div>
+  		</div>
         
         <div>
           <p>
@@ -286,6 +320,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </p>
         </div>
        <input type="hidden" name="publicationActivityLabel" id="publicationActivityLabel" value=""/> 
+       <input type="hidden" name="publicationActivity" id="publicationActivity" value=""/> 
       </fieldset>
     </div>
 
@@ -358,7 +393,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
-        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"
+        configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
+       	defaultNamespace:"${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',

@@ -1248,3 +1248,115 @@ bib:Volume  vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClas
 
 bib:OrganizerActivity
         vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+<http://audio.bibliotek-o.org/GrooveWidthofDiscConcept> vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+<http://audio.bibliotek-o.org/GroovePitchOfCylinderConcept> vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+<http://audio.bibliotek-o.org/SpecialPlaybackConcept> vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+<http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .  
+<http://audio.bibliotek-o.org/TypeOfRecordingConcept>   vitro:inClassGroup  <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/ReviewNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+
+<http://qudt.org/schema/qudt#LengthUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/CuePointMarkerNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/SupplementaryContentNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/InitialsOrNumberOnLabelNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/PerformedMusic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/CaptureAndStorageTechnique>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/PurposeNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/NotInOriginalJacketNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/WritingOnAlbumNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+
+<http://audio.bibliotek-o.org/SummaryNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/PostItNoteNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/ContentsNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#SIUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/TwoCopiesInSameSleeveNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#SIBaseUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/SignatureNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+
+<http://qudt.org/schema/qudt#MassUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#NotUsedWithSIUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+
+<http://audio.bibliotek-o.org/TracksOfInterestNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/Sounds>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#DerivedUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/NumberedSRJacketNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/SpokenWord>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://audio.bibliotek-o.org/TapeOnLPDiscLabelOrCoverNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+

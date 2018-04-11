@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- Default list view config file for object properties 
+    
+     See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    <query-select>    
+        PREFIX afn:  &lt;http://jena.apache.org/ARQ/function#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        
+        SELECT ?object 
+               ?label 
+               ?localName ?type ?mostSpecificType WHERE {
+               
+            ?subject ?property ?object .
+            ?object vitro:mostSpecificType ?mostSpecificType .
+            ?object rdf:type ?objectType .
+            ?object rdf:type ?type .
+            LET (?localName := afn:localname(?object)) 
+                
+            OPTIONAL { ?object rdfs:label ?label } 
+                    
+        } ORDER BY ASC( ?label ) ASC( ?label ) ASC( ?localName )
+    </query-select>
+    
+    <template>propStatement-soundcharacteristic.ftl</template>
+</list-view-config>
