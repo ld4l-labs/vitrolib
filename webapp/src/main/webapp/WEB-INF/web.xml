@@ -1270,6 +1270,16 @@
     <servlet-name>TpfServlet</servlet-name>
     <url-pattern>/tpf/*</url-pattern>
   </servlet-mapping>
+  
+  !-- -Adding notification experiment servlet -->
+    <servlet>
+    <servlet-name>readNotification</servlet-name>
+    <servlet-class>edu.cornell.mannlib.vitro.webapp.servlet.ReadNotificationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>readNotification</servlet-name>
+    <url-pattern>/readNotification</url-pattern>
+  </servlet-mapping>
 
   <!-- ==================== mime types ============================== -->
   
