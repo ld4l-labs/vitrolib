@@ -64,8 +64,12 @@
                     <#-- Title can be edited as per normal-->
                     <#-- Not sure how to integrate label editing for now, can figure out later
                      -->
+                     <#if individualType?? && (individualType == "work" || individualType == "instance" || individualType == "item")>
                      <#assign indLabel = individual.nameStatement>
 					 ${indLabel.value!}
+					 <#else>
+					 <@p.label individual editable labelCount localesCount languageCount/>
+					 </#if>
                   <#--  Most-specific types -->
                     <@p.mostSpecificTypes individual />
                     <@showSuperclassType individual />
