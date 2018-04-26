@@ -1,0 +1,157 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio:   <http://purl.org/spar/fabio/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix bib:    <http://bibliotek-o.org/ontology/> .
+@prefix legacy:  <http://bibliotek-o.org/ontology/legacy/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+
+#http://ld4l.org/ontology#vitroClassGroupactivities
+#http://ld4l.org/ontology#vitroClassGrouplocations
+
+<http://bibliotek-o.org/ontology/Activity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AbridgerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AcquisitionActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ActorActivity>               vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AdapterActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AddresseeActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AnalystActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AnimatorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AppellantActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AppelleeActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ApplicantActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArchitectActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArrangerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArtCopyistActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArtDirectorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArtistActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ArtisticDirectorActivity>    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AssigneeActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AttributionActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/AuthorActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/BinderActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/BindingDesignerActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/BroadcasterActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CaptureActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CartographerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ChoreographerActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CinematographerActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CollectionRegistarActivity>  vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CollectorActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CollotyperActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ColoristActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CommentatorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CompilerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ComposerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ConductorActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ConservatorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ConsultantActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ContributorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CopyrightHolderActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CorrespondentActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CoverDesignerActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CreatorActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/CuratorActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DancerActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DedicateeActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DedicatorActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DepositorActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DesignerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DirectorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DistributorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DonorActivity>               vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/DraftsmanActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/EditorActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/EngraverActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/EtcherActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/FacsimilistActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/FieldDirectorActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/FilmDistributorActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/FilmEditor>                  vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ForgerActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/HonoreeActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/HostActivity>                vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/IlluminatorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/IllustratorActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/InscriberActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/InstrumentalistActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/IntervieweeActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/InterviewerActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/InventorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LenderActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LibrettistActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LicenseeActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LicensorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LightingDesignerActivity>    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LithographerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/LyricistActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ManufacturerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MarblerActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MetalEngraverActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MinuteTakerActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ModeratorActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MonitorActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MusicCopyistActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MusicalDirectorActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/MusicianActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/NarratorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/OfferActivity>               vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/OpponentActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/OrganizerActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/OriginatorActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/OwnerActivity>               vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PanelistActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PaperMakerActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PatentApplicantActivity>     vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PatentHolderActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PatronActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PerformerActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PhotographerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PlatemakerActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PresenterActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PrinterActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PrintmakerActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ProducerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ProductionActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ProgrammerActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ProofreaderActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ProviderActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PublisherActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/PuppeteerActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/RecordistActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/RendererActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ReporterActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/RepositoryActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ResearcherActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ReviewerActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ScientificAdvisorActivity>   vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ScreenwriterAdvisorActivity> vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ScribeActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SculptorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SecretaryActivity>           vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SellerActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SetDesignerActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SignerActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SingerActivity>              vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SoundDesignerActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SpeakerActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SponsorActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/StageDirectorActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/StageManagerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/StereotyperActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/StorytellerActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/SurveyorActivity>            vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/TeacherActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/ThesisAdvisorActivity>       vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/TranscriberActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/TranslatorActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/TypographerActivity>         vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/VideographerActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/VoiceActorActivity>          vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://bibliotek-o.org/ontology/WitnessActivity>             vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .
+ <http://biblotek-o.org/ontology/WoodEngraverActivity>        vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupactivities> .

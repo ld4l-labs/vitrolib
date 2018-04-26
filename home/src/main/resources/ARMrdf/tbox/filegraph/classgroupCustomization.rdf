@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"> 
+   
+
+  
+  <rdf:Description rdf:about="http://ld4l.org/ontology#vitroClassGroupactivities">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en-US">activities</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ClassGroup"/>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</vitro:displayRank>
+  </rdf:Description>
+  
+    <rdf:Description rdf:about="http://ld4l.org/ontology#vitroClassGroupAllClasses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en-US">all classes</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ClassGroup"/>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</vitro:displayRank>
+  </rdf:Description>
+
+</rdf:RDF>

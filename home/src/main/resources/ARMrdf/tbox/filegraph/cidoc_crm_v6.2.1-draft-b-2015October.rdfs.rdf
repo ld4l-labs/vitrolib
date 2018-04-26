@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CIDOC CRM v6.2.1 (draft) encoded in RDFS
+
+This is the encoding approved by CRM-SIG in the meeting 21/11/2012 
+as the current version for the CIDOC CRM namespace.
+Note that this is NOT a definition of the CIDOC CRM, but an encoding
+derived from the authoritative release of the CIDOC CRM v6.0 Janauary 2015 on 
+http://www.cidoc-crm.org/official_release_cidoc.html
+
+Created by FORTH-ICS  Monday February 22, 2016
+
+
+Encoding Rules:
+1. The RDF spelling rules do not allow blanks. Hence we have replaced them by underscores.
+   For instance "E63_Beginning_of_Existence" or "P2i_is_type_of".
+
+2. RDF does not allow to instantiate properties beginning from a range value.
+   Therefore, each CRM property is represented as two RDFS properties.
+   For instance "P2 has type (is type of)" is represented as:
+   "P2_has_type" for the domain to range direction and "P2i_is_type_of" for the range to domain direction.
+
+3. The primitive values "E60 Number", "E61 Time Primitive" and "E62 String" referred in
+   the Model for formal completeness are interpreted as rdf: literal.
+
+4. RDF does not support properties of properties, therefore, users may create their own
+   subProperties for CRM properties that have a type property such as "P3 has note":
+   Instead of P3 has note (P3-1 has type : parts description) declare
+   <rdf:Property rdf:about="P3_parts_description">
+      <rdfs:domain rdf:resource="E1_CRM_Entity"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:subPropertyOf rdf:resource="P3_has_note"/>
+   </rdf:Property>
+
+5. Scope notes are represented as <rdf:comment> elements.
+
+6. In addition this encoding contains labels in languages different from English, 
+which are taken from translations of previous versions of the CIDOC CRM.    
+
+7. Any other differences in labels, scope notes  and semantic relationships of this encoding 
+to the authoritative definition of the CIDOC CRM v.6.0 (January 2015) are not intended transfer errors. 
+FORTH appreciates your feed-back on such errors.
+
+8. CRM time extension 1.0 Encoded in RDFS
+Since the Time Primitive of the CRM can not directly be implemented in RDF Triple Stores, we define in this extension
+of 4 properties replacing P81 and P82 adequately using xsd:dateTime. 
+Property P81 is dedicated for modeling the Time-Span's maximum known temporal extent i.e. ongoing_throughout. 
+Property P82 is for modeling the minimum outer bounds of events i.e. at_some_time_within. 
+P81 has its time interval redefined by P81a and P81b. Similarly, we redefine P82 by P82a and P82b.
+-->
+
+<rdf:RDF xml:lang="en" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.cidoc-crm.org/cidoc-crm/">
+	
+	<rdf:Property rdf:about="P2_has_type">
+		<rdfs:label xml:lang="de">hat den Typus</rdfs:label>
+		<rdfs:label xml:lang="en">has type</rdfs:label>
+		<rdfs:label xml:lang="el">έχει τύπο</rdfs:label>
+		<rdfs:label xml:lang="fr">est de type</rdfs:label>
+		<rdfs:label xml:lang="ru">имеет тип</rdfs:label>
+		<rdfs:label xml:lang="pt">é do tipo</rdfs:label>
+		<rdfs:label xml:lang="zh">有类型</rdfs:label>
+		<rdfs:comment>This property allows sub typing of CRM entities - a form of specialisation – through the use of a terminological hierarchy, or thesaurus. 
+			The CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question.
+		</rdfs:comment>
+		<rdfs:domain rdf:resource="E1_CRM_Entity"/>
+		<rdfs:range rdf:resource="E55_Type"/>
+	</rdf:Property>
+	
+</rdf:RDF>

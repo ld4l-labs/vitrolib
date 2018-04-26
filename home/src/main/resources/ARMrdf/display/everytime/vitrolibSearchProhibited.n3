@@ -1,0 +1,19 @@
+# $This file is distributed under the terms of the license in /doc/license.txt$ 
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vitroDisplay: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix core: <http://vivoweb.org/ontology/core#> .
+@prefix localNav: <http://vitro.mannlib.cornell.edu/ns/localnav#> .
+
+@prefix bib: <http://bibliotek-o.org/ontology/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+
+# See vitroSearchProhibited.n3 for more information about files in this directory.
+
+vitroDisplay:SearchIndex 
+    rdf:type owl:Thing ; 
+   vitroDisplay:excludeClass bibframe:Identifier .
+	

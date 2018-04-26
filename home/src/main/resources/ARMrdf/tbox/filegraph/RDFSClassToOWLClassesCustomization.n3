@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+#OA only uses rdfs but we are including these here so we don't get errors in the application
+
+<http://www.w3.org/ns/oa#Annotation> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/oa#Motivation> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/oa#TextualBody> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/oa#Selector> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/oa#SpecificResource> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/oa#TextQuoteSelector> rdf:type <http://www.w3.org/2002/07/owl#Class> .
+
+<http://schema.org/Event> rdf:type <http://www.w3.org/2002/07/owl#Class> .
