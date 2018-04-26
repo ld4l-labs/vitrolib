@@ -1,9 +1,0 @@
-@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix bib: <http://bibliotek-o.org/ontology/> .
-@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-
-
-#has activity shouldn't enable the dropdown of existing activities
-#this does not work as expected
-#<http://bibliotek-o.org/ontology/hasActivity> vitro:selectFromExistingAnnot "false"^^xsd:boolean .

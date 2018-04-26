@@ -1,0 +1,22 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+<https://w3id.org/arm/ontologies/measurement/hasMeasurement> rdf:type owl:ObjectProperty .  
+<https://w3id.org/arm/core/ontology/0.1/hasStylePeriod> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/ontologies/core/hasArrangement> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/ontologies/core/hasActivity> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/ontologies/award/hasAward> rdf:type owl:ObjectProperty . 
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#label> rdf:type owl:ObjectProperty . 
+<http://measurement.bibliotek-o.org/hasUnit> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/core/ontology/0.1/hasActivity> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/ontologies/measurement/hasMeasurementGroup> rdf:type owl:ObjectProperty . 
+<http://measurement.bibliotek-o.org/hasMeasurement> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/core/ontology/0.1/receives> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/ontologies/award/receives> rdf:type owl:ObjectProperty . 
+<http://measurement.bibliotek-o.org/measures> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/core/ontology/0.1/hasAppliedMaterial> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/core/ontology/0.1/hasBaseMaterial> rdf:type owl:ObjectProperty . 
+<https://w3id.org/arm/core/ontology/0.1/origin> rdf:type owl:ObjectProperty . 

@@ -2,20 +2,50 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://purl.org/dc/terms/date>
+<https://w3id.org/arm/core/ontology/0.1/Activity>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/partName>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
 
 <http://purl.org/dc/terms/description>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
+
+<https://w3id.org/arm/core/ontology/0.1/Handwriting>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://purl.org/dc/terms/description>
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/partNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
+
+<https://w3id.org/arm/core/ontology/0.1/PaginationFoliation>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://purl.org/dc/terms/description>
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/mainTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
 
 rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Note>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -26,33 +56,33 @@ rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 <http://id.loc.gov/ontologies/bibframe/Title>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     rdf:value
-                         ] .
-
-<http://id.loc.gov/ontologies/bibframe/Event>
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/subtitle>
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://purl.org/dc/terms/date>
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/partNumber>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/partName>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/mainTitle>
                          ] .
-
-<http://schema.org/duration>
-        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Instance>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/editionStatement>
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/responsibilityStatement>
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
-                         ] .
-
-<http://id.loc.gov/ontologies/bibframe/Identifier>
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     rdf:value
                          ] .
 
 <http://measurement.bibliotek-o.org/Measurement>
@@ -61,38 +91,39 @@ rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                            owl:onProperty     rdf:value
                          ] .
 
-<http://id.loc.gov/ontologies/bibframe/Audio>
+rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
+
+<http://vivoweb.org/ontology/core#Award>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://schema.org/duration>
+                           owl:onProperty     rdf:label
                          ] .
 
-<http://bibliotek-o.org/ontology/TitleElement>
+<http://id.loc.gov/ontologies/bibframe/subtitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
+
+<http://id.loc.gov/ontologies/bibframe/responsibilityStatement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> .
+
+<https://w3id.org/arm/ontologies/award/AwardReceipt>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://vivoweb.org/ontology/core#rank>
-                         ] ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
+                         ] .
+
+<https://w3id.org/arm/core/ontology/0.1/SignatureStatement>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     rdf:value
-                         ] .
-
-<http://measurement.bibliotek-o.org/MeasurementGroup>
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     <http://purl.org/dc/terms/description>
                          ] .
 
-<http://id.loc.gov/ontologies/bibframe/editionStatement>
+<http://id.loc.gov/ontologies/bibframe/date>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
-
-<http://vivoweb.org/ontology/core#rank>
-        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
-
-<http://bibliotek-o.org/ontology/Activity>
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://purl.org/dc/terms/date>
-                         ] .
+                <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstancePartsAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventLocationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventActivityNotePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventActivityPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemTypePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventNotePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/XXX> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventItemDescriptionPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemPartsAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstancePhysicalDecriptionPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventSubjectAndCoveragePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/ItemNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventDatePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventTitlePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profile/shacl/raremat_monograph/:WorkToWorkPropertyGroup> .
