@@ -59,7 +59,8 @@
      xmlns:ero="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core">
         <rdfs:label xml:lang="en-us">VIVO core</rdfs:label>
-        <owl:imports rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7"/>
+        <!-- Imports are just causing errors right now -->
+        <!--owl:imports rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/dateTimeValuePrecision.owl"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/documentStatus.owl"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/geopolitical.tbox.ver1.1-11-18-11.owl"/>
@@ -71,7 +72,7 @@
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-fabio-public-1.5.owl"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-foaf-public-1.5.owl"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-pws-public-1.5.owl"/>
-        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-skos-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-skos-public-1.5.owl"/-->
     </owl:Ontology>
     
 
