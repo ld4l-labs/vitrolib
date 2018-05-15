@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+]>
+
+<rdf:RDF xmlns="http://vivoweb.org/ontology/core#"
+     xml:base="http://vivoweb.org/ontology/core"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vivo="http://vivoweb.org/ontology/core#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+ 
+    <!-- http://vivoweb.org/ontology/core#rank -->
+    
+    <owl:DatatypeProperty rdf:about="&vivo;rank">
+        <rdfs:label xml:lang="en-us">rank</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>
+
+
+
+

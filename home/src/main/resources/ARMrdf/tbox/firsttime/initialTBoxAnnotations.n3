@@ -1,0 +1,278 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio:   <http://purl.org/spar/fabio/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix bib:    <http://bibliotek-o.org/ontology/> .
+@prefix legacy:  <http://bibliotek-o.org/ontology/legacy/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#/> .
+
+##### ONTOLOGY METADATA #####
+
+<http://id.loc.gov/ontologies/bibframe/> 
+    rdfs:label "BIBFRAME vocabulary"@en-US ;  
+    vitro:ontologyPrefixAnnot "bf"^^xsd:string .
+    
+<http://bibliotek-o.org/ontology/> 
+    rdfs:label "bibliotek-o: a BIBFRAME Ontology Extension"@en-US ;  
+    vitro:ontologyPrefixAnnot "bib"^^xsd:string .
+    
+<http://www.w3.org/2011/content#> 
+    rdfs:label "Content Ontology"@en-US ;  
+    vitro:ontologyPrefixAnnot "cnt"^^xsd:string .
+
+<http://purl.org/dc/elements/1.1/> 
+    rdfs:label "DC Elements"@en-US ;  
+    vitro:ontologyPrefixAnnot "dc"^^xsd:string .
+       
+<http://purl.org/dc/terms/> 
+    rdfs:label "DC Terms"@en-US ;  
+    vitro:ontologyPrefixAnnot "dcterms"^^xsd:string .
+    
+<http://purl.org/spar/fabio/> 
+    rdfs:label "FaBiO (FRBR-Aligned Bibliographic Ontology)"@en-US ;  
+    vitro:ontologyPrefixAnnot "fabio"^^xsd:string .
+
+<http://xmlns.com/foaf/0.1/> 
+    rdfs:label "FOAF (Friend of a Friend)"@en-US ;
+    vitro:ontologyPrefixAnnot "foaf"^^xsd:string .
+
+       
+<http://www.lingvoj.org/ontology#> 
+    rdfs:label "Lingvoj"@en-US ;
+    vitro:ontologyPrefixAnnot "lingvo"^^xsd:string .
+
+<http://www.loc.gov/mads/rdf/v1#>
+    rdfs:label "MADS/RDF"@en-US ;
+    vitro:ontologyPrefixAnnot "madsrdf"^^xsd:string .
+           
+<http://www.w3.org/ns/oa#> 
+    rdfs:label "Open Annotation"@en-US ;  
+    vitro:ontologyPrefixAnnot "oa"^^xsd:string .
+
+<http://www.w3.org/2002/07/owl#> 
+    rdfs:label "OWL (Web Ontology Language)"@en-US ;  
+    vitro:ontologyPrefixAnnot "owl"^^xsd:string .
+
+<http://www.w3.org/ns/prov#> 
+    rdfs:label "PROV-O (Provenance Ontology)"@en-US ;  
+    vitro:ontologyPrefixAnnot "prov"^^xsd:string . 
+    
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+    rdfs:label "RDF"@en-US ;  
+    vitro:ontologyPrefixAnnot "rdf"^^xsd:string .
+    
+<http://www.w3.org/2000/01/rdf-schema#> 
+    rdfs:label "RDFS"@en-US ;  
+    vitro:ontologyPrefixAnnot "rdfs"^^xsd:string .
+
+<http://schema.org/>
+    rdfs:label "Schema.org"@en-US ;
+    vitro:ontologyPrefixAnnot "schema"^^xsd:string .
+    
+<http://www.w3.org/2004/02/skos/core#>
+    rdfs:label "SKOS (Simple Knowledge Organization System)"@en-US ;
+    vitro:ontologyPrefixAnnot "skos"^^xsd:string .
+
+<http://purl.org/vocab/vann/> 
+    rdfs:label "VANN (Vocabulary for Annotating Vocabulary Descriptions)"@en-US ;  
+    vitro:ontologyPrefixAnnot "vann"^^xsd:string .
+           
+<http://vitro.mannlib.cornell.edu/ns/vitro/public>
+    rdfs:label "Vitro Public Ontology"@en-US ;
+    vitro:ontologyPrefixAnnot "vitro-public"^^xsd:string .
+
+<http://vivoweb.org/ontology/core#>
+     rdfs:label "VIVO Core"@en-US ;
+     vitro:ontologyPrefixAnnot "vivo"^^xsd:string .
+
+<http://www.w3.org/2003/06/sw-vocab-status/ns#> 
+    rdfs:label "SemWeb Vocab Status Ontology"@en-US ;  
+    vitro:ontologyPrefixAnnot "vs"^^xsd:string .
+               
+<http://www.w3.org/2001/XMLSchema#> 
+    rdfs:label "XML Schema"@en-US ;  
+    vitro:ontologyPrefixAnnot "xsd"^^xsd:string .
+
+    
+##### CLASSGROUP ASSIGNMENTS #####
+
+##
+## WORKS ##
+##
+
+##Doesn't appear fabio is being used anymore?
+
+
+        
+bibframe:Audio
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+bibframe:Cartography
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+bibframe:Collection
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+    
+#Removed continuing resource
+    
+bibframe:Dataset
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+bibframe:Dissertation
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+    
+#Removed finite resource
+
+#Reoved Index
+
+#Removed integrating resource
+
+#Removed monograph    
+             
+bibframe:MovingImage
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+#Removed multimedia
+
+#Removed multipartmonograph
+
+   
+bibframe:NotatedMovement
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+    
+bibframe:NotatedMusic
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+#Removing periodical
+
+#Removing periodicalPart
+
+#Removing Serial
+
+#Removing Series
+        
+                   
+bibframe:StillImage
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+bibframe:Text
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+
+#Removing three dimensional object
+
+
+bibframe:Work
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupworks> .
+        
+##
+## INSTANCES ##
+##
+
+bibframe:Electronic
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
+    
+bibframe:Instance
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
+    
+bibframe:Print
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
+    
+bibframe:Tactile
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupinstances> .
+
+    
+##
+## ITEMS ##
+##
+
+bibframe:Item
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupitems> .
+   
+    
+##
+## PEOPLE ##
+##
+
+foaf:Person
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouppeople> .
+    
+    
+##
+## ORGANIZATIONS ##
+##
+
+foaf:Organization
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouporganizations> .
+    
+schema:GovernmentOrganization
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouporganizations> .
+
+
+##
+## AGENTS ##
+##
+
+foaf:Agent
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupagents> .
+    
+bibframe:Family
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupagents> .    
+
+
+##
+## TOPICS ##
+##
+
+skos:Concept
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouptopics> .
+
+    
+##
+## LOCATIONS ##
+##
+
+prov:Location
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGrouplocations> .
+    
+##
+## EVENTS ##
+##
+
+schema:Event
+    vitro:inClassGroup <http://ld4l.org/ontology#vitroClassGroupevents> .
+    
+    
+    
+##### PROPERTY CONFIGURATION #####
+
+
+#removed hasFormat
+## Removed all property group assignments for now
+        
+# Displayed as faux properties, so hide the display of the base property.
+dcterms:hasPart
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+        
+# Displayed as faux properties, so hide the display of the base property.
+dcterms:isPartOf
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+       <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+foaf:name
+    vitro:displayRankAnnot "10"^^xsd:int .
+                       
+    
+               
+schema:birthDate
+    vitro:displayRankAnnot "20"^^xsd:int .
+        
+schema:deathDate
+    vitro:displayRankAnnot "30"^^xsd:int .
+        
