@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject rdf:type bibframe:Work .",
+        "?subject rdf:type bibframe:Text .",
+		"?subject rdfs:label ?title .",
+		"?subject arm:hasPrefferedTitle ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?title .",
+		"?titleIndividual rdf:value ?title .",
+		"?titleIndividual bibframe:titleOf ?subject .",
+		"?subject rdf:type ?workType .",
+		"?subject dcterms:language ?language ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+		"?subject bibframe:hasInstance ?instance .",
+		"?instance rdf:type bibframe:Instance .",
+		"?instance bibframe:instanceOf ?subject .",
+		"?instance rdfs:label ?instanceTitle .", 
+		"?instance arm:hasPreferredTitle ?instanceTitleIndividual .",
+		"?instanceTitleIndividual rdf:type bibframe:Title .",
+		"?instanceTitleIndividual rdfs:label ?instanceTitle .",
+		"?instanceTitleIndividual rdf:value ?instanceTitle .",
+		"?instanceTitleIndividual bibframe:titleOf ?instance .",
+		"?instance rdf:type ?instanceType .",
+		"?instance bibframe:hasItem ?item .",
+		"?item rdf:type bibframe:Item .",
+		"?item rdfs:label ?itemTitle. ",
+		"?item arm:hasPreferredTitle ?itemTitleIndividual .",
+		"?itemTitleIndividual rdf:type bibframe:Title .",
+		"?itemTitleIndividual rdfs:label ?itemTitle .",
+		"?itemTitleIndividual rdf:value ?itemTitle .",
+		"?itemTitleIndividual bibframe:titleOf ?item ."
+      ],
+      "customform:prefixes": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    },
+      {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": []
+    },
+    {
+      "@id": "customform:addWork_subject",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "subject"
+    },
+    {
+      "@id": "customform:addWork_titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "titleIndividual"
+    },
+     {
+      "@id": "customform:addWork_title",
+      "@type": [
+        "forms:FormComponent",
+        "forms:LiteralField"
+      ],
+      "customform:varName": "title"
+    },
+    {
+      "@id": "customform:addWork_workType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "workType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_workTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_workTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Text"
+      }
+    },
+     {
+      "@id": "customform:whcor_instance",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "instance"
+    },
+    {
+      "@id": "customform:whcor_instanceTitleIndividual",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "instanceTitleIndividual"
+    },
+     {
+      "@id": "customform:whcor_instanceTitle",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "instanceTitle"
+    },
+  
+    
+     {
+      "@id": "customform:whcor_languageOptions",
+      "@type": [
+        "forms:IndividualsViaVClassOptions",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://schema.org/Language"
+      }
+    },
+    {
+      "@id": "customform:whcor_language",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:whcor_languageOptions"
+      },
+    
+      "customform:varName": "language"
+    },
+    
+     {
+      "@id": "customform:addWork_instanceType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:varName": "instanceType",
+       "customform:fieldOptions": {
+        "@id": "customform:whcor_instanceTypeFieldOptions"
+      }
+    },
+      {
+      "@id": "customform:whcor_instanceTypeFieldOptions",
+      "@type": [
+        "forms:ChildVClassesWithParent",
+        "forms:FieldOptions"
+      ],
+      "customform:classUri": {
+        "@id": "http://id.loc.gov/ontologies/bibframe/Instance"
+      }
+    },
+  
+        {
+      "@id": "customform:addItem",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "item"
+    },
+     {
+      "@id": "customform:whcor_itemTitleIndividual",
+      "@type": [
+       "forms:FormComponent",
+       "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "itemTitleIndividual"
+    },
+     {
+      "@id": "customform:whcor_itemTitle",
+      "@type": [
+       "forms:FormComponent",
+       "forms:LiteralField"
+      ],
+      "customform:varName": "itemTitle"
+    }
+   
+   ]
+}
