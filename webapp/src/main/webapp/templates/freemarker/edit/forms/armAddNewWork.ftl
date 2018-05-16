@@ -162,19 +162,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </p>
         </div>
         
-        
-
-		<#-- Instance Type -->
-	<div>
-      <p><#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
-
-
-      		<label for="instanceType">Instance Type</label>
-           <select id="instanceType" name="instanceType" role="select">
-
-              </select>
-        </p>
-      </div>
       
 
       </fieldset>
