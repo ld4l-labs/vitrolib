@@ -122,21 +122,13 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
      <div>
       <p>
       <label for="titleType">Preferred Title Type ${requiredHint}</label>
-           <select id="workType" name="workType" role="select">
+           <select id="titleType" name="titleType" role="select">
 
               </select>
         </p>
       </div>
       
-      <#--  Type of text work -->
-      <div>
-      <p>
-      <label for="titleType">Text Type ${requiredHint}</label>
-           <select id="workType" name="workType" role="select">
-
-              </select>
-        </p>
-      </div>
+      <#--  Potentially include bf:carrier here? but no subclasses for text-->
       
       <#-- Language -->
       
@@ -162,6 +154,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           </p>
         </div>
         
+          <div>
+      <p>
+      <label for="instanceTitleType">Instance Preferred Title Type ${requiredHint}</label>
+           <select id="instanceTitleType" name="instanceTitleType" role="select">
+
+              </select>
+        </p>
+      </div>
+        
       
 
       </fieldset>
@@ -173,10 +174,19 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 
         <div>
           <p>
-            <label for="instanceTitle">Item Preferred Title</label>
+            <label for="itemTitle">Item Preferred Title</label>
             <input size="60"  type="text" id="itemTitle" name="itemTitle" value="" />
           </p>
         </div>
+        
+          <div>
+      <p>
+      <label for="itemTitleType">Preferred Item Title Type ${requiredHint}</label>
+           <select id="itemTitleType" name="itemTitleType" role="select">
+
+              </select>
+        </p>
+      </div>
       
 
       </fieldset>

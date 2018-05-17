@@ -1,0 +1,79 @@
+var displayConfig = {
+	"fieldDisplayProperties" : {
+		"titleType": {
+			"label": "Preferred Title Type", 
+			"constantList":[
+		      {
+		         "label":"Title entity",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/Title"
+		      },
+		      {
+		         "label":"Parallel title proper",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/ParallelTitle"
+		      },
+		      {
+		         "label":"Abbreviated title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"
+		      },
+		      {
+		         "label":"Collective title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/CollectiveTitle"
+		      },
+		      {
+		         "label":"Key title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/KeyTitle"
+		      }
+		   ]
+		},
+		"instanceTitleType": {
+			"label": "Preferred Instance Title Type", 
+			"constantList":[
+		      {
+		         "label":"Title entity",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/Title"
+		      },
+		      {
+		         "label":"Parallel title proper",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/ParallelTitle"
+		      },
+		      {
+		         "label":"Abbreviated title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"
+		      },
+		      {
+		         "label":"Collective title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/CollectiveTitle"
+		      },
+		      {
+		         "label":"Key title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/KeyTitle"
+		      }
+		   ]
+		},
+		"itemTitleType": {
+			"label": "Preferred Item Title Type", 
+			"constantList":[
+		      {
+		         "label":"Title entity",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/Title"
+		      },
+		      {
+		         "label":"Parallel title proper",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/ParallelTitle"
+		      },
+		      {
+		         "label":"Abbreviated title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"
+		      },
+		      {
+		         "label":"Collective title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/CollectiveTitle"
+		      },
+		      {
+		         "label":"Key title",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/KeyTitle"
+		      }
+		   ]
+		}
+	}
+};
