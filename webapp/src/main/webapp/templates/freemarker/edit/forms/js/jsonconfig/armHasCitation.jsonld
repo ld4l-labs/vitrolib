@@ -81,7 +81,7 @@
         "forms:UriField"
       ],
       "customform:varName": "note",
-	  "customform:mayUseNewResource": true,
+	  "customform:mayUseNewResource": true
     },
     {
       "@id": "customform:noteValue",

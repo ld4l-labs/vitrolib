@@ -21,7 +21,7 @@
         "?subject rdf:type bibframe:Work .",
         "?subject rdf:type bibframe:Text .",
 		"?subject rdfs:label ?title .",
-		"?subject arm:hasPrefferedTitle ?titleIndividual .",
+		"?subject arm:hasPreferredTitle ?titleIndividual .",
 		"?titleIndividual rdf:type bibframe:Title .",
 		"?titleIndividual rdf:type ?titleType .",
 		"?titleIndividual rdfs:label ?title .",

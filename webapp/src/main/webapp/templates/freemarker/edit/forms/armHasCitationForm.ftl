@@ -135,7 +135,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
           <p templateId="inputAcSelector">
     		<label for="location">Entry source</label>
               <input type="hidden"  name="locationLabel" id="locationLabel"/>
-              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value=""/>
+              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
           </p>
 
 
@@ -177,14 +177,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   //regular autocomplete url: acUrl: '${urls.base}/autocomplete?tokenize=true',
     var customFormData  = {
         sparqlQueryUrl: '${sparqlQueryUrl}',
-        acUrl: '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames',
+        acUrl: 'acUrl="${urls.base}/autocomplete?tokenize=true"',
         customFormAJAXUrl:'${urls.base}/ajax/customForm',
         editMode: '${editMode}',
         baseHref: '${urls.base}/individual?uri=',
         //blankSentinel: '${blankSentinel}',
         flagClearLabelForExisting: '${flagClearLabelForExisting}',
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
-        acTypes: {},
+        acMultipleTypes: 'true',
+        acTypes: {location: 'https://w3id.org/arm/core/ontology/0.1/Page,https://w3id.org/arm/core/ontology/0.1/Volume,http://id.loc.gov/ontologies/bibframe/Text'},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
        	defaultNamespace:"${defaultNamespace}"
     };
