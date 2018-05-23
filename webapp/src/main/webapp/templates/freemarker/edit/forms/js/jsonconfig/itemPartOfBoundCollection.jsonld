@@ -1,0 +1,60 @@
+{ 
+    "@context": {
+        "arm": "https://w3id.org/arm/core/ontology/0.1/",
+        "bf": "http://id.loc.gov/ontologies/bibframe/",
+        "ch": "https://w3id.org/arm/custodial_history/ontology/0.1/",
+        "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",  
+    },
+    "@graph": [
+        {
+            "@id": "customform:partOfBoundCollection_requiredN3",
+            "@type": [
+                "forms:RequiredN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+            
+                "?subject ?predicate ?objectVar . ",
+        
+                "?objectVar a arm:BoundCollection , bf:Item . ",
+                "objectVar bf:hasPart ?subject . " ,
+                "?objectVar bf:title ?objectVarTitle . ",
+                "?objectVar rdfs:label ?titleValue . ",
+                "?objectVar arm:hasCustodialHistory ?custodialHistory . " ,
+        
+                "?objectVarTitle arm:titleOf ?objectVar . ",
+                "?objectVarTitle rdf:type bf:Title . ",   
+                "?objectVarTitle rdfs:label ?titleValue . ", 
+                "?obectVarTitle rdf:value ?titleValue . " ,
+                
+                "?custodialHistory a ch:CustodialHistory . ",
+                "?custodialHistory arm:isCustodialHistoryOf ?objectVar . "
+            ],
+            "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix owl: <http://www.w3.org/2002/07/owl#> . "
+        },
+        {
+            "@id": "customform:partOfBoundCollection_existingObjectVar",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:mayUseNewResource": true,
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  SELECT ?existingObjectUri WHERE {  ?subject bf:partOf ?existingObjectUri . ?existingObjectUri a bf:BoundCollection . } " ,
+            "customform:varName": "objectVar"
+        },
+        {
+            "@id": "customform:partOfBoundCollection_existingObjectLabel" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?existingObjectLabel WHERE {  ?subject bf:partOf ?existingObjectUri . ?existingObjectUri a bf:BoundCollection . ?existingObjectUri rdfs:label ?existingObjectLabel . } " ,      
+            "customform:varName": "titleValue"
+        }
+    ]
+}
