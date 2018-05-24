@@ -1,5 +1,5 @@
 var displayConfig = {
-    "fieldOrder":  ["eventType", "eventName", "eventDate", "eventLocation"],
+    "fieldOrder":  ["eventType", "eventName", "eventDate", "eventLocation", "eventLocationName"],
     "fieldDisplayProperties": {
         "eventType": {
             "label": "Custodial event type", 
@@ -11,11 +11,16 @@ var displayConfig = {
         },
         "eventDate": {
             "label": "Date", 
-            "description": "Date of the custodial event. Recommended to use EDTF format."
+            "description": "Date or date interval of the custodial event. Recommended to use EDTF format."
         },
         "eventLocation": {
             "label": "Location", 
-            "description": "Location of the custodial event."            
+            "description": "Location of the custodial event."                        
+        },
+        "eventLocationName": {
+            "label": "Location name", 
+            "autocomplete": true,
+            "labelFieldFor": "eventLocation"                             
         }
     }
 };
