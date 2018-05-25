@@ -1,0 +1,54 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bibframe: <http://bibframe.org/vocab/> .
+
+<http://rdaregistry.info/Elements/u/P60311>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60215>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60305>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60241>
+        a       owl:ObjectProperty .
+
+<http://purl.org/dc/terms/relation>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60713>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60261>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60250>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60806>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60214>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60278>
+        a       owl:ObjectProperty .
+
+<http://purl.org/dc/elements/1.1/description>
+        a       owl:DatatypeProperty .
+
+<http://rdaregistry.info/Elements/u/P60260>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60709>
+        a       owl:ObjectProperty .
+
+#owl:topDataProperty  a  owl:ObjectProperty .
+
+#owl:topObjectProperty
+#        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60710>
+        a       owl:ObjectProperty .
