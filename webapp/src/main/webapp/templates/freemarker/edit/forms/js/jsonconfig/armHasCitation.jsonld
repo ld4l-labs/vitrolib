@@ -2,7 +2,6 @@
   "@context": {
     "foaf": "http://xmlns.com/foaf/0.1/",
     "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
-    "bib": "http://bibliotek-o.org/ontology/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "vivo": "http://vivoweb.org/ontology/core#",
