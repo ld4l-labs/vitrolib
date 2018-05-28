@@ -4,7 +4,7 @@
 //And NOT generating fields
 //For now, we are only using this when creating an entirely new object, but later will incorporate editing functionality as well
 
-var armMarkedBy = {
+var armHasPartBinding = {
 		  onLoad: function() {
 	    	 	this.mixIn();  
 	    	 	this.initObjects();
@@ -40,22 +40,22 @@ var armMarkedBy = {
 	        		var agentNameInput = $("#agentName");
 	        		agentNameInput.attr("acUrl", selectedUrl);
 	        		//Also change the value of the agent type dropdown on the basis of what is checked
-	        		armMarkedBy.setAgentType(selectedInput.attr("lookupType"));
+	        		armHasPartBinding.setAgentType(selectedInput.attr("lookupType"));
 	        	});
 	        	
 	        	//If create new chosen, then show lookupType
 	        	this.actionType.change(function() {
 	        		var actionTypeVal = $(this).val();
 	        		if(actionTypeVal == "create") {
-	        			armMarkedBy.vocabSource.hide();
+	        			armHasPartBinding.vocabSource.hide();
 	        		}
 	        		else {
-	        			armMarkedBy.vocabSource.show();
+	        			armHasPartBinding.vocabSource.show();
 	        		}
 	        	});
 	        	
 	        	this.formSubmit.click(function() {
-	        		armMarkedBy.copyActivityLabel();
+	        		armHasPartBinding.copyActivityLabel();
 	        		return true;
 	        	});
 	        	
@@ -72,5 +72,5 @@ var armMarkedBy = {
 };
 
 $(document).ready(function() {   
-    armMarkedBy.onLoad();
+    armHasPartBinding.onLoad();
 }); 

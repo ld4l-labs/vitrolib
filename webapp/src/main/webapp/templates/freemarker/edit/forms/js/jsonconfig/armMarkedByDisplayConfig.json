@@ -1,7 +1,11 @@
 var displayConfig = {
-	"fieldOrder" :  ["markingType", "objectValue"],
+	"fieldOrder" :  ["markingType"],
 	"fieldDisplayProperties" : {
-		"objectValue": {"label":"Note"},
+		"noteType": {"label":"Note Type",
+			"constantList":[{"label":"Note","uri":"http://id.loc.gov/ontologies/bibframe/Note"},
+			{"label":"Descriptive note","uri":"https://w3id.org/arm/core/ontology/0.1/DescriptiveNote"}
+			]
+		},
 		"markingType": {
 			"label": "Marking Type", 
 			"constantList":[{"label":"Marking","uri":"https://w3id.org/arm/core/ontology/0.1/Marking"},

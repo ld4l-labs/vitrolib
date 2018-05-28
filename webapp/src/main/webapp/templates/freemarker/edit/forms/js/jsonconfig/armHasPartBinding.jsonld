@@ -1,0 +1,305 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectVar .",
+        "?objectVar rdf:type arm:Binding ."
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+      	"?objectVar bibframe:hasPart ?bindingComponent .",
+      	"?objectVar crm:P2_has_type ?bindingType .",
+		"?objectVar activity:hasActivity ?activity . ?activity activity:isActivityOf ?objectVar .",
+		"?activity rdf:type ?activityType .",
+		"?activity rdfs:label ?activityLabel . ",
+		"?activity bibframe:agent ?agent .",
+		"?agent a bibframe:Agent.  ", 
+		"?agent rdfs:label ?agentName.",  
+		"?activity bibframe:date ?activityDate .",
+      	"?activity arm:atLocation ?location .", 
+      	"?location rdfs:label ?locationName . ",
+      	"?location rdf:type gn:Feature .",
+      	"?objectVar bibframe:note ?note .",
+      	"?note rdf:type ?noteType .",
+      	"?note rdf:value ?noteValue .",
+      	"?objectVar arm:markedBy ?marking . ",
+      	"?marking rdf:type ?markingType .",
+      	"?marking rdf:value ?markingValue .",
+      	"?marking activity:hasActivity ?markingActivity . ?markingActivity activity:isActivityOf ?marking .",
+		"?markingActivity rdf:type activity:CreatorActivity .",
+		"?markingActivity rdfs:label ?markingActivityLabel . ",
+		"?markingActivity bibframe:agent ?markingAgent .",
+		"?markingAgent a bibframe:Agent.  ", 
+		"?markingAgent rdfs:label ?markingAgentName.",  
+		"?markingActivity bibframe:date ?markingActivityDate .",
+      	"?markingActivity arm:atLocation ?markingLocation .", 
+      	"?markingLocation rdfs:label ?markingLocationName . ",
+      	"?markingLocation rdf:type gn:Feature ."	
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    },
+    {
+      "@id": "customform:bindingType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "bindingType",
+       "customform:fieldOptions": {
+        "@id": "customform:bindingTypeFieldOptions"
+      },
+    },
+    {
+      "@id": "customform:bindingComponent",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "bindingComponent",
+       "customform:fieldOptions": {
+        "@id": "customform:activityTypeFieldOptions"
+      },
+    },
+     {
+      "@id": "customform:activity",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "activity"
+    },
+     {
+      "@id": "customform:activityType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "activityType",
+       "customform:fieldOptions": {
+        "@id": "customform:activityTypeFieldOptions"
+      },
+    },
+   
+    {
+      "@id": "customform:whcor_fieldAgent",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "agent"
+    },
+    {
+      "@id": "customform:whcor_fieldActivityLabel",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:rangeDatatypeUri": {
+        "@id": "xsd:string"
+      },
+      "customform:varName": "activityLabel"
+    },
+     {
+      "@id": "customform:whcor_fieldActivityDate",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "activityDate"
+    },
+    {
+      "@id": "customform:whcor_fieldAgentName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "agentName"
+    },
+     {
+      "@id": "customform:whcor_locationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "location"
+    },
+     {
+      "@id": "customform:whcor_locationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "locationName"
+    },
+     {
+      "@id": "customform:note",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "note",
+      "customform:mayUseNewResource": true
+    },
+     {
+      "@id": "customform:noteType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "noteType",
+       "customform:fieldOptions": {
+        "@id": "customform:noteTypeFieldOptions"
+      },
+    },
+    {
+      "@id": "customform:noteValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "noteValue"
+    },
+      {
+      "@id": "customform:markingType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingType",
+       "customform:fieldOptions": {
+        "@id": "customform:markingTypeFieldOptions"
+      },
+    },
+     {
+      "@id": "customform:markingValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingValue"
+    },
+    {
+      "@id": "customform:markingActivity",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "markingActivity"
+    },
+      {
+      "@id": "customform:markingActivityLabel",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:rangeDatatypeUri": {
+        "@id": "xsd:string"
+      },
+      "customform:varName": "markingActivityLabel"
+    },
+     {
+      "@id": "customform:markingActivityDate",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingActivityDate"
+    },
+    {
+      "@id": "customform:markingAgentName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingAgentName"
+    },
+     {
+      "@id": "customform:markingLocationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingLocation"
+    },
+     {
+      "@id": "customform:markingLocationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "markingLocationName"
+    },
+     {
+      "@id": "customform:bindingTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+     {
+      "@id": "customform:bindingComponentFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    
+     {
+      "@id": "customform:markingTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+     {
+      "@id": "customform:noteTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    {
+      "@id": "customform:activityTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+     {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["note,noteValue", "agent, agentName", "location, locationName"]
+    }
+   
+   ]
+}

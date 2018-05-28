@@ -86,11 +86,20 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
 
     <div id="formcontent">
-
-      <p>
-              <label for="markingValue">Value<span class='requiredHint'> *</span></label>
+		<div>
+      	<p>
+              <label for="markingValue">Marking Value<span class='requiredHint'> *</span></label>
               <input size="60"  type="text" id="markingValue" name="markingValue" value="" />
-     </p>
+     	</p>
+     	</div>
+      	<div>
+      		<p>
+      		<label for="markingType">Marking Type ${requiredHint}</label>
+           	<select id="markingType" name="markingType" role="select">
+
+           	</select>
+        	</p>
+      	</div>
 
 	<br/>
 
@@ -132,7 +141,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
  		
-  		</fieldset>
+  		
   
   		<div> 
 	        <p>
@@ -154,7 +163,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   
   
   		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
-    
+  		</fieldset>  
     <div id="errors" name="errors"></div>
     
    

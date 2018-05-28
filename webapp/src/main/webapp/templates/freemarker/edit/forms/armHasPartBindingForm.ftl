@@ -86,16 +86,46 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
 
     <div id="formcontent">
+		<div>
+      		<p>
+      		<label for="bindingType">Binding Type</label>
+           	<select id="bindingType" name="bindingType" role="select">
 
-      <p>
-              <label for="markingValue">Value<span class='requiredHint'> *</span></label>
-              <input size="60"  type="text" id="markingValue" name="markingValue" value="" />
-     </p>
+           	</select>
+        	</p>
+      	</div>
+      	
+      	<div>
+      		<p>
+      		<label for="bindingComponent">Binding Component</label>
+           	<select id="bindingComponent" name="bindingComponent" role="select">
 
+           	</select>
+        	</p>
+      	</div>
 	<br/>
+	
+	<h4 class="services">Add Note</h4>
+ 		
+ 		<fieldset class="workform__fieldset">
+ 		<div>
+      		<p>
+      		<label for="noteType">Note Type</label>
+           	<select id="noteType" name="noteType" role="select">
 
-
-	<h4 class="services">Add activity/role</h4>
+           	</select>
+        	</p>
+      	</div>
+		<div>
+      	<p>
+              <label for="noteValue">Note</label>
+              <input size="60"  type="text" id="noteValue" name="noteValue" value="" />
+     	</p>
+     	</div>
+  		</fieldset>
+	
+	
+		<h4 class="services">Add activity/role</h4>
  		
  		<fieldset class="workform__fieldset">
 		<div> 
@@ -132,7 +162,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		
  		
-  		</fieldset>
+  		
   
   		<div> 
 	        <p>
@@ -154,6 +184,82 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   
   
   		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
+  		</fieldset>
+
+
+	<h4 class="services">Add Marking</h4>
+ 		
+ 		<fieldset class="workform__fieldset">
+ 		<div>
+      	<p>
+              <label for="markingValue">Marking Value<span class='requiredHint'> *</span></label>
+              <input size="60"  type="text" id="markingValue" name="markingValue" value="" />
+     	</p>
+     	</div>
+      	<div>
+      		<p>
+      		<label for="markingType">Marking Type ${requiredHint}</label>
+           	<select id="markingType" name="markingType" role="select">
+
+           	</select>
+        	</p>
+      	</div>
+		<div> 
+			<div id="actionTypeOptions">
+				<input checked="checked" type="radio" name="markingActionType"  value="lookup">Lookup agent
+				<input type="radio" name="markingActionType"  value="create">Create new agent
+			</div>
+			<br/>
+			
+			<div id="vocabSource">
+				<input checked="checked" type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectMarkingAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
+				<input type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectMarkingAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
+			</div>
+			
+			
+	  		
+	        <p>
+	            <label for="agent"> Person or Organization${requiredHint}</label>
+	            <input class="acSelector" size="60"  type="text" id="markingAgentName" name="markingAgentName" acGroupName="markingAgent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="markingAgent">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="markingAgent" name="markingAgent" value=""  />
+	        </div>
+  		</div>
+ 		
+ 		
+ 		
+ 		
+  		</fieldset>
+  
+  		<div> 
+	        <p>
+	            <label for="markingLocation"> Location</label>
+	            <input class="acSelector" size="60"  type="text" id="markingLocationName" name="markingLocationName" acGroupName="markingLocation"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+	        </p>
+	
+		
+	        <div class="acSelection" acGroupName="markingLocation">
+	            <p class="inline">
+	                <label>${i18n().selected}:</label>
+	                <span class="acSelectionInfo"></span>
+	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	            </p>
+	            <input class="acUriReceiver" type="hidden" id="markingLocation" name="markingLocation" value=""  />
+	        </div>
+  		</div>
+  
+  
+  		<input name="markingActivityLabel" id="markingActivityLabel" type="hidden" value="" />
     
     <div id="errors" name="errors"></div>
     

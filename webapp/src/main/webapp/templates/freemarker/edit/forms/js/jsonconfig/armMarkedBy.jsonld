@@ -35,13 +35,16 @@
 		"?objectVar activity:hasActivity ?activity . ?activity activity:isActivityOf ?objectVar .",
 		"?activity rdf:type activity:CreatorActivity .",
 		"?activity rdfs:label ?activityLabel . ",
-		"?activity bf:agent ?agent .",
-		"?agent a bf:Agent.  ", 
+		"?activity bibframe:agent ?agent .",
+		"?agent a bibframe:Agent.  ", 
 		"?agent rdfs:label ?agentName.",  
-		"?activity bf:date ?activityDate .",
+		"?activity bibframe:date ?activityDate .",
       	"?activity arm:atLocation ?location .", 
       	"?location rdfs:label ?locationName . ",
-      	"?location rdf:type gn:Feature ."	
+      	"?location rdf:type gn:Feature .",
+      	"?objectVar bibframe:note ?note .",
+      	"?note rdf:type ?noteType .",
+      	"?note rdf:value ?noteValue ."	
       ],
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
     },
@@ -51,7 +54,10 @@
         "forms:UriField",
         "forms:FormComponent"
       ],
-      "customform:varName": "markingType"
+      "customform:varName": "markingType",
+       "customform:fieldOptions": {
+        "@id": "customform:markingTypeFieldOptions"
+      },
     },
      {
       "@id": "customform:markingValue",
@@ -60,6 +66,15 @@
         "forms:FormComponent"
       ],
       "customform:varName": "markingValue"
+    },
+    {
+      "@id": "customform:activity",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "activity"
     },
     {
       "@id": "customform:whcor_fieldAgent",
@@ -111,8 +126,58 @@
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:queryForExistingValue": "PREFIX bib: <http://bibliotek-o.org/ontology/>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  PREFIX schema:  <http://schema.org/>   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  SELECT ?existingLocationName   WHERE {?objectVar schema:location ?existingLocation .?existingLocation rdfs:label ?existingLocationName .}    ",
       "customform:varName": "locationName"
+    },
+     {
+      "@id": "customform:note",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "note",
+      "customform:mayUseNewResource": true
+    },
+     {
+      "@id": "customform:noteType",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "noteType",
+       "customform:fieldOptions": {
+        "@id": "customform:noteTypeFieldOptions"
+      },
+    },
+    {
+      "@id": "customform:noteValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "noteValue"
+    },
+     {
+      "@id": "customform:markingTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+     {
+      "@id": "customform:noteTypeFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+     {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["note,noteValue", "agent, agentName", "location, locationName"]
     }
    
    ]
