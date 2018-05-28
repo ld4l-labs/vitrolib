@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectVar .",
+        "?object rdf:type arm:PaginationFoliation ."
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+		"?objectVar dcterms:description ?description .",
+		"?objectVar rdf:value ?value ."
+      ],
+      "customform:prefixes": "@prefix dcterms: <http://purl.org/dc/terms/> . @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    }
+   
+   ]
+}

@@ -1,0 +1,9 @@
+var displayConfig = {
+	"fieldOrder" :  ["description", "value"],
+	"fieldDisplayProperties" : {
+		"description": {"label": "Qualifying information about the handwriting"},
+		"value": {"label": "Pagination and foliation"}
+	}
+};
+
+
