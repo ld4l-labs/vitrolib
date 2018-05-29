@@ -1,0 +1,98 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://purl.org/dc/terms/date>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://purl.org/dc/terms/description>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://id.loc.gov/ontologies/bibframe/Note>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/Title>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/Event>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://purl.org/dc/terms/date>
+                         ] .
+
+<http://schema.org/duration>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://id.loc.gov/ontologies/bibframe/Instance>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/editionStatement>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/Identifier>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] .
+
+<http://measurement.bibliotek-o.org/Measurement>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/Audio>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://schema.org/duration>
+                         ] .
+
+<http://bibliotek-o.org/ontology/TitleElement>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://vivoweb.org/ontology/core#rank>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     rdf:value
+                         ] .
+
+<http://measurement.bibliotek-o.org/MeasurementGroup>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://purl.org/dc/terms/description>
+                         ] .
+
+<http://id.loc.gov/ontologies/bibframe/editionStatement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://vivoweb.org/ontology/core#rank>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <http://bibliotek-o.org/shapes/audio/WorkToWorkPropertyGroup> .
+
+<http://bibliotek-o.org/ontology/Activity>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://purl.org/dc/terms/date>
+                         ] .
