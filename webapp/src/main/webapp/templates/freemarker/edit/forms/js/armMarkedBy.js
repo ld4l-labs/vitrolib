@@ -28,8 +28,7 @@ var armMarkedBy = {
 
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
-	        	//Make invisible for now
-	        	this.agentTypeDiv.hide();
+	        	
 	                           
 	        },
 	      
@@ -65,9 +64,6 @@ var armMarkedBy = {
 	        	//Find selected activity label
 	        	var selectedLabel = $("#activityType option:selected").text();
 	        	$("#activityLabel").val(selectedLabel);
-	        },
-	        setAgentType:function(lookupType) {
-	        	$("#agentType").val(lookupType);
 	        }
 };
 

@@ -70,7 +70,7 @@
       "customform:varName": "bindingType",
        "customform:fieldOptions": {
         "@id": "customform:bindingTypeFieldOptions"
-      },
+      }
     },
     {
       "@id": "customform:bindingComponent",
@@ -81,7 +81,7 @@
       "customform:varName": "bindingComponent",
        "customform:fieldOptions": {
         "@id": "customform:activityTypeFieldOptions"
-      },
+      }
     },
      {
       "@id": "customform:activity",
@@ -101,7 +101,7 @@
       "customform:varName": "activityType",
        "customform:fieldOptions": {
         "@id": "customform:activityTypeFieldOptions"
-      },
+      }
     },
    
     {
@@ -174,7 +174,7 @@
       "customform:varName": "noteType",
        "customform:fieldOptions": {
         "@id": "customform:noteTypeFieldOptions"
-      },
+      }
     },
     {
       "@id": "customform:noteValue",
@@ -193,7 +193,7 @@
       "customform:varName": "markingType",
        "customform:fieldOptions": {
         "@id": "customform:markingTypeFieldOptions"
-      },
+      }
     },
      {
       "@id": "customform:markingValue",

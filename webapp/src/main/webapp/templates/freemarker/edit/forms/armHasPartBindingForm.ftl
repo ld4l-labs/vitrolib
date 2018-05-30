@@ -159,6 +159,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	        </div>
   		</div>
  		
+ 		<div>
+      	<p>
+              <label for="activityDate">Date</label>
+              <input size="60"  type="text" id="activityDate" name="activityDate" value="" />
+     	</p>
+     	</div>
  		
  		
  		
@@ -233,6 +239,32 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	            </p>
 	            <input class="acUriReceiver" type="hidden" id="markingAgent" name="markingAgent" value=""  />
 	        </div>
+	        
+	        <div>
+		      	<p>
+		              <label for="markingActivityDate">Date</label>
+		              <input size="60"  type="text" id="markingActivityDate" name="markingActivityDate" value="" />
+		     	</p>
+	     	</div>
+ 		
+	        
+	        <div> 
+		        <p>
+		            <label for="markingLocation"> Location</label>
+		            <input class="acSelector" size="60"  type="text" id="markingLocationName" name="markingLocationName" acGroupName="markingLocation"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
+		        </p>
+		
+			
+		        <div class="acSelection" acGroupName="markingLocation">
+		            <p class="inline">
+		                <label>${i18n().selected}:</label>
+		                <span class="acSelectionInfo"></span>
+		                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
+		                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+		            </p>
+		            <input class="acUriReceiver" type="hidden" id="markingLocation" name="markingLocation" value=""  />
+		        </div>
+	  		</div>
   		</div>
  		
  		
@@ -240,23 +272,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
   		</fieldset>
   
-  		<div> 
-	        <p>
-	            <label for="markingLocation"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="markingLocationName" name="markingLocationName" acGroupName="markingLocation"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="markingLocation">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="markingLocation" name="markingLocation" value=""  />
-	        </div>
-  		</div>
+  		
   
   
   		<input name="markingActivityLabel" id="markingActivityLabel" type="hidden" value="" />

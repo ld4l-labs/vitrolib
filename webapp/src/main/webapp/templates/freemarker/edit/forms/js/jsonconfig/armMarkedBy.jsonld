@@ -57,7 +57,7 @@
       "customform:varName": "markingType",
        "customform:fieldOptions": {
         "@id": "customform:markingTypeFieldOptions"
-      },
+      }
     },
      {
       "@id": "customform:markingValue",
@@ -146,7 +146,7 @@
       "customform:varName": "noteType",
        "customform:fieldOptions": {
         "@id": "customform:noteTypeFieldOptions"
-      },
+      }
     },
     {
       "@id": "customform:noteValue",

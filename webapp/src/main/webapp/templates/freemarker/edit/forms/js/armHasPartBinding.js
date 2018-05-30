@@ -29,7 +29,7 @@ var armHasPartBinding = {
 	        // Initial page setup. Called only at page load.
 	        initPage: function() {
 	        	//Make invisible for now
-	        	this.agentTypeDiv.hide();
+	        	
 	                           
 	        },
 	      
@@ -65,9 +65,6 @@ var armHasPartBinding = {
 	        	//Find selected activity label
 	        	var selectedLabel = $("#activityType option:selected").text();
 	        	$("#activityLabel").val(selectedLabel);
-	        },
-	        setAgentType:function(lookupType) {
-	        	$("#agentType").val(lookupType);
 	        }
 };
 

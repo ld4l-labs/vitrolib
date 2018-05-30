@@ -139,7 +139,12 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		</div>
  		
  		
- 		
+ 		<div>
+      	<p>
+              <label for="activityDate">Date</label>
+              <input size="60"  type="text" id="activityDate" name="activityDate" value="" />
+     	</p>
+     	</div>
  		
   		
   
