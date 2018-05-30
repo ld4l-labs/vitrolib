@@ -1,49 +1,20 @@
 @prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
-@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
-@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
-@prefix bib: <http://bibliotek-o.org/ontology/> .
+@prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
 @prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 ##These need to be generated from the code later, right now hardcoding in
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig297> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig298> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig299> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig300> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig302> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig303> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig304> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig305> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig306> :listViewConfigFile "listViewConfig-soundcharacteristic.xml"^^xsd:string .
 
-##Identifier 
-#Work
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig215> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasIdentifier.jsonld" .
-#Instance
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig294> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasIdentifier.jsonld" .
-#Item
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasIdentifier.jsonld" .
-##Has Instance creation form
-##Has item creation form
-
-#Song listing can have custom template and info
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig221> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "workHasPart.ftl" .
-
-
-## Has instance
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig214> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewEntity.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewEntityBasicTemplate.ftl" .
-## Has item
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "addNewItem.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "addNewEntityBasicTemplate.ftl" .  
-
-## Adding recordedAt preprocessor
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig289> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customModelChangePreprocessorAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.preprocessors.AuthorityHackPreprocessor"^^<http://www.w3.org/2001/XMLSchema#string> .
-
-## Measurement group
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig309> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "hasMeasurement.ftl" .  
+## Item
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" .
