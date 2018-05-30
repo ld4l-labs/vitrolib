@@ -1,0 +1,16 @@
+var displayConfig = {
+    "fieldOrder":  ["priceSpecification", "price", "priceCurrency"],
+    "fieldDisplayProperties": {
+        "priceSpecification": {
+            "hidden": true
+        },
+        "price": {
+            "label": "Amount", 
+            "description": "Numeric value of the price." 
+        },
+        "priceCurrency": {
+            "label": "Currency", 
+            "description": "Three-digit ISO 4217 currency code."
+        }
+    }
+};
