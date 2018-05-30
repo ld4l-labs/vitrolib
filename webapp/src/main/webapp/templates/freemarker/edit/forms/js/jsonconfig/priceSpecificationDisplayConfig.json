@@ -1,9 +1,6 @@
 var displayConfig = {
-    "fieldOrder":  ["priceSpecification", "price", "priceCurrency"],
+    "fieldOrder":  ["price", "priceCurrency"],
     "fieldDisplayProperties": {
-        "priceSpecification": {
-            "hidden": true
-        },
         "price": {
             "label": "Amount", 
             "description": "Numeric value of the price." 
