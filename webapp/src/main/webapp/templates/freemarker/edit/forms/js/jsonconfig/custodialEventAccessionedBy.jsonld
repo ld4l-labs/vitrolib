@@ -1,15 +1,7 @@
 { 
     "@context": {
-        "arm": "https://w3id.org/arm/core/ontology/0.1/",
-        "bf": "http://id.loc.gov/ontologies/bibframe/",
-        "ch": "https://w3id.org/arm/custodial_history/ontology/0.1/",
         "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#",
-        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "status": "https://w3id.org/arm/core/vocabularies/status/0.1/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"  
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#"
     },
     "@graph": [
         {
@@ -27,31 +19,21 @@
                 "?objectVar arm:accessions ?subject . ",
                 
                 "?objectVar bf:identifies ?item . ",
-                "?item bf:identifiedBy ?objectVar . ",
+                "?item bf:identifiedBy ?objectVar . "
             ],
             "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . "
         },
         {
-            "@id": "customform:accessionedBy_accessionNumber",
-            "@type": [
-                "forms:FormComponent",
-                "forms:UriField"
-            ],
-            "customform:varName": "objectVar",
-            "customform:mayUseNewResource": true,
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> SELECT ?accessionNumber WHERE { ?subject ?predicate ?accessionNumber . ?accessionNumber a arm:AccessionNumber . }"
-        },
-        {
-            "@id": "customform:accessionedBy_value" ,
+            "@id": "customform:accessionedBy_value",
             "@type": [
                 "forms:FormComponent",
                 "forms:LiteralField"
              ],
             "customform:varName": "value",
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?value WHERE { ?subject ?predicate ?accessionNumber . ?accessionNumber a arm:AccessionNumber ; rdf:value ?value . }"
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?value WHERE { ?subject ?predicate ?accessionNumber . ?accessionNumber a arm:AccessionNumber ; rdf:value ?value . } "
         },
         {
-            "@id": "customform:accessionNumber_item" ,
+            "@id": "customform:accessionNumber_item",
             "@type": [
                 "forms:FormComponent",
                 "forms:UriField"
@@ -69,7 +51,7 @@
             ],
             "customform:pattern": [
             
-                "?objectVar bf:status ?status . ",
+                "?objectVar bf:status ?status . "
             ],
             "customform:prefixes": "@prefix bf: <http://id.loc.gov/ontologies/bibframe/> . "
         },
@@ -84,7 +66,7 @@
                 "@id": "customform:statusFieldOptions"
             },
             "customform:mayUseNewResource": false,
-            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX status: <https://w3id.org/arm/core/vocabularies/status/0.1/> SELECT ?status WHERE { ?objectVar bf:status ?status . ?status a bf:Status . }"
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX status: <https://w3id.org/arm/core/vocabularies/status/0.1/> SELECT ?status WHERE { ?objectVar bf:status ?status . ?status a bf:Status . } "
         },
         {
             "@id": "customform:statusFieldOptions",

@@ -1,0 +1,120 @@
+{ 
+    "@context": {
+        "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#",
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+        "xsd": "<http://www.w3.org/2001/XMLSchema#>"
+    },
+    "@graph": [
+        {
+            "@id": "customform:custodialEventHasActivity_requiredN3",
+            "@type": [
+                "forms:RequiredN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+            
+                "?subject ?predicate ?objectVar . ",
+                        
+                "?objectVar activity:isActivityOf ?subject .",
+                "?objectVar a activity:Activity . ",
+                "?objectVar a ?activityType . ",
+                "?objectVar rdfs:label ?activityLabel . ",
+                "?objectVar bf:agent ?agent . ",
+                "?agent arm:agentOf ?objectVar . "
+
+            ],
+            "customform:prefixes": "@prefix activity: <https://w3id.org/arm/core/activity/0.1/> . @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_activityType" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "activityType",
+            "customform:mayUseNewResource": false,
+            "customform:fieldOptons": {
+                "@id": "customform:custodialEventHasActivity_activityTypeFieldOptions"
+            },
+            "customform:queryForExistingValue": "PREFIX activity: <https://w3id.org/arm/core/activity/0.1/> PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> SELECT ?activityType WHERE {  ?subject ?predicate ?activity . ?activity vitro:mostSpecificType ?activityType . } " 
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_activityTypeFieldOptions",
+            "@type": [
+                "forms:ConstantList",
+                "forms:FieldOptions"            
+            ]
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_activityLabel" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "activityLabel",
+            "customform:mayUseNewResource": true,
+            "customform:rangeDatatypeUri": {
+                "@id": "xsd:string"
+            },
+            "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?activityLabel WHERE { ?objectVar rdfs:label ?activityLabel . }  "
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_agent" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "agent",
+            "customform:mayUseNewResource": true,
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?agent WHERE {  ?objectVar bf:hasAgent ?agent . } "
+        },
+                     
+        {
+            "@id": "customform:custodialEventHasActivity_optionalN3",
+            "@type": [
+                "forms:OptionalN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+                
+                "?agent rdfs:label ?agentName . ",
+                "?agent a ?agentType . ",
+                
+                "?objectVar bf:date ?date . ",                
+                "?objectVar arm:atLocation ?location . ",
+                "?location rdfs:label ?locationName . ",
+                "?location a gn:Feature . "
+            ],
+            "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix gn: <http://www.geonames.org/ontology#> @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_date" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+             "customform:varName": "date",
+            "customform:mayUseNewResource": true,
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?date WHERE { ?objectVar bf:date ?date . } "
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_location" ,
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+            ],
+            "customform:varName": "location",
+            "customform:mayUseNewResource": false,
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX gn: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?location WHERE { ?objectVar arm:atLocation ?location . } "       
+        },
+        {
+            "@id": "customform:custodialEventHasActivity_locationName",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+            ],
+            "customform:varName": "locationName",
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?locationName WHERE { ?objectVar arm:atLocation ?location . ?location rdfs:label ?eventName . } "       
+        }
+    ]
+}
