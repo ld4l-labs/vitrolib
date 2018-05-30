@@ -129,6 +129,16 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  		
  		<fieldset class="workform__fieldset">
 		<div> 
+		
+			<div>
+	      		<p>
+	      		<label for="activityType">Activity Type</label>
+	           	<select id="activityType" name="activityType" role="select">
+	
+	           	</select>
+	        	</p>
+      		</div>
+		
 			<div id="actionTypeOptions">
 				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
 				<input type="radio" name="actionType"  value="create">Create new agent

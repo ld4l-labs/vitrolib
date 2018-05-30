@@ -1,0 +1,215 @@
+@prefix reg:   <http://metadataregistry.org/uri/profile/regap/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bibframe: <http://bibframe.org/vocab/> .
+
+<http://rdaregistry.info/Elements/u/P60503>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60211>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60280>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60199>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60309>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60224>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60293>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60180>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60278>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60303>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60178>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60203>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60743>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60244>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60216>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60577>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60310>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60185>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60308>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60110>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60277>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60177>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60243>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60215>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60576>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60102>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60250>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60596>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60276>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60248>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60289>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60189>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60575>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60214>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60296>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60833>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60306>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60275>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60247>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60106>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60354>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60188>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60241>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60505>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60574>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60088>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60295>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60361>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60832>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60305>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60220>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60261>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60205>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60120>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60246>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60312>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60159>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60504>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60212>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60225>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60238>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60279>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60831>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60138>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60260>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60204>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60480>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60245>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60104>
+        a       owl:ObjectProperty .
+
+<http://rdaregistry.info/Elements/u/P60311>
+        a       owl:ObjectProperty .

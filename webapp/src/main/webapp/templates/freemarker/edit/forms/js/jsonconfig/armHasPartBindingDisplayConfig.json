@@ -5,28 +5,41 @@ var displayConfig = {
 			"label": "Activity Type",
 			"constantList": [
 			   {
-			   	  "label": "Binder",
+			      "label":"Binder",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/BinderActivity"
 			   },
 			   {
-			   		"label": "Creator",
+			      "label":"Creator",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/CreatorActivity"
 			   },
 			   {
-			   		"label": "Designer",
+			      "label":"Designer",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/DesignerActivity"
 			   },
 			   {
-			   	  "label": "Engraver",
+			      "label":"Engraver",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/EngraverActivity"
 			   },
 			   {
-			   	  "label": "Marbler",
+			      "label":"Marbler",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/MarblerActivity"
 			   },
 			   {
-			   	  "label": "Papermaker",
+			      "label":"Papermaker",
 			      "uri":"https://w3id.org/arm/core/activity/0.1/PapermakerActivity"
+			   }
+			]
+		},
+		"noteType": {
+			"label": "Note Type",
+			"constantList": [
+			   {
+			      "label":"Descriptive note",
+			      "uri":"https://w3id.org/arm/core/ontology/0.1/DescriptiveNote"
+			   },
+			   {
+			      "label":"Note",
+			      "uri":"http://id.loc.gov/ontologies/bibframe/Note"
 			   }
 			]
 		},
