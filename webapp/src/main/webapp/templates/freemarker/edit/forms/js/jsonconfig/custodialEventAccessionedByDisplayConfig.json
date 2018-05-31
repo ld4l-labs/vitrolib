@@ -1,0 +1,35 @@
+var displayConfig = {
+    "fieldOrder":  [ "value", "item", "status" ],
+    "fieldDisplayProperties": {
+        "value": {
+            "label": "Accession number", 
+            "description": "Accession number of the item associated with this custodial event." 
+        },
+        "item": {
+            "label": "Item", 
+            "description": "Item associated with this custodial event."
+        },
+        "status": {
+            "label": "Status", 
+            "description": "Status of the accession number",
+            "constantList": [
+                { 
+                    "label":"cancelled", 
+                    "uri":"https://w3id.org/arm/core/vocabularies/status/0.1/cancelled" 
+                },
+                { 
+                    "label":"current", 
+                    "uri":"https://w3id.org/arm/core/vocabularies/status/0.1/current" 
+                },                    
+                { 
+                    "label":"deprecated", 
+                    "uri":"https://w3id.org/arm/core/vocabularies/status/0.1/deprecated" 
+                },
+                {
+                    "label":"invalid", 
+                    "uri":"https://w3id.org/arm/core/vocabularies/status/0.1/invalid" 
+                }
+            ]
+        }
+    }
+};

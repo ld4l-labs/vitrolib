@@ -1,0 +1,9 @@
+var displayConfig = {
+    "fieldOrder":  ["titleValue"],
+    "fieldDisplayProperties": {
+        "titleValue": {
+            "label": "Title", 
+            "description": "Title of the bound collection." 
+        }
+    }
+};
