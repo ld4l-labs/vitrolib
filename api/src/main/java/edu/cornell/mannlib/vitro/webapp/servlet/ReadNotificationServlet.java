@@ -4,6 +4,7 @@ package edu.cornell.mannlib.vitro.webapp.servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
@@ -15,9 +16,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.NodeIterator;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResourceFactory;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -66,6 +73,45 @@ public class ReadNotificationServlet extends VitroHttpServlet {
         }        
     }
     
+    /**Code for retrieving RDF for particular URI for ldp inbox discovery**
+     */
+    private String  getInboxURL() {
+    	String resourceURI = "http://vitrolib.cornell.edu/individual/ldpinbox";
+    	String urlString = null;
+    	 try {
+		  System.out.println("Read Inbox");
+		  String urlTarget = "http://localhost:8080/vitrolib/individual?uri=" + resourceURI + "&format=jsonld";
+		  StringBuilder result = new StringBuilder();
+	      URL url = new URL(urlTarget);
+	      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	      conn.setRequestMethod("GET");
+	      conn.setRequestProperty("Accept", "application/ld+json");
+	      //conn.setRequestProperty("Accept", "text/turtle");
+	      BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	      String line;
+	      while ((line = rd.readLine()) != null) {
+	         result.append(line);
+	      }
+	      rd.close();
+	      String resultingJSON = result.toString();
+	      InputStream is =  IOUtils.toInputStream(resultingJSON, "UTF-8");
+	      Model m = ModelFactory.createDefaultModel();
+	      m.read(is, null, "JSON-LD");
+	      NodeIterator ni = m.listObjectsOfProperty(ResourceFactory.createProperty("http://www.w3.org/ns/ldp#inbox"));
+	      while(ni.hasNext()) {
+	    	  RDFNode node = ni.next();
+	    	  urlString = node.asResource().getURI();
+	      }
+		 } catch(Exception ex) {
+			 System.out.println("Error occurred");
+			 ex.printStackTrace();
+		 }
+    	 
+    	 return urlString;
+    	
+    	
+    }
+    
     private ObjectNode parseAndRead(String json) {
     	ObjectMapper objectMapper = new ObjectMapper();
 
@@ -99,10 +145,7 @@ public class ReadNotificationServlet extends VitroHttpServlet {
     }
     
     private String readInbox() {
-		 String urlToRead = "https://linkedresearch.org/inbox/ld4l/";
-
-    	String resultString = readFromInbox(urlToRead);
-		
+    	String resultString = readFromInbox(getInboxURL());
 		 return resultString;
 	 }
     
