@@ -1,0 +1,1358 @@
+var displayConfig = {
+	"fieldOrder" :  ["bindingComponent"],
+	"fieldDisplayProperties" : {
+		"activityType": {
+			"label": "Activity Type",
+			"constantList": [
+			   {
+			      "label":"Binder",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/BinderActivity"
+			   },
+			   {
+			      "label":"Creator",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/CreatorActivity"
+			   },
+			   {
+			      "label":"Designer",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/DesignerActivity"
+			   },
+			   {
+			      "label":"Engraver",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/EngraverActivity"
+			   },
+			   {
+			      "label":"Marbler",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/MarblerActivity"
+			   },
+			   {
+			      "label":"Papermaker",
+			      "uri":"https://w3id.org/arm/core/activity/0.1/PapermakerActivity"
+			   }
+			]
+		},
+		"noteType": {
+			"label": "Note Type",
+			"constantList": [
+			   {
+			      "label":"Descriptive note",
+			      "uri":"https://w3id.org/arm/core/ontology/0.1/DescriptiveNote"
+			   },
+			   {
+			      "label":"Note",
+			      "uri":"http://id.loc.gov/ontologies/bibframe/Note"
+			   }
+			]
+		},
+		"bindingType": {
+			"label": "Binding Type",
+			"constantList": [
+			   {
+			      "label":"Accordion fold format",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin1"
+			   },
+			   {
+			   	  "label":"Adhesive bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin5"
+			   },
+			   {
+			      "label":"All along sewing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin10"
+			   },
+			   {
+			      "label":"All-over style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin13"
+			   },
+			   {
+			      "label":"Alum tawed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin15"
+			   },
+			   {
+			      "label":"Alum tawed thongs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin20"
+			   },
+			   {
+			      "label":"Aluminum bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin22"
+			   },
+			   {
+			      "label":"Ancillary structures (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin23"
+			   },
+			   {
+			      "label":"Apollo and Pegasus bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin32"
+			   },
+			   {
+			      "label":"Architectural bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin35"
+			   },
+			   {
+			      "label":"Armorial bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin37"
+			   },
+			   {
+			      "label":"Art Deco bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin423"
+			   },
+			   {
+			      "label":"Backless bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin43"
+			   },
+			   {
+			      "label":"Bands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin44"
+			   },
+			   {
+			      "label":"Bevelled edge boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin51"
+			   },
+			   {
+			      "label":"Binders' bills",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin55"
+			   },
+			   {
+			      "label":"Binders' evidence (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin56"
+			   },
+			   {
+			      "label":"Binders' instructions",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin57"
+			   },
+			   {
+			      "label":"Binders' receipts",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin58"
+			   },
+			   {
+			      "label":"Binders' tickets",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin59"
+			   },
+			   {
+			      "label":"Binding errors",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin64"
+			   },
+			   {
+			      "label":"Binding labels",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin69"
+			   },
+			   {
+			      "label":"Blind tooled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin71"
+			   },
+			   {
+			      "label":"Blocked bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin79"
+			   },
+			   {
+			      "label":"Board fastenings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin81"
+			   },
+			   {
+			      "label":"Boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin88"
+			   },
+			   {
+			      "label":"Bookbinding (Assign only with subdivisions)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin94"
+			   },
+			   {
+			      "label":"Bosses",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin95"
+			   },
+			   {
+			      "label":"Brass bosses",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin97"
+			   },
+			   {
+			      "label":"Brass clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin100"
+			   },
+			   {
+			      "label":"Brocade bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin102"
+			   },
+			   {
+			      "label":"Buttonhole stitched headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin112"
+			   },
+			   {
+			      "label":"Calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin114"
+			   },
+			   {
+			      "label":"Caoutchouc bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin8"
+			   },
+			   {
+			      "label":"Case bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin118"
+			   },
+			   {
+			      "label":"Catches",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin83"
+			   },
+			   {
+			      "label":"Categories of bindings/Occasions for binding (Gathering term;do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin119"
+			   },
+			   {
+			      "label":"Cathedral bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin36"
+			   },
+			   {
+			      "label":"Centerpiece and cornerpiece bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin127"
+			   },
+			   {
+			      "label":"Centerpieces (Designs)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin128"
+			   },
+			   {
+			      "label":"Centerpieces (Furniture)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin129"
+			   },
+			   {
+			      "label":"Chained bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin131"
+			   },
+			   {
+			      "label":"Chemises",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin133"
+			   },
+			   {
+			      "label":"Circuit edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin135"
+			   },
+			   {
+			      "label":"Clamshell boxes",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin427"
+			   },
+			   {
+			      "label":"Clasp plates",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin84"
+			   },
+			   {
+			      "label":"Clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin85"
+			   },
+			   {
+			      "label":"Cloth binding labels",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin146"
+			   },
+			   {
+			      "label":"Cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin104"
+			   },
+			   {
+			      "label":"Cloth tapes",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin147"
+			   },
+			   {
+			      "label":"Cloth wrappers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin148"
+			   },
+			   {
+			      "label":"Comb bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin419"
+			   },
+			   {
+			      "label":"Contemporary bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin120"
+			   },
+			   {
+			      "label":"Coptic bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin151"
+			   },
+			   {
+			      "label":"Cords",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin49"
+			   },
+			   {
+			      "label":"Cornerpieces (Designs)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin155"
+			   },
+			   {
+			      "label":"Cornerpieces (Furniture)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin130"
+			   },
+			   {
+			      "label":"Corrugated board bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin156"
+			   },
+			   {
+			      "label":"Cosway bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin160"
+			   },
+			   {
+			      "label":"Cottage style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin161"
+			   },
+			   {
+			      "label":"Cottonian Library book covers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin162"
+			   },
+			   {
+			      "label":"Cuir-ciselé bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin165"
+			   },
+			   {
+			      "label":"Decorated edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin170"
+			   },
+			   {
+			      "label":"Decorated paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin108"
+			   },
+			   {
+			      "label":"Deerskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin106"
+			   },
+			   {
+			      "label":"Dentelle bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin190"
+			   },
+			   {
+			      "label":"Diced leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin191"
+			   },
+			   {
+			      "label":"Disguised bands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin192"
+			   },
+			   {
+			      "label":"Dos-à-dos bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin398"
+			   },
+			   {
+			      "label":"Double bands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin46"
+			   },
+			   {
+			      "label":"Double cords",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin152"
+			   },
+			   {
+			      "label":"Double fore-edge paintings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin193"
+			   },
+			   {
+			      "label":"Doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin24"
+			   },
+			   {
+			      "label":"Dust jackets",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin93"
+			   },
+			   {
+			      "label":"Dutch gilt papers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin202"
+			   },
+			   {
+			      "label":"Edge titles",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin203"
+			   },
+			   {
+			      "label":"Edges of binding boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin52"
+			   },
+			   {
+			      "label":"Edges of text block",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin171"
+			   },
+			   {
+			      "label":"Embossed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin208"
+			   },
+			   {
+			      "label":"Embossed cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin209"
+			   },
+			   {
+			      "label":"Embossed paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin179"
+			   },
+			   {
+			      "label":"Embroidered bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin141"
+			   },
+			   {
+			      "label":"Enamel bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin213"
+			   },
+			   {
+			      "label":"Enamel clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin139"
+			   },
+			   {
+			      "label":"Endpapers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin25"
+			   },
+			   {
+			      "label":"Engraved paper binding labels",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin218"
+			   },
+			   {
+			      "label":"Errors (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin66"
+			   },
+			   {
+			      "label":"Etruscan bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin221"
+			   },
+			   {
+			      "label":"False bands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin47"
+			   },
+			   {
+			      "label":"Fan style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin223"
+			   },
+			   {
+			      "label":"Fanfare bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin225"
+			   },
+			   {
+			      "label":"Fastenings, Attachments, or Titling (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin82"
+			   },
+			   {
+			      "label":"Filigree",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin226"
+			   },
+			   {
+			      "label":"Fillet tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin227"
+			   },
+			   {
+			      "label":"Flap bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin136"
+			   },
+			   {
+			      "label":"Flock paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin180"
+			   },
+			   {
+			      "label":"Folding errors",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin67"
+			   },
+			   {
+			      "label":"Fore-edge paintings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin194"
+			   },
+			   {
+			      "label":"Fur bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin17"
+			   },
+			   {
+			      "label":"Furniture",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin96"
+			   },
+			   {
+			      "label":"Gauffered edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin173"
+			   },
+			   {
+			      "label":"Geometric tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin248"
+			   },
+			   {
+			      "label":"Gilt edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin253"
+			   },
+			   {
+			      "label":"Girdle books",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin256"
+			   },
+			   {
+			      "label":"Goatskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin258"
+			   },
+			   {
+			      "label":"Gold blocked bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin80"
+			   },
+			   {
+			      "label":"Gold powdered bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin260"
+			   },
+			   {
+			      "label":"Gold tooled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin74"
+			   },
+			   {
+			      "label":"Gouge tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin230"
+			   },
+			   {
+			      "label":"Graphite edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin174"
+			   },
+			   {
+			      "label":"Greek style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin262"
+			   },
+			   {
+			      "label":"Grotesque bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin263"
+			   },
+			   {
+			      "label":"Guard books",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin264"
+			   },
+			   {
+			      "label":"Guards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin266"
+			   },
+			   {
+			      "label":"Half bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin268"
+			   },
+			   {
+			      "label":"Hatched tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin42"
+			   },
+			   {
+			      "label":"Headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin26"
+			   },
+			   {
+			      "label":"Headcaps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin274"
+			   },
+			   {
+			      "label":"Hemp boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin89"
+			   },
+			   {
+			      "label":"Hollis bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin276"
+			   },
+			   {
+			      "label":"Hollow backs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin277"
+			   },
+			   {
+			      "label":"Inlays",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin279"
+			   },
+			   {
+			      "label":"Interlace bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin281"
+			   },
+			   {
+			      "label":"Iron clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin283"
+			   },
+			   {
+			      "label":"Islamic bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin284"
+			   },
+			   {
+			      "label":"Ivory bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin286"
+			   },
+			   {
+			      "label":"Jansenist style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin287"
+			   },
+			   {
+			      "label":"Japanese sewing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin288"
+			   },
+			   {
+			      "label":"Jewelled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin246"
+			   },
+			   {
+			      "label":"Kangaroo leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin290"
+			   },
+			   {
+			      "label":"Kermes dyed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin291"
+			   },
+			   {
+			      "label":"Lace bindings (Materials)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin142"
+			   },
+			   {
+			      "label":"Lacquered bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin294"
+			   },
+			   {
+			      "label":"Lambskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin296"
+			   },
+			   {
+			      "label":"Landscape bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin298"
+			   },
+			   {
+			      "label":"Law bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin299"
+			   },
+			   {
+			      "label":"Leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin18"
+			   },
+			   {
+			      "label":"Leather doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin195"
+			   },
+			   {
+			      "label":"Leather thongs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin310"
+			   },
+			   {
+			      "label":"Ledger bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin311"
+			   },
+			   {
+			      "label":"Lettering pieces",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin293"
+			   },
+			   {
+			      "label":"Limp bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin315"
+			   },
+			   {
+			      "label":"Linings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin316"
+			   },
+			   {
+			      "label":"Loop-and-ball fastenings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin86"
+			   },
+			   {
+			      "label":"Machine-made headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin409"
+			   },
+			   {
+			      "label":"Manuscript waste",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin320"
+			   },
+			   {
+			      "label":"Marbled calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin322"
+			   },
+			   {
+			      "label":"Marbled edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin324"
+			   },
+			   {
+			      "label":"Marbled paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin181"
+			   },
+			   {
+			      "label":"Marbled sheepskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin406"
+			   },
+			   {
+			      "label":"Maril",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin326"
+			   },
+			   {
+			      "label":"Masonic bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin327"
+			   },
+			   {
+			      "label":"Materials and treatment (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin16"
+			   },
+			   {
+			      "label":"Mauchline ware bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin426"
+			   },
+			   {
+			      "label":"Mechanical bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin418"
+			   },
+			   {
+			      "label":"Medallion tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin111"
+			   },
+			   {
+			      "label":"Metal clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin101"
+			   },
+			   {
+			      "label":"Middle Hill boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin339"
+			   },
+			   {
+			      "label":"Moiré doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin196"
+			   },
+			   {
+			      "label":"Molded leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin164"
+			   },
+			   {
+			      "label":"Monogrammed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin39"
+			   },
+			   {
+			      "label":"Morocco bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin259"
+			   },
+			   {
+			      "label":"Morocco doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin307"
+			   },
+			   {
+			      "label":"Mosaic bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin342"
+			   },
+			   {
+			      "label":"Mottled calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin343"
+			   },
+			   {
+			      "label":"Mudéjar bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin285"
+			   },
+			   {
+			      "label":"Needlepoint bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin143"
+			   },
+			   {
+			      "label":"Non-adhesive bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin9"
+			   },
+			   {
+			      "label":"Onlays",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin280"
+			   },
+			   {
+			      "label":"Open tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin271"
+			   },
+			   {
+			      "label":"Original covers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin121"
+			   },
+			   {
+			      "label":"Ostrich leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin302"
+			   },
+			   {
+			      "label":"Overcasting",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin345"
+			   },
+			   {
+			      "label":"Painted bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin295"
+			   },
+			   {
+			      "label":"Painted edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin175"
+			   },
+			   {
+			      "label":"Painted leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin346"
+			   },
+			   {
+			      "label":"Painted paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin182"
+			   },
+			   {
+			      "label":"Pallet tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin231"
+			   },
+			   {
+			      "label":"Panel-stamped bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin413"
+			   },
+			   {
+			      "label":"Paper binding labels",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin219"
+			   },
+			   {
+			      "label":"Paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin159"
+			   },
+			   {
+			      "label":"Paper onlays",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin417"
+			   },
+			   {
+			      "label":"Papier-mâché bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin328"
+			   },
+			   {
+			      "label":"Paste edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin176"
+			   },
+			   {
+			      "label":"Paste paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin183"
+			   },
+			   {
+			      "label":"Pasteboard",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin90"
+			   },
+			   {
+			      "label":"Penitential bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin353"
+			   },
+			   {
+			      "label":"Petit point bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin344"
+			   },
+			   {
+			      "label":"Pictorial bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin355"
+			   },
+			   {
+			      "label":"Pictorial cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin329"
+			   },
+			   {
+			      "label":"Pigskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin303"
+			   },
+			   {
+			      "label":"Pinhead style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin358"
+			   },
+			   {
+			      "label":"Plaited headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin99"
+			   },
+			   {
+			      "label":"Plaquette stamps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin359"
+			   },
+			   {
+			      "label":"Platinum tooled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin75"
+			   },
+			   {
+			      "label":"Pointillé tooling",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin240"
+			   },
+			   {
+			      "label":"Pre-ornamented cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin361"
+			   },
+			   {
+			      "label":"Presentation bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin122"
+			   },
+			   {
+			      "label":"Printed boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin330"
+			   },
+			   {
+			      "label":"Printed paper binding labels",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin349"
+			   },
+			   {
+			      "label":"Printed paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin184"
+			   },
+			   {
+			      "label":"Printed waste",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin364"
+			   },
+			   {
+			      "label":"Printed wrappers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin357"
+			   },
+			   {
+			      "label":"Prize bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin123"
+			   },
+			   {
+			      "label":"Proprietary bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin34"
+			   },
+			   {
+			      "label":"Protective housing (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin134"
+			   },
+			   {
+			      "label":"Publishers' bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin124"
+			   },
+			   {
+			      "label":"Publishers' cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin145"
+			   },
+			   {
+			      "label":"Publishers' paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin348"
+			   },
+			   {
+			      "label":"Punch-dotting",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin366"
+			   },
+			   {
+			      "label":"Quarter bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin269"
+			   },
+			   {
+			      "label":"Raised bands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin48"
+			   },
+			   {
+			      "label":"Raised cords",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin153"
+			   },
+			   {
+			      "label":"Rebacking",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin367"
+			   },
+			   {
+			      "label":"Recasing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin369"
+			   },
+			   {
+			      "label":"Recessed cords",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin154"
+			   },
+			   {
+			      "label":"Relievo bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin210"
+			   },
+			   {
+			      "label":"Remboîtage",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin374"
+			   },
+			   {
+			      "label":"Resewing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin376"
+			   },
+			   {
+			      "label":"Retrospective bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin31"
+			   },
+			   {
+			      "label":"Reversed leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin377"
+			   },
+			   {
+			      "label":"Ribbon-embossed cloth bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin211"
+			   },
+			   {
+			      "label":"Ribbon markers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin436"
+			   },
+			   {
+			      "label":"Roan bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin378"
+			   },
+			   {
+			      "label":"Royal bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin40"
+			   },
+			   {
+			      "label":"Ruling in red",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin372"
+			   },
+			   {
+			      "label":"Russia leather bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin304"
+			   },
+			   {
+			      "label":"Scaleboard",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin381"
+			   },
+			   {
+			      "label":"Scottish herringbone design bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin382"
+			   },
+			   {
+			      "label":"Scottish wheel design bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin224"
+			   },
+			   {
+			      "label":"Sealskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin305"
+			   },
+			   {
+			      "label":"Semé",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin385"
+			   },
+			   {
+			      "label":"Settle bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin365"
+			   },
+			   {
+			      "label":"Sewing patterns",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin11"
+			   },
+			   {
+			      "label":"Shagreen bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin306"
+			   },
+			   {
+			      "label":"Sheepskin bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin297"
+			   },
+			   {
+			      "label":"Signed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin60"
+			   },
+			   {
+			      "label":"Silk doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin197"
+			   },
+			   {
+			      "label":"Silk ties",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin387"
+			   },
+			   {
+			      "label":"Silver bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin255"
+			   },
+			   {
+			      "label":"Silver catches",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin126"
+			   },
+			   {
+			      "label":"Silver clasp plates",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin138"
+			   },
+			   {
+			      "label":"Silver clasps",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin338"
+			   },
+			   {
+			      "label":"Silver furniture",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin242"
+			   },
+			   {
+			      "label":"Silver tooled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin76"
+			   },
+			   {
+			      "label":"Slipcases",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin411"
+			   },
+			   {
+			      "label":"Smooth spines",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin237"
+			   },
+			   {
+			      "label":"Solid tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin272"
+			   },
+			   {
+			      "label":"Somber bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin354"
+			   },
+			   {
+			      "label":"Spines (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin275"
+			   },
+			   {
+			      "label":"Spiral bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin420"
+			   },
+			   {
+			      "label":"Sprinkled calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin388"
+			   },
+			   {
+			      "label":"Sprinkled edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin389"
+			   },
+			   {
+			      "label":"Sprinkled paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin185"
+			   },
+			   {
+			      "label":"Square edge boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin53"
+			   },
+			   {
+			      "label":"Stabbing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin386"
+			   },
+			   {
+			      "label":"Stained calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin323"
+			   },
+			   {
+			      "label":"Stained edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin177"
+			   },
+			   {
+			      "label":"Stained vellum bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin390"
+			   },
+			   {
+			      "label":"Stamped or tooled bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin73"
+			   },
+			   {
+			      "label":"Stamped paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin186"
+			   },
+			   {
+			      "label":"Stencilled paper bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin187"
+			   },
+			   {
+			      "label":"Stuck-on headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin273"
+			   },
+			   {
+			      "label":"Styles (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin14"
+			   },
+			   {
+			      "label":"Subsequent treatment",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin368"
+			   },
+			   {
+			      "label":"Suede doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin308"
+			   },
+			   {
+			      "label":"Supports (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin45"
+			   },
+			   {
+			      "label":"Tacketed bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin407"
+			   },
+			   {
+			      "label":"Tall copies",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin392"
+			   },
+			   {
+			      "label":"Tapes",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin50"
+			   },
+			   {
+			      "label":"Text block (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin4"
+			   },
+			   {
+			      "label":"Thongs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin21"
+			   },
+			   {
+			      "label":"Three-quarter bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin270"
+			   },
+			   {
+			      "label":"Thumb indexes",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin431"
+			   },
+			   {
+			      "label":"Ties",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin87"
+			   },
+			   {
+			      "label":"Tight backs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin278"
+			   },
+			   {
+			      "label":"Titling",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin204"
+			   },
+			   {
+			      "label":"Tooled doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin198"
+			   },
+			   {
+			      "label":"Tooled lettering",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin205"
+			   },
+			   {
+			      "label":"Tortoise shell bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin331"
+			   },
+			   {
+			      "label":"Tracery",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin169"
+			   },
+			   {
+			      "label":"Treasure bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin215"
+			   },
+			   {
+			      "label":"Tree calf bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin319"
+			   },
+			   {
+			      "label":"Tree sheep bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin397"
+			   },
+			   {
+			      "label":"Tucks",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin235"
+			   },
+			   {
+			      "label":"Turn-ins",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin27"
+			   },
+			   {
+			      "label":"Two-on sewing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin12"
+			   },
+			   {
+			      "label":"Types of binding structure (Gathering term; do not assign)",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin7"
+			   },
+			   {
+			      "label":"Types of tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin229"
+			   },
+			   {
+			      "label":"Unbound sheets",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin394"
+			   },
+			   {
+			      "label":"Unlettered bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin410"
+			   },
+			   {
+			      "label":"Unopened books",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin399"
+			   },
+			   {
+			      "label":"Unsupported sewing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin289"
+			   },
+			   {
+			      "label":"Untrimmed edges",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin206"
+			   },
+			   {
+			      "label":"Vegetal tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin250"
+			   },
+			   {
+			      "label":"Vellucent bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin347"
+			   },
+			   {
+			      "label":"Vellum bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin19"
+			   },
+			   {
+			      "label":"Vellum doublures",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin199"
+			   },
+			   {
+			      "label":"Vellum endleaves",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin28"
+			   },
+			   {
+			      "label":"Vellum pastedowns",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin29"
+			   },
+			   {
+			      "label":"Vellum tapes",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin393"
+			   },
+			   {
+			      "label":"Vellum thongs",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin395"
+			   },
+			   {
+			      "label":"Vellum wrappers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin402"
+			   },
+			   {
+			      "label":"Velvet bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin144"
+			   },
+			   {
+			      "label":"Visible structure",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin405"
+			   },
+			   {
+			      "label":"Washing",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin391"
+			   },
+			   {
+			      "label":"Waste",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin321"
+			   },
+			   {
+			      "label":"Woodblock printed papers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin78"
+			   },
+			   {
+			      "label":"Wooden bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin332"
+			   },
+			   {
+			      "label":"Wooden boards",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin91"
+			   },
+			   {
+			      "label":"Worked headbands",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin113"
+			   },
+			   {
+			      "label":"Wrappers",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin150"
+			   },
+			   {
+			      "label":"Yapp style bindings",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin137"
+			   },
+			   {
+			      "label":"Zoomorphic tools",
+			      "uri":"https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin251"
+			   }
+			]
+		},
+		"bindingComponent": {
+			"label": "Binding Component", 
+			"constantList":[{"label":"back-linings (binding components)","uri":"http://vocab.getty.edu/aat/300261522"},
+			{"label":"band (binding component)","uri":"http://vocab.getty.edu/aat/300253047"},
+			{"label":"bead (binding component)","uri":"http://vocab.getty.edu/aat/300261776"},
+			{"label":"book-binding hardware","uri":"http://vocab.getty.edu/aat/300312358"},
+			{"label":"boards (binding components)","uri":"http://vocab.getty.edu/aat/300202819"},
+			{"label":"board, split","uri":"http://vocab.getty.edu/aat/300263630"},
+			{"label":"cords (binding components)","uri":"http://vocab.getty.edu/aat/300253051"},
+			{"label":"recessed bands","uri":"http://vocab.getty.edu/aat/300253057"},
+			{"label":"cores (binding components)","uri":"http://vocab.getty.edu/aat/300263628"},
+			{"label":"endbands","uri":"http://vocab.getty.edu/aat/300195163"},
+			{"label":"cornerpieces (binding components)","uri":"http://vocab.getty.edu/aat/300263627"},
+			{"label":"doublures","uri":"http://vocab.getty.edu/aat/300195149"},{
+			"label":"sheets, end","uri":"http://vocab.getty.edu/aat/300209357"},
+			{"label":"endpapers","uri":"http://vocab.getty.edu/aat/300083023"},
+			{"label":"band, false","uri":"http://vocab.getty.edu/aat/300263593"},
+			{"label":"flange (binding component)","uri":"http://vocab.getty.edu/aat/300263626"},
+			{"label":"fly-leaves","uri":"http://vocab.getty.edu/aat/300195150"},
+			{"label":"sunk joint","uri":"http://vocab.getty.edu/aat/300263618"},
+			{"label":"guard (binding component)","uri":"http://vocab.getty.edu/aat/300248893"},
+			{"label":"endbands","uri":"http://vocab.getty.edu/aat/300195163"},
+			{"label":"double headbands","uri":"http://vocab.getty.edu/aat/300261765"},
+			{"label":"headband, single","uri":"http://vocab.getty.edu/aat/300263629"},
+			{"label":"stuck-on headband","uri":"http://vocab.getty.edu/aat/300261769"},
+			{"label":"vittae","uri":"http://vocab.getty.edu/aat/300410465"},
+			{"label":"sewn-on headbands","uri":"http://vocab.getty.edu/aat/300263625"},
+			{"label":"head-caps","uri":"http://vocab.getty.edu/aat/300252986"},
+			{"label":"stitches, ketch","uri":"http://vocab.getty.edu/aat/300261564"},
+			{"label":"endpapers, paste-down","uri":"http://vocab.getty.edu/aat/300208775"},
+			{"label":"sewing support","uri":"http://vocab.getty.edu/aat/300263631"},
+			{"label":"slip (binding component)","uri":"http://vocab.getty.edu/aat/300253125"},
+			{"label":"tapes (binding components)","uri":"http://vocab.getty.edu/aat/300253099"},
+			{"label":"thong (binding component)","uri":"http://vocab.getty.edu/aat/300253096"},
+			{"label":"downs, tie","uri":"http://vocab.getty.edu/aat/300261780"},
+			{"label":"closed joint","uri":"http://vocab.getty.edu/aat/300263632"},
+			{"label":"turn-in","uri":"http://vocab.getty.edu/aat/300253949"}]
+		},
+		"markingType": {
+			"label": "Marking Type", 
+			"constantList":[{"label":"Marking","uri":"https://w3id.org/arm/core/ontology/0.1/Marking"},
+			{"label":"Autograph","uri":"https://w3id.org/arm/core/ontology/0.1/Autograph"},
+			{"label":"Binder's ticket","uri":"https://w3id.org/arm/core/ontology/0.1/BindersTicket"},
+			{"label":"Label","uri":"https://w3id.org/arm/core/ontology/0.1/Label"},
+			{"label":"Seal","uri":"https://w3id.org/arm/core/ontology/0.1/Seal"},
+			{"label":"Stamp","uri":"https://w3id.org/arm/core/ontology/0.1/Stamp"},
+			{"label":"Watermark","uri":"https://w3id.org/arm/core/ontology/0.1/Watermark"}]
+		}
+	}
+};
+
+

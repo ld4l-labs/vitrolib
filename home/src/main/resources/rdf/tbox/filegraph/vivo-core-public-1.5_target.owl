@@ -59,7 +59,6 @@
      xmlns:ero="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core">
         <rdfs:label xml:lang="en-us">VIVO core</rdfs:label>
-        <!-- Imports are just causing errors right now -->
         <!--owl:imports rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/dateTimeValuePrecision.owl"/>
         <owl:imports rdf:resource="http://vivoweb.org/ontology/core/documentStatus.owl"/>

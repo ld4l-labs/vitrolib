@@ -339,7 +339,8 @@ var customForm = {
                     data: {
                         searchTerm: request.term,
                         term: request.term, //used by internal autocomplete
-                        type:selectedSearchType //used for internal search and ignored by other search services
+                        type:selectedSearchType, //used for internal search and ignored by other search services
+                        multipleTypes:(customForm.acMultipleTypes == undefined || customForm.acMultipleTypes == null)? null: customForm.acMultipleTypes
                     },
                     complete: function(xhr, status) {
                     	

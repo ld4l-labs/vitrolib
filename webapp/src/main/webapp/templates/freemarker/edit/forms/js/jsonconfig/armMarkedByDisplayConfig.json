@@ -1,0 +1,21 @@
+var displayConfig = {
+	"fieldOrder" :  ["markingType"],
+	"fieldDisplayProperties" : {
+		"noteType": {"label":"Note Type",
+			"constantList":[{"label":"Note","uri":"http://id.loc.gov/ontologies/bibframe/Note"},
+			{"label":"Descriptive note","uri":"https://w3id.org/arm/core/ontology/0.1/DescriptiveNote"}
+			]
+		},
+		"markingType": {
+			"label": "Marking Type", 
+			"constantList":[{"label":"Marking","uri":"https://w3id.org/arm/core/ontology/0.1/Marking"},
+			{"label":"Autograph","uri":"https://w3id.org/arm/core/ontology/0.1/Autograph"},
+			{"label":"Binder's ticket","uri":"https://w3id.org/arm/core/ontology/0.1/BindersTicket"},
+			{"label":"Label","uri":"https://w3id.org/arm/core/ontology/0.1/Label"},
+			{"label":"Seal","uri":"https://w3id.org/arm/core/ontology/0.1/Seal"},
+			{"label":"Stamp","uri":"https://w3id.org/arm/core/ontology/0.1/Stamp"},
+			{"label":"Watermark","uri":"https://w3id.org/arm/core/ontology/0.1/Watermark"}]
+		}
+	}
+};
+
