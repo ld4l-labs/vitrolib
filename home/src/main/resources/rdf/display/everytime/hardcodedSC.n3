@@ -16,5 +16,5 @@
 
 ##These need to be generated from the code later, right now hardcoding in
 
-## Item
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" .
+## http://id.loc.gov/ontologies/bibframe/partOf from http://id.loc.gov/ontologies/bibframe/Item to https://w3id.org/arm/core/ontology/0.1/BoundCollection
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" .
