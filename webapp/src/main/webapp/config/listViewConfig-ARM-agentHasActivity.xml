@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        PREFIX activity: &lt;https://w3id.org/arm/core/activity/0.1/&gt;
+        PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+    	PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    	PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
+    
+        SELECT DISTINCT 
+            ?activity ?activityLabel
+            ?subclassLabel
+            ?work ?workTitle
+    
+        WHERE {
+            ?subject ?property ?activity .
+            ?activity a activity:Activity .
+            ?activity rdfs:label ?activityLabel .
+            
+            OPTIONAL {
+             ?activity activity:isActivityOf ?work .
+            ?work a bf:Work ;
+                bf:title ?title .
+            ?title a bf:Title ;
+                rdfs:label ?workTitle .
+                }
+            OPTIONAL {
+                ?activity vitro:mostSpecificType ?subclass .
+                ?subclass rdfs:subClassOf activity:Activity; 
+                    rdfs:label ?subclassLabel .
+            }
+        }
+    </query-select>
+    
+    <template>propStatement-agentHasActivity.ftl</template>
+</list-view-config>
