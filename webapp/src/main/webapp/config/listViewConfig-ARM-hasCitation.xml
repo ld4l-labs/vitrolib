@@ -129,7 +129,7 @@
                     ?citation bf:note ?citationNoteIndividual .
                     ?citationNoteIndividual rdf:value ?citationNoteValue .
                     }
-                    } GROUP BY ?citation
+                    }
     </query-select>
 
     <!-- TODO Template
