@@ -16,17 +16,17 @@
         
                 "?objectVar a arm:BoundCollection , bf:Item . ",
                 "?objectVar bf:hasPart ?subject . " ,
-                "?objectVar bf:title ?objectVarTitle . ",
+                "?objectVar arm:hasPreferredTitle ?objectVarTitle . ",
                 "?objectVar rdfs:label ?titleValue . ",
                 "?objectVar ch:hasCustodialHistory ?custodialHistory . ",
         
-                "?objectVarTitle arm:titleOf ?objectVar . ",
+                "?objectVarTitle arm:isPreferredTitleOf ?objectVar . ",
                 "?objectVarTitle rdf:type bf:Title . ",   
                 "?objectVarTitle rdfs:label ?titleValue . ", 
                 "?objectVarTitle rdf:value ?titleValue . ",
                 
                 "?custodialHistory a ch:CustodialHistory . ",
-                "?custodialHistory ch:isCustodialHistoryOf ?subject . "
+                "?custodialHistory ch:isCustodialHistoryOf ?objectVar . "
             ],
             "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
         },
