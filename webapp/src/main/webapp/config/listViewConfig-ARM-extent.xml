@@ -13,16 +13,13 @@
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         
         SELECT DISTINCT 
-        ?paginationFoliation ?paginationFoliationValue ?paginationFoliationDescription
+        ?paginationFoliation ?paginationFoliationValue
    
         WHERE {
         ?subject ?property ?paginationFoliation .
         ?paginationFoliation a arm:PaginationFoliation .
         OPTIONAL {
         ?paginationFoliation rdf:value ?paginationFoliationValue .
-        }
-        OPTIONAL {
-        ?paginationFoliation dcterms:description ?paginationFoliationDescription .
         }
         }
     </query-select>
