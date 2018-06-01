@@ -16,6 +16,7 @@
                     
                     SELECT DISTINCT 
                     ?citation ?citationNoteValue 
+                    <!-- Keeping the citation note in this case to account for negative citations; without a note value it might look like something was cited from a particular source from the list view. -->
                     ?entryLocationInstanceMostSpecificTypeMostSpecificTypeLabel ?instanceTitle 
                     ?entryLocationPageMostSpecificTypeLabel ?pageValue
                     ?volumeContainingPageMostSpecificTypeLabel
