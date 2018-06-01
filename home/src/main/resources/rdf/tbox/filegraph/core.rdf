@@ -350,13 +350,6 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>   
     
-    <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/StylePeriod">
-        <rdfs:label xml:lang="en">StylePeriod</rdfs:label>
-        <skos:definition xml:lang="en">A defined style, historical period, group, school, dynasty, movement, nationality, culture, etc. whose characteristics are represented in the work.</skos:definition>        
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:Class>   
-    
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/SubjectNote">
         <rdfs:label xml:lang="en">Subject note</rdfs:label>
         <skos:definition xml:lang="en">Textual information describing the subject or iconographic details of a resource.</skos:definition>
@@ -462,6 +455,24 @@
         <rdfs:label xml:lang="en">carries</rdfs:label>
         <skos:definition xml:lang="en">A particular physical form, such as a volume, a sheet of paper, or a computer disk, contains or has on it the resource being described.</skos:definition>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/isOnCarrier"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/cites">
+        <rdfs:label xml:lang="en">cites</rdfs:label>
+        <skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a creator reproduces the totality or a section of a (well-known) work of art (here, the object) to incorporate it a new visual creation (here, the subject).</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/citedBy"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/citedBy">
+        <rdfs:label xml:lang="en">cited by</rdfs:label>
+        <skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a creator reproduces the totality or a section of a (well-known) work of art (here, the subject) to incorporate it into a new visual creation (here, the object).</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/cites"/>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>

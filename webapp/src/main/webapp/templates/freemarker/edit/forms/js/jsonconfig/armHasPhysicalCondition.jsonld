@@ -1,0 +1,137 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:addWork_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+        "?subject ?predicate ?objectVar .",
+        "?object rdf:type arm:PhysicalCondition .",
+        "?objectVar rdf:value ?physicalConditionValue . ",
+        "?objectVar rdfs:label ?physicalConditionValue ."
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
+    },
+    {
+      "@id": "customform:addWork_optionalN3",
+      "@type": [
+        "forms:OptionalN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+		"?objectVar seq:directlyPrecedes ?directlyPrecedes .",
+		"?directlyPrecedes rdf:value ?directlyPrecedesValue .",
+		"?directlyPrecedes rdfs:label ?directlyPrecedesValue .",
+		"?objectVar seq:directlyFollows ?directlyFollows .",
+		"?directlyFollows rdf:value ?directlyFollowsValue .",
+		"?directlyFollows rdfs:label ?directlyFollowsValue .",
+		"?objectVar seq:precedes ?precedes . ",
+		"?precedes rdf:value ?precedesValue . ",
+		"?precedes rdfs:label ?precedesValue . ",
+		"?objectVar seq:follows ?follows . ",
+		"?follows rdf:value ?followsValue . ",
+		"?follows rdfs:label ?followsValue ."
+      ],
+      "customform:prefixes": "@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> . @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    },
+     {
+      "@id": "customform:physicalConditionValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "physicalConditionValue"
+    },
+    {
+      "@id": "customform:directlyPrecedesValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "directlyPrecedesValue"
+    },
+    {
+      "@id": "customform:directlyFollowsValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "directlyFollowsValue"
+    },
+    {
+      "@id": "customform:precedesValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "precedesValue"
+    },
+    {
+      "@id": "customform:followsValue",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "followsValue"
+    },
+    {
+      "@id": "customform:directlyFollows",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "directlyFollows",
+      "customform:mayUseNewResource": true
+    },
+     {
+      "@id": "customform:directlyPrecedes",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "directlyPrecedes",
+      "customform:mayUseNewResource": true
+    },
+     {
+      "@id": "customform:follows",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "follows",
+      "customform:mayUseNewResource": true
+    },
+     {
+      "@id": "customform:precedes",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "precedes",
+      "customform:mayUseNewResource": true
+    },
+    {
+          "@id": "customform:dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],
+         
+          "customform:dependencies": ["precedes,precedesValue","follows,followsValue","directlyPrecedes,directlyPrecedesValue","directlyFollows,directlyFollowsValue"]
+    }
+   
+   ]
+}

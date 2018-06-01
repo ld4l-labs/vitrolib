@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        <!-- Check for needed prefixes -->
+        PREFIX arm: &lt;https://w3id.org/arm/core/ontology/0.1/&gt;
+        PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        
+        SELECT DISTINCT 
+        ?paginationFoliation ?paginationFoliationValue
+   
+        WHERE {
+        ?subject ?property ?paginationFoliation .
+        ?paginationFoliation a arm:PaginationFoliation .
+        OPTIONAL {
+        ?paginationFoliation rdf:value ?paginationFoliationValue .
+        }
+        }
+    </query-select>
+
+    <!-- TODO Template
+    <template>SOMETHING GOES IN HERE</template>
+    -->
+</list-view-config>
+
