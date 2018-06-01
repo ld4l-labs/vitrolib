@@ -131,7 +131,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	  			   	    <option value="">Select event source type</option>
 	               		<option value="https://w3id.org/arm/core/ontology/0.1/Page">Page</option>
 						<option value="https://w3id.org/arm/core/ontology/0.1/Volume">Volume</option>
-						<option value="http://id.loc.gov/ontologies/bibframe/Text">Text</option>
+						<option value="http://id.loc.gov/ontologies/bibframe/Instance">Instance</option>
 	            	</select>
 			        </p>
 		  		</div>

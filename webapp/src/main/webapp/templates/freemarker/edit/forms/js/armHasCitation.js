@@ -26,6 +26,7 @@ var armHasCitation = {
 	        	this.locationTypeDropdown = $("#locationType");//this is hidden on load - will the jquery selector pick it up
 	        	this.locationValueSection = $("#locationValueSection");
 	        	this.locationTitleSection = $("#locationTitleSection");
+	        	this.formSubmit = $("input#submit");
 	        },
 
 	        // Initial page setup. Called only at page load.
@@ -74,6 +75,14 @@ var armHasCitation = {
 	        },
 	       clearLocationValues:function() {
 	        	//Based on selection, clear other values
+	    	   if(armHasCitation.actionTypeVal == "create") {
+	    		   //if create, then get rid of any uris for location
+	    		   $("#location").val("");
+	    	   } else {
+	    		   $("#locationType").val("");
+	    		   $("#locationValue").val("");
+	    		   $("#locationPreferredTitle").val("");
+	    	   }
 	        }
 };
 

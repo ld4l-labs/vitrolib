@@ -40,99 +40,95 @@
                     ?entryValue    
                    -->
                     
-                    WHERE {
-                    ?subject ?property ?citation .
-                    ?citation a arm:Citation .
-                    
-                    OPTIONAL {
-                    ?citation arm:hasSource ?citationEntry .
-                    ?citationEntry a arm:Entry .
-                    }
-                        OPTIONAL {
-                        ?citationEntry rdf:value ?entryValue .
-                        }
-                        OPTIONAL {
-                        ?citationEntry arm:atLocation ?entryLocationInstance .
-                        ?entryLocationInstance a bf:Instance .
-                        }
-                        OPTIONAL {
-                        ?citationEntry arm:atLocation ?entryLocationPage .
-                        ?entryLocationInstance a arm:Page .
-                        }
-                        OPTIONAL {
-                        ?citationEntry arm:atLocation ?entryLocationVolume .
-                        ?entryLocationInstance a arm:Volume .
-                        }
-                    
-                            OPTIONAL {
-                            ?entryLocationInstance vitro:mostSpecificType ?entryLocationInstanceMostSpecificType .
-                            ?entryLocationInstanceMostSpecificType rdfs:label ?entryLocationInstanceMostSpecificTypeMostSpecificTypeLabel .
-                            ?entryLocationInstance bf:title ?titleIndividual .
-                            ?titleIndividual rdf:type bf:Title .
-                            ?titleIndividual rdf:value ?instanceTitle .
-                            }
-                    
-                        OPTIONAL {
-                        ?entryLocationPage vitro:mostSpecificType ?entryLocationPageMostSpecificType .
-                        ?entryLocationPageMostSpecificType rdfs:label ?entryLocationPageMostSpecificTypeLabel .
-                        ?entryLocationPage rdf:value ?pageValue .
-                        }
-                        OPTIONAL {
-                        ?entryLocationPage dcterms:isPartOf ?VolumeContainingPage .
-                        ?VolumeContainingPage a arm:Volume .
-                        }
-                            OPTIONAL {
-                            ?volumeContainingPage vitro:mostSpecificType ?volumeContainingPageMostSpecificType .
-                            ?volumeContainingPageMostSpecificType rdfs:label ?volumeContainingPageMostSpecificTypeLabel .
-                            ?volumeContainingPage rdf:value ?volumeContainingPageValue .
-                            }
-                            OPTIONAL {
-                            ?VolumeContainingPage dcterms:isPartOf ?instanceContainingVolumeContainingPage .
-                            ?instanceContainingVolumeContainingPage a bf:Instance .
-                            }
-                                OPTIONAL {
-                                ?instanceContainingVolumeContainingPage vitro:mostSpecificType ?instanceContainingVolumeContainingPageMostSpecificType .
-                                ?instanceContainingVolumeContainingPageMostSpecificType rdfs:label ?instanceContainingVolumeContainingPageMostSpecificTypeLabel .
-                                ?instanceContainingVolumeContainingPage bf:title ?instanceContainingVolumeContainingPageTitleIndividual .
-                                ?instanceContainingVolumeContainingPageTitleIndividual rdf:type bf:Title .
-                                ?instanceContainingVolumeContainingPageTitleIndividual rdf:value ?instanceContainingVolumeContainingPageTitle .
-                                }
-                        OPTIONAL {
-                        ?entryLocationPage dcterms:isPartOf ?instanceContainingPage .
-                        ?instanceContainingPage a bf:Instance .
-                        }
-                            OPTIONAL {
-                            ?instanceContainingPage vitro:mostSpecificType ?instanceContainingPageMostSpecificType .
-                            ?instanceContainingPageMostSpecificType rdfs:label ?instanceContainingPageMostSpecificTypeLabel .
-                            ?instanceContainingPage bf:title ?instanceContainingPageTitleIndividual .
-                            ?instanceContainingPageTitleIndividual rdf:type bf:Title .
-                            ?instanceContainingPageTitleIndividual rdf:value ?instanceContainingPageTitle .
-                            }
-                    
-                        OPTIONAL {
-                        ?entryLocationVolume vitro:mostSpecificType ?entryLocationVolumeMostSpecificType .
-                        ?entryLocationVolumeMostSpecificType rdfs:label ?entryLocationVolumeMostSpecificTypeLabel .
-                        ?entryLocationVolume rdf:value ?entryLocationVolumeValue .
-                        }
-                        OPTIONAL {
-                        ?entryLocationVolume dcterms:isPartOf ?InstanceContainingVolume .
-                        ?InstanceContainingVolume a bf:Instance .
-                        }
-                            OPTIONAL {
-                            ?instanceContainingVolume vitro:mostSpecificType ?instanceContainingVolumeMostSpecificType .
-                            ?instanceContainingVolumeMostSpecificType rdfs:label ?instanceContainingVolumeMostSpecificTypeLabel .
-                            ?instanceContainingVolume bf:title ?instanceContainingVolumeTitleIndividual .
-                            ?instanceContainingVolumeTitleIndividual rdf:type bf:Title .
-                            ?instanceContainingVolumeTitleIndividual rdf:value ?instanceContainingVolumeTitle .
-                            }
-                    
-                    OPTIONAL {
-                    ?citation bf:note ?citationNoteIndividual .
-                    ?citationNoteIndividual rdf:value ?citationNoteValue .
-                    }
-                    }
+					WHERE {
+						?subject ?property ?citation .
+						?citation a arm:Citation .
+						OPTIONAL {
+							?citation arm:hasSource ?citationEntry .
+							?citationEntry a arm:Entry .
+							<!-- Optionals related to this entry -->
+							OPTIONAL {
+								?citationEntry rdf:value ?entryValue .
+							}
+							<!-- location= Instance -->
+							OPTIONAL {
+								?citationEntry arm:atLocation ?entryLocationInstance .
+								?entryLocationInstance rdf:type bf:Instance .
+								OPTIONAL {
+									?entryLocationInstance vitro:mostSpecificType ?entryLocationInstanceMostSpecificType .
+									?entryLocationInstanceMostSpecificType rdfs:label ?entryLocationInstanceMostSpecificTypeMostSpecificTypeLabel .
+									?entryLocationInstance arm:hasPreferredTitle ?titleIndividual .
+									?titleIndividual rdf:type bf:Title .
+									?titleIndividual rdf:value ?instanceTitle .
+								}
+							}
+							<!--  location Page -->
+							OPTIONAL {
+								?citationEntry arm:atLocation ?entryLocationPage .
+								?entryLocationInstance a arm:Page .
+								OPTIONAL {
+									?entryLocationPage vitro:mostSpecificType ?entryLocationPageMostSpecificType .
+									?entryLocationPageMostSpecificType rdfs:label ?entryLocationPageMostSpecificTypeLabel .
+									?entryLocationPage rdf:value ?pageValue .
+								}
+								<!--  Page is part of a volume which in term may be part of an instance -->
+								OPTIONAL {
+									?entryLocationPage dcterms:isPartOf ?volumeContainingPage .
+									?volumeContainingPage a arm:Volume .
+									?volumeContainingPage vitro:mostSpecificType ?volumeContainingPageMostSpecificType .
+									?volumeContainingPageMostSpecificType rdfs:label ?volumeContainingPageMostSpecificTypeLabel .
+									?volumeContainingPage rdf:value ?volumeContainingPageValue .
+									OPTIONAL {
+										?volumeContainingPage dcterms:isPartOf ?instanceContainingVolumeContainingPage .
+										?instanceContainingVolumeContainingPage a bf:Instance .
+										?instanceContainingVolumeContainingPage vitro:mostSpecificType ?instanceContainingVolumeContainingPageMostSpecificType .
+										?instanceContainingVolumeContainingPageMostSpecificType rdfs:label ?instanceContainingVolumeContainingPageMostSpecificTypeLabel .
+										?instanceContainingVolumeContainingPage arm:hasPreferredTitle ?instanceContainingVolumeContainingPageTitleIndividual .
+										?instanceContainingVolumeContainingPageTitleIndividual rdf:type bf:Title .
+										?instanceContainingVolumeContainingPageTitleIndividual rdf:value ?instanceContainingVolumeContainingPageTitle .
+									}
+								}
+								
+								<!-- Page can be part of an instance -->	
+								OPTIONAL {
+									?entryLocationPage dcterms:isPartOf ?instanceContainingPage .
+									?instanceContainingPage a bf:Instance .
+									
+									?instanceContainingPage vitro:mostSpecificType ?instanceContainingPageMostSpecificType .
+									?instanceContainingPageMostSpecificType rdfs:label ?instanceContainingPageMostSpecificTypeLabel .
+									?instanceContainingPage arm:hasPreferredTitle ?instanceContainingPageTitleIndividual .
+									?instanceContainingPageTitleIndividual rdf:type bf:Title .
+									?instanceContainingPageTitleIndividual rdf:value ?instanceContainingPageTitle .
+								}	
+							}
+							<!--  Volume -->
+							OPTIONAL {
+								?citationEntry arm:atLocation ?entryLocationVolume .
+								?entryLocationVolume a arm:Volume .
+								OPTIONAL {
+									?entryLocationVolume vitro:mostSpecificType ?entryLocationVolumeMostSpecificType .
+									?entryLocationVolumeMostSpecificType rdfs:label ?entryLocationVolumeMostSpecificTypeLabel .
+									?entryLocationVolume rdf:value ?entryLocationVolumeValue .
+								}
+								<!-- Volume can be part of instance -->
+								OPTIONAL {
+									?entryLocationVolume dcterms:isPartOf ?instanceContainingVolume .
+									?instanceContainingVolume a bf:Instance .
+									?instanceContainingVolume vitro:mostSpecificType ?instanceContainingVolumeMostSpecificType .
+									?instanceContainingVolumeMostSpecificType rdfs:label ?instanceContainingVolumeMostSpecificTypeLabel .
+									?instanceContainingVolume bf:title ?instanceContainingVolumeTitleIndividual .
+									?instanceContainingVolumeTitleIndividual rdf:type bf:Title .
+									?instanceContainingVolumeTitleIndividual rdf:value ?instanceContainingVolumeTitle .
+								}
+							}
+						}
+						OPTIONAL {
+							?citation bf:note ?citationNoteIndividual .
+							?citationNoteIndividual rdf:value ?citationNoteValue .
+						}
+					}
     </query-select>
-
+	<template>propStatement-ARM-hasCitation.ftl</template>
     <!-- TODO Template
     <template>SOMETHING GOES IN HERE</template>
     -->

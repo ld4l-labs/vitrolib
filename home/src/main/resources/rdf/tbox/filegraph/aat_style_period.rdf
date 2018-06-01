@@ -586,7 +586,7 @@
                                                          rdf:datatype=
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
                                                         >2014-10-10T13:14:59</dct:modified>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <skos:changeNote>
                                                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5003696476">
                                                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300393217"/>
@@ -907,7 +907,7 @@
     <prov:used rdf:resource="http://vocab.getty.edu/aat/300391448"/>
                                                               </rdf:Description>
                                                             </skos:note>
-                                                            <rdf:type rdf:nodeID="A0"/>
+                                                            <!--rdf:type rdf:nodeID="A0"/-->
                                                             <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003696524"/>
                                                             <skos:related rdf:resource="http://vocab.getty.edu/aat/300025619"/>
                                                             <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003696510"/>
@@ -1147,7 +1147,7 @@
                                                         >antigÃ¼edad</rdfs:label>
                                                         <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/68377"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/68377"/>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
                                                         <skos:changeNote>
                                                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001055763">
@@ -1400,7 +1400,7 @@
       </rdf:Description>
     </skos:member>
     <gvp:parentStringAbbrev>&lt;styles, periods, and cultures by region&gt;, Styles and Periods (hierarchy name), Styles and Periods Facet</gvp:parentStringAbbrev>
-    <rdf:type rdf:nodeID="A0"/>
+    <!--rdf:type rdf:nodeID="A0"/-->
     <gvp:broaderGeneric rdf:resource="http://vocab.getty.edu/aat/300111079"/>
     <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5004441707"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
@@ -1671,7 +1671,7 @@
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
                                                         >2013-03-29T09:43:54</dct:modified>
                                                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003993194"/>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                                                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5001679804"/>
                                                         <skos:changeNote>
@@ -2015,7 +2015,7 @@
                                                         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300111078"/>
                                                         <dct:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
                                                         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
                                                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5002109027"/>
                                                       </gvp:Concept>
@@ -2228,7 +2228,7 @@
                                                         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001554403"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/79765"/>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Subject"/>
                                                         <skos:altLabel
                                                          xml:lang="zh-hant"
@@ -2306,7 +2306,7 @@
                                                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300386009"/>
                                                           </rdf:Description>
                                                         </skos:note>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <dct:created
                                                          rdf:datatype=
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -2407,7 +2407,7 @@
                                                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300404836"/>
                                                           </rdf:Description>
                                                         </skos:changeNote>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300111078"/>
                                                         <dct:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
                                                         <rdfs:label
@@ -2550,7 +2550,7 @@
                                                          rdf:datatype=
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
                                                         >2014-04-24T10:35:04</dct:created>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
                                                         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300111078"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/119152"/>
@@ -2832,7 +2832,7 @@
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/96503"/>
                                                         <gvp:parentString
                                                         >&lt;styles, periods, and cultures by general era&gt;, Styles and Periods (hierarchy name), Styles and Periods Facet</gvp:parentString>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000474308-nl"/>
                                                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003395662"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003395646"/>
@@ -3005,7 +3005,7 @@
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2008-10-07T21:48:36</dct:modified>
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2015-05-22T08:40:36</dct:modified>
@@ -3142,7 +3142,7 @@
         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
         <gvp:broaderNonConcept rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <gvp:broaderGeneric rdf:resource="http://vocab.getty.edu/aat/300310538"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <dc:identifier>300310542</dc:identifier>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001938851"/>
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
@@ -3516,7 +3516,7 @@
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300241490"/>
         <gvp:parentStringAbbrev>structural assemblies, structural elements, ... Objects Facet</gvp:parentStringAbbrev>
         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5004143649"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2011-01-07T10:32:28</dct:modified>
         <gvp:prefLabelGVP rdf:resource="http://vocab.getty.edu/aat/term/1000067402-en"/>
@@ -3901,7 +3901,7 @@
             <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
             >2007-02-02T11:01:35</dct:modified>
             <skos:prefLabel xml:lang="nl">modern (stijlen en perioden)</skos:prefLabel>
-            <rdf:type rdf:nodeID="A0"/>
+            <!--rdf:type rdf:nodeID="A0"/-->
             <gvp:prefLabelGVP rdf:resource="http://vocab.getty.edu/aat/term/1000304726-en"/>
             <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5001538464"/>
             <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
@@ -4055,7 +4055,7 @@
         >2012-09-17T13:26:48</dct:created>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003256462"/>
         <gvp:broaderGeneric rdf:resource="http://vocab.getty.edu/aat/300310538"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
         <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/107615"/>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003256457"/>
@@ -4110,7 +4110,7 @@
             <prov:used rdf:resource="http://vocab.getty.edu/aat/300310544"/>
           </rdf:Description>
         </skos:changeNote>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/130781"/>
         <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/57000"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -4218,7 +4218,7 @@
               </rdf:Description>
             </skos:note>
             <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
-            <rdf:type rdf:nodeID="A0"/>
+            <!--rdf:type rdf:nodeID="A0"/-->
             <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
             >2014-10-21T16:09:10</dct:modified>
             <skos:changeNote>
@@ -4350,7 +4350,7 @@
         <gvp:prefLabelGVP rdf:resource="http://vocab.getty.edu/aat/term/1000597344-en"/>
         <rdfs:label xml:lang="en">human (culture)</rdfs:label>
         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003698501"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
         <dct:contributor rdf:resource="http://vocab.getty.edu/aat/contrib/10000000"/>
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
@@ -4664,7 +4664,7 @@
                 </skos:changeNote>
                 <rdfs:label xml:lang="nl">naÃ¯eve kunst</rdfs:label>
                 <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5001545614"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:changeNote>
                   <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001601069">
                     <prov:used rdf:resource="http://vocab.getty.edu/aat/300263555"/>
@@ -5316,7 +5316,7 @@
         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003091178"/>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2005-06-17T17:30:57</dct:modified>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
       </skos:Concept>
     </skos:member>
     <skos:member>
@@ -5375,7 +5375,7 @@
         </skos:changeNote>
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
         <rdfs:label xml:lang="en">chic, shabby</rdfs:label>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <cc:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <skos:note>
@@ -5452,7 +5452,7 @@
         <gvp:broaderNonConcept rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <gvp:broaderGeneric rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <void:inDataset rdf:resource="http://vocab.getty.edu/dataset/aat"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <rdfs:label xml:lang="en">rustic style</rdfs:label>
         <skos:changeNote>
@@ -5732,7 +5732,7 @@
             <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5002057921"/>
             <gvp:prefLabelGVP rdf:resource="http://vocab.getty.edu/aat/term/1000409530-en"/>
             <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
-            <rdf:type rdf:nodeID="A0"/>
+            <!--rdf:type rdf:nodeID="A0"/-->
             <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/131828"/>
             <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
             <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
@@ -5785,7 +5785,7 @@
         <cc:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
         <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5004000365"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2010-01-26T16:23:46</dct:modified>
         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
@@ -5944,7 +5944,7 @@
         >2008-10-07T21:43:09</dct:modified>
         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000633955-zh-Hant"/>
         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000633956-zh-Latn-pinyin-x-notone"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <void:inDataset rdf:resource="http://vocab.getty.edu/dataset/aat"/>
         <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001938910"/>
@@ -6097,7 +6097,7 @@
         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003639416"/>
         <dc:identifier>300391392</dc:identifier>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Subject"/>
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
@@ -6162,7 +6162,7 @@
             <prov:used rdf:resource="http://vocab.getty.edu/aat/300310540"/>
           </rdf:Description>
         </skos:note>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <gvp:broaderPreferred rdf:resource="http://vocab.getty.edu/aat/300310538"/>
         <dct:source rdf:resource="http://vocab.getty.edu/aat/source/2000094126"/>
@@ -6327,7 +6327,7 @@
         <skos:prefLabel xml:lang="nl">country (stijl)</skos:prefLabel>
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2008-10-07T21:31:40</dct:modified>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001938891"/>
@@ -6441,7 +6441,7 @@
                                                             >contemporÃ¡nea</skos:altLabel>
                                                             <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5002035190"/>
                                                             <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300264088"/>
-                                                            <rdf:type rdf:nodeID="A0"/>
+                                                            <!--rdf:type rdf:nodeID="A0"/-->
                                                             <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/58092"/>
                                                             <skos:altLabel
                                                              xml:lang="nl"
@@ -6832,7 +6832,7 @@
                                                          rdf:datatype=
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
                                                         >2010-03-05T11:00:46</dct:modified>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <dct:modified
                                                          rdf:datatype=
                                                         "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -6993,7 +6993,7 @@
                                                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300019280"/>
                                                           </rdf:Description>
                                                         </skos:changeNote>
-                                                        <rdf:type rdf:nodeID="A0"/>
+                                                        <!--rdf:type rdf:nodeID="A0"/-->
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5002878830"/>
                                                         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
                                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/96516"/>
@@ -7246,7 +7246,7 @@
                                                 </skos:note>
                                                 <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5004382312"/>
                                                 <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300106723"/>
-                                                <rdf:type rdf:nodeID="A0"/>
+                                                <!--rdf:type rdf:nodeID="A0"/-->
                                                 <gvp:displayOrder
                                                  rdf:datatype=
                                                 "http://www.w3.org/2001/XMLSchema#positiveInteger"
@@ -7475,7 +7475,7 @@
                                             <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300019255"/>
                                           </rdf:Description>
                                         </skos:narrower>
-                                        <rdf:type rdf:nodeID="A0"/>
+                                        <!--rdf:type rdf:nodeID="A0"/-->
                                         <skos:narrower>
                                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/300019571">
                                             <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300019255"/>
@@ -9102,7 +9102,7 @@
                                             <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300015647"/>
                                           </rdf:Description>
                                         </skos:narrower>
-                                        <rdf:type rdf:nodeID="A0"/>
+                                        <!--rdf:type rdf:nodeID="A0"/-->
                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5002893853"/>
                                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001681542"/>
                                         <skosxl:altLabel rdf:resource="http://vocab.getty.edu/aat/term/1000386020-it"/>
@@ -9224,7 +9224,7 @@
                                 <skos:narrower rdf:resource="http://vocab.getty.edu/aat/300265077"/>
                                 <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5001656422"/>
                                 <skos:altLabel xml:lang="en">middle eastern</skos:altLabel>
-                                <rdf:type rdf:nodeID="A0"/>
+                                <!--rdf:type rdf:nodeID="A0"/-->
                                 <prov:wasGeneratedBy rdf:resource="http://vocab.getty.edu/aat/rev/5001656418"/>
                                 <rdfs:label xml:lang="en">Middle East</rdfs:label>
                                 <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003756666"/>
@@ -9333,7 +9333,7 @@
                         </skos:changeNote>
                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5001055770"/>
                         <dct:contributor rdf:resource="http://vocab.getty.edu/aat/contrib/10000088"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                         >2001-07-26T22:15:04</dct:modified>
                         <skos:scopeNote rdf:resource="http://vocab.getty.edu/aat/scopeNote/62439"/>
@@ -9439,7 +9439,7 @@
                     <skos:member rdf:resource="http://vocab.getty.edu/aat/300016617"/>
                     <skos:member>
                       <rdf:Description rdf:about="http://vocab.getty.edu/aat/300021854">
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skos:changeNote>
                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001055776">
                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300021854"/>
@@ -9716,7 +9716,7 @@
                             <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003755194"/>
                             <gvp:parentString>&lt;styles, periods, and cultures by region&gt;, Styles and Periods (hierarchy name), Styles and Periods Facet</gvp:parentString>
                             <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Subject"/>
-                            <rdf:type rdf:nodeID="A0"/>
+                            <!--rdf:type rdf:nodeID="A0"/-->
                             <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300386974"/>
                             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                             >2013-08-05T12:10:51</dct:created>
@@ -9947,7 +9947,7 @@
                         </skos:changeNote>
                         <rdfs:label xml:lang="en">Antarctic</rdfs:label>
                         <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                         >2013-05-09T15:30:04</dct:issued>
                         <dc:identifier>300385955</dc:identifier>
@@ -10044,7 +10044,7 @@
                         >2013-05-09T16:07:08</dct:issued>
                         <skos:note rdf:resource="http://vocab.getty.edu/aat/scopeNote/113792"/>
                         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000568002-en"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skos:changeNote>
                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5003475046">
                             <prov:used rdf:resource="http://vocab.getty.edu/aat/300385959"/>
@@ -10815,7 +10815,7 @@
                           </rdf:Description>
                         </skos:narrower>
                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5004431553"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5000005011"/>
                         <skos:prefLabel xml:lang="es">el mundo islÃ¡mico</skos:prefLabel>
                         <skos:narrower>
@@ -10870,7 +10870,7 @@
                           </rdf:Description>
                         </skos:changeNote>
                         <skos:altLabel xml:lang="en">Afro-Asian (style)</skos:altLabel>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <gvp:displayOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger"
                         >2</gvp:displayOrder>
                         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
@@ -11045,7 +11045,7 @@
                         >2013-07-25T12:50:41</dct:modified>
                         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                         >2013-07-25T12:44:11</dct:modified>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <prov:wasGeneratedBy rdf:resource="http://vocab.getty.edu/aat/rev/5003492920"/>
                         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000570552-en"/>
                         <skos:changeNote>
@@ -11219,7 +11219,7 @@
                 >2013-12-23T11:09:48</dct:modified>
                 <skosxl:altLabel rdf:resource="http://vocab.getty.edu/aat/term/1000578933-en"/>
                 <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003539055"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5003539056"/>
                 <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003539057"/>
                 <dct:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
@@ -13291,7 +13291,7 @@
             <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300020656"/>
           </rdf:Description>
         </skos:narrower>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
         >2007-10-26T09:05:46</dct:modified>
         <gvp:broaderNonConcept rdf:resource="http://vocab.getty.edu/aat/300111079"/>
@@ -14149,7 +14149,7 @@
                   </rdf:Description>
                 </skos:note>
                 <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:note>
                   <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5004274448">
                     <prov:used rdf:resource="http://vocab.getty.edu/aat/300148033"/>
@@ -14904,7 +14904,7 @@
                     <gvp:broader rdf:resource="http://vocab.getty.edu/aat/300055513"/>
                   </rdf:Description>
                 </skos:member>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <gvp:broaderNonPreferred rdf:resource="http://vocab.getty.edu/aat/300258340"/>
                 <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300239103"/>
                 <cc:license rdf:resource="http://opendatacommons.org/licenses/by/1.0/"/>
@@ -15834,7 +15834,7 @@
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5002354361"/>
         <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5003261642"/>
         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300015646"/>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
       </skos:Concept>
     </rdf:object>
   </rdf:Description>

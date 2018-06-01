@@ -318,7 +318,7 @@
                 >2001-07-26T22:01:32</dct:modified>
                 <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300201262"/>
                 <rdfs:label xml:lang="es">letra negrilla</rdfs:label>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:changeNote>
                   <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001100349">
                     <prov:used rdf:resource="http://vocab.getty.edu/aat/300200661"/>
@@ -949,7 +949,7 @@
                 <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300132471"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300054593"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300264552"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300220751"/>
                 <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300026029"/>
                 <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300404444"/>
@@ -1122,7 +1122,7 @@
                         <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300069727"/>
                         <dct:contributor rdf:resource="http://vocab.getty.edu/aat/contrib/10000250"/>
                         <gvp:parentString>&lt;typefaces by weight or density&gt;, typefaces (type forms), &lt;script and type forms&gt;, information form components, &lt;components by specific context&gt;, components (objects parts), Components (hierarchy name), Objects Facet</gvp:parentString>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skosxl:prefLabel rdf:resource="http://vocab.getty.edu/aat/term/1000592496-zh-Latn-wadegile"/>
                         <void:inDataset rdf:resource="http://vocab.getty.edu/dataset/aat"/>
                         <skos:note>
@@ -1425,7 +1425,7 @@
                         <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Subject"/>
                         <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300132471"/>
                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5000038921"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5002472158"/>
                         <skos:altLabel xml:lang="en">typefaces, expanded</skos:altLabel>
                         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300241584"/>
@@ -1533,7 +1533,7 @@
                         </skos:changeNote>
                         <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300264092"/>
                         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300264092"/>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300138088"/>
                         <skos:note>
                           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5003414898">
@@ -1758,7 +1758,7 @@
                 <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300201263"/>
                 <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300241583"/>
                 <gvp:broaderPreferredExtended rdf:resource="http://vocab.getty.edu/aat/300241583"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300201263"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300220751"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300241584"/>
@@ -1976,7 +1976,7 @@
                         <dct:source rdf:resource="http://vocab.getty.edu/aat/source/2000094828-subject-300195865"/>
                         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                         >2014-08-01T08:31:03</dct:modified>
-                        <rdf:type rdf:nodeID="A0"/>
+                        <!--rdf:type rdf:nodeID="A0"/-->
                         <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300210935"/>
                         <skos:changeNote rdf:resource="http://vocab.getty.edu/aat/rev/5001103709"/>
                         <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300264092"/>
@@ -2388,7 +2388,7 @@
                 <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300220751"/>
                 <dct:contributor rdf:resource="http://vocab.getty.edu/aat/contrib/10000131"/>
                 <gvp:broaderGeneric rdf:resource="http://vocab.getty.edu/aat/300210935"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300220751"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300163707"/>
                 <rdfs:label xml:lang="zh-hant">æ¨™é¡Œå­—</rdfs:label>
@@ -2657,7 +2657,7 @@
                 <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
                 >2011-01-07T12:56:58</dct:modified>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300201263"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:changeNote>
                   <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5003666833">
                     <prov:used rdf:resource="http://vocab.getty.edu/aat/300194460"/>
@@ -3395,7 +3395,7 @@
                 <gvp:parentString>typefaces (type forms), &lt;script and type forms&gt;, information form components, &lt;components by specific context&gt;, components (objects parts), Components (hierarchy name), Objects Facet</gvp:parentString>
                 <skos:note rdf:resource="http://vocab.getty.edu/aat/rev/5002646204"/>
                 <gvp:broaderGenericExtended rdf:resource="http://vocab.getty.edu/aat/300241490"/>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <skos:note>
                   <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001711959">
                     <prov:used rdf:resource="http://vocab.getty.edu/aat/300202354"/>
@@ -4430,7 +4430,7 @@
                 <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300138088"/>
                 <dct:source rdf:resource="http://vocab.getty.edu/aat/source/2000024811-subject-300211185"/>
                 <skos:altLabel xml:lang="en">typefaces, roman (typeface style group)</skos:altLabel>
-                <rdf:type rdf:nodeID="A0"/>
+                <!--rdf:type rdf:nodeID="A0"/-->
                 <rdfs:label xml:lang="en">typefaces, roman (typeface style group)</rdfs:label>
                 <gvp:broaderPartitiveExtended rdf:resource="http://vocab.getty.edu/aat/300069727"/>
                 <gvp:broaderExtended rdf:resource="http://vocab.getty.edu/aat/300069727"/>
@@ -4845,7 +4845,7 @@
             <prov:used rdf:resource="http://vocab.getty.edu/aat/300211132"/>
           </rdf:Description>
         </skos:note>
-        <rdf:type rdf:nodeID="A0"/>
+        <!--rdf:type rdf:nodeID="A0"/-->
         <skos:changeNote>
           <rdf:Description rdf:about="http://vocab.getty.edu/aat/rev/5001712292">
             <prov:used rdf:resource="http://vocab.getty.edu/aat/300211132"/>
