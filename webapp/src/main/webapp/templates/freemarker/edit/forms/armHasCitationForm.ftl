@@ -111,6 +111,71 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <form id="addCitation" class="customForm noIE67" action="${submitUrl}"  role="add work" >
 
     <div id="formcontent">
+	     <#--  at location -->
+      <#--  Autocomplete field for Subject Headings using LOC SH field -->
+
+      <div>
+      
+      	 <div id="actionTypeOptions">
+				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup Page, Volume, or Text
+				<input type="radio" name="actionType"  value="create">Create new Page, Volume, or Text
+			</div>
+			<br/>
+			
+		
+			<div id="createNewLocation" style="display:none">
+				<div id="locationType" role="locationTypeDropdown">
+			  		<p>
+			  		<label for="locationType">Location Type </label>
+	  			   <select id="locationType" name="locationType" role="select">
+	  			   	    <option value="">Select event source type</option>
+	               		<option value="https://w3id.org/arm/core/ontology/0.1/Page">Page</option>
+						<option value="https://w3id.org/arm/core/ontology/0.1/Volume">Volume</option>
+						<option value="http://id.loc.gov/ontologies/bibframe/Text">Text</option>
+	            	</select>
+			        </p>
+		  		</div>
+				 
+				 <p id="locationValueSection" style="display:none">
+	              <label for="locationValue">Value</label>
+	              <input size="60"  type="text" id="locationValue" name="locationValue" value="" />
+	    		 </p>
+	    		 
+	    		  <p id="locationTitleSection" style="display:none">
+	              <label for="locationPreferredTitle">Preferred Title</label>
+	              <input size="60"  type="text" id="locationPreferredTitle" name="locationPreferredTitle" value="" />
+	    		 </p>
+	    	</div>
+	    		 
+	    		 
+	   		<div id="lookupLocation">
+	      
+	          <p templateId="inputAcSelector">
+	    		<label for="location">Entry source</label>
+	              <input type="hidden"  name="locationLabel" id="locationLabel"/>
+	              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
+	          </p>
+	
+	
+	          <div class="acSelection" acGroupName="location" >
+	              <p class="inline">
+	                  <label>${i18n().selected} source:</label>
+	                  <span class="acSelectionInfo"></span>
+	                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+	                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	              </p>
+	              <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	              <#--  $ {flagClearLabelForExisting}="true"  -->
+	          </div>
+          </div>
+      </div>
+      
+     <#--  Source value -->
+     <p>
+              <label for="entryValue">Bibliographic citation entry/source value</label>
+              <input size="60"  type="text" id="entryValue" name="entryValue" value="" />
+     </p>
+
    
       <#--  Note value -->
      <p>
@@ -119,37 +184,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
      </p>
      
      
-     <#--  Source value -->
-     <p>
-              <label for="entryValue">Bibliographic citation entry/source value</label>
-              <input size="60"  type="text" id="entryValue" name="entryValue" value="" />
-     </p>
      
-     <#--  at location -->
-      <#--  Autocomplete field for Subject Headings using LOC SH field -->
-
-      <div>
-      	
-      		  
-             
-          <p templateId="inputAcSelector">
-    		<label for="location">Entry source</label>
-              <input type="hidden"  name="locationLabel" id="locationLabel"/>
-              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
-          </p>
-
-
-          <div class="acSelection" acGroupName="location" >
-              <p class="inline">
-                  <label>${i18n().selected} source:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
 
     
       

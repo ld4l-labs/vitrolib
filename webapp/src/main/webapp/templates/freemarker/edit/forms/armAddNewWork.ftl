@@ -251,4 +251,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/amAddNewWork.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armAddNewWork.js"></script>')}
