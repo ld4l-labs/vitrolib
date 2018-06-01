@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        PREFIX arm: &lt;https://w3id.org/arm/core/ontology/0.1/&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+    	PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    	PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
+    	
+        SELECT DISTINCT 
+            ?instance ?instanceTitle
+            ?publicationAgentName ?publicationDate 
+            ?mostSpecificType ?mostSpecificTypeLabel
+            ?publicationLocationName
+    
+        WHERE {
+            ?subject ?property ?instance .
+          	?instance a bf:Instance .
+          	?instance vitro:mostSpecificType ?mostSpecificType .
+          	?mostSpecificType rdfs:label ?mostSpecificTypeLabel .
+            
+            OPTIONAL {
+            ?instance arm:hasPreferredTitle ?titleIndividual .
+           	?titleIndividual rdf:type bf:Title .
+           	?titleIndividual rdf:value ?instanceTitle . 
+                }
+            OPTIONAL {
+               ?instance activity:hasActivity ?publicationActivity .
+               ?publicationActivity a activity:PublicationActivity .
+                OPTIONAL {
+                ?publicationActivity bf:date ?publicationDate .
+                }
+                OPTIONAL {
+               ?publicationAgent a bf:Agent.
+			   ?publicationAgent rdfs:label ?publicationAgentName .
+			   ?publicationAgent arm:agentOf ?publicationActivity .
+			   }
+			    OPTIONAL {
+              ?publicationActivity bf:place ?publicationLocation .
+              ?publicationLocation rdfs:label ?publicationLocationName . 
+			   }
+            }
+            
+        } GROUP BY  ?instance ?instanceTitle ?publicationAgentName ?publicationDate ?mostSpecificType ?mostSpecificTypeLabel ?publicationLocationName
+    </query-select>
+    
+    <template>propStatement-hasInstance.ftl</template>
+</list-view-config>
