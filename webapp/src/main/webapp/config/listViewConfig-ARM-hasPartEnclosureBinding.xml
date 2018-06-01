@@ -17,8 +17,7 @@
         PREFIX rdf: &lt;http://www.w3.org/2004/02/skos/core#&gt;
                     
                     SELECT DISTINCT 
-                    ?binding ?bindingTypeLabel ?bindingNoteValue
-                    
+                    ?binding ?bindingTypeLabel
                     WHERE {
                     ?subject ?property ?binding .
                     ?binding a arm:Binding .
@@ -28,12 +27,7 @@
                     ?bindingType a skos:Concept .
                     ?bindingType skos:prefLabel ?bindingTypeLabel .
                     }
-                    OPTIONAL {
-                    ?binding bf:note ?bindingNote .
-                    ?bindingNote a bf:Note .
-                    ?bindingNote rdf:value ?bindingNoteValue .
                     }
-                    }GROUP BY ?binding
     </query-select>
 
     <!-- TODO Template
