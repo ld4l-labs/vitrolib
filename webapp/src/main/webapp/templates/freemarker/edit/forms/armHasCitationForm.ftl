@@ -124,7 +124,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 			
 		
 			<div id="createNewLocation" style="display:none">
-				<div id="locationType" role="locationTypeDropdown">
+				<div id="locationTypeSection" role="locationTypeSection">
 			  		<p>
 			  		<label for="locationType">Location Type </label>
 	  			   <select id="locationType" name="locationType" role="select">

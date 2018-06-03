@@ -52,7 +52,7 @@ var armHasCitation = {
 	        	});
 	        	
 	        	this.locationTypeDropdown.change(function() {
-	        		var locationTypeeVal = $(this).val();
+	        		var locationTypeVal = $(this).val();
 	        		if(locationTypeVal == "") {
 	        			armHasCitation.locationTitleSection.hide();
 	        			armHasCitation.locationValueSection.hide();
