@@ -109,7 +109,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     
 		<div>
       	<p>
-              <label for="markingValue">Marking Value<span class='requiredHint'> *</span></label>
+              <label for="markingValue">Marking Value</label>
               <input size="60"  type="text" id="markingValue" name="markingValue" value="" />
      	</p>
      	</div>

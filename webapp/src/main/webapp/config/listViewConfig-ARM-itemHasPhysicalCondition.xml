@@ -12,7 +12,7 @@
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         
         SELECT DISTINCT 
-        ?phyiscalCondition ?physicalConditionValue 
+        ?physicalCondition ?physicalConditionValue 
    
         WHERE {
         ?subject ?property ?physicalCondition .

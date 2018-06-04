@@ -143,8 +143,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       <div>
       
       	 <div id="actionTypeOptions">
-				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup Page, Volume, or Text
-				<input type="radio" name="actionType"  value="create">Create new Page, Volume, or Text
+				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup Page, Volume, or Instance
+				<input type="radio" name="actionType"  value="create">Create new Page, Volume, or Instance
 			</div>
 			<br/>
 			
@@ -152,9 +152,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 			<div id="createNewLocation" style="display:none">
 				<div id="locationTypeSection" role="locationTypeSection">
 			  		<p>
-			  		<label for="locationType">Entry Source Type </label>
+			  		<label for="locationType">Source Type </label>
 	  			   <select id="locationType" name="locationType" role="select">
-	  			   	    <option value="">Select event source type</option>
+	  			   	    <option value="">Select source type</option>
 	               		<option value="https://w3id.org/arm/core/ontology/0.1/Page">Page</option>
 						<option value="https://w3id.org/arm/core/ontology/0.1/Volume">Volume</option>
 						<option value="http://id.loc.gov/ontologies/bibframe/Instance">Instance</option>
@@ -177,7 +177,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	   		<div id="lookupLocation">
 	      
 	          <p templateId="inputAcSelector">
-	    		<label for="location">Entry source of the citation</label>
+	    		<label for="location">Source of the citation</label>
 	              <input type="hidden"  name="locationLabel" id="locationLabel"/>
 	              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
 	          </p>
@@ -198,7 +198,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
       
      <#--  Source value -->
      <p>
-              <label for="entryValue">Citation value</label>
+              <label for="entryValue">Entry value</label>
               <input size="60"  type="text" id="entryValue" name="entryValue" value="" />
      </p>
 

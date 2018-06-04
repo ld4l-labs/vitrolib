@@ -18,3 +18,27 @@
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" ;:listViewConfigFile "listViewConfig-ARM-itemPartOfBoundCollection.xml" .
 
+#Also hardcoding this faux property for custodial history here for now
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#collateBySubclassAnnot> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayLimitAnnot> "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot> "0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot> "Custodial events" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Custodial events" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ObjectPropertyDisplayConfig> .
+
+
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#configContextFor> <https://w3id.org/arm/custodial_history/ontology/0.1/hasCustodialHistory> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#hasConfiguration> <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#qualifiedBy> <https://w3id.org/arm/custodial_history/ontology/0.1/CustodialHistory> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn400> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#qualifiedByDomain> <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn400> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ConfigContext> .
+
+#Hardcoding custom form to faux property

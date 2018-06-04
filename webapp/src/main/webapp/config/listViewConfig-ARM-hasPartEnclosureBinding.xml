@@ -11,10 +11,11 @@
         <!-- Check for needed prefixes -->
         PREFIX arm: &lt;https://w3id.org/arm/core/ontology/0.1/&gt;
         PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
-        PREFIX crm: &lt;http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/&gt;
+        PREFIX crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+        <!-- PREFIX crm: &lt;http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/&gt;-->
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-        PREFIX rdf: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+        PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
                     
                     SELECT DISTINCT 
                     ?binding ?bindingTypeLabel

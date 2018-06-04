@@ -20,8 +20,7 @@
       "customform:pattern": [
         "?subject ?predicate ?objectVar .",
         "?objectVar rdf:type arm:Marking .",
-        "?objectVar rdf:type ?markingType .",
-        "?objectVar rdf:value ?markingValue . "
+        "?objectVar rdf:type ?markingType ."
       ],
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -32,6 +31,7 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
+      	"?objectVar rdf:value ?markingValue . ",
 		"?objectVar activity:hasActivity ?activity . ?activity activity:isActivityOf ?objectVar .",
 		"?activity rdf:type activity:CreatorActivity .",
 		"?activity rdfs:label ?activityLabel . ",
