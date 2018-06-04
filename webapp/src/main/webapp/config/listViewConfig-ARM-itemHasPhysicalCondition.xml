@@ -20,7 +20,7 @@
             rdf:value ?physicalConditionValue .
         }
     </query-select>
-
+	<template>propStatement-ARM-itemHasPhysicalCondition.ftl</template>
     <!-- TODO Template
     <template>SOMETHING GOES IN HERE</template>
     -->

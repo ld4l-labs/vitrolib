@@ -29,6 +29,7 @@
                     }
                     }
     </query-select>
+    <template>propStatement-ARM-hasPartEnclosureBinding.ftl</template>
 
     <!-- TODO Template
     <template>SOMETHING GOES IN HERE</template>

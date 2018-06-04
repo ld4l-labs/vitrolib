@@ -85,7 +85,28 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <@lvf.unsupportedBrowser urls.base/>
 <form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
 
+
     <div id="formcontent">
+      <ul id="existingCitations" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Markings </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+    <br/>
+    	<#if editMode = "add">
+
+    
 		<div>
       	<p>
               <label for="markingValue">Marking Value<span class='requiredHint'> *</span></label>
@@ -181,6 +202,10 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
+       </#if> <#--  End form addition -->
+        <#if editMode = "edit">
+	  	</div> <#-- End formcontent div above -->
+	  </#if>
     </form>
 
 
@@ -210,7 +235,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         predicateURI:"${editConfiguration.predicateUri}",
         primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
         defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
+        eraseLabelsForFields:["locationName", "agentName"],
+        queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+       	subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
 
     };
     var i18nStrings = {

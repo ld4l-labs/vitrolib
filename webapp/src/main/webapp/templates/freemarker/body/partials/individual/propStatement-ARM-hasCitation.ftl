@@ -11,8 +11,27 @@
      next statement -->
 <#macro showActivity statement>
 
-<#if statement.citation?? && statement.citationNote??>
-    <a href="${profileUrl(statement.uri("citation"))}" title="${statement.citationNote}">${statement.citationNote} </a>
+<#if statement.citation??>
+<a href="${profileUrl(statement.uri("citation"))}" title="${statement.citation}">
+<#if statement.entryValue??>
+   Entry: ${statement.entryValue} &nbsp;
+</#if>
+<#if statement.citationNoteValue??>
+    Note: ${statement.citationNoteValue} &nbsp;
+</#if>
+</a>
+
+<#if statement.entryLocationInstance?? && statement.instanceTitle??>
+<a href="${profileUrl(statement.uri("entryLocationInstance"))}" title="${statement.instanceTitle}">Instance: ${statement.instanceTitle}</a>&nbsp;
 </#if>
 
+<#if statement.entryLocationPage?? && statement.pageValue??>
+<a href="${profileUrl(statement.uri("entryLocationPage"))}" title="${statement.pageValue}">Page: ${statement.pageValue}</a>&nbsp;
+</#if>
+
+<#if statement.entryLocationVolume?? && statement.entryLocationVolumeValue??>
+<a href="${profileUrl(statement.uri("entryLocationVolume"))}" title="${statement.entryLocationVolumeValue}">Volume: ${statement.entryLocationVolumeValue}</a>
+</#if>
+
+</#if>
 </#macro>
