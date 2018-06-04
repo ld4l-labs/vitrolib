@@ -19,7 +19,7 @@
       ],
       "customform:pattern": [
         "?subject ?predicate ?objectVar .",
-        "?object rdf:type arm:PhysicalCondition .",
+        "?objectVar rdf:type arm:PhysicalCondition .",
         "?objectVar rdf:value ?physicalConditionValue . ",
         "?objectVar rdfs:label ?physicalConditionValue ."
       ],
@@ -53,7 +53,8 @@
         "forms:LiteralField",
         "forms:FormComponent"
       ],
-      "customform:varName": "physicalConditionValue"
+      "customform:varName": "physicalConditionValue",
+      "customform:queryForExistingValue": "PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  PREFIX vitro:<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> SELECT ?existingValue   WHERE {?objectVar rdf:value ?existingValue .}    "     
     },
     {
       "@id": "customform:directlyPrecedesValue",

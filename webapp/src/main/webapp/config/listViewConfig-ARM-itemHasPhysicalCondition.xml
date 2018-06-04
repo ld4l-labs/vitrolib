@@ -12,7 +12,7 @@
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         
         SELECT DISTINCT 
-        ?phyiscalCondition ?physicalConditionValue 
+        ?physicalCondition ?physicalConditionValue 
    
         WHERE {
         ?subject ?property ?physicalCondition .
@@ -20,7 +20,7 @@
             rdf:value ?physicalConditionValue .
         }
     </query-select>
-
+	<template>propStatement-ARM-itemHasPhysicalCondition.ftl</template>
     <!-- TODO Template
     <template>SOMETHING GOES IN HERE</template>
     -->

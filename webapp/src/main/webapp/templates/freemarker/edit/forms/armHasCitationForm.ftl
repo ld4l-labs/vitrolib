@@ -108,9 +108,100 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <section id="addCitationSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
+
+
+
+
 <form id="addCitation" class="customForm noIE67" action="${submitUrl}"  role="add work" >
 
     <div id="formcontent">
+
+	  <ul id="existingCitations" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Citations </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+       
+
+	<br/>
+
+	  <#-- Adding new relationships -->
+	
+	  <#if editMode = "add">
+
+      <div>
+      
+      	 <div id="actionTypeOptions">
+				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup Page, Volume, or Instance
+				<input type="radio" name="actionType"  value="create">Create new Page, Volume, or Instance
+			</div>
+			<br/>
+			
+		
+			<div id="createNewLocation" style="display:none">
+				<div id="locationTypeSection" role="locationTypeSection">
+			  		<p>
+			  		<label for="locationType">Source Type </label>
+	  			   <select id="locationType" name="locationType" role="select">
+	  			   	    <option value="">Select source type</option>
+	               		<option value="https://w3id.org/arm/core/ontology/0.1/Page">Page</option>
+						<option value="https://w3id.org/arm/core/ontology/0.1/Volume">Volume</option>
+						<option value="http://id.loc.gov/ontologies/bibframe/Instance">Instance</option>
+	            	</select>
+			        </p>
+		  		</div>
+				 
+				 <p id="locationValueSection" style="display:none">
+	              <label for="locationValue">Value</label>
+	              <input size="60"  type="text" id="locationValue" name="locationValue" value="" />
+	    		 </p>
+	    		 
+	    		  <p id="locationTitleSection" style="display:none">
+	              <label for="locationTitle">Instance Preferred Title</label>
+	              <input size="60"  type="text" id="locationTitle" name="locationTitle" value="" />
+	    		 </p>
+	    	</div>
+	    		 
+	    		 
+	   		<div id="lookupLocation">
+	      
+	          <p templateId="inputAcSelector">
+	    		<label for="location">Source of the citation</label>
+	              <input type="hidden"  name="locationLabel" id="locationLabel"/>
+	              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
+	          </p>
+	
+	
+	          <div class="acSelection" acGroupName="location" >
+	              <p class="inline">
+	                  <label>${i18n().selected} source:</label>
+	                  <span class="acSelectionInfo"></span>
+	                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+	                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+	              </p>
+	              <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
+	              <#--  $ {flagClearLabelForExisting}="true"  -->
+	          </div>
+          </div>
+      </div>
+      
+     <#--  Source value -->
+     <p>
+              <label for="entryValue">Entry value</label>
+              <input size="60"  type="text" id="entryValue" name="entryValue" value="" />
+     </p>
+
    
       <#--  Note value -->
      <p>
@@ -119,37 +210,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
      </p>
      
      
-     <#--  Source value -->
-     <p>
-              <label for="entryValue">Bibliographic citation entry/source value</label>
-              <input size="60"  type="text" id="entryValue" name="entryValue" value="" />
-     </p>
      
-     <#--  at location -->
-      <#--  Autocomplete field for Subject Headings using LOC SH field -->
-
-      <div>
-      	
-      		  
-             
-          <p templateId="inputAcSelector">
-    		<label for="location">Entry source</label>
-              <input type="hidden"  name="locationLabel" id="locationLabel"/>
-              <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/autocomplete?tokenize=true"/>
-          </p>
-
-
-          <div class="acSelection" acGroupName="location" >
-              <p class="inline">
-                  <label>${i18n().selected} source:</label>
-                  <span class="acSelectionInfo"></span>
-                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
-                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-              </p>
-              <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
-          </div>
-      </div>
 
     
       
@@ -163,6 +224,10 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
        </p>
 
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
+    </#if> <#-- end if for form addition -->
+      <#if editMode = "edit">
+	  	</div> <#-- End formcontent div above -->
+	  </#if>
     </form>
 
 
@@ -187,7 +252,11 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         acMultipleTypes: 'true',
         acTypes: {location: 'https://w3id.org/arm/core/ontology/0.1/Page,https://w3id.org/arm/core/ontology/0.1/Volume,http://id.loc.gov/ontologies/bibframe/Text'},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-       	defaultNamespace:"${defaultNamespace}"
+       	defaultNamespace:"${defaultNamespace}",
+       	queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
+       	subjectURI:"${editConfiguration.subjectUri}",
+        predicateURI:"${editConfiguration.predicateUri}",
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -206,6 +275,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customForm.css" />')}
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/customFormWithAutocomplete.css" />')}
+${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarker/edit/forms/css/lookupWithContext.css" />')}
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',

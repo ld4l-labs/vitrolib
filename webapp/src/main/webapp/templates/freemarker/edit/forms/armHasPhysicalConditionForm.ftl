@@ -95,7 +95,8 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 		
 	<br/>
 	
-	
+	<!-- Hiding this section as not using currently -->
+	<!--
 	 <div>
           <p templateId="inputAcSelector">
     		<label for="location">Directly Precedes</label>
@@ -111,7 +112,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
               <input class="acUriReceiver" type="hidden" id="directlyPrecedes" name="directlyPrecedes" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
       
@@ -132,7 +132,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
               <input class="acUriReceiver" type="hidden" id="directlyFollows" name="directlyFollows" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
       
@@ -152,7 +151,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
               <input class="acUriReceiver" type="hidden" id="precedes" name="precedes" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
       
@@ -173,10 +171,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                   <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
               </p>
               <input class="acUriReceiver" type="hidden" id="follows" name="follows" value=""  />
-              <#--  $ {flagClearLabelForExisting}="true"  -->
           </div>
       </div>
-	
+		-->
  		    
     <div id="errors" name="errors"></div>
     
@@ -259,4 +256,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasPartBinding.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasPhysicalCondition.js"></script>')}

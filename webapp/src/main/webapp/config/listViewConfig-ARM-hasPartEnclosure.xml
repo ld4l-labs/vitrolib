@@ -30,6 +30,7 @@
                     }
                     }
     </query-select>
+    <template>propStatement-ARM-hasPartEnclosure.ftl</template>
 
     <!-- TODO Template
     <template>SOMETHING GOES IN HERE</template>

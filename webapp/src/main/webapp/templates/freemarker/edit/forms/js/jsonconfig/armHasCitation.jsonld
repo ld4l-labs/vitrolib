@@ -34,10 +34,17 @@
 		"?entry rdf:value ?entryValue .",
 		"?entry arm:atLocation ?location .",
 		"?location rdf:type ?locationType .",
-		"?location rdfs:label ?locationName . ",
 		"?objectVar bibframe:note ?note . ",
 		"?note rdf:type bibframe:Note .",
-		"?note rdf:value ?noteValue ."
+		"?note rdf:value ?noteValue .",
+		"?location rdf:value ?locationValue .",
+		"?location rdfs:label ?locationValue .",
+		"?location arm:hasPreferredTitle ?titleIndividual .",
+		"?titleIndividual rdf:type bibframe:Title .",
+		"?titleIndividual rdfs:label ?locationTitle .",
+		"?titleIndividual rdf:value ?locationTitle .",
+		"?titleIndividual bibframe:titleOf ?location .",
+		"?location rdfs:label ?locationTitle ."
       ],
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
     },
@@ -48,7 +55,7 @@
             "forms:FieldDependencies"
           ],
          
-          "customform:dependencies": ["entry, entryValue", "note, noteValue", "locationType, locationName"]
+          "customform:dependencies": ["entry, entryValue", "note, noteValue", "titleIndividual, locationTitle"]
     },
     {
       "@id": "customform:entry",
@@ -77,14 +84,6 @@
       "customform:varName": "location"
     },
      {
-      "@id": "customform:locationName",
-      "@type": [
-        "forms:FormComponent",
-        "forms:LiteralField"
-      ],
-      "customform:varName": "locationName"
-    },
-     {
       "@id": "customform:locationType",
       "@type": [
         "forms:FormComponent",
@@ -108,6 +107,31 @@
         "forms:LiteralField"
       ],
       "customform:varName": "noteValue"
+    },
+     {
+      "@id": "customform:locationValue",
+      "@type": [
+        "forms:FormComponent",
+        "forms:LiteralField"
+      ],
+      "customform:varName": "locationValue"
+    },
+     {
+      "@id": "customform:locationTitle",
+      "@type": [
+        "forms:FormComponent",
+        "forms:LiteralField"
+      ],
+      "customform:varName": "locationTitle"
+    },
+    {
+      "@id": "customform:titleIndividual",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "titleIndividual"
     }
    
    ]
