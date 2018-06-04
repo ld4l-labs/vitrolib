@@ -92,7 +92,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                  <div class='row'>
                      <div class='col-12'>
                          <div class='column conceptLabelInfo'>
-                            <h4>Markings </h4>
+                            <h4>Bindings </h4>
                          </div>
                          
                          <div class='column conceptRemoval'>&nbsp;

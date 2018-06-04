@@ -59,7 +59,7 @@
                 "?objectVarTitle rdfs:label ?titleValue . ", 
                 "?objectVarTitle rdf:value ?titleValue . "
             ],
-            "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+            "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> ."
         },       
         {
             "@id": "customform:partOfBoundCollection_objectVarTitle",

@@ -78,7 +78,7 @@ var armHasPartBinding = {
 	    		"SELECT DISTINCT ?object ?bindingType ?bindingTypeLabel  " + 
 	    		"WHERE {?subject ?predicate ?object ." + 
 	    		"?object crm:P2_has_type ?bindingType ." +
-	    		"OPTIONAL{ ?object skos:prefLabel ?bindingTypeLabel  .}}  " + 
+	    		"OPTIONAL{ ?bindingType skos:prefLabel ?bindingTypeLabel  .}}  " + 
 	    		"ORDER BY ?object ?bindingTypeLabel";
 	    		
 	    		//Replace subject with subject URI and predicate with predicate URI
