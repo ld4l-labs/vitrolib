@@ -17,7 +17,9 @@
         SELECT DISTINCT 
             ?activity ?activityLabel
             ?subclassLabel
-            ?agent ?agentLabel ?date
+            ?agent ?agentLabel
+            ?place ?placeLabel
+            ?date
         
         WHERE {
             ?subject ?property ?activity .
