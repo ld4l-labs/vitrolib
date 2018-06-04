@@ -112,5 +112,5 @@
         }
     </query-select>
     
-    <template>propStatement-hasCustodialEvent.ftl</template>
+    <template>propStatement-ARM-hasCustodialEvent.ftl</template>
 </list-view-config>
