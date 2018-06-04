@@ -26,22 +26,12 @@
             "customform:prefixes": "@prefix schema: <http://schema.org/> . "
         },
         {
-            "@id": "customform:priceSpecification_priceSpecification",
-            "@type": [
-                "forms:FormComponent",
-                "forms:UriField"
-            ],
-            "customform:varName": "objectVar",
-            "customform:mayUseNewResource": true,
-            "customform:queryForExistingValue": "PREFIX schema: <http://schema.org> SELECT ?priceSpecification WHERE {  ?subject ?predicate ?priceSpecification . ?priceSpecification a schema:PriceSpecification . } " 
-        },
-        {
             "@id": "customform:priceSpecification_price" ,
             "@type": [
                 "forms:FormComponent",
                 "forms:LiteralField"
-             ],
-             "customform:rangeDatatypeUri": {
+            ],
+            "customform:rangeDatatypeUri": {
                 "@id": "xsd:decimal"
             },
             "customform:varName": "price",

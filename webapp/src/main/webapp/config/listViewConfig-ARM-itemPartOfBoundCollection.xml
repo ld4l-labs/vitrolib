@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+ 
+    <query-select>
+        PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
+        PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
+        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        
+        SELECT DISTINCT 
+            ?boundCollection 
+            ?label
+            ?preferredTitle ?titleValue
+        
+        WHERE {        
+            ?subject ?property ?boundCollection .
+            ?boundCollection a arm:BoundCollection ;
+                rdfs:label ?label .
+
+            OPTIONAL {                
+                ?boundCollection arm:hasPreferredTitle ?title .
+                
+                ?preferredTitle a bf:Title ;
+                    rdf:value ?titleValue .
+            }
+        }
+    </query-select>
+    
+    <template>propStatement-ARM-itemPartOfBoundCollection.ftl</template>
+</list-view-config>
