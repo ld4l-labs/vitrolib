@@ -44,7 +44,7 @@
             "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?custodialHistory WHERE { ?subject ?predicate ?objectVar . ?objectVar a arm:BoundCollection ; ch:hasCustodialHistory ?custodialHistory . } "            
         },
               
-       {
+        {
             "@id": "customform:itemPartOfBoundCollection_optionalN3",
             "@type": [
                 "forms:OptionalN3Pattern",

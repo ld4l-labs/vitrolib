@@ -16,9 +16,11 @@
 
 ## These need to be generated from the code later, right now hardcoding in.
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" ;:listViewConfigFile "listViewConfig-ARM-itemPartOfBoundCollection.xml" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; 
+    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "itemPartOfBoundCollection.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-itemPartOfBoundCollection.xml" .
 
-#Also hardcoding this faux property for custodial history here for now
+# Also hardcoding this faux property for custodial history here for now
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#collateBySubclassAnnot> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayLimitAnnot> "0"^^<http://www.w3.org/2001/XMLSchema#int> .
