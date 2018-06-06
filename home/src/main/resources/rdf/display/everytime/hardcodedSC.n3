@@ -16,9 +16,9 @@
 
 ## These need to be generated from the code later, right now hardcoding in.
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; 
-    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armPartOfBoundCollection.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> . 
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armPartOfBoundCollection.jsonld" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319> :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
 
 # Also hardcoding this faux property for custodial history here for now
 
@@ -45,4 +45,4 @@
 
 #Hardcoding custom form to faux property
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "hasCustodialEvent.jsonld" ;:listViewConfigFile "listViewConfig-ARM-hasCustodialEvent.xml" .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig400> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasCustodialHistory.jsonld" ;:listViewConfigFile "listViewConfig-ARM-hasCustodialHistory.xml" .
