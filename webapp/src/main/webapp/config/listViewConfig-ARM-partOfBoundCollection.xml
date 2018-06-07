@@ -6,7 +6,7 @@
 <list-view-config>
  
     <query-select>
-        PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
+        PREFIX arm: &lt;https://w3id.org/arm/core/ontology/0.1/&gt;
         PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -24,7 +24,7 @@
             OPTIONAL {                
                 ?boundCollection arm:hasPreferredTitle ?title .
                 
-                ?preferredTitle a bf:Title ;
+                ?title a bf:Title ;
                     rdf:value ?titleValue .
             }
         }

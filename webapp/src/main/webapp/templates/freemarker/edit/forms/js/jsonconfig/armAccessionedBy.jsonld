@@ -30,17 +30,17 @@
                 "forms:LiteralField"
              ],
             "customform:varName": "value",
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?value WHERE { ?subject ?predicate ?accessionNumber . ?accessionNumber a arm:AccessionNumber ; rdf:value ?value . } "
+            "customform:queryForExistingValue": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?value WHERE { ?objectVar rdf:value ?value . } "
         },
         {
-            "@id": "customform:accessionNumber_item",
+            "@id": "customform:accessionedBy_item",
             "@type": [
                 "forms:FormComponent",
                 "forms:UriField"
              ],
             "customform:varName": "item",
             "customform:mayUseNewResource": false,
-            "customform:queryForExistingValue": "bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?item WHERE { ?item a bf:Item ; ch:hasCustodialHistory ?custodialHistory . ?subject bf:partOf ?custodialHistory . }"
+            "customform:queryForExistingValue": "bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?item WHERE { ?objectVar bf:identifies ?item . }"
         },
         
         {
@@ -63,13 +63,13 @@
             ],
             "customform:varName": "status",
             "customform:fieldOptons": {
-                "@id": "customform:statusFieldOptions"
+                "@id": "customform:accessionedBy_statusFieldOptions"               
             },
             "customform:mayUseNewResource": false,
-            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX status: <https://w3id.org/arm/core/vocabularies/status/0.1/> SELECT ?status WHERE { ?objectVar bf:status ?status . ?status a bf:Status . } "
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX status: <https://w3id.org/arm/core/vocabularies/status/0.1/> SELECT ?status WHERE { ?objectVar bf:status ?status . } "
         },
         {
-            "@id": "customform:statusFieldOptions",
+            "@id": "customform:accessionedBy_statusFieldOptions",
             "@type": [
                 "forms:ConstantList",
                 "forms:FieldOptions"            

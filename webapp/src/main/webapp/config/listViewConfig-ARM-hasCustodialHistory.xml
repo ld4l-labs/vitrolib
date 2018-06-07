@@ -7,7 +7,7 @@
     
     <query-construct>
         PREFIX activity: &lt;https://w3id.org/core/activity/0.1/&gt;
-        PREFIX ch: &lt;https://w3id.org/core/ontology/0.1/&gt;
+        PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
         PREFIX ch: &lt;https://w3id.org/custodial_history/ontology/0.1/&gt;
         PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
         PREFIX ch: &lt;https://w3id.org/core/custodial_history/ontology/0.1/&gt;
@@ -77,7 +77,7 @@
     
     <query-select>
         PREFIX activity: &lt;https://w3id.org/core/activity/0.1/&gt;
-        PREFIX ch: &lt;https://w3id.org/core/ontology/0.1/&gt;
+        PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
         PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
         PREFIX ch: &lt;https://w3id.org/core/custodial_history/ontology/0.1/&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
