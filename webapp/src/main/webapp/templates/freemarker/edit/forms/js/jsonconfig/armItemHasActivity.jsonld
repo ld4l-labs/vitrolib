@@ -18,8 +18,7 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-      	"?activity rdf:type activity:Activity .",
-      	"?activity activity:isActivityOf ?objectVar .",
+      	"?objectVar rdf:type activity:Activity .",
 		"?objectVar rdfs:label ?activityLabel . ",
 		"?objectVar bibframe:agent ?agent .",
 		"?agent a bibframe:Agent.  "
