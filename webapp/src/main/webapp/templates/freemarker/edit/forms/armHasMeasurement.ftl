@@ -6,7 +6,6 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
-<#assign defaultNamespace = editConfiguration.defaultNamespace />
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -54,6 +53,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
+<h2>Measurement Group</h2>
 
 <#if submissionErrors?has_content>
  
@@ -83,95 +83,124 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <section id="hasLCSHSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
+<form id="hasLCSH" class="customForm noIE67" action="${submitUrl}"  role="add subject heading" >
 
     <div id="formcontent">
 
-      <#--  Autocomplete field for Subject Headings using LOC SH field --> 
+      <#--  Autocomplete field for Subject Headings using LOC SH field -->
+
+     
+      <ul id="existingMeasurements" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Measurement Groups </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+       
 
 	<br/>
 
-
-	<h4 class="services">Add activity/role</h4>
+<#if editMode = "add">
+    <form id="addConceptForm" class="customForm" action="${submitUrl}">
+	<h4 class="services">Add Measurements</h4>
   
-  	<div>
-  		<p>
-  		<label for="activityType">Activity Type </label>
-  			   <select id="activityType" name="activityType" role="select">
-                
-            	</select>
-        </p>
-  		</div>
-  
- 
- 		
- 		
- 		<fieldset class="workform__fieldset">
-		<div> 
-			<div id="actionTypeOptions">
-				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
-				<input type="radio" name="actionType"  value="create">Create new agent
-			</div>
-			<br/>
-			
-			<div id="vocabSource">
-				<input checked="checked" type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-				<input type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-			</div>
-			
-	  		
-	        <p>
-	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="agent">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-	        </div>
-  		</div>
- 		
- 		
- 		
- 		
-  		</fieldset>
-  
-  		<div>
-      	<p>
-              <label for="activityDate">Date</label>
-              <input size="60"  type="text" id="activityDate" name="activityDate" value="" />
+   
+   <!--"groupDescription", "value1", "unit1", "dimension1"-->
+    <!--Group Description-->
+     <fieldset class="workform__fieldset">
+        <legend class="workform__legend"><strong>Measurement 1</legend>
+         <!-- Measurement 1-->
+     	<p>
+              <label for="value1">Numeric Value ${requiredHint}</label>
+              <input size="60"  type="text" id="value1" name="value1" value=""/>
      	</p>
-     	</div>
-  
-  		<div> 
-	        <p>
-	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
-	        </p>
+     	
+     	<div>
+      	<p>
+	      <label for="unit1">Unit ${requiredHint}</label>
+	           <select id="unit1" name="unit1" role="select" >
 	
-		
-	        <div class="acSelection" acGroupName="location">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
-	        </div>
-  		</div>
-  
-  
-  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
-    
-    <div id="errors" name="errors"></div>
-    
+	              </select>
+	        </p>
+	      </div>
+	     
+	      <div>
+      	<p>
+	      <label for="dimension1">Dimension ${requiredHint}</label>
+	           <select id="dimension1" name="dimension1" role="select" >
+	
+	              </select>
+	        </p>
+	      </div> 
+	      
+     </fieldset>
+     
+     <fieldset class="workform__fieldset">
+        <legend class="workform__legend"><strong>Measurement 2</legend>
+         <!-- Measurement 2-->
+     	<p>
+              <label for="value2">Numeric Value </label>
+              <input size="60"  type="text" id="value2" name="value2" value=""/>
+     	</p>
+     	
+     	<div>
+      	<p>
+	      <label for="unit2">Unit </label>
+	           <select id="unit2" name="unit2" role="select" >
+	
+	              </select>
+	        </p>
+	      </div>
+	     
+	      <div>
+      	<p>
+	      <label for="dimension2">Dimension </label>
+	           <select id="dimension2" name="dimension2" role="select" >
+	
+	              </select>
+	        </p>
+	      </div> 
+	      
+     </fieldset>
+     
+     <fieldset class="workform__fieldset">
+        <legend class="workform__legend"><strong>Measurement 3</legend>
+         <!-- Measurement 3-->
+     	<p>
+              <label for="value3">Numeric Value </label>
+              <input size="60"  type="text" id="value3" name="value3" value=""/>
+     	</p>
+     	
+     	<div>
+      	<p>
+	      <label for="unit3">Unit </label>
+	           <select id="unit3" name="unit3" role="select" >
+	
+	              </select>
+	        </p>
+	      </div>
+	     
+	      <div>
+      	<p>
+	      <label for="dimension3">Dimension </label>
+	           <select id="dimension3" name="dimension3" role="select" >
+	
+	              </select>
+	        </p>
+	      </div> 
+	      
+     </fieldset>
+   
    
 
 
@@ -184,7 +213,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
     </form>
 
-
+</#if>
 
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
@@ -209,10 +238,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
-        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
-
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -245,9 +271,8 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarke
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',      
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',              
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasActivity.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasMeasurement.js"></script>')}

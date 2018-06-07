@@ -6,7 +6,6 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
-<#assign defaultNamespace = editConfiguration.defaultNamespace />
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -54,6 +53,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
+<h2>Manage Associated Genre Forms</h2>
 
 <#if submissionErrors?has_content>
  
@@ -83,93 +83,55 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <section id="hasLCSHSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="hasActivity" class="customForm noIE67" action="${submitUrl}"  role="add activity" >
+<form id="hasLCSH" class="customForm noIE67" action="${submitUrl}"  role="add subject heading" >
 
     <div id="formcontent">
 
-      <#--  Autocomplete field for Subject Headings using LOC SH field --> 
+      <#--  Autocomplete field for Subject Headings using LOC SH field -->
+
+     
+      <ul id="existingConcepts" style="display:none">
+          	 <li class='conceptHeadings conceptsListContainer'>
+             <div class='container'>
+                 <div class='row'>
+                     <div class='col-12'>
+                         <div class='column conceptLabelInfo'>
+                            <h4>Genre Form </h4>
+                         </div>
+                         
+                         <div class='column conceptRemoval'>&nbsp;
+                         </div>
+                     </div>
+                 </div>
+             </div>
+    	 	</li>
+      </ul>
+       
 
 	<br/>
 
 
-	<h4 class="services">Add activity/role</h4>
+    <form id="addConceptForm" class="customForm" action="${submitUrl}">
+	<h4 class="services">Lookup and Add Genre Form</h4>
   
-  	<div>
-  		<p>
-  		<label for="activityType">Activity Type </label>
-  			   <select id="activityType" name="activityType" role="select">
-                
-            	</select>
-        </p>
-  		</div>
-  
- 
- 		
- 		
- 		<fieldset class="workform__fieldset">
-		<div> 
-			<div id="actionTypeOptions">
-				<input checked="checked" type="radio" name="actionType"  value="lookup">Lookup agent
-				<input type="radio" name="actionType"  value="create">Create new agent
-			</div>
-			<br/>
-			
-			<div id="vocabSource">
-				<input checked="checked" type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"> LOC Person
-				<input type="radio" lookupType="http://id.loc.gov/ontologies/bibframe/Agent" name="selectAcUrl"  value="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Forganization"> LOC Organization
-			</div>
-			
-	  		
-	        <p>
-	            <label for="agent"> Person or Organization${requiredHint}</label>
-	            <input class="acSelector" size="60"  type="text" id="agentName" name="agentName" acGroupName="agent"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames%2Fperson"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="agent">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="agent" name="agent" value=""  />
-	        </div>
-  		</div>
- 		
- 		
- 		
- 		
-  		</fieldset>
-  
-  		<div>
-      	<p>
-              <label for="activityDate">Date</label>
-              <input size="60"  type="text" id="activityDate" name="activityDate" value="" />
-     	</p>
-     	</div>
-  
-  		<div> 
-	        <p>
-	            <label for="location"> Location</label>
-	            <input class="acSelector" size="60"  type="text" id="locationName" name="locationName" acGroupName="location"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fgeonames.org"/>
-	        </p>
-	
-		
-	        <div class="acSelection" acGroupName="location">
-	            <p class="inline">
-	                <label>${i18n().selected}:</label>
-	                <span class="acSelectionInfo"></span>
-	                <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or} 
-	                <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
-	            </p>
-	            <input class="acUriReceiver" type="hidden" id="location" name="location" value=""  />
-	        </div>
-  		</div>
-  
-  
-  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
+    <p class="inline-search">
+        <input type="text" id="searchTerm" label="Search" class="acSelector" size="35" />
+        <input type="button" class="submit concept-search" id="searchButton" name="searchButton" value="${i18n().search_service_btn}"/>&nbsp;
+    </p>
     
+   
+    <input type="hidden" id="objectLabel" name="objectLabel" value="" />  <!-- Field value populated by JavaScript -->
+	  <div id="indicator" class="hidden">
+    	<img id="loadingIndicator" class="indicator" src="${urls.base}/images/indicatorWhite.gif" alt="${i18n().processing_indicator}"/>
+    </div>
+    <div id="selectedConcept" name="selectedConcept" class="acSelection">
+        <p class="inline">
+         
+        </p>
+        
+        <!-- Search results populated by JavaScript -->
+    </div>
+  
     <div id="errors" name="errors"></div>
     
    
@@ -209,10 +171,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         queryAJAXURL:"${urls.base}/ajax/sparqlQuery",
         subjectURI:"${editConfiguration.subjectUri}",
         predicateURI:"${editConfiguration.predicateUri}",
-        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit",
-        defaultNamespace:"${defaultNamespace}",
-        eraseLabelsForFields:["locationName", "agentName"]
-
+        primitiveEdit:"${urls.base}/edit/primitiveRdfEdit"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -245,9 +204,9 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/templates/freemarke
 
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/jquery-ui-1.12.1.min.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/customFormUtils.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',      
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/js/browserUtils.js"></script>',              
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasActivity.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContextConfig.js"></script>',
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/lookupWithContext.js"></script>')}

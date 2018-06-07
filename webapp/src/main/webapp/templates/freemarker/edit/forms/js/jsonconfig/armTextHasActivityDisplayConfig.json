@@ -1,0 +1,15 @@
+var displayConfig = {
+	"fieldOrder" :  ["activityType", "activityLabel", "agentType", "agentName" ],
+	"fieldDisplayProperties" : {
+		"activityLabel": {"label":"Activity Label", "hidden":"true"},		
+		"activityType": {
+			"label": "Activity Type", 
+			"constantList":[{"label":"Author","uri":"https://w3id.org/arm/core/activity/0.1/AuthorActivity"},
+			{"label":"Illustrator","uri":"https://w3id.org/arm/core/activity/0.1/IllustratorActivity"},
+			{"label":"Editor","uri":"https://w3id.org/arm/core/activity/0.1/EditorActivity"},
+			{"label":"Editor","uri":"https://w3id.org/arm/core/activity/0.1/EditorActivity"},
+			{"label":"Translator","uri":"https://w3id.org/arm/core/activity/0.1/TranslatorActivity"},
+			{"label":"Activity","uri":"https://w3id.org/arm/core/activity/0.1/Activity"}]
+		}
+	}
+};
