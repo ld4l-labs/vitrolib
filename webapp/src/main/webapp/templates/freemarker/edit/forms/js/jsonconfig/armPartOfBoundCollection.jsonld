@@ -35,7 +35,7 @@
         },
         {
             "@id": "customform:itemPartOfBoundCollection_custodialHistory",
-            "@type": [s
+            "@type": [
                 "forms:FormComponent",
                 "forms:UriField"
              ],
