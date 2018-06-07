@@ -10,7 +10,7 @@
         PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
-        PREFIX measure: &lt;https://w3id.org/arm/measurement/ontology/0.1//&gt;
+        PREFIX measure: &lt;https://w3id.org/arm/measurement/ontology/0.1/&gt;
         
         CONSTRUCT {
             ?subject ?property ?measurementGroup .
@@ -48,7 +48,7 @@
         PREFIX afn: &lt;http://jena.apache.org/ARQ/function#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
-        PREFIX measure: &lt;https://w3id.org/arm/measurement/ontology/0.1//&gt;
+        PREFIX measure: &lt;https://w3id.org/arm/measurement/ontology/0.1/&gt;
         
         SELECT DISTINCT 
             ?measurementGroup 
