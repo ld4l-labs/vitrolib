@@ -27,21 +27,6 @@
     :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
 
 
-## Custom form and list view for faux property of bf:hasPart (arm:BoundCollection to bf:Item)
-
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig313>   
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armBoundCollectionHasPartItem.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-BoundCollectionHasPartItem.xml" .
-
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn313>
-    :configContextFor bf:hasPart ;
-    :hasConfiguration local:fpgenconfig313 ;
-    :qualifiedBy bf:Item ;
-    :qualifiedByDomain arm:BoundCollection ; 
-    a :ConfigContext .
-
-
 
 ##### CUSTODIAL HISTORY #####
 
