@@ -5,76 +5,6 @@
 
 <list-view-config>
     
-    <query-construct>
-        PREFIX activity: &lt;https://w3id.org/core/activity/0.1/&gt;
-        PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
-        PREFIX ch: &lt;https://w3id.org/custodial_history/ontology/0.1/&gt;
-        PREFIX bf: &lt;http://id.loc.gov/ontologies/bibframe/&gt;
-        PREFIX ch: &lt;https://w3id.org/core/custodial_history/ontology/0.1/&gt;
-        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;        
-
-        CONSTRUCT { 
-            ?subject ?property ?objectVar .
-            
-            ?objectVar bf:hasPart ?custodialEvent .
-            
-            ?custodialEvent a ch:CustodialEvent ;
-                vitro:mostSpecificType ?eventType ;                
-                rdfs:label ?eventName ;
-                arm:atLocation ?eventLocation ;
-                bf:date ?eventDate .
-                                       
-            ?eventLocation rdfs:label ?eventLocationName .
-            
-            ?activity bf:agent ?agent ;
-                arm:atLocation ?activityLocation ;
-                bf:date ?activityDate .
-                
-            ?agent rdfs:label ?agentName .
-            
-            ?activityLocation rdfs:label ?activityLocationName .
-         }
-         
-         WHERE { {
-             ?subject ?property ?objectVar .
-             ?objectVar bf:hasPart ?custodialEvent .
-             ?custodialEvent a ch:CustodialEvent ;
-                 vitro:mostSpecificType ?eventType .         
-         
-         } UNION {
-             ?subject ?property ?objectVar .
-             ?objectVar bf:hasPart ?custodialEvent .
-             ?custodialEvent a ch:CustodialEvent ;
-                 vitro:mostSpecificType ?eventType ;
-                 rdfs:label ?eventName .
-         
-         } UNION {
-             ?subject ?property ?objectVar .
-             ?objectVar bf:hasPart ?custodialEvent .
-             ?custodialEvent a ch:CustodialEvent ;
-                 vitro:mostSpecificType ?eventType ; 
-                 arm:atLocation ?eventLocation .
-                 
-         } UNION {
-             ?subject ?property ?objectVar .
-             ?objectVar bf:hasPart ?custodialEvent .
-             ?custodialEvent a ch:CustodialEvent ;
-                 vitro:mostSpecificType ?eventType ; 
-                 arm:atLocation ?eventLocation .  
-             ?eventLocation rdfs:label ?eventLocationName .
-
-        } UNION {
-            ?subject ?property ?objectVar .
-            ?objectVar bf:hasPart ?custodialEvent .
-            ?custodialEvent a ch:CustodialEvent ;
-                vitro:mostSpecificType ?eventType ;
-                bf:date ?eventDate .
-        } 
-    }              
-    </query-construct>
-    
     <query-select>
         PREFIX activity: &lt;https://w3id.org/core/activity/0.1/&gt;
         PREFIX arm: &lt;https://w3id.org/core/ontology/0.1/&gt;
@@ -92,8 +22,8 @@
             ?eventDate
         
         WHERE {        
-            ?subject ?property ?objectVar .
-            ?objectVar bf:hasPart ?custodialEvent .
+            ?subject ?property ?custodialHistory .
+            ?custodialHistory bf:hasPart ?custodialEvent .
             ?custodialEvent a ch:CustodialEvent ;
                 vitro:mostSpecificType ?eventType .
 
