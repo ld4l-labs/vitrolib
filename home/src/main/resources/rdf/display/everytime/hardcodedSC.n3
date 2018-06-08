@@ -143,8 +143,8 @@
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig402>   
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasPriceSpecification.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-hasPriceSpecification.xml" .
+    vitro:customConfigFileAnnot "armPriceSpecification.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-priceSpecification.xml" .
  
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn402>
     :configContextFor schema:priceSpecification ;
