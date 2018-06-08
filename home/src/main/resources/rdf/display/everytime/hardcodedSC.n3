@@ -26,7 +26,14 @@
     vitro:customConfigFileAnnot "armPartOfBoundCollection.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
 
-
+## 
+# NOTE: Manually changed this line in ARMItem.n3:
+# <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn313> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#qualifiedByDomain> <http://id.loc.gov/ontologies/bibframeItem> .
+# to:
+# <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn313> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#qualifiedByDomain> <https://w3id.org/arm/core/ontology/0.1/BoundCollection> .
+# so that only BoundCollections, not other Items, can have Item parts. This change will be wiped out when the file is regenerated, so need to fix the SHACL. See https://github.com/LD4P/arm/issues/102 and
+# https://github.com/ld4l-labs/vitrolib/issues/211.
+##
 
 ##### CUSTODIAL HISTORY #####
 
