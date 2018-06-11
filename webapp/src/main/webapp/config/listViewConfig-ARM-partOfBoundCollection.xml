@@ -14,7 +14,7 @@
         SELECT DISTINCT 
             ?boundCollection 
             ?label
-            ?preferredTitle ?titleValue
+            ?titleValue
         
         WHERE {        
             ?subject ?property ?boundCollection .
@@ -30,5 +30,5 @@
         }
     </query-select>
     
-    <template>propStatement-ARM-itemPartOfBoundCollection.ftl</template>
+    <template>propStatement-ARM-partOfBoundCollection.ftl</template>
 </list-view-config>

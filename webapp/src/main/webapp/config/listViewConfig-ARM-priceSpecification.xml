@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    
+    <query-select>
+        PREFIX schema: &lt;http://schema.org/&gt;
+        
+        SELECT DISTINCT 
+            ?priceSpecification
+            ?price
+            ?priceCurrency
+        
+        WHERE {        
+            ?subject ?property ?priceSpecification .
+            
+            ?priceSpecification schema:price ?price ;               
+                schema:priceCurrency ?priceCurrency .
+        }
+    </query-select>
+    
+    <template>propStatement-ARM-priceSpecification.ftl</template>
+</list-view-config>

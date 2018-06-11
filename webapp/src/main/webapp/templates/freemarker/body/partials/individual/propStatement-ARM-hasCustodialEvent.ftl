@@ -11,6 +11,7 @@
      next statement -->
 <#macro showCustodialEvent statement>
 
+    <#local eventLabel=statement.>
     <#local eventLabel>${eventType}<#if statement.eventLabel>: ${statement.eventName}</#if></#local>
     <a href="${profileUrl(statement.uri("custodialEvent"))}" title="${eventLabel}">${eventLabel}</a>
     <#if statement.eventLocation>
