@@ -168,7 +168,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
   		</div>
   
   
-  		<input name="activityLabel" id="activityLabel" type="hidden" value="" />
+  		<input name="activityLabel" id="activityLabel" type="hidden" value="Activity" />
     
     <div id="errors" name="errors"></div>
     
