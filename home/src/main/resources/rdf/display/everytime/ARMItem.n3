@@ -42,7 +42,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Binding" .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ObjectPropertyDisplayConfig> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#collateBySubclassAnnot> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayLimitAnnot> "0"^^<http://www.w3.org/2001/XMLSchema#int> .
@@ -53,7 +53,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "Other enclosure" .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#propertyGroup> <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig315> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#ObjectPropertyDisplayConfig> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig316> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#collateBySubclassAnnot> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig316> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayLimitAnnot> "0"^^<http://www.w3.org/2001/XMLSchema#int> .

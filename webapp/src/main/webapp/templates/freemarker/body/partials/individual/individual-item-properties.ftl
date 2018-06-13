@@ -46,7 +46,8 @@
                     </h3>
                 <#elseif rangeClass == "Name" && property.statements?has_content && editable >
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /> </h3>
-                <#elseif rangeClass == "Title" && property.statements?has_content && editable >
+                  <#-- We are actually ok with rangeClass title for some things, used to rangeClass == "Title" -->
+                <#elseif property.uri == "https://w3id.org/arm/core/ontology/0.1/hasPreferredTitle" && property.statements?has_content && editable >
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /> </h3>
 				<#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
 					<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
