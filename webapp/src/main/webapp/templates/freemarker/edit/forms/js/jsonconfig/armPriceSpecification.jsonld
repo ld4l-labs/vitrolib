@@ -35,7 +35,7 @@
                 "@id": "xsd:decimal"
             },
             "customform:varName": "price",
-            "customform:queryForExistingValue": "PREFIX schema: <http://schema.org> SELECT ?priceSpecification WHERE {  ?subject ?predicate ?priceSpecification . ?priceSpecification a schema:PriceSpecification ; schema:price ?price . } " 
+            "customform:queryForExistingValue": "PREFIX schema: <http://schema.org> SELECT ?price WHERE {  ?objectVar schema:price ?price . } " 
         },
         {
             "@id": "customform:priceSpecification_priceCurrency" ,
@@ -44,15 +44,7 @@
                 "forms:LiteralField"
              ],
             "customform:varName": "priceCurrency",
-            "customform:queryForExistingValue": "PREFIX schema: <http://schema.org> SELECT ?priceCurrency WHERE {  ?subject ?predicate ?priceSpecification . ?priceSpecification a schema:PriceSpecification ; schema:priceCurrency ?priceCurrency . } " 
-        },
-        {
-          "@id": "customform:priceSpecification_dependencies",
-          "@type": [
-            "forms:FormComponent",
-            "forms:FieldDependencies"
-          ],         
-          "customform:dependencies": ["priceSpecification, price, priceCurrency"]
+            "customform:queryForExistingValue": "PREFIX schema: <http://schema.org> SELECT ?priceCurrency WHERE {  ?objectVar schema:priceCurrency ?priceCurrency . } " 
         }
     ]
 }

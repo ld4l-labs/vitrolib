@@ -2,11 +2,11 @@ var displayConfig = {
     "fieldOrder":  ["objectVarLabel", "titleValue"],
     "fieldDisplayProperties": {
         "objectVarLabel": {
-            "label": "Label (required)",
+            "label": "Label (required). Recommended to be the title, if one exists; otherwise a cataloger-supplied value identifying or briefly describing the resource.",
             "description": "Label for the bound collection (required). Recommended to be the title, if one exists; otherwise a cataloger-supplied value identifying or briefly describing the resource." 
         },
         "titleValue": {
-            "label": "Title", 
+            "label": "Title, if one exists", 
             "description": "Title of the bound collection, if one exists." 
         }
     }

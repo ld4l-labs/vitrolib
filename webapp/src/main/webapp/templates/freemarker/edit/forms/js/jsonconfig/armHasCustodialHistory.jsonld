@@ -1,0 +1,124 @@
+{ 
+    "@context": {
+        "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#",
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#"
+    },
+    "@graph": [
+        {
+            "@id": "customform:hasCustodialEvent_requiredN3",
+            "@type": [
+                "forms:RequiredN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+                
+                "?subject ?predicate ?custodialHistory . ",
+                
+                "?custodialHistory a ch:CustodialHistory . ",
+                "?custodialHistory bf:hasPart ?custodialEvent . ",
+                        
+                "?custodialEvent a ch:CustodialEvent . ",
+                "?custodialEvent a ?eventType . ",
+                "?custodialEvent rdfs:label ?eventLabel . ",
+
+                "?custodialEvent bf:partOf ?custodialHistory . "
+            ],
+            "customform:prefixes": "@prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+        },
+        {
+            "@id": "customform:hasCustodialEvent_custodialHistory",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "custodialHistory",
+            "customform:queryForExistingValue": "PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?custodialHistory WHERE {  ?subject ?predicate ?custodialHistory . ?custodialHistory a ch:CustodialHistory . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_custodialEvent",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "custodialEvent",
+            "customform:mayUseNewResource": true,
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?custodialEvent WHERE {  ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventType",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "eventType",
+            "customform:fieldOptions": {
+                "@id": "customform:hasCustodialEvent_eventTypeFieldOptions"
+            },
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  SELECT ?eventType WHERE {  ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent ; vitro:mostSpecificType ?eventType . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventTypeFieldOptions",
+            "@type": [
+                "forms:ChildVClassesWithParent",
+                "forms:FieldOptions"
+            ],
+            "customform:classUri": {
+                "@id": "https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"
+            }
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventLabel",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "eventLabel",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?eventLabel WHERE { ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent ; rdfs:label ?eventLabel . } "       
+        },
+            
+        {
+            "@id": "customform:hasCustodialEvent_optionalN3",
+            "@type": [
+                "forms:OptionalN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+                
+                "?custodialEvent bf:date ?eventDate . ",                
+                "?custodialEvent arm:atLocation ?eventLocation . ",
+                
+                "?eventLocation rdfs:label ?eventLocationName . ",
+                "?eventLocation a gn:Feature . "
+            ],
+            "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix gn: <http://www.geonames.org/ontology#> @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventDate",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+            ],
+            "customform:varName": "eventDate",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?eventDate WHERE { ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent ; bf:date ?eventDate . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventLocation",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "eventLocation",
+            "customform:mayUseNewResource": false,
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?eventLocation WHERE { ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent ; arm:atLocation ?eventLocation . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_eventLocationName",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+            ],
+            "customform:varName": "eventLocationName",
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?eventName WHERE { ?objectVar bf:hasPart ?custodialEvent . ?custodialEvent a ch:CustodialEvent ; arm:atLocation ?eventLocation . ?eventLocation rdfs:label ?eventName . } "       
+        }
+    ]
+}

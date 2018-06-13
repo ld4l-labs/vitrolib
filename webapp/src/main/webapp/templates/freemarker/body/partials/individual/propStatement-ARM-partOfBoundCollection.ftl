@@ -11,10 +11,8 @@
      next statement -->
 <#macro showBoundCollection statement>
 
-    <#if statement.titleValue??>
-        <a href="${profileUrl(statement.uri("preferredTitle"))}" title="${statement.titleValue}">${statement.titleValue}</a>  
-    <#else>
-        ${statement.label}
-    </#if>
+    <#local label=statement.titleValue!statement.label>
+
+    <a href="${profileUrl(statement.boundCollection)}" title="${label}">${label}</a>  
 
 </#macro>

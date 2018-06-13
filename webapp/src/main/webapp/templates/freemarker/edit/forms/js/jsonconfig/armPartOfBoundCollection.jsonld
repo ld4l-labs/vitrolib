@@ -5,7 +5,7 @@
     },
     "@graph": [
         {
-            "@id": "customform:partOfBoundCollection_requiredN3",
+            "@id": "customform:armPartOfBoundCollection_requiredN3",
             "@type": [
                 "forms:RequiredN3Pattern",
                 "forms:FormComponent"
@@ -25,27 +25,27 @@
             "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . "
         },
         {
-            "@id": "customform:partOfBoundCollection_objectVarLabel",
+            "@id": "customform:armPartOfBoundCollection_objectVarLabel",
             "@type": [
                 "forms:FormComponent",
                 "forms:LiteralField"
              ],
             "customform:varName": "objectVarLabel",
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdfs: <rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?objectVarLabel WHERE { ?subject ?predicate ?objectVar . ?objectVar a arm:BoundCollection ; rdfs:label ?objectVarLabel . } "     
+            "customform:queryForExistingValue": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?objectVarLabel WHERE { ?objectVar rdfs:label ?objectVarLabel . } "     
         },
         {
-            "@id": "customform:partOfBoundCollection_custodialHistory",
+            "@id": "customform:armPartOfBoundCollection_custodialHistory",
             "@type": [
                 "forms:FormComponent",
                 "forms:UriField"
              ],
             "customform:varName": "custodialHistory",
             "customform:mayUseNewResource": true, 
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?custodialHistory WHERE { ?subject ?predicate ?objectVar . ?objectVar a arm:BoundCollection ; ch:hasCustodialHistory ?custodialHistory . } "            
+            "customform:queryForExistingValue": "PREFIX ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> SELECT ?custodialHistory WHERE { ?objectVar ch:hasCustodialHistory ?custodialHistory . } "            
         },
               
-       {
-            "@id": "customform:partOfBoundCollection_optionalN3",
+        {
+            "@id": "customform:armPartOfBoundCollection_optionalN3",
             "@type": [
                 "forms:OptionalN3Pattern",
                 "forms:FormComponent"
@@ -62,23 +62,31 @@
             "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix bf: <http://id.loc.gov/ontologies/bibframe/> ."
         },       
         {
-            "@id": "customform:partOfBoundCollection_objectVarTitle",
+            "@id": "customform:armPartOfBoundCollection_objectVarTitle",
             "@type": [
                 "forms:FormComponent",
                 "forms:UriField"
             ],
             "customform:varName": "objectVarTitle",
             "customform:mayUseNewResource": true,
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?objectVarTitle WHERE { ?subject ?predicate ?objectVar . ?objectVar a arm:BoundCollection ; arm:hasPreferredTitle ?objectVarTitle . } "
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> SELECT ?objectVarTitle WHERE { ?objectVar arm:hasPreferredTitle ?objectVarTitle . } "
         },
         {
-            "@id": "customform:partOfBoundCollection_titleValue",
+            "@id": "customform:armPartOfBoundCollection_titleValue",
             "@type": [
                 "forms:FormComponent",
                 "forms:LiteralField"
              ],
             "customform:varName": "titleValue",
-            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?titleValue WHERE { ?subject ?predicate ?objectVar . ?objectVar a arm:BoundCollection ; arm:hasPreferredTitle ?objectVarTitle . ?objectVarTitle rdf:value ?titleValue . } "     
+            "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?titleValue WHERE { ?objectVar arm:hasPreferredTitle ?objectVarTitle . ?objectVarTitle rdf:value ?titleValue . } "     
+        },
+        {
+          "@id": "customform:armPartOfBoundCollection_dependencies",
+          "@type": [
+            "forms:FormComponent",
+            "forms:FieldDependencies"
+          ],      
+          "customform:dependencies": ["objectVarTitle, titleValue"]
         }
     ]
 }

@@ -2,11 +2,11 @@ var displayConfig = {
     "fieldOrder":  ["price", "priceCurrency"],
     "fieldDisplayProperties": {
         "price": {
-            "label": "Amount", 
+            "label": "Numeric value of the price (required)", 
             "description": "Numeric value of the price." 
         },
         "priceCurrency": {
-            "label": "Currency", 
+            "label": "Currency formatted as three-digit ISO 4217 currency code (required)", 
             "description": "Three-digit ISO 4217 currency code."
         }
     }

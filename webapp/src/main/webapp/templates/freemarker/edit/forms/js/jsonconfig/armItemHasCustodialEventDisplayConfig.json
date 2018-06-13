@@ -1,0 +1,26 @@
+var displayConfig = {
+    "fieldOrder":  ["eventType", "eventLabel", "eventDate", "eventLocation", "eventLocationName"],
+    "fieldDisplayProperties": {
+        "eventType": {
+            "label": "Custodial event type (required). Custodial events include both states (e.g., ownership) and transitions (e.g., sale).", 
+            "description": "Custodial events include both states (e.g., ownership) and transitions (e.g., sale)." 
+        },
+        "eventLabel": {
+            "label": "Custodial event name or label (required)", 
+            "description": "Specify a name or label for the custodial event." 
+        },
+        "eventDate": {
+            "label": "Date or date interval (optional). EDTF format recommended.", 
+            "description": "Date or date interval of the custodial event. EDTF format recommended."
+        },
+        "eventLocation": {
+            "label": "Location (optional)", 
+            "description": "Location of the custodial event."                        
+        },
+        "eventLocationName": {
+            "label": "Location name (optional)", 
+            "autocomplete": true,
+            "labelFieldFor": "eventLocation"                             
+        }
+    }
+};
