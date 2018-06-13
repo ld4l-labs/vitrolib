@@ -35,3 +35,12 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig312> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasGenreForm.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasGenreForm.ftl" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig325> :listViewConfigFile "listViewConfig-ARM-hasActivity.xml"^^xsd:string ;  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string>  ;<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armItemHasActivity.jsonld" ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasActivity.ftl" .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig334> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasMeasurementGroup.jsonld"; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasMeasurement.ftl" .
+
+
+##Hardcoding now, but to be generated later
+
+#item
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> :listViewConfigFile "listViewConfig-ARM-hasPartEnclosure.xml"^^xsd:string .
+#instance 
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> :listViewConfigFile "listViewConfig-ARM-hasPartEnclosure.xml"^^xsd:string .
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasPartEnclosure.jsonld" ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasPartEnclosureForm.ftl" . 

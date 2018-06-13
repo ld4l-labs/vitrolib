@@ -15,6 +15,7 @@
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
         PREFIX rdf: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+        PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
                     
                     SELECT DISTINCT 
                     ?otherEnclosure ?subclassLabel
@@ -22,12 +23,14 @@
                     WHERE {
                     ?subject ?property ?otherEnclosure .
                     ?otherEnclosure a arm:Enclosure .
+                    ?otherEnclosure vitro:mostSpecificType ?subclass .
                     
                     OPTIONAL {
-                    ?otherEnclosure vitro:mostSpecificType ?subclass .
-                    ?subclass rdfs:subClassOf arm:Enclosure ;
-                    rdfs:label ?subclassLabel .
+	                    ?subclass rdfs:subClassOf arm:Enclosure ;
+	                    rdfs:label ?subclassLabel .
                     }
+                    
+                    FILTER(str(?subclass) != "https://w3id.org/arm/core/ontology/0.1/Binding")
                     }
     </query-select>
     <template>propStatement-ARM-hasPartEnclosure.ftl</template>
