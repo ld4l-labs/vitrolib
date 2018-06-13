@@ -1,0 +1,45 @@
+var displayConfig = {
+    "fieldOrder":  ["titleType", "titleValue", "mainTitle", "subtitle", "partNumber", "partName"],
+    "fieldDisplayProperties": {
+        "titleType": {
+            "label": "Title Type (required)", 
+            "constantList":[
+                {
+                    "label": "Title",
+                    "uri": "http://id.loc.gov/ontologies/bibframe/Title"
+                },
+                {
+                    "label": "Parallel Title Proper",
+                    "uri": "http://id.loc.gov/ontologies/bibframe/ParallelTitle"
+                },
+                {
+                    "label": "Abbreviated Title",
+                    "uri": "http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle"
+                },
+                {
+                    "label": "Collective Title",
+                    "uri":"http://id.loc.gov/ontologies/bibframe/CollectiveTitle"
+                },
+                {
+                    "label": "Key Title",
+                    "uri":"http://id.loc.gov/ontologies/bibframe/KeyTitle"
+                }
+           ]
+        },
+        "titleValue": {
+            "label": "Title Value (required)"
+        },
+        "mainTitle": {
+            "label": "Main Title (optional)" 
+        },
+        "subtitle": {
+            "label": "Subtitle (optional)"
+        },
+        "partNumber": {
+            "label": "Part Number (optional)"
+        },
+        "partName": {
+            "label": "Part Name (optional)"
+        }
+    }
+};

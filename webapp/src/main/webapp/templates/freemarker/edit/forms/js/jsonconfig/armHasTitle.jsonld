@@ -1,0 +1,106 @@
+{ 
+    "@context": {
+        "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#",
+        "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#"
+    },
+    "@graph": [
+        {
+            "@id": "customform:hasTitle_requiredN3",
+            "@type": [
+                "forms:RequiredN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [
+            
+                "?subject ?predicate ?objectVar . ",
+                        
+                "?objectVar a bf:Title . ",
+                "?objectVar a ?titleType . ",
+                "?objectVar rdfs:label ?titleValue . ",
+                "?objectVar rdf:value ?titleValue . "
+            ],
+            "customform:prefixes": "@prefix bf: <http://id.loc.gov/ontologies/bibframe/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  . "
+        },
+        {
+            "@id": "customform:hasTitle_titleType",
+            "@type": [
+                "forms:FormComponent",
+                "forms:UriField"
+             ],
+            "customform:varName": "titleType",
+            "mayUseNewResource": false,
+            "customform:fieldOptions": {
+                "@id": "customform:hasTitle_titleTypeFieldOptions"
+            },
+            "customform:queryForExistingValue": "PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> SELECT ?titleType WHERE { ?objectVar vitro:mostSpecificType ?titleType . } "
+        },
+        {
+            "@id": "customform:hasTitle_titleTypeFieldOptions",
+            "@type": [
+                "forms:FieldOptions",
+                "forms:ConstantList"
+            ]
+        },
+        {
+            "@id": "customform:hasTitle_titleValue",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "titleValue",
+            "customform:queryForExistingValue": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT ?titleValue WHERE { ?objectVar rdf:value ?titleValue . }"
+        },
+        
+        {
+            "@id": "customform:hasTitle_optionalN3",
+            "@type": [
+                "forms:OptionalN3Pattern",
+                "forms:FormComponent"
+            ],
+            "customform:pattern": [            
+                "?objectVar bf:mainTitle ?mainTitle . ",
+                "?objectVar bf:subtitle ?subtitle . ",
+                "?objectVar bf:partNumber ?partNumber . ",   
+                "?objectVar bf:partName ?partName . "
+             
+            ],
+            "customform:prefixes": "@prefix bf: <http://id.loc.gov/ontologies/bibframe/> . "
+        },
+        {
+            "@id": "customform:hasTitle_mainTitle",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "mainTitle",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?mainTitle WHERE { ?objectVar bf:mainTitle ?mainTitle . }"
+        },
+        {
+            "@id": "customform:hasTitle_subtitle",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "subtitle",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?subtitle WHERE { ?objectVar bf:subtitle ?subtitle . }"
+        },
+        {
+            "@id": "customform:hasTitle_partNumber",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "partNumber",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?partNumber WHERE { ?objectVar bf:partNumber ?partNumber . }"
+        },
+        {
+            "@id": "customform:hasTitle_partName",
+            "@type": [
+                "forms:FormComponent",
+                "forms:LiteralField"
+             ],
+            "customform:varName": "partName",
+            "customform:queryForExistingValue": "PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> SELECT ?partName WHERE { ?objectVar bf:partName ?partName . }"
+        }
+    ]
+}

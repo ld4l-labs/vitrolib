@@ -95,6 +95,14 @@
             ],
             "customform:varName": "eventLocationName",
             "customform:queryForExistingValue": "PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> PREFIX bf: <http://id.loc.gov/ontologies/bibframe/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?eventName WHERE { ?objectVar arm:atLocation ?eventLocation . ?eventLocation rdfs:label ?eventName . } "       
+        },
+        {
+            "@id": "customform:hasCustodialEvent_dependencies",
+            "@type": [
+              "forms:FormComponent",
+              "forms:FieldDependencies"
+            ],         
+            "customform:dependencies": ["eventLocation, eventLocationName"]
         }
     ]
 }
