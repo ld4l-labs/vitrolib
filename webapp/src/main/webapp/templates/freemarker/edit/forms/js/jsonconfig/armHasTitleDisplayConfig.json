@@ -9,7 +9,7 @@ var displayConfig = {
                     "uri": "http://id.loc.gov/ontologies/bibframe/Title"
                 },
                 {
-                    "label": "Parallel Title",
+                    "label": "Parallel Title Proper",
                     "uri": "http://id.loc.gov/ontologies/bibframe/ParallelTitle"
                 },
                 {

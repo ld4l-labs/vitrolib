@@ -19,43 +19,47 @@
 
 ##### TITLES #####
 
-# TODO - custom list view needed? - probably not - just display the title label
-
 # Custom form for Item title
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig320>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Item preferred title
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig329>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Instance title
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Instance preferred title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig306>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig307>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Work title
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig211>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Work preferred title
 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig282>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
+    :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
     
     
 
