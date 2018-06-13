@@ -6,7 +6,7 @@
 <#import "lib-vitro-form.ftl" as lvf>
 
 <#--Retrieve certain edit configuration information-->
-<#assign defaultNamespace = editConfiguration.defaultNamespace />
+<#assign defaultNamespace = editConfiguration.defaultNamespace>
 <#assign editMode = editConfiguration.pageData.editMode />
 <#assign newUriSentinel = "" />
 <#if editConfigurationConstants?has_content>
@@ -42,7 +42,6 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <#--  --assign pubTypeLiteralOptions = editConfiguration.pageData.pubType /-->
 <#-- In case of submission error, may already have publication type or title - although latter not likely, but storing values to be on safe side -->
 <#--  --assign publicationTypeValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "pubType") /-->
-<#assign titleValue = lvf.getFormFieldValue(editSubmission, editConfiguration, "title") />
 
 
 <#--  Get the configfile name and include below -->
@@ -59,7 +58,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 </#if>
 
 <#--  What to replace publication entry for with? Display name of property-->
-<h2>New Text Work/Instance/Item (ARM) </h2>
+<h2>${titleVerb} Subject Heading</h2>
 
 <#if submissionErrors?has_content>
   <#--  Some custom handling -->
@@ -105,93 +104,42 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
  <div>Error</div>
 <#else>
 
-<section id="addNewWork" role="region">
+<section id="hasLCSHSection" role="region">
 
 <@lvf.unsupportedBrowser urls.base/>
-<form id="addNewWork" class="customForm noIE67" action="${submitUrl}"  role="add work" >
+<form id="hasLCSH" class="customForm noIE67" action="${submitUrl}"  role="add subject heading" >
 
     <div id="formcontent">
-    <#--  New Work fields -->
-      <#--  Title -->
-     <p>
-              <label for="title">Preferred Title value${requiredHint}</label>
-              <input size="60"  type="text" id="title" name="title" value="" />
-     </p>
 
-     <#--  Type: type of title -->
-     <div>
-      <p>
-      <label for="titleType">Preferred Title Type ${requiredHint}</label>
-           <select id="titleType" name="titleType" role="select">
+      <#--  Autocomplete field for Subject Headings using LOC SH field -->
 
-              </select>
-        </p>
+      <div>
+      	
+      		  
+             
+          <p templateId="inputAcSelector">
+    		<label for="lcshTerm">LC Subject Heading</label>
+              <input type="hidden"  name="lcshLabel" id="lcshLabel"/>
+              <input class="acSelector" size="60"  type="text" id="lcshTerm" name="lcshTerm" acGroupName="lcshGroup"  value="" acUrl="${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fsubjects"/>
+          </p>
+
+
+          <div class="acSelection" acGroupName="lcshGroup" templateId="literalSelection">
+              <p class="inline">
+                  <label>${i18n().selected} Subject:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="objectVar" name="objectVar" value=""  />
+              <#--  $ {flagClearLabelForExisting}="true"  -->
+          </div>
       </div>
       
-      <#--  Potentially include bf:carrier here? but no subclasses for text-->
       
-      <#-- Language -->
-      
-        <div>
-      <p>
-      <label for="language">Language </label>
-           <select id="language" name="language" role="select">
+      <#-- '${urls.base}/conceptSearchService?source=http%3A%2F%2Fid.loc.gov%2Fauthorities%2Fnames' -->
 
-              </select>
-        </p>
-      </div>
-    <#--  Autocomplete field for AUTHOR using LOC NAF field -->
-
-     
       <#--  Instance fields are in their own field set -->
-      <fieldset class="workform__fieldset">
-        <legend class="workform__legend"><strong>Has Instance</strong> (RDA Manifestation) </legend>
-
-        <div>
-          <p>
-            <label for="instanceTitle">Instance Preferred Title</label>
-            <input size="60"  type="text" id="instanceTitle" name="instanceTitle" value="" />
-          </p>
-        </div>
-        
-          <div>
-      <p>
-      <label for="instanceTitleType">Instance Preferred Title Type ${requiredHint}</label>
-           <select id="instanceTitleType" name="instanceTitleType" role="select">
-
-              </select>
-        </p>
-      </div>
-        
-      
-
-      </fieldset>
-      
-      
-      <#------------ Item Form ----------------->
-     <fieldset class="workform__fieldset">
-        <legend class="workform__legend"><strong>Has Item</strong>  </legend>
-
-        <div>
-          <p>
-            <label for="itemTitle">Item Preferred Title</label>
-            <input size="60"  type="text" id="itemTitle" name="itemTitle" value="" />
-          </p>
-        </div>
-        
-          <div>
-      <p>
-      <label for="itemTitleType">Preferred Item Title Type ${requiredHint}</label>
-           <select id="itemTitleType" name="itemTitleType" role="select">
-
-              </select>
-        </p>
-      </div>
-      
-
-      </fieldset>
-      
-    </div>
 
 
        <p class="submit">
@@ -204,10 +152,49 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     </form>
 
 
-  
+    <#--  Form field option, Simple literal -->
+    <#--  Need to handle required vs. non-required, also put these in their own templates -->
+      <div templateId="literalTemplate" style="display:none" >
+          <p>
+              <label for=""></label>
+              <input size="60"  type="text" id="" name="" value="" />
+          </p>
+
+
+
+      </div>
+
+      <#--  Autocomplete literal template -->
+
+    <div templateId="autocompleteLiteralTemplate" style="display:none">
+          <p templateId="inputAcSelector">
+              <label for=""> ${requiredHint}</label>
+              <input class="acSelector" size="60"  type="text" id="" name="" acGroupName="group"  value="" />
+          </p>
+
+
+          <div class="acSelection" acGroupName="group" templateId="literalSelection">
+              <p class="inline">
+                  <label>${i18n().selected}:</label>
+                  <span class="acSelectionInfo"></span>
+                  <a href="" class="verifyMatch"  title="${i18n().verify_match_capitalized}">(${i18n().verify_match_capitalized}</a> ${i18n().or}
+                  <a href="#" class="changeSelection" id="changeSelection">${i18n().change_selection})</a>
+              </p>
+              <input class="acUriReceiver" type="hidden" id="" name="" value=""  ${flagClearLabelForExisting}="true" />
+          </div>
+      </div>
+
+      <div templateId="selectDropdownTemplate" style="display:none">
+      <p>
+      <label for=""> </label>
+           <select id="" name="" role="select">
+
+              </select>
+        </p>
+      </div>
 
 <#assign sparqlQueryUrl = "${urls.base}/ajax/sparqlQuery" >
-
+<#include "existingValuesScript.ftl" />
     <script type="text/javascript">
     //No uris or literals in scope here
 
@@ -224,7 +211,9 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
         defaultTypeName: 'entity', //REPLACE with type name for specific auto complete
         acTypes: {},
         configFileURL:"${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}",
-       	defaultNamespace:"${defaultNamespace}"
+        urisInScope : urisInScope,
+	    literalsInScope : literalsInScope,
+	    defaultNamespace: "${defaultNamespace}"
     };
     var i18nStrings = {
         selectAnExisting: '${i18n().select_an_existing}',
@@ -250,5 +239,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/customFormWithAutocompleteAuthority.js"></script>',
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armAddNewWork.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>')}
