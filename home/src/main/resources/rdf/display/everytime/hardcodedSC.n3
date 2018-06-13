@@ -14,8 +14,50 @@
 @prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-## These need to be generated from the code later, right now hardcoding in.
+## These need to be generated from the code later, right now hard-coding in.
 
+
+##### TITLES #####
+
+# TODO - custom list view needed? - probably not - just display the title label
+
+# Custom form for Item title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig320>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+
+# Custom form for Item preferred title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig329>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+
+# Custom form for Instance title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+
+# Custom form for Instance preferred title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig306>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+
+# Custom form for Work title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig211>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+
+# Custom form for Work preferred title
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig282>
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+    vitro:customConfigFileAnnot "armHasTitle.jsonld" .
+    
+    
 
 ##### BOUND COLLECTIONS #####
 
@@ -152,6 +194,9 @@
     :qualifiedBy schema:PriceSpecification ;
     :qualifiedByDomain ch:CustodialEvent ; # for present purposes
     a :ConfigContext .
+    
+
+
     
      
 ## Faux property, custom form, and list view for arm:atLocation (ch:CustodialEvent to location)
