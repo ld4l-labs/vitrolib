@@ -26,8 +26,7 @@
 		"?titleIndividual rdf:type ?titleType .",
 		"?titleIndividual rdfs:label ?title .",
 		"?titleIndividual rdf:value ?title .",
-		"?titleIndividual bibframe:titleOf ?subject .",
-		"?subject bibframe:language ?language ."
+		"?titleIndividual bibframe:titleOf ?subject ."
       ],
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .  @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -38,6 +37,7 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
+      	"?subject bibframe:language ?language .",
 		"?subject bibframe:hasInstance ?instance .",
 		"?instance rdf:type bibframe:Instance .",
 		"?instance bibframe:instanceOf ?subject .",
@@ -150,12 +150,9 @@
      {
       "@id": "customform:whcor_languageOptions",
       "@type": [
-        "forms:IndividualsViaVClassOptions",
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://schema.org/Language"
-      }
+      ]
     },
     {
       "@id": "customform:whcor_language",
