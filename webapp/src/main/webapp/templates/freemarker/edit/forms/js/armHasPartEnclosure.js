@@ -76,12 +76,16 @@ var armHasPartBinding = {
 	    		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " + 
 	    		"PREFIX arm: <https://w3id.org/arm/core/ontology/0.1/> " + 
 	    		"PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/> " + 
-	    		"PREFIX crm:<http://www.cidoc-crm.org/cidoc-crm/> " + 
+	    		"PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> " + 
+	    		"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " + 
 	    		"PREFIX skos:<http://www.w3.org/2004/02/skos/core#> " + 
-	    		"SELECT DISTINCT ?object ?bindingType ?bindingTypeLabel  " + 
+	    		"PREFIX vitro:<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> " + 
+	    		"SELECT DISTINCT ?object ?subclassLabel  " + 
 	    		"WHERE {?subject ?predicate ?object ." + 
-	    		"?object crm:P2_has_type ?bindingType ." +
-	    		"OPTIONAL{ ?bindingType skos:prefLabel ?bindingTypeLabel  .}}  " + 
+                "?object vitro:mostSpecificType ?subclass ." + 
+                "?subclass rdfs:label ?subclassLabel . " + 
+	    		"FILTER(str(?subclass) != \"https://w3id.org/arm/core/ontology/0.1/Binding\")" + 
+	    		"}  " + 
 	    		"ORDER BY ?object ?bindingTypeLabel";
 	    		
 	    		//Replace subject with subject URI and predicate with predicate URI
@@ -102,7 +106,7 @@ var armHasPartBinding = {
 	    						var uri = binding["object"]["value"];
 	    						var label = "";
 	    						var labelValues = [];
-	    						if("bindingTypeLabel" in binding && "value" in binding["bindingTypeLabel"]) labelValues.push("Binding Type:" + binding["bindingTypeLabel"]["value"]);
+	    						if("subclassLabel" in binding && "value" in binding["subclassLabel"]) labelValues.push("Type:" + binding["subclassLabel"]["value"]);
 	    						label = labelValues.join(", ");
 	    						html += armHasPartBinding.generateExistingValueRow(uri, label);
 	    						
@@ -152,7 +156,7 @@ var armHasPartBinding = {
 	    	},
 	    	 removeExistingPart: function(link) {
 		            var removeLast = false,
-		                message = "Are you sure you wish to remove this binding?";
+		                message = "Are you sure you wish to remove this enclosure?";
 		                
 		            if (!confirm(message)) {
 		                return false;

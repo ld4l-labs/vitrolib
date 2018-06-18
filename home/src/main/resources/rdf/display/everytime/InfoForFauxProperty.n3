@@ -38,9 +38,13 @@
 
 
 ##Hardcoding now, but to be generated later
-
+##Measurement group listviews
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig310> :listViewConfigFile "listViewConfig-ARM-hasMeasurementGroup.xml"^^xsd:string .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig334> :listViewConfigFile "listViewConfig-ARM-hasMeasurementGroup.xml"^^xsd:string .
 #item
+
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> :listViewConfigFile "listViewConfig-ARM-hasPartEnclosure.xml"^^xsd:string .
 #instance 
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> :listViewConfigFile "listViewConfig-ARM-hasPartEnclosure.xml"^^xsd:string .
-#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasPartEnclosure.jsonld" ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasPartEnclosureForm.ftl" . 
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig314> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasPartEnclosure.jsonld" ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasPartEnclosureForm.ftl" . 
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig295> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customEntryFormAnnot> "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customConfigFileAnnot> "armHasPartEnclosure.jsonld" ; <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#customTemplateFileAnnot> "armHasPartEnclosureForm.ftl" . 
