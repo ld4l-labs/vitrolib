@@ -92,7 +92,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
                  <div class='row'>
                      <div class='col-12'>
                          <div class='column conceptLabelInfo'>
-                            <h4>Bindings </h4>
+                            <h4>Enclosures </h4>
                          </div>
                          
                          <div class='column conceptRemoval'>&nbsp;
@@ -105,26 +105,17 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
     <br/>
         	<#if editMode = "add">
 
-    
-    
-		<div>
-      		<p>
-      		<label for="bindingType">Binding Type</label>
-           	<select id="bindingType" name="bindingType" role="select">
 
-           	</select>
-        	</p>
-      	</div>
-      	
       	<div>
       		<p>
-      		<label for="bindingComponent">Binding Component</label>
-           	<select id="bindingComponent" name="bindingComponent" role="select">
+      		<label for="enclosureType">General type of enclosure</label>
+           	<select id="enclosureType" name="enclosureType" role="select">
 
            	</select>
         	</p>
       	</div>
-      	
+      	<#-- Part of instance or item -->
+
       	<div id="partOfLookup">
 	      
 	          <p templateId="inputAcSelector">
@@ -146,7 +137,7 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 	          </div>
           </div>
       	
-      	
+  
 	<br/>
 	
 	<h4 class="services">Add Note</h4>
@@ -420,4 +411,4 @@ ${scripts.add('<script type="text/javascript" src="${urls.base}/js/jquery-ui/js/
               '<script type="application/ld+json" id="configjsonscript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configFile}"></script>', 
                '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/jsonconfig/${configDisplayFile}"></script>', 
               '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/minimalCustomTemplate.js"></script>',
-              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasPartBinding.js"></script>')}
+              '<script type="text/javascript" src="${urls.base}/templates/freemarker/edit/forms/js/armHasPartEnclosure.js"></script>')}

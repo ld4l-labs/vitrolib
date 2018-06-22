@@ -19,7 +19,7 @@
       ],
       "customform:pattern": [
         "?subject ?predicate ?objectVar .",
-        "?objectVar rdf:type arm:Binding ."
+        "?objectVar rdf:type arm:Enclosure ."
       ],
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix lexvo: <http://lexvo.org/id/iso639-3/> ."
     },
@@ -30,9 +30,8 @@
         "forms:FormComponent"
       ],
       "customform:pattern": [
-      	"?objectVar bibframe:partOf ?partOf .",
-      	"?objectVar bibframe:hasPart ?bindingComponent .",
-      	"?objectVar crm:P2_has_type ?bindingType .",
+		"?objectVar bibframe:partOf ?partOf .",
+      	"?objectVar rdf:type ?enclosureType . ",
 		"?objectVar activity:hasActivity ?activity . ?activity activity:isActivityOf ?objectVar .",
 		"?activity rdf:type ?activityType .",
 		"?activity rdfs:label ?activityLabel . ",
@@ -63,25 +62,14 @@
       "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
     },
     {
-      "@id": "customform:bindingType",
+      "@id": "customform:enclosureType",
       "@type": [
         "forms:UriField",
         "forms:FormComponent"
       ],
-      "customform:varName": "bindingType",
+      "customform:varName": "enclosureType",
        "customform:fieldOptions": {
-        "@id": "customform:bindingTypeFieldOptions"
-      }
-    },
-    {
-      "@id": "customform:bindingComponent",
-      "@type": [
-        "forms:UriField",
-        "forms:FormComponent"
-      ],
-      "customform:varName": "bindingComponent",
-       "customform:fieldOptions": {
-        "@id": "customform:activityTypeFieldOptions"
+        "@id": "customform:enclosureTypeFieldOptions"
       }
     },
      {
@@ -257,20 +245,12 @@
       "customform:varName": "markingLocationName"
     },
      {
-      "@id": "customform:bindingTypeFieldOptions",
+      "@id": "customform:enclosureTypeFieldOptions",
       "@type": [
         "forms:ConstantList",
         "forms:FieldOptions"
       ]
     },
-     {
-      "@id": "customform:bindingComponentFieldOptions",
-      "@type": [
-        "forms:ConstantList",
-        "forms:FieldOptions"
-      ]
-    },
-    
      {
       "@id": "customform:markingTypeFieldOptions",
       "@type": [
