@@ -1,0 +1,17 @@
+var displayConfig = {
+	"fieldOrder" :  ["activityType", "activityLabel", "agentType", "agentName" ],
+	"fieldDisplayProperties" : {
+		"activityLabel": {"label":"Activity Label", "hidden":"true"},		
+		"activityType": {
+			"label": "Activity Type", 
+			"constantList":[{"uri":"https://w3id.org/arm/activity/ontology/0.1/ColoristActivity","label":"Colorist"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/ConditionAssessmentActivity","label":"Condition Assessment"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/ConservatorActivity","label":"Conservator"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/PapermakerActivity","label":"Papermaker"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/StereotyperActivity","label":"Stereotyper"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/DedicateeActivity","label":"Dedicatee"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/DedicatorActivity","label":"/Dedicator"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/InscriberActivity","label":"Inscriber"}]
+		}
+	}
+};

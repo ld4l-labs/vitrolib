@@ -1,0 +1,25 @@
+# $This file is distributed under the terms of the license in /doc/license.txt$ 
+
+@prefix about: <http://vitro.mannlib.cornell.edu/ns/default/about#> .
+
+about:ABOUTDG
+    a   <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.FixedHTMLDataGetter> ;
+    <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#htmlValue>
+        """<h2>About VitroLib</h2>
+        <div class=\"pageGroupBody\" id=\"aboutText\"><p></p>
+
+        <p>VitroLib is an ontology-based cataloging editor enabling manual cataloging in RDF based on a generalized bibliographic ontology with extensions for specialized cataloging. Built on Vitro, a generalized semantic web ontology and instance editor with customizable browsing, VitroLib is a joint product of the Mellon-funded Linked Data for Libraries Labs and Linked Data for Production projects.
+        </p>
+
+        <p>See more information on the <a href=\"http://ld4l.org\">LD4L Project site</a>.</p></div>
+        """@en ;
+        <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#saveToVar>
+                "aboutPage" .
+about:ABOUTPAGE
+    a   <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#Page> ;
+    <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasDataGetter>
+        about:ABOUTDG ;
+    <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#title>
+        "About Page" ;
+    <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#urlMapping>
+        "/about" .

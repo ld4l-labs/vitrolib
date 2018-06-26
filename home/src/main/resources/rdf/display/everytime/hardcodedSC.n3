@@ -21,42 +21,42 @@
 
 # Custom form for Item title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig320>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig286>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Item preferred title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig329>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig293>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Instance title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig301>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig264>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Instance preferred title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig307>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig272>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Work title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig211>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig217>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
 
 # Custom form for Work preferred title
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig282>
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig240>
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
     vitro:customConfigFileAnnot "armHasTitle.jsonld" ;
     :listViewConfigFile "listViewConfig-ARM-hasTitle.xml" .
@@ -66,11 +66,11 @@
 ##### BOUND COLLECTIONS #####
 
 ## Custom form and list view for faux property of bf:partOf (bf:Item to arm:BoundCollection)
-
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319>
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armPartOfBoundCollection.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
+##Commenting out for now until we find property
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig319>
+#    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+#    vitro:customConfigFileAnnot "armPartOfBoundCollection.jsonld" ;
+#    :listViewConfigFile "listViewConfig-ARM-partOfBoundCollection.xml" .
 
 ## 
 # NOTE: Manually changed this line in ARMItem.n3:
@@ -145,59 +145,60 @@
 ## For now, omitting CustodialHistory node and going directly from bf:Item to ch:CustodialEvent.
 ## Faux property, custom form, and list view for ch:hasCustodialHistory (bf:Item to ch:CustodialEvent)
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig405>
-    vitro:collateBySubclassAnnot "false"^^xsd:boolean ;
-    vitro:displayLimitAnnot "0"^^xsd:int ;
-    vitro:displayRankAnnot "0"^^xsd:int ;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
-    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    vitro:publicDescriptionAnnot "Custodial event" ;
-    vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
-    :displayName "Custodial event" ;
-    :propertyGroup <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> ;
-    a :ObjectPropertyDisplayConfig .
+##Find property then uncomment
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig405>
+#    vitro:collateBySubclassAnnot "false"^^xsd:boolean ;
+#    vitro:displayLimitAnnot "0"^^xsd:int ;
+#    vitro:displayRankAnnot "0"^^xsd:int ;
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+#    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
+#    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
+#    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+#    vitro:publicDescriptionAnnot "Custodial event" ;
+#    vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+#    :displayName "Custodial event" ;
+ #   :propertyGroup <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> ;
+ #   a :ObjectPropertyDisplayConfig .
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig405>   
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armItemHasCustodialEvent.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-itemHasCustodialEvent.xml" .
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig405>   
+#    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+#    vitro:customConfigFileAnnot "armItemHasCustodialEvent.jsonld" ;
+#    :listViewConfigFile "listViewConfig-ARM-itemHasCustodialEvent.xml" .
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn405>
-    :configContextFor ch:hasCustodialHistory ;
-    :hasConfiguration local:fpgenconfig405 ;
-    :qualifiedBy ch:CustodialHistory ;
-    :qualifiedByDomain bf:Item ; 
-    a :ConfigContext .
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn405>
+#    :configContextFor ch:hasCustodialHistory ;
+#    :hasConfiguration local:fpgenconfig405 ;
+#    :qualifiedBy ch:CustodialHistory ;
+#    :qualifiedByDomain bf:Item ; 
+#    a :ConfigContext .
 
     
 ## Faux property, custom form, and list view for schema:priceSpecification (ch:CustodialEvent to schema:PriceSpecification)
+#Uncomment once correct property discerned
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig402>
+#    vitro:collateBySubclassAnnot "false"^^xsd:boolean ;
+#    vitro:displayLimitAnnot "0"^^xsd:int ;
+#    vitro:displayRankAnnot "0"^^xsd:int ;
+#    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+#    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
+#    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
+#    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+#    vitro:publicDescriptionAnnot "Price" ;
+ #   vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
+ #   :displayName "Price" ;
+ #   a :ObjectPropertyDisplayConfig .
 
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig402>
-    vitro:collateBySubclassAnnot "false"^^xsd:boolean ;
-    vitro:displayLimitAnnot "0"^^xsd:int ;
-    vitro:displayRankAnnot "0"^^xsd:int ;
-    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
-    vitro:hiddenFromPublishBelowRoleLevelAnnot role:public ;
-    vitro:offerCreateNewOptionAnnot "true"^^xsd:boolean ;
-    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    vitro:publicDescriptionAnnot "Price" ;
-    vitro:selectFromExistingAnnot "true"^^xsd:boolean ;
-    :displayName "Price" ;
-    a :ObjectPropertyDisplayConfig .
-
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig402>   
-    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
-    vitro:customConfigFileAnnot "armPriceSpecification.jsonld" ;
-    :listViewConfigFile "listViewConfig-ARM-priceSpecification.xml" .
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgenconfig402>   
+#    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.MinimalEditConfigurationGenerator"^^xsd:string ; 
+  #  vitro:customConfigFileAnnot "armPriceSpecification.jsonld" ;
+   # :listViewConfigFile "listViewConfig-ARM-priceSpecification.xml" .
  
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn402>
-    :configContextFor schema:priceSpecification ;
-    :hasConfiguration local:fpgenconfig402 ;
-    :qualifiedBy schema:PriceSpecification ;
-    :qualifiedByDomain ch:CustodialEvent ; # for present purposes
-    a :ConfigContext .
+#<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/fpgn402>
+#    :configContextFor schema:priceSpecification ;
+#    :hasConfiguration local:fpgenconfig402 ;
+ #   :qualifiedBy schema:PriceSpecification ;
+ #   :qualifiedByDomain ch:CustodialEvent ; # for present purposes
+ #   a :ConfigContext .
     
 
 

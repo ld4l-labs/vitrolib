@@ -1,0 +1,1577 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://id.loc.gov/ontologies/bibframe/PlaybackChannels>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.w3.org/ns/prov#Location>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/FileSize>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Sale>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/NotatedMovement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardWinner>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PapermakerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Seal>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MovingImage>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicMedium>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://example.org/MeasurementGroup>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AspectRatio>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Upc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Isrc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/SupplementaryContentNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ArtCopyistActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ConservatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/SoundContent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CorrespondentActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Content>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Strn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Barcode>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/RegionalEncoding>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CartographicDataType>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/StylePeriod>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Dataset>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/EditorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/TrackConfig>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/RecordingMedium>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationNlm>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/RelatedMaterialNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ColorContent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CartographerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Classification>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ProviderActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+[ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+          <http://ld4l.org/ontology#vitroClassGroupAllClasses> ] .
+
+<https://w3id.org/arm/core/activity/0.1/HonoreeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ReportNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/measurement/ontology/0.1/Measurement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/RetentionPolicy>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationLcc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Binding>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/LyricistActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Topic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/PostalRegistration>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MovementNotation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CopyrightNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ReductionRatio>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Frame>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Repatriation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://example.org/Origin>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/Activity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardNominee>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Citation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Label>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Fingerprint>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/LicenseeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationDdc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicPublisherNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardShortlist>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/ClaimOfOwnership>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Discarding>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AuthorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Arrangement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+[ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+          <http://ld4l.org/ontology#vitroClassGroupAllClasses> ] .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/InheritorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CollectorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/PhysicalCondition>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/RecordingMethod>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/DescriptionAuthentication>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AttributionActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Inheritance>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ProducerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Deaccessioning>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/SoundCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/InaccuracyNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Electronic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Dissertation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ForgerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/BaseMaterial>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/LithographerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ArchitectActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Hdl>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PrinterActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/RecovererActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Production>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PatronActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.w3.org/2004/02/skos/core#Concept>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CopyrightHolderActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardLonglist>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicVoice>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Attribution>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Place>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Enclosure>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/TestatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/OclcNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ObjectCount>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DistributorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Coden>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CoverArt>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Status>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/HandwritingType>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ArtistActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/GenerationProcess>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/SponsorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/EncodingFormat>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/TableOfContents>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Multimedia>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Manufacture>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/AccessionerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/BookFormat>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMark>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Iso>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Text>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DestructionActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/TactileNotation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/Activity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkUdc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/OwnerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ChoreographerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/GrooveCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AudioIssueNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/TranscriberActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Frequency>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Iswc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Unit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Event>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Istc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/RecipientActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/IlluminatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/DissertationIdentifier>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/VariantTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Urn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Destruction>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ContentAccessibility>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/FileType>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/GeographicCoverage>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Chronology>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Ansi>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/BinderActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ProductionMethod>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Collection>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://rdfs.org/ns/void#Dataset>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/ConditionAssessment>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicFormat>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/ThiefActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Bequest>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/DescriptionConventions>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AppellantActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Instance>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Auction>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicEnsemble>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Isbn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/BuyerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/LcOverseasAcq>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Donation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkNlm>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Identifier>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/OrganizerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Source>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/NotatedMusic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Autograph>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/CaptionNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DedicatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/VideoRecordingNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Notation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Transfer>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/FontStyle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Sublocation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/TypographerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Isni>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DisputantActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/PreferredCitation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/ClaimantActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#MassUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Publication>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DonorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/LimitationNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Layout>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Wrapper>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/SystemRequirement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/WitnessActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Volume>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/PresentationFormat>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/PlaybackCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardSelectorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/TapeConfig>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Ownership>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ContributorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Generation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/StudyNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Extent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/FacsimilistActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/WrapAroundBand>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Meeting>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Loss>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Deposit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://xmlns.com/foaf/0.1/Person>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DiscarderActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://schema.org/SaleEvent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ConditionAssessmentActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/TranslatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/EngraverActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CopyrightRegistration>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Exhibition>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/PlayingSpeed>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ModeratorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+[ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+          <http://ld4l.org/ontology#vitroClassGroupAllClasses> ] .
+
+<https://w3id.org/arm/core/ontology/0.1/Pedestal>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Archival>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Audio>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardReceipt>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ManufacturerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AppliedMaterial>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MixedMaterial>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/SignerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/SlipCase>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Illustration>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/MarblerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Object>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/IssnL>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/StillImage>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/BoundCollection>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CartographicObjectType>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Temporal>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Lccn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://schema.org/PriceSpecification>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/LossActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/CustodialHistory>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardGranterActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/PublisherNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Emulsion>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/EncodedBitrate>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicPlate>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DesignerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/RepatriatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/SellerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://schema.org/Event>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Title>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AddresseeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DealerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Handwriting>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ColoristActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AcquisitionSource>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.cidoc-crm.org/cidoc-crm/E57_Material>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicInstrument>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Local>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Carrier>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/InscriberActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AccessionNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Script>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/SupplementaryContent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Loan>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Agent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Person>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Watermark>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/SummaryNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/FontSize>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://schema.org/StructuredValue>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Doi>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://purl.org/iso25964/skos-thes#ThesaurusArray>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PrintmakerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/PaginationFoliation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#LengthUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://schema.org/Thing>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/ContentsNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Issn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Recovery>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Language>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Ismn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/TransfererActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Nbn>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Role>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/BindersTicket>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CreatorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PublisherActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/BorrowerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#DerivedUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/StockNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://xmlns.com/foaf/0.1/Organization>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/LicensorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Cartographic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Organization>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/EtcherActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Inscription>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/VideoFormat>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Isan>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/CollectiveTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Enumeration>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Note>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/OfferActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Family>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/BroadcastStandard>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/LenderActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Polarity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Tactile>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Arrangement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#NotUsedWithSIUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Offer>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DirectorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ProvisionActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/InventorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardCitation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Item>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ScribeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Print>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Gtin14Number>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://example.org/Measurement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Review>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/KeyTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AudioTake>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Resolution>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/SubjectNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Distribution>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/award/ontology/0.1/AwardHonoraryMention>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Mount>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PhotographerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://vivoweb.org/ontology/core#Award>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Sici>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#SIBaseUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/AcquisitionActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Accessioning>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Jurisdiction>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/SculptorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/DescriptiveNote>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/IllustratorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DraftsmanActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Contribution>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MatrixNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/UsePolicy>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DepositorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/DedicateeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Ean>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Manuscript>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/AccessionNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Work>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/DustJacket>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Marking>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://qudt.org/schema/qudt#SIUnit>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/RepositoryActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Projection>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://vocab.getty.edu/ontology#Concept>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Entry>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/VideoCharacteristic>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/PlatemakerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Cartography>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/Theft>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CuratorActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CollotyperActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Typeface>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.w3.org/2004/02/skos/core#OrderedCollection>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/TextBlock>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Stamp>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AccessPolicy>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Mount>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/AdminMetadata>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/custodial_history/ontology/0.1/DeaccessionerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/SignatureStatement>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ParallelTitle>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/GenreForm>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ProjectionSpeed>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/IntendedAudience>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Media>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Scale>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://xmlns.com/foaf/0.1/Agent>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.w3.org/2004/02/skos/core#Collection>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationUdc>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/CompilerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://vocab.getty.edu/ontology#Subject>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AppelleeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Summary>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Page>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/ontology/0.1/Font>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Issuance>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/Capture>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/AssigneeActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://vocab.getty.edu/ontology#GuideTerm>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://id.loc.gov/ontologies/bibframe/MusicNotation>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/ArrangerActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
+
+<https://w3id.org/arm/core/activity/0.1/StereotyperActivity>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
+                <http://ld4l.org/ontology#vitroClassGroupAllClasses> .

@@ -1,0 +1,137 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "forms": "java:edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.forms#",
+    "bib": "http://bibliotek-o.org/ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bibframe": "http://id.loc.gov/ontologies/bibframe/",
+    "customform": "http://vitro.mannlib.cornell.edu/ns/vitro/CustomFormConfiguration#"
+  },
+  "@graph": [
+    {
+      "@id": "customform:whcor_requiredN3",
+      "@type": [
+        "forms:RequiredN3Pattern",
+        "forms:FormComponent"
+      ],
+      "customform:pattern": [
+      	"?objectVar rdf:type activity:Activity .",
+		"?objectVar rdfs:label ?activityLabel . ",
+		"?objectVar bibframe:agent ?agent .",
+		"?agent a bibframe:Agent.  "
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> ."
+    },
+    {
+      "@id": "customform:whcor_fieldAgent",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:queryForExistingValue": "PREFIX bibframe: <http://id.loc.gov/ontologies/bibframe/>  SELECT ?existingAgent WHERE {  ?objectVar bibframe:agent ?existingAgent . }   ",
+      "customform:varName": "agent"
+    },
+    {
+      "@id": "customform:whcor_optionalN3",
+      "@type": [
+        "forms:FormComponent",
+        "forms:OptionalN3Pattern"
+      ],
+      "customform:prefixes": "@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> . @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> . @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .  @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . @prefix bib: <http://bibliotek-o.org/ontology/> . @prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .   @prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .   @prefix dcterms: <http://purl.org/dc/terms/> .  @prefix foaf: <http://xmlns.com/foaf/0.1/> . @prefix lexvo: <http://lexvo.org/id/iso639-3/> . @prefix owl: <http://www.w3.org/2002/07/owl#> .  @prefix schema: <http://schema.org/> .  @prefix gn: <http://www.geonames.org/ontology#> .",
+      "customform:pattern": ["?agent a ?agentType.  ", 
+      						"?agent rdfs:label ?agentName.",  
+      						"?objectVar bibframe:date ?activityDate .",
+      						"?objectVar arm:atLocation ?location .", 
+      						"?location rdfs:label ?locationName . ",
+      						"?location rdf:type gn:Feature ."]
+    },
+   
+    {
+      "@id": "customform:whcor_activityTypeListFieldOptions",
+      "@type": [
+        "forms:ConstantList",
+        "forms:FieldOptions"
+      ]
+    },
+    
+    {
+      "@id": "customform:whcor_fieldActivityType",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:fieldOptions": {
+        "@id": "customform:whcor_activityTypeListFieldOptions"
+      },
+      "customform:queryForExistingValue": "PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>      SELECT ?existingActivityType      WHERE {?objectVar vitro:mostSpecificType ?existingActivityType .   }    ",
+      "customform:varName": "activityType"
+    },
+      {
+      "@id": "customform:activity",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "activity"
+    },
+    {
+      "@id": "customform:whcor_fieldAgent",
+      "@type": [
+        "forms:FormComponent",
+        "forms:UriField"
+      ],
+      "customform:mayUseNewResource": true,
+      "customform:varName": "agent"
+    },
+    {
+      "@id": "customform:whcor_fieldActivityLabel",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:rangeDatatypeUri": {
+        "@id": "xsd:string"
+      },
+      "customform:varName": "activityLabel"
+    },
+     {
+      "@id": "customform:whcor_fieldActivityDate",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "activityDate"
+    },
+    {
+      "@id": "customform:whcor_fieldAgentName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "agentName"
+    },
+     {
+      "@id": "customform:whcor_locationUri",
+      "@type": [
+        "forms:UriField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "location"
+    },
+     {
+      "@id": "customform:whcor_locationName",
+      "@type": [
+        "forms:LiteralField",
+        "forms:FormComponent"
+      ],
+      "customform:varName": "locationName"
+    }
+    
+    
+  ]
+}

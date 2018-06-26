@@ -3,7 +3,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <https://w3id.org/arm/core/ontology/0.1/PhysicalCondition>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -19,7 +19,7 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 
 <http://id.loc.gov/ontologies/bibframe/date>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventDateAndLocationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventExhibitionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventSubjectAndCoveragePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTypePropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceCopyrightPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventDateAndLocationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventExhibitionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceRelationshipsPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemNotePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventSubjectAndCoveragePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkCopyrightPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemRelationshipsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemHoldingsPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstancePhysicalDecriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTypePropertyGroup> .
 
 <http://vivoweb.org/ontology/core#Award>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -29,7 +29,11 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 
 <http://id.loc.gov/ontologies/bibframe/partName>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
+
+<http://id.loc.gov/ontologies/bibframe/originDate>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <https://w3id.org/arm/core/ontology/0.1/PaginationFoliation>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -43,7 +47,7 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 
 <https://w3id.org/arm/core/ontology/0.1/endDate>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -53,7 +57,7 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 
 <http://id.loc.gov/ontologies/bibframe/subtitle>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <https://w3id.org/arm/core/ontology/0.1/BoundCollection>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -83,30 +87,42 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                            owl:onProperty     rdf:value
                          ] .
 
+<https://w3id.org/arm/activity/ontology/0.1/Activity>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
+                         ] .
+
+<https://w3id.org/arm/activity/ontology/0.1/CreatorActivity>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
+                         ] .
+
 <http://id.loc.gov/ontologies/bibframe/responsibilityStatement>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/partNumber>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/editionStatement>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Title>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/subtitle>
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/partName>
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/partName>
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/subtitle>
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
@@ -122,7 +138,7 @@ rdf:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                          ] .
 
 rdfs:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Instance>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -136,11 +152,15 @@ rdfs:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     <http://id.loc.gov/ontologies/bibframe/editionStatement>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/copyrightDate>
                          ] .
 
 <http://id.loc.gov/ontologies/bibframe/mainTitle>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://schema.org/ExhibitionEvent>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -152,14 +172,14 @@ rdfs:label  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                            owl:onProperty     <https://w3id.org/arm/core/ontology/0.1/endDate>
                          ] .
 
-<https://w3id.org/arm/core/activity/0.1/Activity>
+rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
+
+<https://w3id.org/arm/core/ontology/0.1/Attribution>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
                          ] .
-
-rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Note>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -169,9 +189,13 @@ rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
 
 <https://w3id.org/arm/core/ontology/0.1/startDate>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <http://id.loc.gov/ontologies/bibframe/Identifier>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     rdf:value
@@ -183,9 +207,13 @@ rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                            owl:onProperty     rdf:value
                          ] .
 
+<http://id.loc.gov/ontologies/bibframe/copyrightDate>
+        <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemHoldingsPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceNotePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventSubjectAndCoveragePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceTypePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventDateAndLocationPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceActivityPropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemPhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstancePhysicalDecriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemTypePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemRelationshipsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemBibliographicCitationPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/ItemHistoryAndProvenancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemNotePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkCopyrightPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkNotePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstancePhysicalDescriptionPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/ExhibitionEventExhibitionPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceOfWorkPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemOfInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/ItemTitlePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToInstancePropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceCopyrightPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/WorkLanguageFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkSubjectGenreFormPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemIdentifierPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceRelationshipsPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkAwardReceiptPropertyGroup> , <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/InstanceHasItemPropertyGroup> , <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/ItemNotePropertyGroup> .
+
 <http://purl.org/dc/terms/description>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
-                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/WorkToWorkPropertyGroup> .
+                <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/InstanceAccompanimentsPropertyGroup> .
 
 <https://w3id.org/arm/core/ontology/0.1/Page>
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -199,14 +227,14 @@ rdf:value  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot>
                            owl:onProperty     rdf:value
                          ] .
 
-<https://w3id.org/arm/core/activity/0.1/CreatorActivity>
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
-                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/date>
-                         ] .
-
 <https://w3id.org/arm/core/ontology/0.1/Handwriting>
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
                            owl:onProperty     <http://purl.org/dc/terms/description>
+                         ] .
+
+<https://w3id.org/arm/core/ontology/0.1/Activity>
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://www.w3.org/2001/XMLSchema#string> ;
+                           owl:onProperty     <http://id.loc.gov/ontologies/bibframe/originDate>
                          ] .

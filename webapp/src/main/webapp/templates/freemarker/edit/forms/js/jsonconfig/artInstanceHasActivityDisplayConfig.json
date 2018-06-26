@@ -1,0 +1,23 @@
+var displayConfig = {
+	"fieldOrder" :  ["activityType", "activityLabel", "agentType", "agentName" ],
+	"fieldDisplayProperties" : {
+		"activityLabel": {"label":"Activity Label", "hidden":"true"},		
+		"activityType": {
+			"label": "Activity Type", 
+			"constantList":[
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/ArtCopyistActivity", "label": "Art Copyist"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/CollectorActivity", "label": "Collector"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/EngraverActivity", "label": "Engraver"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/EtcherActivity", "label": "Etcher"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/FacsimilistActivity", "label":"Facsimilist"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/LithographerActivity","label":"Lithographer"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/PrintmakerActivity", "label": "Printmaker"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/PrinterActivity", "label":"Printer"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/ManufacturerActivity", "label":"Manufacturer"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/PublisherActivity", "label": "Publisher"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/ProducerActivity", "label": "Producer"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/PapermakerActivity", "label": "Papermaker"},
+			{"uri":"https://w3id.org/arm/activity/ontology/0.1/StereotyperActivity", "label": "Stereotyper"}]
+		}
+	}
+};

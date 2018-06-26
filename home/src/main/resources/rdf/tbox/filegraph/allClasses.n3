@@ -25,7 +25,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PapermakerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PapermakerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -61,11 +61,11 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ArtCopyistActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ArtCopyistActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ConservatorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ConservatorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -73,7 +73,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CorrespondentActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CorrespondentActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -105,7 +105,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/EditorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/EditorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -129,7 +129,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CartographerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CartographerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -137,14 +137,14 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ProviderActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ProviderActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
 [ <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
           <http://ld4l.org/ontology#vitroClassGroupAllClasses> ] .
 
-<https://w3id.org/arm/core/activity/0.1/HonoreeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/HonoreeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -172,7 +172,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/LyricistActivity>
+<https://w3id.org/arm/activity/ontology/0.1/LyricistActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -212,7 +212,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/Activity>
+<https://w3id.org/arm/activity/ontology/0.1/Activity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -232,7 +232,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/LicenseeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/LicenseeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -256,7 +256,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AuthorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AuthorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -271,7 +271,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CollectorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CollectorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -287,7 +287,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AttributionActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AttributionActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -295,7 +295,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ProducerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ProducerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -319,7 +319,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ForgerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ForgerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -327,11 +327,11 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/LithographerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/LithographerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ArchitectActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ArchitectActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -339,7 +339,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PrinterActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PrinterActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -351,7 +351,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PatronActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PatronActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -359,7 +359,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CopyrightHolderActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CopyrightHolderActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -395,7 +395,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DistributorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DistributorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -415,7 +415,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ArtistActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ArtistActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -423,7 +423,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/SponsorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/SponsorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -483,7 +483,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ChoreographerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ChoreographerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -495,7 +495,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/TranscriberActivity>
+<https://w3id.org/arm/activity/ontology/0.1/TranscriberActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -523,7 +523,7 @@
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/IlluminatorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/IlluminatorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -566,7 +566,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/BinderActivity>
+<https://w3id.org/arm/activity/ontology/0.1/BinderActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -602,7 +602,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AppellantActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AppellantActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -650,7 +650,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/OrganizerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/OrganizerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -670,7 +670,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DedicatorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DedicatorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -694,7 +694,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/TypographerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/TypographerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -778,7 +778,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ContributorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ContributorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -794,7 +794,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/FacsimilistActivity>
+<https://w3id.org/arm/activity/ontology/0.1/FacsimilistActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -826,15 +826,15 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ConditionAssessmentActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ConditionAssessmentActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/TranslatorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/TranslatorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/EngraverActivity>
+<https://w3id.org/arm/activity/ontology/0.1/EngraverActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -850,7 +850,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ModeratorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ModeratorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -881,7 +881,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ManufacturerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ManufacturerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -893,7 +893,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/SignerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/SignerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -905,7 +905,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/MarblerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/MarblerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -969,7 +969,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DesignerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DesignerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -993,7 +993,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AddresseeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AddresseeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1005,7 +1005,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ColoristActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ColoristActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1029,7 +1029,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/InscriberActivity>
+<https://w3id.org/arm/activity/ontology/0.1/InscriberActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1081,7 +1081,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PrintmakerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PrintmakerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1137,11 +1137,11 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CreatorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CreatorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PublisherActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PublisherActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1161,7 +1161,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/LicensorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/LicensorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1173,7 +1173,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/EtcherActivity>
+<https://w3id.org/arm/activity/ontology/0.1/EtcherActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1237,7 +1237,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DirectorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DirectorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1245,7 +1245,7 @@ owl:Thing  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/InventorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/InventorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1260,7 +1260,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ScribeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ScribeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1308,7 +1308,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PhotographerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PhotographerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1336,7 +1336,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/SculptorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/SculptorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1344,11 +1344,11 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/IllustratorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/IllustratorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DraftsmanActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DraftsmanActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1368,7 +1368,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/DedicateeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/DedicateeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1404,7 +1404,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/RepositoryActivity>
+<https://w3id.org/arm/activity/ontology/0.1/RepositoryActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1424,7 +1424,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/PlatemakerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/PlatemakerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1436,11 +1436,11 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CuratorActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CuratorActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CollotyperActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CollotyperActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1516,7 +1516,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/CompilerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/CompilerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1524,7 +1524,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AppelleeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AppelleeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1552,7 +1552,7 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/AssigneeActivity>
+<https://w3id.org/arm/activity/ontology/0.1/AssigneeActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
@@ -1568,10 +1568,10 @@ owl:Datatype  <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/ArrangerActivity>
+<https://w3id.org/arm/activity/ontology/0.1/ArrangerActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
 
-<https://w3id.org/arm/core/activity/0.1/StereotyperActivity>
+<https://w3id.org/arm/activity/ontology/0.1/StereotyperActivity>
         <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup>
                 <http://ld4l.org/ontology#vitroClassGroupAllClasses> .
