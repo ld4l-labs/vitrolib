@@ -1,5 +1,22 @@
 var displayConfig = {
 	"fieldDisplayProperties" : {
+		"workType": {
+			"label": "Work Type", 
+			"constantList":[
+				 {
+		         "label":"Text",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/Text"
+		      },
+		      {
+		         "label":"Still Image",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/StillImage"
+		      },
+		      {
+		         "label":"Object",
+		         "uri":"http://id.loc.gov/ontologies/bibframe/Object"
+		      },
+			]
+		},
 		"titleType": {
 			"label": "Preferred Title Type", 
 			"constantList":[

@@ -111,6 +111,15 @@ Set this flag on the input acUriReceiver where you would like this behavior to o
 <form id="addNewWork" class="customForm noIE67" action="${submitUrl}"  role="add work" >
 
     <div id="formcontent">
+    <#-- Adding this for ArtFrame but should not hurt ARM either -->
+    <div>
+      <p>
+      <label for="workType">Work Type ${requiredHint}</label>
+           <select id="workType" name="workType" role="select">
+
+              </select>
+        </p>
+      </div>
     <#--  New Work fields -->
       <#--  Title -->
      <p>

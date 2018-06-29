@@ -19,7 +19,7 @@
       ],
       "customform:pattern": [
         "?subject rdf:type bibframe:Work .",
-        "?subject rdf:type bibframe:Text .",
+        "?subject rdf:type ?workType .",
 		"?subject rdfs:label ?title .",
 		"?subject arm:hasPreferredTitle ?titleIndividual .",
 		"?titleIndividual rdf:type bibframe:Title .",
@@ -111,13 +111,10 @@
     },
       {
       "@id": "customform:whcor_workTypeFieldOptions",
-      "@type": [
-        "forms:ChildVClassesWithParent",
+       "@type": [
+        "forms:ConstantList",
         "forms:FieldOptions"
-      ],
-      "customform:classUri": {
-        "@id": "http://id.loc.gov/ontologies/bibframe/Text"
-      }
+      ]
     },
      {
       "@id": "customform:whcor_instance",

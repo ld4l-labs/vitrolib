@@ -1271,6 +1271,15 @@
     <url-pattern>/tpf/*</url-pattern>
   </servlet-mapping>
 
+<!-- our version of Vitro probably needs better upgrade, this web.xml is still using older version  -->
+ <servlet>
+    <servlet-name>DumpRestoreController</servlet-name>
+    <servlet-class>edu.cornell.mannlib.vitro.webapp.controller.datatools.dumprestore.DumpRestoreController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DumpRestoreController</servlet-name>
+    <url-pattern>/dumpRestore/*</url-pattern>
+  </servlet-mapping>
   <!-- ==================== mime types ============================== -->
   
   <mime-mapping>
